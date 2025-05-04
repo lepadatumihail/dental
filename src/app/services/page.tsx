@@ -10,7 +10,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
+import logoMailSmirk from '@/images/clients/phobia/logo-dark.svg'
 import { EmergencyServiceBanner } from '@/components/EmergencyServiceBanner'
 
 import { FirstAidKit, Syringe, Tooth } from '@phosphor-icons/react/dist/ssr'

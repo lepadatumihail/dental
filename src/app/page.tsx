@@ -10,38 +10,22 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import SmoothScrollLink from '@/components/SmoothScrollLink'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import imageLaptop from '@/images/laptop.jpg'
-import RobinMain from '@/images/clinic/robin-colour.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import logoNeos from '@/images/clients/neos.png'
+import logoStrauman from '@/images/clients/strauman.svg'
+import logoInvisalign from '@/images/clients/invisalign.svg'
+import { loadCaseStudies } from '@/lib/mdx'
 import CalendlyButton from '@/components/CalendlyButton'
 import Implants from '@/images/clinic/implant.jpg'
 import Dentists from '@/images/clinic/dentists.jpg'
-import Xray from '@/images/clinic/xray.jpg'
-import {
-  FirstAid,
-  FirstAidKit,
-  Syringe,
-  Tooth,
-} from '@phosphor-icons/react/dist/ssr'
+import { FirstAid, Syringe, Tooth } from '@phosphor-icons/react/dist/ssr'
 
 const clients = [
-  ['Bright Smiles', logoPhobiaLight],
-  ['Dental Care', logoFamilyFund],
-  ['Perfect Teeth', logoUnseal],
-  ['Orthodontics Plus', logoMailSmirk],
-  // ['Family Dental', logoHomeWork],
-  // ['Kids Dental', logoGreenLife],
-  // ['Cosmetic Dental', logoBrightPath],
-  // ['Emergency Dental', logoNorthAdventures],
+  ['Invisalign', logoInvisalign],
+  ['Neos', logoNeos],
+  ['Strauman', logoStrauman],
+  ['Unseal', logoUnseal],
 ]
 
 function Clients() {
@@ -50,16 +34,21 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Trusted by patients across the region
+            Using the latest technology
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-neutral-700" />
         </FadeIn>
         <FadeInStagger faster>
           <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
             {clients.map(([client, logo]) => (
               <li key={client}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image
+                    src={logo}
+                    alt={client}
+                    unoptimized
+                    className={logo.src.includes('neos') ? 'max-w-20' : ''}
+                  />
                 </FadeIn>
               </li>
             ))}
