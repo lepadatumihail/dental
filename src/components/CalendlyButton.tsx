@@ -17,11 +17,11 @@ export default function CalendlyButton() {
 
   return (
     <PopupButton
-      url="https://calendly.com/viktorstoiclifeinc/onboarding-call"
+      url="https://calendly.com/robin-moazzez/30min"
       rootElement={rootElement}
-      text="Get Free Consultation"
+      text="Schedule a Free Consultation"
       className={clsx(
-        'rounded-lg px-4 py-2 text-sm font-semibold transition',
+        'cursor-pointer rounded-lg px-5 py-3 font-display text-sm font-semibold transition',
         'bg-neutral-950 text-white hover:bg-neutral-800',
       )}
     />

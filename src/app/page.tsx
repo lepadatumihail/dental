@@ -9,6 +9,7 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
+import SmoothScrollLink from '@/components/SmoothScrollLink'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
@@ -21,25 +22,35 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import RobinMain from '@/images/clinic/robin-colour.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import CalendlyButton from '@/components/CalendlyButton'
+import Implants from '@/images/clinic/implant.jpg'
+import Dentists from '@/images/clinic/dentists.jpg'
+import Xray from '@/images/clinic/xray.jpg'
+import {
+  FirstAid,
+  FirstAidKit,
+  Syringe,
+  Tooth,
+} from '@phosphor-icons/react/dist/ssr'
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Bright Smiles', logoPhobiaLight],
+  ['Dental Care', logoFamilyFund],
+  ['Perfect Teeth', logoUnseal],
+  ['Orthodontics Plus', logoMailSmirk],
+  // ['Family Dental', logoHomeWork],
+  // ['Kids Dental', logoGreenLife],
+  // ['Cosmetic Dental', logoBrightPath],
+  // ['Emergency Dental', logoNorthAdventures],
 ]
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24 rounded-4xl bg-neutral-900 py-20 sm:mx-10 lg:mt-42">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Trusted by patients across the region
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -59,63 +70,93 @@ function Clients() {
   )
 }
 
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
+function ServiceCategory() {
   return (
-    <>
-      <SectionIntro
-        title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+    <div id="services">
+      <SectionIntro title="Our Services" className="pt-24">
+        <p className="sm:text-md font-display text-sm text-neutral-500">
+          We utilize cutting-edge dental and aesthetic technologies to deliver
+          premium care. Our advanced equipment ensures precision and comfort,
+          enhancing both your smile and facial appearance with exceptional
+          results.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
+              <h3>
+                <Link href="/services/general-medicine">
+                  <span className="absolute inset-0 rounded-3xl" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
+                    <FirstAid size={32} />
+                  </div>
+                </Link>
+              </h3>
+              <p className="mt-6 flex gap-x-2 text-sm font-medium text-neutral-950">
+                General Practitioner
+              </p>
+              <p className="mt-6 bg-gradient-to-r from-neutral-950 to-neutral-700 bg-clip-text font-display text-2xl font-semibold text-neutral-950 text-transparent">
+                Comprehensive General Practitioner Services
+              </p>
+              <p className="mt-4 text-base text-neutral-600">
+                High-quality primary healthcare services providing personalized
+                care for patients of all ages, from routine check-ups to chronic
+                disease management and preventive medicine.
+              </p>
+            </article>
+          </FadeIn>
+
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
+              <h3>
+                <Link href="/services/dental">
+                  <span className="absolute inset-0 rounded-3xl" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
+                    <Tooth size={32} />
+                  </div>
+                </Link>
+              </h3>
+              <p className="mt-6 flex gap-x-2 text-sm font-medium text-neutral-950">
+                Dental
+              </p>
+              <p className="mt-6 bg-gradient-to-r from-neutral-950 to-neutral-700 bg-clip-text font-display text-2xl font-semibold text-neutral-950 text-transparent">
+                Premium Dental Care for Your Perfect Smile
+              </p>
+              <p className="mt-4 text-base text-neutral-600">
+                State-of-the-art dental facility offering comprehensive dental
+                services from routine care to advanced cosmetic and surgical
+                procedures, available 24/7 for emergencies.
+              </p>
+            </article>
+          </FadeIn>
+
+          <FadeIn className="flex">
+            <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
+              <h3>
+                <Link href="/services/aesthetics">
+                  <span className="absolute inset-0 rounded-3xl" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
+                    <Syringe size={32} />
+                  </div>
+                </Link>
+              </h3>
+              <p className="mt-6 flex gap-x-2 text-sm font-medium text-neutral-950">
+                Aesthetics
+              </p>
+              <p className="mt-6 bg-gradient-to-r from-neutral-950 to-neutral-700 bg-clip-text font-display text-2xl font-semibold text-neutral-950 text-transparent">
+                Advanced Aesthetics Treatments
+              </p>
+              <p className="mt-4 text-base text-neutral-600">
+                Prisma Clinic Marbella offers premium aesthetic treatments with
+                cutting-edge technology and techniques to help you look and feel
+                your best.
+              </p>
+            </article>
+          </FadeIn>
         </FadeInStagger>
       </Container>
-    </>
+    </div>
   )
 }
 
@@ -123,49 +164,46 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="About Me"
-        title="From Prison to Purpose: Viktor Simon's Journey"
-        className="mt-24 sm:mt-32 lg:mt-40"
+        eyebrow="Our Services"
+        title="Comprehensive Dental Care for the Whole Family"
+        className="mt-24 font-display sm:mt-32"
       >
-        <p>
-          Helping You Overcome Addiction, Depression, and Self-Doubt to Build a
-          Stronger, Healthier You Viktor Simon, once an ex-convict and addict,
-          transformed his life to become a fitness and wellness coach. His
-          journey inspires those struggling with life`s toughest battles to
-          reclaim their strength and rise above their circumstances.
+        <p className="sm:text-md text-sm text-neutral-600">
+          At Prisma Clinic Marbella, we offer a wide range of services to meet
+          all your dental needs. From preventive care to cosmetic dentistry, our
+          experienced team is committed to providing personalized treatment in a
+          comfortable and welcoming environment.
         </p>
       </SectionIntro>
-      <Container className="mt-16">
+      <Container className="mt-16 font-display">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
               <StylizedImage
-                src={RobinMain}
+                src={Dentists}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
-                shape={1}
+                shape={0}
               />
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Stoic-Inspired Workout Plans">
-              Individually crafted workout routines that not only build physical
-              strength but also foster discipline, resilience, and mental
-              clarity.
+            <ListItem title="General Dentistry">
+              Comprehensive check-ups, cleanings, fillings, and preventive care
+              to maintain your oral health and prevent future problems.
             </ListItem>
-            <ListItem title="One-on-One Stoic Coaching">
-              Personalized sessions focused on applying Stoic principles to
-              overcome challenges, cultivate inner strength, and stay aligned
-              with your goals.
+            <ListItem title="Cosmetic Dentistry">
+              Transform your smile with our range of cosmetic services including
+              teeth whitening, veneers, bonding, and smile makeovers.
             </ListItem>
-            <ListItem title="Mindful Nutrition Guidance">
-              Nutrition plans designed to nourish both body and mind, promoting
-              balanced living and complementing your transformative journey.
+            <ListItem title="Restorative Dentistry">
+              Restore damaged or missing teeth with crowns, bridges, implants,
+              and dentures to regain full function and confidence.
             </ListItem>
-            <ListItem title="Growth Tracking and Reflection">
-              Regular progress assessments paired with guided reflections to
-              ensure accountability, celebrate achievements, and stay grounded
-              in your purpose.
+            <ListItem title="Pediatric Dental Care">
+              Specialized gentle care for children, creating positive dental
+              experiences and establishing good oral health habits from an early
+              age.
             </ListItem>
           </List>
         </div>
@@ -176,7 +214,7 @@ function Services() {
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Prisma Clinic Marbella offers comprehensive dental care with a focus on patient comfort and beautiful results.',
 }
 
 export default async function Home() {
@@ -184,35 +222,38 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-16">
+      <Container className="mt-16 font-display">
         <div className="flex flex-col gap-[140px] lg:flex-row">
-          <div className="mt-32 lg:mt-32">
-            <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-7xl">
-              Dental Arts Clinic
+          <div className="mt-32">
+            <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
+              Prisma Clinic Marbella
             </h1>
             <p className="mt-6 text-lg text-neutral-500">
-              At Dental Arts Clinic, we provide exceptional dental care with
-              compassion and precision. Our team of experienced professionals
-              uses advanced technology to ensure your comfort while delivering
-              comprehensive treatments for all your oral health needs. From
-              routine cleanings to cosmetic procedures, we are committed to
-              giving you a healthy, beautiful smile.
+              At Prisma Clinic Marbella, we provide exceptional dental and
+              aesthetics care with compassion and precision. Our team of
+              experienced professionals uses advanced technology to ensure your
+              comfort while delivering comprehensive treatments for all your
+              oral health needs. From routine cleanings to cosmetic procedures,
+              we are committed to giving you a healthy, beautiful smile.
             </p>
-            <p className="mt-6 text-lg text-neutral-500">
-              Join us beyond workouts and meals—forge mental resilience and true
-              strength in a united, empowering community.
-            </p>
-            {/* <div className="mt-8 lg:hidden">
+
+            <div className="mt-8 flex flex-col items-center gap-8 sm:flex-row">
               <CalendlyButton />
-            </div> */}
+              <SmoothScrollLink
+                targetId="services"
+                className="cursor-pointer rounded-md border border-neutral-200 px-4 py-3 text-sm font-medium text-neutral-700 shadow-sm hover:bg-neutral-50 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:outline-none"
+              >
+                View our services
+              </SmoothScrollLink>
+            </div>
           </div>
           <div className="flex justify-center lg:w-1/3">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[38rem]">
               <StylizedImage
-                src={RobinMain}
+                src={Implants}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
-                shape={3}
+                shape={0}
               />
             </FadeIn>
           </div>
@@ -221,15 +262,15 @@ export default async function Home() {
 
       <Clients />
 
-      <CaseStudies caseStudies={caseStudies} />
+      <ServiceCategory />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Bright Smiles', logo: logoPhobiaDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+        The team at Prisma Clinic Marbella made my dental visit so comfortable
+        and stress-free. Their gentle approach and attention to detail
+        completely changed my perspective on dental care.
       </Testimonial>
 
       <Services />

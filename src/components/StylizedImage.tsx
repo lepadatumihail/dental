@@ -36,12 +36,7 @@ export function StylizedImage({
   const { width, height, path } = shapes[shape]
 
   return (
-    <div
-      className={clsx(
-        className,
-        'relative flex aspect-719/680 w-full grayscale',
-      )}
-    >
+    <div className={clsx(className, 'relative flex aspect-719/680 w-full')}>
       <svg
         viewBox={`0 0 ${width} ${height}`}
         fill="none"

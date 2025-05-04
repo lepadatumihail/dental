@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import Image from 'next/image'
 
 const navigation = [
   {
@@ -37,33 +38,33 @@ const navigation = [
   },
 ]
 
-function Navigation() {
-  return (
-    <nav>
-      <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-        {navigation.map((section, sectionIndex) => (
-          <li key={sectionIndex}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-              {section.title}
-            </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
-              {section.links.map((link, linkIndex) => (
-                <li key={linkIndex} className="mt-4">
-                  <Link
-                    href={link.href}
-                    className="transition hover:text-neutral-950"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  )
-}
+// function Navigation() {
+//   return (
+//     <nav>
+//       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+//         {navigation.map((section, sectionIndex) => (
+//           <li key={sectionIndex}>
+//             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+//               {section.title}
+//             </div>
+//             <ul role="list" className="mt-4 text-sm text-neutral-700">
+//               {section.links.map((link, linkIndex) => (
+//                 <li key={linkIndex} className="mt-4">
+//                   <Link
+//                     href={link.href}
+//                     className="transition hover:text-neutral-950"
+//                   >
+//                     {link.title}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </li>
+//         ))}
+//       </ul>
+//     </nav>
+//   )
+// }
 
 function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -112,20 +113,31 @@ function NewsletterForm() {
 
 export function Footer() {
   return (
-    <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
+    <Container as="footer" className="mt-12 w-full">
       <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <Navigation />
-          <div className="flex lg:justify-end">
-            <NewsletterForm />
-          </div>
+        <div className="mt-6 overflow-hidden rounded-xl">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.0238356449193!2d-4.889272488857869!3d36.50901447991112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd73218056e8e6dd%3A0x2df2a27c598cc9fc!2sAv.%20de%20Nabeul%2C%2014%2C%2029601%20Marbella%2C%20M%C3%A1laga%2C%20Spain!5e0!3m2!1sen!2sus!4v1655308001000!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Prisma Clinic Marbella Location Map"
+          />
         </div>
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Image
+              src="/logo.jpeg"
+              alt="Prisma Clinic Marbella Logo"
+              width={150}
+              height={150}
+            />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Prisma Clinic Marbella {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

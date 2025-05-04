@@ -1,4 +1,4 @@
-import { type Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -14,18 +14,18 @@ import { loadArticles } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    'Stay up-to-date with the latest health news, treatments, and advice from our experienced medical team.',
 }
 
 export default async function Blog() {
-  let articles = await loadArticles()
+  const articles = await loadArticles()
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="Blog" title="Health News & Clinical Updates">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          Stay informed with the latest health information, treatment
+          innovations, and medical advice from our expert clinical team.
         </p>
       </PageIntro>
 

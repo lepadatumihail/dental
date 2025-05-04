@@ -74,19 +74,31 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
-          />
-          <Image
-            src="/logo.jpeg"
-            alt="Dental Arts Clinic"
-            width={200}
-            height={100}
-          />
+          <div className="hidden sm:block">
+            <Image
+              src="/logo.jpeg"
+              alt="Prisma Clinic Marbella"
+              width={200}
+              height={100}
+            />
+          </div>
+          <div className="sm:hidden">
+            <Image
+              src="/logo-small.png"
+              alt="Prisma Clinic Marbella"
+              width={30}
+              height={30}
+            />
+          </div>
         </Link>
-        <div className="flex items-center gap-x-8">
+        <div className="flex items-center gap-x-4">
+          <Button
+            href="/services/emergency"
+            className="border border-red-400 text-red-500"
+            invert
+          >
+            Emergency 24/7
+          </Button>
           <Button href="/contact" invert={invert}>
             Contact us
           </Button>
@@ -149,24 +161,31 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
-        <NavigationItem href="/about">About Us</NavigationItem>
+        <NavigationItem href="/services">Services</NavigationItem>
+        <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/services/emergency">
+          <span className="flex items-center">
+            <span>Emergency Care</span>
+            <span className="ml-4 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold tracking-wider uppercase">
+              24/7
+            </span>
+          </span>
+        </NavigationItem>
+        <NavigationItem href="/contact">Contact</NavigationItem>
       </NavigationRow>
     </nav>
   )
 }
 
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
-  let panelId = useId()
-  let [expanded, setExpanded] = useState(false)
-  let openRef = useRef<React.ElementRef<'button'>>(null)
-  let closeRef = useRef<React.ElementRef<'button'>>(null)
-  let navRef = useRef<React.ElementRef<'div'>>(null)
-  let shouldReduceMotion = useReducedMotion()
+  const panelId = useId()
+  const [expanded, setExpanded] = useState(false)
+  const openRef = useRef<React.ElementRef<'button'>>(null)
+  const closeRef = useRef<React.ElementRef<'button'>>(null)
+  const navRef = useRef<React.ElementRef<'div'>>(null)
+  const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
     function onClick(event: MouseEvent) {
@@ -238,9 +257,6 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
                   <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
-                    </h2>
                     <Offices
                       invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
@@ -292,8 +308,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 }
 
 export function RootLayout({ children }: { children: React.ReactNode }) {
-  let pathname = usePathname()
-  let [logoHovered, setLogoHovered] = useState(false)
+  const pathname = usePathname()
+  const [logoHovered, setLogoHovered] = useState(false)
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
