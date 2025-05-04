@@ -33,7 +33,8 @@ export async function submitAppointmentRequest(
     // In server actions, we need an absolute URL, not a relative one
     const baseUrl = process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : process.env.NEXT_PUBLIC_BASE_URL || 'http://www.prismaclinicmarbella.es'
+      : process.env.NEXT_PUBLIC_BASE_URL ||
+        'https://www.prismaclinicmarbella.es'
 
     // Log the base URL for debugging
 
