@@ -12,16 +12,42 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { WhatsappLogo } from '@phosphor-icons/react'
 import Image from 'next/image'
+import LanguageSelector from '@/components/LanguageSelector'
+
+import LogoSmall from '../../public/logo-small.png'
+import LogoLight from '../../public/logo-light.png'
+import LogoDark from '../../public/logo-dark.png'
+
+type LayoutTranslations = {
+  header: {
+    home: string
+    emergency: string
+    contact: string
+    toggleNavigation: string
+  }
+  navigation: {
+    services: string
+    blog: string
+    emergency: {
+      title: string
+      badge: string
+    }
+    contact: string
+  }
+  footer: {
+    followUs: string
+  }
+}
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -64,19 +90,41 @@ function Header({
     logoHovered: false,
     setLogoHovered: () => {},
   }
+  const t = useTranslations('layout')
+
+  const translations: LayoutTranslations = {
+    header: {
+      home: t('header.home'),
+      emergency: t('header.emergency'),
+      contact: t('header.contact'),
+      toggleNavigation: t('header.toggleNavigation'),
+    },
+    navigation: {
+      services: t('navigation.services'),
+      blog: t('navigation.blog'),
+      emergency: {
+        title: t('navigation.emergency.title'),
+        badge: t('navigation.emergency.badge'),
+      },
+      contact: t('navigation.contact'),
+    },
+    footer: {
+      followUs: t('footer.followUs'),
+    },
+  }
 
   return (
     <Container>
       <div className="flex items-center justify-between">
         <Link
           href="/"
-          aria-label="Home"
+          aria-label={translations.header.home}
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
           <div className="hidden sm:block">
             <Image
-              src="/logo.jpeg"
+              src={invert ? LogoLight : LogoDark}
               alt="Prisma Clinic Marbella"
               width={200}
               height={100}
@@ -84,24 +132,27 @@ function Header({
           </div>
           <div className="sm:hidden">
             <Image
-              src="/logo-small.png"
+              src={LogoDark}
               alt="Prisma Clinic Marbella"
-              width={30}
-              height={30}
+              width={80}
+              height={80}
             />
           </div>
         </Link>
         <div className="flex items-center gap-x-4">
+          <LanguageSelector />
           <Button
             href="/services/emergency"
             className="border border-red-400 text-red-500"
             invert
           >
-            Emergency 24/7
+            {translations.header.emergency}
           </Button>
-          <Button href="/contact" invert={invert}>
-            Contact us
-          </Button>
+          <div className="hidden sm:block">
+            <Button href="/contact" invert={invert}>
+              {translations.header.contact}
+            </Button>
+          </div>
           <button
             ref={toggleRef}
             type="button"
@@ -112,7 +163,7 @@ function Header({
               'group -m-2.5 rounded-full p-2.5 transition',
               invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
             )}
-            aria-label="Toggle navigation"
+            aria-label={translations.header.toggleNavigation}
           >
             <Icon
               className={clsx(
@@ -158,22 +209,51 @@ function NavigationItem({
 }
 
 function Navigation() {
+  const t = useTranslations('layout')
+
+  const translations: LayoutTranslations = {
+    header: {
+      home: t('header.home'),
+      emergency: t('header.emergency'),
+      contact: t('header.contact'),
+      toggleNavigation: t('header.toggleNavigation'),
+    },
+    navigation: {
+      services: t('navigation.services'),
+      blog: t('navigation.blog'),
+      emergency: {
+        title: t('navigation.emergency.title'),
+        badge: t('navigation.emergency.badge'),
+      },
+      contact: t('navigation.contact'),
+    },
+    footer: {
+      followUs: t('footer.followUs'),
+    },
+  }
+
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/services">Services</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
+        <NavigationItem href="/services">
+          {translations.navigation.services}
+        </NavigationItem>
+        <NavigationItem href="/blog">
+          {translations.navigation.blog}
+        </NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/services/emergency">
           <span className="flex items-center">
-            <span>Emergency Care</span>
+            <span>{translations.navigation.emergency.title}</span>
             <span className="ml-4 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold tracking-wider uppercase">
-              24/7
+              {translations.navigation.emergency.badge}
             </span>
           </span>
         </NavigationItem>
-        <NavigationItem href="/contact">Contact</NavigationItem>
+        <NavigationItem href="/contact">
+          {translations.navigation.contact}
+        </NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -186,6 +266,29 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
   const closeRef = useRef<React.ElementRef<'button'>>(null)
   const navRef = useRef<React.ElementRef<'div'>>(null)
   const shouldReduceMotion = useReducedMotion()
+  const [isMounted, setIsMounted] = useState(false)
+  const t = useTranslations('layout')
+
+  const translations: LayoutTranslations = {
+    header: {
+      home: t('header.home'),
+      emergency: t('header.emergency'),
+      contact: t('header.contact'),
+      toggleNavigation: t('header.toggleNavigation'),
+    },
+    navigation: {
+      services: t('navigation.services'),
+      blog: t('navigation.blog'),
+      emergency: {
+        title: t('navigation.emergency.title'),
+        badge: t('navigation.emergency.badge'),
+      },
+      contact: t('navigation.contact'),
+    },
+    footer: {
+      followUs: t('footer.followUs'),
+    },
+  }
 
   useEffect(() => {
     function onClick(event: MouseEvent) {
@@ -204,12 +307,20 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return null
+  }
+
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
           className="absolute top-2 right-0 left-0 z-40 pt-14"
-          aria-hidden={expanded ? 'true' : undefined}
+          aria-hidden={expanded ? 'true' : false}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
         >
@@ -264,7 +375,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
-                      Follow us
+                      {translations.footer.followUs}
                     </h2>
                     <SocialMedia className="mt-6" invert />
                   </div>

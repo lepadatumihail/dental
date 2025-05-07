@@ -2,8 +2,61 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Phone, FirstAid, Clock } from '@phosphor-icons/react/dist/ssr'
+import { useTranslations } from 'next-intl'
+
+type EmergencyServiceBannerTranslations = {
+  title: string
+  description: string
+  conditions: {
+    toothache: string
+    broken: string
+    lost: string
+    trauma: string
+  }
+  learnMore: string
+  emergencyHotline: string
+  availability: {
+    title: string
+    subtitle: string
+  }
+  contact: {
+    title: string
+    number: string
+  }
+  footer: {
+    label: string
+    title: string
+  }
+}
 
 export function EmergencyServiceBanner() {
+  const t = useTranslations('emergency')
+
+  const translations: EmergencyServiceBannerTranslations = {
+    title: t('title'),
+    description: t('description'),
+    conditions: {
+      toothache: t('conditions.toothache'),
+      broken: t('conditions.broken'),
+      lost: t('conditions.lost'),
+      trauma: t('conditions.trauma'),
+    },
+    learnMore: t('learnMore'),
+    emergencyHotline: t('emergencyHotline'),
+    availability: {
+      title: t('availability.title'),
+      subtitle: t('availability.subtitle'),
+    },
+    contact: {
+      title: t('contact.title'),
+      number: t('contact.number'),
+    },
+    footer: {
+      label: t('footer.label'),
+      title: t('footer.title'),
+    },
+  }
+
   return (
     <Container className="mt-12">
       <FadeIn>
@@ -13,23 +66,19 @@ export function EmergencyServiceBanner() {
               <div className="mb-4 flex items-center gap-3">
                 <FirstAid size={32} weight="duotone" className="text-white" />
                 <h2 className="font-display text-3xl font-medium tracking-tight text-white">
-                  24/7 Emergency Dental Care
+                  {translations.title}
                 </h2>
               </div>
-              <p className="mb-6 text-white/80">
-                Dental emergencies don&apos;t wait for business hours. Our team
-                of specialists is available around the clock to provide
-                immediate care when you need it most.
-              </p>
+              <p className="mb-6 text-white/80">{translations.description}</p>
               <ul className="mb-8 list-disc space-y-1 pl-5 text-white/80">
-                <li>Severe toothache or dental pain</li>
-                <li>Broken or chipped teeth</li>
-                <li>Lost crowns or fillings</li>
-                <li>Dental trauma from accidents</li>
+                <li>{translations.conditions.toothache}</li>
+                <li>{translations.conditions.broken}</li>
+                <li>{translations.conditions.lost}</li>
+                <li>{translations.conditions.trauma}</li>
               </ul>
               <div className="flex flex-wrap gap-4">
                 <Button href="/services/emergency" invert>
-                  Learn More
+                  {translations.learnMore}
                 </Button>
                 <Button
                   href="tel:+34673290786"
@@ -38,7 +87,7 @@ export function EmergencyServiceBanner() {
                 >
                   <div className="flex items-center gap-2">
                     <Phone className="mr-2" size={20} />
-                    Emergency Hotline
+                    {translations.emergencyHotline}
                   </div>
                 </Button>
               </div>
@@ -50,10 +99,10 @@ export function EmergencyServiceBanner() {
                     <Clock size={24} className="text-white/80" />
                     <div>
                       <h3 className="font-semibold text-white">
-                        Available 24/7
+                        {translations.availability.title}
                       </h3>
                       <p className="text-sm text-white/70">
-                        Including weekends and holidays
+                        {translations.availability.subtitle}
                       </p>
                     </div>
                   </div>
@@ -61,18 +110,20 @@ export function EmergencyServiceBanner() {
                     <Phone size={24} className="text-white/80" />
                     <div>
                       <h3 className="font-semibold text-white">
-                        Direct Hotline
+                        {translations.contact.title}
                       </h3>
-                      <p className="text-sm text-white/70">+34 673 290 786</p>
+                      <p className="text-sm text-white/70">
+                        {translations.contact.number}
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-auto">
                   <p className="text-sm font-medium tracking-wider text-white/60 uppercase">
-                    Emergency Dental Care
+                    {translations.footer.label}
                   </p>
                   <p className="text-2xl font-bold text-white">
-                    Marbella&apos;s Premier 24/7 Service
+                    {translations.footer.title}
                   </p>
                 </div>
               </div>

@@ -2,9 +2,10 @@ import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 import Image from 'next/image'
+
+import Logo from '../../public/logo-dark.png'
 
 const navigation = [
   {
@@ -130,7 +131,7 @@ export function Footer() {
         <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <Image
-              src="/logo.jpeg"
+              src={Logo}
               alt="Prisma Clinic Marbella Logo"
               width={150}
               height={150}

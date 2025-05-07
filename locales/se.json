@@ -1,0 +1,402 @@
+{
+  "home": {
+    "title": "Prisma Clinic Marbella",
+    "description": "På Prisma Clinic Marbella erbjuder vi exceptionell tand- och estetisk vård med omtanke och precision. Vårt team av erfarna specialister använder avancerad teknik för att säkerställa din komfort samtidigt som vi levererar omfattande behandlingar för alla dina munhälsobehov. Från rutinrengöringar till kosmetiska ingrepp är vi engagerade i att ge dig ett friskt och vackert leende.",
+    "viewServices": "Se våra tjänster",
+    "clients": {
+      "title": "Med den senaste teknologin"
+    },
+    "services": {
+      "title": "Våra tjänster",
+      "description": "Vi använder banbrytande tand- och estetiska teknologier för att erbjuda vård av högsta kvalitet. Vår avancerade utrustning säkerställer precision och komfort, vilket förbättrar både ditt leende och ditt ansiktes utseende med exceptionella resultat.",
+      "categories": {
+        "general": {
+          "title": "Allmänläkare",
+          "heading": "Omfattande allmänläkartjänster",
+          "description": "Högkvalitativa primärvårdstjänster som erbjuder personlig vård för patienter i alla åldrar, från rutinundersökningar till hantering av kroniska sjukdomar och förebyggande medicin."
+        },
+        "dental": {
+          "title": "Tandvård",
+          "heading": "Förstklassig tandvård för ditt perfekta leende",
+          "description": "Modern tandvårdsklinik som erbjuder heltäckande tandvårdstjänster, från rutinvård till avancerade kosmetiska och kirurgiska ingrepp, tillgängliga dygnet runt för akuta situationer."
+        },
+        "aesthetics": {
+          "title": "Estetik",
+          "heading": "Avancerade estetiska behandlingar",
+          "description": "Prisma Clinic Marbella erbjuder premium estetiska behandlingar med banbrytande teknik och metoder för att hjälpa dig att se ut och må som ditt bästa jag."
+        }
+      },
+      "comprehensive": {
+        "eyebrow": "Våra tjänster",
+        "title": "Omfattande tandvård för hela familjen",
+        "description": "På Prisma Clinic Marbella erbjuder vi ett brett utbud av tjänster för att tillgodose alla dina tandvårdsbehov. Från förebyggande vård till kosmetisk tandvård är vårt erfarna team engagerat i att ge personligt anpassad behandling i en bekväm och välkomnande miljö.",
+        "list": {
+          "general": {
+            "title": "Allmäntandvård",
+            "description": "Omfattande undersökningar, rengöringar, fyllningar och förebyggande vård för att bevara din munhälsa och förhindra framtida problem."
+          },
+          "cosmetic": {
+            "title": "Kosmetisk tandvård",
+            "description": "Förvandla ditt leende med vårt utbud av kosmetiska tjänster som tandblekning, fasader, bonding och leendeförvandlingar."
+          },
+          "restorative": {
+            "title": "Rekonstruktiv tandvård",
+            "description": "Återställ skadade eller saknade tänder med kronor, broar, implantat och proteser för att återfå full funktion och självförtroende."
+          },
+          "pediatric": {
+            "title": "Barn- och ungdomstandvård",
+            "description": "Specialiserad skonsam vård för barn som skapar positiva upplevelser och etablerar goda munhälsovanor från tidig ålder."
+          }
+        }
+      }
+    },
+    "testimonial": {
+      "text": "Teamet på Prisma Clinic Marbella gjorde mitt tandläkarbesök så bekvämt och stressfritt. Deras varsamma tillvägagångssätt och noggrannhet förändrade helt min syn på tandvård."
+    }
+  },
+  "emergency": {
+    "title": "Akut tandvård 24/7",
+    "description": "Tandvårdsnödsituationer väntar inte på kontorstid. Vårt specialistteam finns tillgängligt dygnet runt för att ge omedelbar vård när du behöver det som mest.",
+    "conditions": {
+      "toothache": "Svår tandvärk",
+      "broken": "Spruckna eller flisade tänder",
+      "lost": "Förlorade kronor eller fyllningar",
+      "trauma": "Tandtrauma vid olyckor"
+    },
+    "learnMore": "Läs mer",
+    "emergencyHotline": "Akutlinje",
+    "availability": {
+      "title": "Tillgängligt 24/7",
+      "subtitle": "Även helger och helgdagar"
+    },
+    "contact": {
+      "title": "Direktlinje",
+      "number": "+34 673 290 786"
+    },
+    "footer": {
+      "label": "Akut tandvård",
+      "title": "Marbellas ledande 24/7-service"
+    }
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "description": "Vi är här för att hjälpa dig med alla dina tand- och estetiska behandlingsbehov. Kontakta Prisma Clinic Marbella för att boka din tid eller ställa frågor.",
+    "location": {
+      "title": "Vår plats"
+    }
+  },
+  "layout": {
+    "header": {
+      "home": "Hem",
+      "emergency": "Akut 24/7",
+      "contact": "Kontakta oss",
+      "toggleNavigation": "Växla navigation"
+    },
+    "navigation": {
+      "services": "Tjänster",
+      "blog": "Blogg",
+      "emergency": {
+        "title": "Akutvård",
+        "badge": "24/7"
+      },
+      "contact": "Kontakt"
+    },
+    "footer": {
+      "followUs": "Följ oss"
+    },
+    "services": {
+      "page": {
+        "title": "Våra tjänster",
+        "subtitle": "Omfattande hälsolösningar i Marbella",
+        "description": "Prisma Clinic Marbella erbjuder ett brett utbud av premium medicinska och tandvårdstjänster, inklusive akutvård dygnet runt. Vårt specialistteam är dedikerat till att ge exceptionell vård med hjälp av den senaste tekniken.",
+        "learnMore": "Läs mer",
+        "testimonial": {
+          "content": "Teamet på Prisma Clinic Marbella förvandlade min tandvårdsupplevelse. Deras professionella arbetssätt och toppmoderna teknik gjorde min behandling både bekväm och effektiv. Jag kunde inte vara mer nöjd med resultatet."
+        }
+      },
+      "dental": {
+        "title": "Premium tandvårdstjänster",
+        "client": "Tandvård",
+        "service": "Heltäckande tjänster",
+        "testimonial": {
+          "author": "Maria L.",
+          "role": "Patient från Marbella",
+          "content": "Tandvården på Prisma Clinic är enastående. Från regelbundna kontroller till mitt senaste kosmetiska ingrepp har teamet alltid levererat professionell och bekväm behandling."
+        }
+      },
+      "aesthetics": {
+        "title": "Avancerade estetiska behandlingar",
+        "client": "Estetik",
+        "service": "Skönhet & föryngring",
+        "summary": [
+          "Vårt estetiska team är specialiserat på icke-kirurgiska föryngringsbehandlingar som Botox, dermala fillers, läppförstoring och andra ansiktsesthetic ingrepp.",
+          "Våra kvalificerade specialister skapar naturliga resultat som framhäver dina drag samtidigt som de bevarar ansiktets harmoni, och hjälper dig att uppnå ett fräscht, ungdomligt utseende."
+        ],
+        "testimonial": {
+          "author": "Sofia R.",
+          "role": "Patient från Marbella",
+          "content": "De estetiska behandlingarna på Prisma Clinic gav exakt det jag ville ha – subtila förbättringar som ser helt naturliga ut. Teamets expertis och noggrannhet är enastående."
+        }
+      },
+      "generalMedicine": {
+        "title": "Omfattande medicinsk vård",
+        "client": "Allmänläkare",
+        "service": "Primärvård",
+        "summary": [
+          "Våra allmänläkartjänster erbjuder heltäckande primärvård inklusive förebyggande medicin, hantering av kroniska sjukdomar, diagnostiska tjänster och behandling av akuta tillstånd.",
+          "Våra erfarna läkare tar sig tid att förstå dina hälsobekymmer och erbjuder personligt anpassad vård som tar itu med dina specifika behov, för att säkerställa ditt totala välbefinnande."
+        ],
+        "testimonial": {
+          "author": "Robert P.",
+          "role": "Patient från Marbella",
+          "content": "Att ha tillgång till pålitlig primärvård på Prisma Clinic har gjort det mycket lättare att hantera min hälsa. Den personliga uppmärksamheten och det omfattande tillvägagångssättet är precis vad jag behövde."
+        }
+      }
+    }
+  },
+  "office": {
+    "name": "Prisma Clinic Marbella",
+    "address": "Av. de Nabeul 14, 29601 Marbella, Málaga",
+    "country": "Spanien",
+    "phone": "Telefon",
+    "phoneNumber": "+34 951 123 456",
+    "openingHours": "Öppettider",
+    "weekdays": "Måndag–Fredag: 09:00–19:00",
+    "saturday": "Lördag: 10:00–14:00",
+    "sunday": "Söndag: Stängt"
+  },
+  "emergencyPage": {
+    "hero": {
+      "title": "Akut tandvård 24/7",
+      "description": "Omedelbar tandvård när du behöver det som mest. Tillgängligt dygnet runt, året om i Marbella.",
+      "emergencyHotline": "Akutlinje",
+      "whatsapp": "WhatsApp"
+    },
+    "services": {
+      "title": "Akuta tjänster",
+      "description": "Tandvårdsnödsituationer kan inträffa när som helst. På Prisma Clinic Marbella erbjuder vi omedelbar vård för alla tandvårdssituationer, 24 timmar om dygnet, 7 dagar i veckan. Vårt specialistteam är alltid redo att ge snabb behandling för att lindra din smärta och hantera akuta tandproblem.",
+      "stats": {
+        "availability": {
+          "value": "24/7",
+          "label": "Alltid tillgängliga"
+        },
+        "response": {
+          "value": "15 min",
+          "label": "Responstid"
+        },
+        "treatment": {
+          "value": "100%",
+          "label": "Behandling samma dag"
+        },
+        "insurance": {
+          "value": "Alla",
+          "label": "Godkända försäkringar"
+        }
+      }
+    },
+    "conditions": {
+      "title": "Akuta tandproblem",
+      "description": "Vår akuta tandvård täcker ett brett spektrum av brådskande tillstånd:",
+      "items": {
+        "toothache": {
+          "title": "Svår tandvärk",
+          "description": "Omedelbar smärtlindring och behandling för intensiv tandvärk"
+        },
+        "broken": {
+          "title": "Spruckna eller flisade tänder",
+          "description": "Snabb återställning av skadade tänder för att förhindra ytterligare komplikationer"
+        },
+        "knockedOut": {
+          "title": "Utrivna tänder",
+          "description": "Akut reimplantation och behandling för avulsiva tänder"
+        },
+        "lostRestorations": {
+          "title": "Förlorade kronor eller fyllningar",
+          "description": "Omedelbar ersättning av förlorade tandrestaureringar"
+        },
+        "abscess": {
+          "title": "Tandabscess",
+          "description": "Brådskande behandling av smärtsamma tandinfektioner"
+        },
+        "trauma": {
+          "title": "Tandtrauma",
+          "description": "Expertvård för tandskador och skador på tandköttet vid olyckor"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Varför välja vår akuta tandvård",
+      "features": {
+        "availability": {
+          "title": "Tillgängligt 24/7",
+          "description": "Vårt team finns tillgängligt dygnet runt, även helger och helgdagar"
+        },
+        "sameDay": {
+          "title": "Behandling samma dag",
+          "description": "Omedelbara tider för alla akutfall"
+        },
+        "location": {
+          "title": "Centralt beläget i Marbella",
+          "description": "Enklare att nå kliniken i centrala Marbella"
+        },
+        "payment": {
+          "title": "Flera betalningsalternativ",
+          "description": "Vi accepterar alla större försäkringsplaner och erbjuder flexibla betalningsalternativ"
+        }
+      }
+    },
+    "howWorks": {
+      "title": "Så fungerar vår akuta service",
+      "steps": {
+        "call": {
+          "title": "Ring vår linje",
+          "description": "Kontakta vår akuta linje 24/7 på +34 673 290 786 för att tala med vårt team"
+        },
+        "describe": {
+          "title": "Beskriv nödsituationen",
+          "description": "Våra specialister bedömer din situation och ger omedelbara råd"
+        },
+        "come": {
+          "title": "Kom till vår klinik",
+          "description": "Vi förbereder för ditt besök och ger omedelbar behandling när du anländer"
+        }
+      }
+    },
+    "testimonial": {
+      "quote": "Jag hade svår tandvärk kl. 02:00 och visste inte vad jag skulle göra. Jag ringde Prisma Clinic Marbellas akuta linje och fick komma in direkt. Smärtan försvann inom en timme och jag fick enastående vård. Jag är så tacksam att de finns tillgängliga dygnet runt!"
+    },
+    "callToAction": {
+      "title": "Behöver du akut tandvård?",
+      "description": "Vänta inte tills det är för sent. Kontakta vår akuta tandvård i Marbella nu.",
+      "callNow": "Ring nu: +34 673 290 786",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "common": {
+    "calendly": {
+      "button": "Boka en gratis konsultation"
+    }
+  },
+  "generalMedicine": {
+    "hero": {
+      "title": "Prisma Clinic Marbella Allmänmedicin",
+      "description": "Modern medicinsk anläggning som erbjuder omfattande primärvårdstjänster från rutinundersökningar till hantering av kroniska sjukdomar."
+    },
+    "services": {
+      "title": "Våra tjänster",
+      "description": "Våra moderna lokaler och erfarna medicinska team säkerställer att patienter får vård av högsta kvalitet för alla deras hälsobehov. Vi är stolta över att erbjuda personligt anpassade behandlingsplaner skräddarsydda efter varje patients specifika krav."
+    },
+    "primaryCare": {
+      "title": "Primärvård",
+      "description": "Omfattande vård för dig och din familj:",
+      "items": {
+        "checkups": {
+          "title": "Rutinundersökningar",
+          "description": "Omfattande hälsokontroller för att övervaka din allmänna hälsa"
+        },
+        "assessments": {
+          "title": "Hälsobedömningar",
+          "description": "Grundliga utvärderingar av din nuvarande hälsostatus och riskfaktorer"
+        },
+        "travel": {
+          "title": "Resemedicin",
+          "description": "konsultationer före resa, vaccinationer och hälso rådgivning"
+        }
+      }
+    },
+    "chronicDisease": {
+      "title": "Hantering av kroniska sjukdomar",
+      "description": "Expertvård för pågående hälsotillstånd:",
+      "items": {
+        "diabetes": {
+          "title": "Diabetesvård",
+          "description": "Omfattande hantering av alla typer av diabetes"
+        },
+        "hypertension": {
+          "title": "Blodtryckskontroll",
+          "description": "Övervakning och hantering av högt blodtryck"
+        },
+        "asthma": {
+          "title": "Astma & KOL",
+          "description": "Hantering av respiratoriska tillstånd och behandlingsplaner"
+        }
+      }
+    },
+    "specialized": {
+      "title": "Specialiserade tjänster",
+      "description": "Ytterligare vård för specifika hälsobehov:",
+      "items": {
+        "surgical": {
+          "title": "Mindre kirurgiska ingrepp",
+          "description": "Procedurer på mottagningen, inklusive avlägsnande av födelsemärken och hudbiopsier"
+        },
+        "mental": {
+          "title": "Stöd för mental hälsa",
+          "description": "Utvärdering och hantering av ångest, depression och stress"
+        },
+        "gender": {
+          "title": "Kvinnors & mäns hälsa",
+          "description": "Könsspecifika hälsoundersökningar och konsultationer"
+        }
+      }
+    },
+    "preventive": {
+      "title": "Förebyggande vård",
+      "description": "Behåll din hälsa med våra förebyggande tjänster:",
+      "items": {
+        "vaccination": {
+          "title": "Vaccination",
+          "description": "Fullt utbud av immuniseringar för alla åldersgrupper"
+        },
+        "screenings": {
+          "title": "Hälsokontroller",
+          "description": "Tidiga detektionstester för olika tillstånd"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Varför välja Prisma Clinic Marbella?",
+      "features": {
+        "expert": {
+          "title": "Expertteam",
+          "description": "Högt kvalificerade läkare och vårdpersonal"
+        },
+        "facility": {
+          "title": "Modern anläggning",
+          "description": "Senaste medicinska teknologin och utrustningen"
+        },
+        "personalized": {
+          "title": "Personlig vård",
+          "description": "Anpassade behandlingsplaner för varje patient"
+        },
+        "comfort": {
+          "title": "Bekväm miljö",
+          "description": "Avkopplande atmosfär för att minska medicinsk ångest"
+        },
+        "scheduling": {
+          "title": "Flexibel schemaläggning",
+          "description": "Flexibla bokningstider som passar ditt schema"
+        },
+        "diagnostics": {
+          "title": "Diagnostik på plats",
+          "description": "Blodprov och grundläggande diagnostiska procedurer tillgängliga"
+        }
+      }
+    },
+    "cta": {
+      "text": "Kontakta oss idag för att boka din konsultation och upplev förstklassig vård på Prisma Clinic Marbella."
+    }
+  },
+  "services": {
+    "page": {
+      "title": "Våra tjänster",
+      "subtitle": "Omfattande hälsolösningar i Marbella",
+      "description": "Prisma Clinic Marbella erbjuder ett brett utbud av premium medicinska och tandvårdstjänster, inklusive akutvård dygnet runt. Vårt specialistteam är dedikerat till att ge exceptionell vård med hjälp av den senaste tekniken.",
+      "learnMore": "Läs mer",
+      "testimonial": {
+        "client": "Bright Smiles",
+        "content": "Teamet på Prisma Clinic Marbella förvandlade min tandvårdsupplevelse. Deras professionella arbetssätt och toppmoderna teknik gjorde min behandling både bekväm och effektiv."
+      }
+    }
+  }
+}

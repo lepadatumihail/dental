@@ -1,0 +1,535 @@
+{
+  "home": {
+    "title": "Prisma Clinic Marbella",
+    "description": "At Prisma Clinic Marbella, we provide exceptional dental and aesthetic care with compassion and precision. Our team of experienced professionals uses advanced technology to ensure your comfort while delivering comprehensive treatments for all your oral health needs. From routine cleanings to cosmetic procedures, we are committed to giving you a healthy, beautiful smile.",
+    "viewServices": "View our services",
+    "clients": {
+      "title": "Using the latest technology"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "We utilize cutting-edge dental and aesthetic technologies to deliver premium care. Our advanced equipment ensures precision and comfort, enhancing both your smile and facial appearance with exceptional results.",
+      "categories": {
+        "general": {
+          "title": "General Practitioner",
+          "heading": "Comprehensive General Practitioner Services",
+          "description": "High-quality primary healthcare services providing personalized care for patients of all ages, from routine check-ups to chronic disease management and preventive medicine."
+        },
+        "dental": {
+          "title": "Dental",
+          "heading": "Premium Dental Care for Your Perfect Smile",
+          "description": "State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies."
+        },
+        "aesthetics": {
+          "title": "Aesthetics",
+          "heading": "Advanced Aesthetic Treatments",
+          "description": "Prisma Clinic Marbella offers premium aesthetic treatments with cutting-edge technology and techniques to help you look and feel your best."
+        }
+      },
+      "comprehensive": {
+        "eyebrow": "Our Services",
+        "title": "Comprehensive Dental Care for the Whole Family",
+        "description": "At Prisma Clinic Marbella, we offer a wide range of services to meet all your dental needs. From preventive care to cosmetic dentistry, our experienced team is committed to providing personalized treatment in a comfortable and welcoming environment.",
+        "list": {
+          "general": {
+            "title": "General Dentistry",
+            "description": "Comprehensive check-ups, cleanings, fillings, and preventive care to maintain your oral health and prevent future problems."
+          },
+          "cosmetic": {
+            "title": "Cosmetic Dentistry",
+            "description": "Transform your smile with our range of cosmetic services including teeth whitening, veneers, bonding, and smile makeovers."
+          },
+          "restorative": {
+            "title": "Restorative Dentistry",
+            "description": "Restore damaged or missing teeth with crowns, bridges, implants, and dentures to regain full function and confidence."
+          },
+          "pediatric": {
+            "title": "Pediatric Dental Care",
+            "description": "Specialized gentle care for children, creating positive dental experiences and establishing good oral health habits from an early age."
+          }
+        }
+      }
+    },
+    "testimonial": {
+      "text": "The team at Prisma Clinic Marbella made my dental visit so comfortable and stress-free. Their gentle approach and attention to detail completely changed my perspective on dental care."
+    }
+  },
+  "emergency": {
+    "title": "24/7 Emergency Dental Care",
+    "description": "Dental emergencies don't wait for business hours. Our team of specialists is available around the clock to provide immediate care when you need it most.",
+    "conditions": {
+      "toothache": "Severe toothache",
+      "broken": "Broken or chipped teeth",
+      "lost": "Lost crowns or fillings",
+      "trauma": "Dental trauma from accidents"
+    },
+    "learnMore": "Learn more",
+    "emergencyHotline": "Emergency Hotline",
+    "availability": {
+      "title": "Available 24/7",
+      "subtitle": "Including weekends and holidays"
+    },
+    "contact": {
+      "title": "Direct Hotline",
+      "number": "+34 673 290 786"
+    },
+    "footer": {
+      "label": "Emergency Dental Care",
+      "title": "Marbella’s Premier 24/7 Service"
+    }
+  },
+  "contact": {
+    "title": "24/7 Emergency Dental Care",
+    "description": "Dental emergencies don't wait for business hours. Our team of specialists is available around the clock to provide immediate care when you need it most.",
+    "conditions": {
+      "toothache": "Severe toothache",
+      "broken": "Broken or chipped teeth",
+      "lost": "Lost crowns or fillings",
+      "trauma": "Dental trauma from accidents"
+    },
+    "learnMore": "Learn more",
+    "emergencyHotline": "Emergency Hotline",
+    "location": {
+      "title": "Our Location"
+    }
+  },
+  "layout": {
+    "header": {
+      "home": "Home",
+      "emergency": "Emergency 24/7",
+      "contact": "Contact Us",
+      "toggleNavigation": "Toggle navigation"
+    },
+    "navigation": {
+      "services": "Services",
+      "blog": "Blog",
+      "emergency": {
+        "title": "Emergency Care",
+        "badge": "24/7"
+      },
+      "contact": "Contact"
+    },
+    "footer": {
+      "followUs": "Follow us"
+    },
+    "services": {
+      "page": {
+        "title": "Our Services",
+        "subtitle": "Comprehensive healthcare solutions in Marbella",
+        "description": "Prisma Clinic Marbella provides a wide range of premium medical and dental services, including emergency care available 24/7. Our team of specialists is dedicated to providing exceptional care using cutting-edge technology.",
+        "learnMore": "Learn more",
+        "testimonial": {
+          "content": "The team at Prisma Clinic Marbella transformed my dental experience. Their professional approach and state-of-the-art technology made my treatment comfortable and effective. I couldn’t be happier with the results."
+        }
+      },
+      "dental": {
+        "title": "Premium Dental Services",
+        "client": "Dental Care",
+        "service": "Comprehensive Services",
+        "testimonial": {
+          "author": "Maria L.",
+          "role": "Patient from Marbella",
+          "content": "The dental care at Prisma Clinic is exceptional. From regular check-ups to my recent cosmetic procedure, the team has always provided professional and comfortable treatment."
+        }
+      },
+      "aesthetics": {
+        "title": "Advanced Aesthetic Treatments",
+        "client": "Aesthetics",
+        "service": "Beauty & Rejuvenation",
+        "summary": [
+          "Our aesthetics department specializes in non-surgical rejuvenation treatments including Botox, dermal fillers, lip enhancement, and other facial aesthetic procedures.",
+          "Our qualified specialists create natural-looking results that enhance your features while maintaining facial harmony, helping you achieve a refreshed, youthful appearance."
+        ],
+        "testimonial": {
+          "author": "Sofia R.",
+          "role": "Patient from Marbella",
+          "content": "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted—subtle enhancement that looks completely natural. The team's expertise and attention to detail is outstanding."
+        }
+      },
+      "generalMedicine": {
+        "title": "Comprehensive Medical Care",
+        "client": "General Practitioner",
+        "service": "Primary Healthcare",
+        "summary": [
+          "Our general practitioner services provide holistic primary healthcare including preventative medicine, chronic disease management, diagnostic services, and treatment for acute conditions.",
+          "Our experienced doctors take the time to understand your health concerns and provide personalized care that addresses your specific needs, ensuring your overall wellbeing."
+        ],
+        "testimonial": {
+          "author": "Robert P.",
+          "role": "Patient from Marbella",
+          "content": "Having access to reliable primary care at Prisma Clinic has made managing my health so much easier. The personal attention and comprehensive approach is exactly what I needed."
+        }
+      }
+    }
+  },
+  "office": {
+    "name": "Prisma Clinic Marbella",
+    "address": "Av. de Nabeul, 14, 29601 Marbella, Málaga",
+    "country": "Spain",
+    "phone": "Phone",
+    "phoneNumber": "+34 951 123 456",
+    "openingHours": "Opening Hours",
+    "weekdays": "Monday - Friday: 9:00 AM - 7:00 PM",
+    "saturday": "Saturday: 10:00 AM - 2:00 PM",
+    "sunday": "Sunday: Closed"
+  },
+  "emergencyPage": {
+    "hero": {
+      "title": "24/7 Emergency Dental Care",
+      "description": "Immediate dental attention when you need it most. Available 24 hours a day, every day of the year in Marbella.",
+      "emergencyHotline": "Emergency Hotline",
+      "whatsapp": "WhatsApp"
+    },
+    "services": {
+      "title": "Emergency Services",
+      "description": "Dental emergencies can happen at any time. At Prisma Clinic Marbella, we provide immediate care for all dental emergencies, 24 hours a day, 7 days a week. Our team of specialists is always ready to provide prompt treatment to relieve your pain and address urgent dental issues.",
+      "stats": {
+        "availability": {
+          "value": "24/7",
+          "label": "Always available"
+        },
+        "response": {
+          "value": "15min",
+          "label": "Response time"
+        },
+        "treatment": {
+          "value": "100%",
+          "label": "Same-day treatment"
+        },
+        "insurance": {
+          "value": "All",
+          "label": "Insurance accepted"
+        }
+      }
+    },
+    "conditions": {
+      "title": "Emergency Dental Conditions",
+      "description": "Our emergency dental care covers a wide range of urgent conditions:",
+      "items": {
+        "toothache": {
+          "title": "Severe Toothache",
+          "description": "Immediate pain relief and treatment for intense dental pain"
+        },
+        "broken": {
+          "title": "Broken or Chipped Teeth",
+          "description": "Quick restoration of damaged teeth to prevent further complications"
+        },
+        "knockedOut": {
+          "title": "Knocked-Out Teeth",
+          "description": "Emergency replantation and treatment for avulsed teeth"
+        },
+        "lostRestorations": {
+          "title": "Lost Crowns or Fillings",
+          "description": "Immediate replacement of lost dental restorations"
+        },
+        "abscess": {
+          "title": "Dental Abscess",
+          "description": "Urgent treatment for painful dental infections"
+        },
+        "trauma": {
+          "title": "Dental Trauma",
+          "description": "Expert care for teeth and gum injuries from accidents"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Emergency Dental Service",
+      "features": {
+        "availability": {
+          "title": "Available 24/7",
+          "description": "Our team is available around the clock, including weekends and holidays"
+        },
+        "sameDay": {
+          "title": "Same-Day Treatment",
+          "description": "Immediate appointments for all emergency cases"
+        },
+        "location": {
+          "title": "Central Marbella Location",
+          "description": "Easily accessible clinic in the heart of Marbella"
+        },
+        "payment": {
+          "title": "Multiple Payment Options",
+          "description": "We accept all major insurance plans and offer flexible payment options"
+        }
+      }
+    },
+    "howWorks": {
+      "title": "How Our Emergency Service Works",
+      "steps": {
+        "call": {
+          "title": "Call Our Hotline",
+          "description": "Contact our 24/7 emergency line at +34 673 290 786 to speak with our team"
+        },
+        "describe": {
+          "title": "Describe the Emergency",
+          "description": "Our specialists will assess your situation and provide immediate advice"
+        },
+        "come": {
+          "title": "Come to Our Clinic",
+          "description": "We’ll prepare for your arrival and provide immediate treatment upon your arrival"
+        }
+      }
+    },
+    "testimonial": {
+      "quote": "I had a terrible toothache at 2 AM and didn’t know what to do. I called Prisma Clinic Marbella’s emergency line, and they saw me right away. The pain was gone within an hour, and I received exceptional care. I am so grateful they’re available 24/7!"
+    },
+    "callToAction": {
+      "title": "Need Emergency Dental Care?",
+      "description": "Don’t wait until it’s too late. Contact our emergency dental service in Marbella now.",
+      "callNow": "Call Now: +34 673 290 786",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "common": {
+    "calendly": {
+      "button": "Schedule a Free Consultation"
+    }
+  },
+  "generalMedicine": {
+    "hero": {
+      "title": "Prisma Clinic Marbella General Medicine",
+      "description": "State-of-the-art medical facility offering comprehensive primary care services from routine check-ups to chronic disease management."
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Our modern facilities and experienced medical team ensure patients receive the highest quality care for all their health needs. We pride ourselves on providing personalized treatment plans tailored to each patient’s specific requirements."
+    },
+    "primaryCare": {
+      "title": "Primary Care",
+      "description": "Comprehensive healthcare for you and your family:",
+      "items": {
+        "checkups": {
+          "title": "Routine Check-ups",
+          "description": "Comprehensive physical examinations to monitor your overall health"
+        },
+        "assessments": {
+          "title": "Health Assessments",
+          "description": "Thorough evaluations of your current health status and risk factors"
+        },
+        "travel": {
+          "title": "Travel Medicine",
+          "description": "Pre-travel consultations, vaccinations, and health advice"
+        }
+      }
+    },
+    "chronicDisease": {
+      "title": "Chronic Disease Management",
+      "description": "Expert care for ongoing health conditions:",
+      "items": {
+        "diabetes": {
+          "title": "Diabetes Care",
+          "description": "Comprehensive management of all types of diabetes"
+        },
+        "hypertension": {
+          "title": "Hypertension Control",
+          "description": "Monitoring and management of high blood pressure"
+        },
+        "asthma": {
+          "title": "Asthma & COPD",
+          "description": "Respiratory condition management and treatment plans"
+        }
+      }
+    },
+    "specialized": {
+      "title": "Specialized Services",
+      "description": "Additional care for specific health concerns:",
+      "items": {
+        "surgical": {
+          "title": "Minor Surgical Procedures",
+          "description": "In-office procedures including mole removal and skin biopsies"
+        },
+        "mental": {
+          "title": "Mental Health Support",
+          "description": "Assessment and management of anxiety, depression, and stress"
+        },
+        "gender": {
+          "title": "Women’s & Men’s Health",
+          "description": "Gender-specific health screenings and consultations"
+        }
+      }
+    },
+    "preventive": {
+      "title": "Preventive Care",
+      "description": "Maintain your health with our preventive services:",
+      "items": {
+        "vaccination": {
+          "title": "Vaccination",
+          "description": "Full range of immunizations for all age groups"
+        },
+        "screenings": {
+          "title": "Health Screenings",
+          "description": "Early detection tests for various conditions"
+        }
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Prisma Clinic Marbella?",
+      "features": {
+        "expert": {
+          "title": "Expert Team",
+          "description": "Highly qualified doctors and healthcare professionals"
+        },
+        "facility": {
+          "title": "State-of-the-Art Facility",
+          "description": "Latest medical technology and equipment"
+        },
+        "personalized": {
+          "title": "Personalized Care",
+          "description": "Customized treatment plans for each patient"
+        },
+        "comfort": {
+          "title": "Comfortable Environment",
+          "description": "Relaxing atmosphere to ease medical anxiety"
+        },
+        "scheduling": {
+          "title": "Convenient Scheduling",
+          "description": "Flexible appointment times to fit your schedule"
+        },
+        "diagnostics": {
+          "title": "On-site Diagnostics",
+          "description": "Blood tests and basic diagnostic procedures available"
+        }
+      }
+    },
+    "cta": {
+      "text": "Contact us today to schedule your consultation and experience premium healthcare at Prisma Clinic Marbella."
+    }
+  },
+  "dental": {
+    "hero": {
+      "title": "Prisma Clinic Marbella Dental Services",
+      "description": "State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures.",
+      "imageAlt": "Dental Services"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Our modern facilities and experienced team ensure patients receive the highest quality care for all their dental needs. We pride ourselves on providing personalized treatment plans tailored to each patient’s specific requirements."
+    },
+    "stats": {
+      "satisfaction": {
+        "value": "100%",
+        "label": "Patient satisfaction"
+      },
+      "availability": {
+        "value": "24/7",
+        "label": "Emergency availability"
+      },
+      "experience": {
+        "value": "15+",
+        "label": "Years of experience"
+      },
+      "treatments": {
+        "value": "500+",
+        "label": "Successful treatments"
+      }
+    },
+    "cosmetic": {
+      "title": "Cosmetic Dentistry",
+      "description": "Transform your smile with our advanced cosmetic procedures:",
+      "treatments": [
+        {
+          "title": "Smile Design",
+          "description": "Custom-designed smile makeovers tailored to your facial features"
+        },
+        {
+          "title": "Hollywood Smile",
+          "description": "Achieve that perfect celebrity smile through comprehensive treatment"
+        },
+        {
+          "title": "Professional Teeth Whitening",
+          "description": "Advanced whitening techniques for a brighter smile"
+        }
+      ]
+    },
+    "restorative": {
+      "title": "Restorative Procedures",
+      "description": "Restore both function and aesthetics with our restorative treatments:",
+      "treatments": [
+        {
+          "title": "Dental Implants",
+          "description": "Permanent tooth replacement solutions"
+        },
+        {
+          "title": "Fillings",
+          "description": "Tooth-colored restorations for damaged teeth"
+        },
+        {
+          "title": "Prosthetics",
+          "description": "High-quality dentures and bridges"
+        }
+      ]
+    },
+    "surgical": {
+      "title": "Surgical Services",
+      "description": "Expert surgical care with minimal discomfort:",
+      "treatments": [
+        {
+          "title": "Extractions",
+          "description": "Simple and complex tooth removal procedures"
+        },
+        {
+          "title": "Sinus Lifts",
+          "description": "Preparing the upper jaw for successful implant placement"
+        },
+        {
+          "title": "Dental Surgery",
+          "description": "Specialized surgical interventions for various conditions"
+        }
+      ]
+    },
+    "emergency": {
+      "title": "Emergency Care",
+      "description": "We understand dental emergencies can happen anytime:",
+      "conditions": [
+        {
+          "title": "Severe Toothache",
+          "description": "Immediate pain relief and treatment for intense dental pain"
+        },
+        {
+          "title": "Broken or Chipped Teeth",
+          "description": "Quick restoration of damaged teeth to prevent further complications"
+        },
+        {
+          "title": "Knocked-Out Teeth",
+          "description": "Emergency replantation and treatment for avulsed teeth"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Choose Prisma Clinic Marbella?",
+      "features": {
+        "expert": {
+          "title": "Expert Team",
+          "description": "Highly qualified dentists with specialized training"
+        },
+        "facility": {
+          "title": "State-of-the-Art Facility",
+          "description": "Latest dental technology and equipment"
+        },
+        "personalized": {
+          "title": "Personalized Care",
+          "description": "Customized treatment plans for each patient"
+        },
+        "comfort": {
+          "title": "Comfortable Environment",
+          "description": "Relaxing atmosphere to ease dental anxiety"
+        },
+        "scheduling": {
+          "title": "Convenient Scheduling",
+          "description": "Flexible appointment times to fit your schedule"
+        }
+      }
+    },
+    "testimonial": {
+      "author": {
+        "name": "Debra Fiscal",
+        "role": "Patient"
+      },
+      "content": "The team at Prisma Clinic Marbella provided exceptional care during my smile makeover. Their attention to detail and commitment to patient comfort made the entire experience outstanding."
+    },
+    "cta": {
+      "title": "Ready to Transform Your Smile?",
+      "description": "Contact us today to schedule your consultation and experience premium dental care at Prisma Clinic Marbella."
+    }
+  }
+}

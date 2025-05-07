@@ -1,4 +1,5 @@
 import clsx from 'clsx'
+import { useTranslations } from 'next-intl'
 
 function Office({
   name,
@@ -29,23 +30,25 @@ export function Offices({
   invert = false,
   ...props
 }: React.ComponentPropsWithoutRef<'ul'> & { invert?: boolean }) {
+  const t = useTranslations('office')
+
   return (
     <ul {...props}>
       <li>
         <div className="flex w-full flex-col justify-between gap-6 sm:flex-row">
-          <Office name="Prisma Clinic Marbella" invert={invert}>
+          <Office name={t('name')} invert={invert}>
             <div className="min-w-xs">
-              Av. de Nabeul, 14, 29601 Marbella, Málaga
+              {t('address')}
               <br />
-              Spain
+              {t('country')}
               <br />
               <br />
             </div>
             <span className={invert ? 'text-white' : 'text-neutral-950'}>
-              Phone:
+              {t('phone')}:
             </span>
             <br />
-            +34 951 123 456
+            {t('phoneNumber')}
           </Office>
           <div
             className={clsx(
@@ -56,14 +59,14 @@ export function Offices({
             <span
               className={invert ? 'font-bold text-white' : 'text-neutral-950'}
             >
-              Opening Hours:
+              {t('openingHours')}:
             </span>
             <br />
-            Monday - Friday: 9:00 AM - 7:00 PM
+            {t('weekdays')}
             <br />
-            Saturday: 10:00 AM - 2:00 PM
+            {t('saturday')}
             <br />
-            Sunday: Closed
+            {t('sunday')}
             <br />
             <br />
           </div>

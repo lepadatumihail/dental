@@ -33,7 +33,7 @@ export async function submitAppointmentRequest(
     // This avoids URL resolution issues on the server
     try {
       // Import the API handler directly to call it
-      const { POST } = await import('./api/submit-appointment/route')
+      const { POST } = await import('./[locale]/api/submit-appointment/route')
 
       // Create a Request object with the form data
       const request = new Request(

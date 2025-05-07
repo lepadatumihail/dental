@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import type { IconProps } from '@phosphor-icons/react'
 
 import { Blockquote } from '@/components/Blockquote'
 import { Border } from '@/components/Border'
@@ -14,60 +16,73 @@ import logoMailSmirk from '@/images/clients/phobia/logo-dark.svg'
 import { EmergencyServiceBanner } from '@/components/EmergencyServiceBanner'
 
 import { FirstAidKit, Syringe, Tooth } from '@phosphor-icons/react/dist/ssr'
+
+interface Service {
+  id: number
+  icon: React.ComponentType<IconProps>
+  client: string
+  service: string
+  title: string
+  summary: string[]
+  href: string
+  testimonial: {
+    author: {
+      name: string
+      role: string
+    }
+    content: string
+  }
+}
+
 function Services() {
-  const services = [
+  const t = useTranslations('layout.services')
+  const services: Service[] = [
     {
       id: 1,
       icon: Tooth,
-      client: 'Dental Care',
-      service: 'Comprehensive Services',
-
-      title: 'Premium Dental Services',
-      summary: [
-        'Our dental department offers a complete range of services including general dentistry, cosmetic treatments, implants, orthodontics, and emergency dental care available 24/7.',
-        'Using state-of-the-art technology and the latest techniques, our experienced dentists provide personalized treatment plans to maintain and enhance your oral health and smile aesthetics.',
-      ],
+      client: t('dental.client'),
+      service: t('dental.service'),
+      title: t('dental.title'),
+      summary: t.raw('dental.summary') as string[],
       href: '/services/dental',
       testimonial: {
-        author: { name: 'Maria L.', role: 'Patient from Marbella' },
-        content:
-          'The dental care at Prisma Clinic is exceptional. From regular check-ups to my recent cosmetic procedure, the team has always provided professional and comfortable treatment.',
+        author: {
+          name: t('dental.testimonial.author'),
+          role: t('dental.testimonial.role'),
+        },
+        content: t('dental.testimonial.content'),
       },
     },
     {
       id: 2,
       icon: Syringe,
-      client: 'Aesthetics',
-      service: 'Beauty & Rejuvenation',
-
-      title: 'Advanced Aesthetic Treatments',
-      summary: [
-        'Our aesthetics department specializes in non-surgical rejuvenation treatments including Botox, dermal fillers, lip enhancement, and other facial aesthetic procedures.',
-        'Our qualified specialists create natural-looking results that enhance your features while maintaining facial harmony, helping you achieve a refreshed, youthful appearance.',
-      ],
+      client: t('aesthetics.client'),
+      service: t('aesthetics.service'),
+      title: t('aesthetics.title'),
+      summary: t.raw('aesthetics.summary') as string[],
       href: '/services/aesthetics',
       testimonial: {
-        author: { name: 'Sofia R.', role: 'Patient from Marbella' },
-        content:
-          "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted - subtle enhancement that looks completely natural. The team's expertise and attention to detail is outstanding.",
+        author: {
+          name: t('aesthetics.testimonial.author'),
+          role: t('aesthetics.testimonial.role'),
+        },
+        content: t('aesthetics.testimonial.content'),
       },
     },
     {
       id: 3,
       icon: FirstAidKit,
-      client: 'General Practitioner',
-      service: 'Primary Healthcare',
-
-      title: 'Comprehensive Medical Care',
-      summary: [
-        'Our general practitioner services provide holistic primary healthcare including preventative medicine, chronic disease management, diagnostic services, and treatment for acute conditions.',
-        'Our experienced doctors take the time to understand your health concerns and provide personalized care that addresses your specific needs, ensuring your overall wellbeing.',
-      ],
+      client: t('generalMedicine.client'),
+      service: t('generalMedicine.service'),
+      title: t('generalMedicine.title'),
+      summary: t.raw('generalMedicine.summary') as string[],
       href: '/services/general-medicine',
       testimonial: {
-        author: { name: 'Robert P.', role: 'Patient from Marbella' },
-        content:
-          'Having access to reliable primary care at Prisma Clinic has made managing my health so much easier. The personal attention and comprehensive approach is exactly what I needed.',
+        author: {
+          name: t('generalMedicine.testimonial.author'),
+          role: t('generalMedicine.testimonial.role'),
+        },
+        content: t('generalMedicine.testimonial.content'),
       },
     },
   ]
@@ -76,7 +91,7 @@ function Services() {
     <Container className="mt-24">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Services
+          {t('page.title')}
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24">
@@ -102,18 +117,21 @@ function Services() {
                     <Link href={service.href}>{service.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {service.summary.map((paragraph, index) => (
-                      <p key={`${service.id}-paragraph-${index}`}>
-                        {paragraph}
-                      </p>
-                    ))}
+                    {Array.isArray(service.summary) &&
+                      service.summary.map(
+                        (paragraph: string, index: number) => (
+                          <p key={`${service.id}-paragraph-${index}`}>
+                            {paragraph}
+                          </p>
+                        ),
+                      )}
                   </div>
                   <div className="mt-8 flex">
                     <Button
                       href={service.href}
-                      aria-label={`Learn more about ${service.client}`}
+                      aria-label={`${t('page.learnMore')} ${service.client}`}
                     >
-                      Learn more
+                      {t('page.learnMore')}
                     </Button>
                   </div>
                   {service.testimonial && (
@@ -141,18 +159,12 @@ export const metadata: Metadata = {
 }
 
 export default function ServicesPage() {
+  const t = useTranslations('layout.services')
+
   return (
     <>
-      <PageIntro
-        eyebrow="Our Services"
-        title="Comprehensive healthcare solutions in Marbella"
-      >
-        <p>
-          Prisma Clinic Marbella provides a wide range of premium medical and
-          dental services, including emergency care available 24/7. Our team of
-          specialists is dedicated to providing exceptional care using
-          cutting-edge technology.
-        </p>
+      <PageIntro eyebrow={t('page.title')} title={t('page.subtitle')}>
+        <p>{t('page.description')}</p>
       </PageIntro>
 
       <EmergencyServiceBanner />
@@ -161,12 +173,9 @@ export default function ServicesPage() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Bright Smiles', logo: logoMailSmirk }}
+        client={{ name: t('page.testimonial.client'), logo: logoMailSmirk }}
       >
-        The team at Prisma Clinic Marbella transformed my dental experience.
-        Their professional approach and state-of-the-art technology made my
-        treatment comfortable and effective. I couldn&apos;t be happier with the
-        results.
+        {t('page.testimonial.content')}
       </Testimonial>
 
       {/* <Clients />  */}

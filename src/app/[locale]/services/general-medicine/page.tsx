@@ -1,69 +1,76 @@
-import logo from '@/images/svg/syringe.svg'
-import imageHero from '@/images/clinic/aesthetics-2.jpg'
+import logo from '@/images/svg/first-aid.svg'
+import imageHero from '@/images/clinic/clinic1.jpg'
+import imageDebraFiscal from '@/images/clinic/robin-colour.jpg'
 import { StatList, StatListItem } from '@/components/StatList'
+import { Blockquote } from '@/components/Blockquote'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { Border } from '@/components/Border'
 import {
-  Syringe,
+  FirstAidKit,
   Smiley,
   ShieldStar,
+  Clock,
   FirstAid,
   Stethoscope,
   User,
   Calendar,
   ClockCounterClockwise,
-  Sparkle,
-  Scissors,
-  Leaf,
+  Pulse,
+  Activity,
+  Syringe,
 } from '@phosphor-icons/react/dist/ssr'
 import CalendlyButton from '@/components/CalendlyButton'
+import { Footer } from '@/components/Footer'
+import { useTranslations } from 'next-intl'
 
 export const caseStudy = {
-  client: 'Aesthetics',
-  title: 'Premium Aesthetic Treatments',
+  client: 'General Medicine',
+  title: 'Comprehensive Primary Care Services',
   description:
-    'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial treatments, skin rejuvenation, and body contouring.',
+    'State-of-the-art medical facility offering comprehensive general practitioner services from routine check-ups to chronic disease management, available 24/7 for emergencies.',
   summary: [
-    'Prisma Clinic Marbella provides exceptional aesthetic care combining cutting-edge technology with personalized treatment plans for optimal results.',
-    'Our services include facial treatments, skin rejuvenation, body contouring, and specialized aesthetic procedures.',
+    'Prisma Clinic Marbella provides exceptional primary care combining leading medical expertise with personalized treatment plans for optimal health outcomes.',
+    'Our services include routine check-ups, chronic disease management, preventive care, minor surgical procedures, diagnostics, and more.',
   ],
   logo,
   image: { src: imageHero },
   date: '2025-01',
-  service: 'Aesthetic Treatments, Beauty Services',
+  service: 'General Practice, Primary Care, Emergency Services',
   testimonial: {
     author: { name: 'Debra Fiscal', role: 'Patient' },
     content:
-      'The team at Prisma Clinic Marbella provided exceptional care during my aesthetic treatments. Their attention to detail and commitment to patient comfort made the entire experience outstanding.',
+      'The team at Prisma Clinic Marbella provided exceptional care during my health journey. Their attention to detail and commitment to patient well-being made the entire experience outstanding.',
   },
 }
 
 export const metadata = {
-  title: 'Prisma Clinic Marbella - Premium Aesthetic Services',
+  title: 'Prisma Clinic Marbella - General Practice & Primary Care Services',
   description:
-    'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial treatments, skin rejuvenation, and body contouring.',
+    'State-of-the-art medical facility offering comprehensive general practitioner services from routine check-ups to chronic disease management, available 24/7 for emergencies.',
 }
 
-export default function AestheticsServices() {
+export default function GeneralMedicineServices() {
+  const t = useTranslations('generalMedicine')
+
   return (
     <div className="mx-auto max-w-7xl">
       <div className="relative mx-1 mt-12 mb-20 h-[500px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24">
         <Image
           src={imageHero}
-          alt="Aesthetic Services"
+          alt="General Medicine Services"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 flex items-center bg-gradient-to-r from-neutral-950/80 to-transparent">
           <div className="max-w-2xl px-12">
-            <h1 className="mb-6 font-display text-6xl font-medium tracking-tight text-white">
-              Prisma Clinic Marbella Aesthetics
+            <h1 className="mb-6 font-display text-3xl font-medium tracking-tight text-white sm:text-6xl">
+              {t('hero.title')}
             </h1>
-            <p className="text-xl font-light text-white/90">
-              State-of-the-art aesthetic clinic offering comprehensive beauty
-              and rejuvenation services for natural, stunning results.
+            <p className="texl-md text-white/90 sm:text-xl">
+              {t('hero.description')}
             </p>
           </div>
         </div>
@@ -74,25 +81,21 @@ export default function AestheticsServices() {
           <div className="flex flex-col gap-12 md:flex-row">
             <div className="md:w-1/2">
               <div className="mb-4 flex items-center gap-3">
-                <Syringe size={32} />
+                <FirstAidKit size={32} />
                 <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
-                  Our Services
+                  {t('services.title')}
                 </h2>
               </div>
               <p className="text-lg leading-relaxed text-neutral-600">
-                Our modern facilities and experienced aesthetic specialists
-                ensure patients receive the highest quality care for all their
-                beauty and rejuvenation needs. We pride ourselves on providing
-                personalized treatment plans tailored to each patient&apos;s
-                specific goals.
+                {t('services.description')}
               </p>
             </div>
             <div className="flex items-center justify-center rounded-xl bg-neutral-100 p-8">
               <StatList>
                 <StatListItem value="100%" label="Patient satisfaction" />
+                <StatListItem value="24/7" label="Emergency availability" />
                 <StatListItem value="15+" label="Years of experience" />
-                <StatListItem value="500+" label="Successful treatments" />
-                <StatListItem value="20+" label="Treatment options" />
+                <StatListItem value="500+" label="Patients treated" />
               </StatList>
             </div>
           </div>
@@ -104,75 +107,43 @@ export default function AestheticsServices() {
           <section>
             <FadeIn>
               <div className="flex items-center gap-3">
-                <Sparkle size={28} />
-
+                <Stethoscope size={28} />
                 <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  Facial Treatments
+                  {t('primaryCare.title')}
                 </h3>
               </div>
               <p className="text-md my-2 text-neutral-600">
-                Enhance your natural facial features with our premium
-                treatments:
+                {t('primaryCare.description')}
               </p>
             </FadeIn>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Lip Filler
+                    {t('primaryCare.items.checkups.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Add volume and definition to your lips
+                    {t('primaryCare.items.checkups.description')}
                   </p>
                 </div>
               </FadeIn>
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Facial Harmonization
+                    {t('primaryCare.items.assessments.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Create balanced, harmonious facial proportions
+                    {t('primaryCare.items.assessments.description')}
                   </p>
                 </div>
               </FadeIn>
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    5-Point Lift
+                    {t('primaryCare.items.travel.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Non-surgical facelift targeting key facial areas
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Under-Eye PDRN
-                  </h4>
-                  <p className="text-neutral-700">
-                    Reduce dark circles and under-eye hollowing
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Eyelid Lift
-                  </h4>
-                  <p className="text-neutral-700">
-                    Rejuvenate tired-looking eyes without surgery
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Nose Tip Lift
-                  </h4>
-                  <p className="text-neutral-700">
-                    Refine and enhance your nose without surgery
+                    {t('primaryCare.items.travel.description')}
                   </p>
                 </div>
               </FadeIn>
@@ -182,74 +153,43 @@ export default function AestheticsServices() {
           <section className="my-14">
             <FadeIn>
               <div className="flex items-center gap-3">
-                <Leaf size={28} />
+                <Pulse size={28} />
                 <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  Skin Rejuvenation
+                  {t('chronicDisease.title')}
                 </h3>
               </div>
               <p className="text-md my-2 text-neutral-600">
-                Revitalize your skin with our advanced procedures:
+                {t('chronicDisease.description')}
               </p>
             </FadeIn>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Bio Revitalizer
+                    {t('chronicDisease.items.diabetes.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Deep hydration and skin regeneration
+                    {t('chronicDisease.items.diabetes.description')}
                   </p>
                 </div>
               </FadeIn>
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Skin Booster
+                    {t('chronicDisease.items.hypertension.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Improve skin texture and luminosity
+                    {t('chronicDisease.items.hypertension.description')}
                   </p>
                 </div>
               </FadeIn>
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Micro Needling
+                    {t('chronicDisease.items.asthma.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Stimulate collagen production for firmer skin
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Chemical Peel
-                  </h4>
-                  <p className="text-neutral-700">
-                    Remove damaged outer layers for renewed skin
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Exosomes
-                  </h4>
-                  <p className="text-neutral-700">
-                    Advanced cell therapy for skin rejuvenation
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    PRP Face/Capilar
-                  </h4>
-                  <p className="text-neutral-700">
-                    Harness your body&apos;s healing capabilities for skin and
-                    hair
+                    {t('chronicDisease.items.asthma.description')}
                   </p>
                 </div>
               </FadeIn>
@@ -259,23 +199,43 @@ export default function AestheticsServices() {
           <section className="my-14">
             <FadeIn>
               <div className="flex items-center gap-3">
-                <Scissors size={28} />
+                <Activity size={28} />
                 <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  Body Contouring
+                  {t('specialized.title')}
                 </h3>
               </div>
               <p className="text-md my-2 text-neutral-600">
-                Sculpt and define your body contours:
+                {t('specialized.description')}
               </p>
             </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-1">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Fat Dissolving
+                    {t('specialized.items.surgical.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Non-surgical reduction of localized fat deposits
+                    {t('specialized.items.surgical.description')}
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
+                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
+                    {t('specialized.items.mental.title')}
+                  </h4>
+                  <p className="text-neutral-700">
+                    {t('specialized.items.mental.description')}
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
+                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
+                    {t('specialized.items.gender.title')}
+                  </h4>
+                  <p className="text-neutral-700">
+                    {t('specialized.items.gender.description')}
                   </p>
                 </div>
               </FadeIn>
@@ -285,84 +245,33 @@ export default function AestheticsServices() {
           <section className="my-14">
             <FadeIn>
               <div className="flex items-center gap-3">
-                <FirstAid size={28} />
+                <ClockCounterClockwise size={28} />
                 <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  Specialized Treatments
+                  {t('preventive.title')}
                 </h3>
               </div>
               <p className="text-md my-2 text-neutral-600">
-                Targeted solutions for specific concerns:
+                {t('preventive.description')}
               </p>
             </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Skin Tag Removal
+                    {t('preventive.items.vaccination.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Safe and effective removal of unwanted skin tags
+                    {t('preventive.items.vaccination.description')}
                   </p>
                 </div>
               </FadeIn>
               <FadeIn>
                 <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                   <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Botox Full Face
+                    {t('preventive.items.screenings.title')}
                   </h4>
                   <p className="text-neutral-700">
-                    Reduce wrinkles and fine lines throughout the face
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Gummy Smile
-                  </h4>
-                  <p className="text-neutral-700">
-                    Correct excessive gum exposure when smiling
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Lip Flip
-                  </h4>
-                  <p className="text-neutral-700">
-                    Create the appearance of fuller lips without fillers
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Bruxism
-                  </h4>
-                  <p className="text-neutral-700">
-                    Treat teeth grinding and jaw clenching
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Nefertiti Neck Lift
-                  </h4>
-                  <p className="text-neutral-700">
-                    Redefine the jawline and neck contours
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    Barbie Tox
-                  </h4>
-                  <p className="text-neutral-700">
-                    Create a lifted, youthful appearance with precision
-                    techniques
+                    {t('preventive.items.screenings.description')}
                   </p>
                 </div>
               </FadeIn>
@@ -377,7 +286,7 @@ export default function AestheticsServices() {
             <div className="mb-8 flex items-center gap-3">
               <ShieldStar size={28} />
               <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                Why Choose Prisma Clinic Marbella?
+                {t('whyChoose.title')}
               </h2>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -385,68 +294,66 @@ export default function AestheticsServices() {
                 <div className="mb-2 flex items-center gap-2">
                   <User size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Expert Team
+                    {t('whyChoose.features.expert.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Highly qualified aesthetic specialists and medical
-                  professionals
+                  {t('whyChoose.features.expert.description')}
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                 <div className="mb-2 flex items-center gap-2">
                   <Syringe size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Advanced Technology
+                    {t('whyChoose.features.facility.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Latest aesthetic technology and premium products
+                  {t('whyChoose.features.facility.description')}
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                 <div className="mb-2 flex items-center gap-2">
                   <Stethoscope size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Personalized Care
+                    {t('whyChoose.features.personalized.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Customized treatment plans for your unique aesthetic goals
+                  {t('whyChoose.features.personalized.description')}
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                 <div className="mb-2 flex items-center gap-2">
                   <Smiley size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Natural Results
+                    {t('whyChoose.features.comfort.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Enhanced beauty that looks subtle and naturally beautiful
+                  {t('whyChoose.features.comfort.description')}
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                 <div className="mb-2 flex items-center gap-2">
                   <Calendar size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Convenient Scheduling
+                    {t('whyChoose.features.scheduling.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Flexible appointment times to fit your busy lifestyle
+                  {t('whyChoose.features.scheduling.description')}
                 </p>
               </div>
               <div className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
                 <div className="mb-2 flex items-center gap-2">
-                  <ClockCounterClockwise size={20} />
+                  <Syringe size={20} />
                   <h4 className="font-display text-lg font-semibold text-neutral-900">
-                    Minimal Downtime
+                    {t('whyChoose.features.diagnostics.title')}
                   </h4>
                 </div>
                 <p className="text-neutral-700">
-                  Non-invasive treatments that let you return to daily
-                  activities quickly
+                  {t('whyChoose.features.diagnostics.description')}
                 </p>
               </div>
             </div>
@@ -458,8 +365,7 @@ export default function AestheticsServices() {
         <FadeIn>
           <div className="flex flex-col items-center gap-4">
             <p className="mb-8 max-w-5xl font-display text-2xl text-neutral-700">
-              Contact us today to schedule your consultation and experience
-              premium aesthetic care at Prisma Clinic Marbella.
+              {t('cta.text')}
             </p>
           </div>
           <CalendlyButton />
