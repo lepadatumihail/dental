@@ -75,7 +75,7 @@
     },
     "footer": {
       "label": "Emergency Dental Care",
-      "title": "Marbella’s Premier 24/7 Service"
+      "title": "Marbella's Premier 24/7 Service"
     }
   },
   "contact": {
@@ -119,7 +119,7 @@
         "description": "Prisma Clinic Marbella provides a wide range of premium medical and dental services, including emergency care available 24/7. Our team of specialists is dedicated to providing exceptional care using cutting-edge technology.",
         "learnMore": "Learn more",
         "testimonial": {
-          "content": "The team at Prisma Clinic Marbella transformed my dental experience. Their professional approach and state-of-the-art technology made my treatment comfortable and effective. I couldn’t be happier with the results."
+          "content": "The team at Prisma Clinic Marbella transformed my dental experience. Their professional approach and state-of-the-art technology made my treatment comfortable and effective. I couldn't be happier with the results."
         }
       },
       "dental": {
@@ -266,16 +266,16 @@
         },
         "come": {
           "title": "Come to Our Clinic",
-          "description": "We’ll prepare for your arrival and provide immediate treatment upon your arrival"
+          "description": "We'll prepare for your arrival and provide immediate treatment upon your arrival"
         }
       }
     },
     "testimonial": {
-      "quote": "I had a terrible toothache at 2 AM and didn’t know what to do. I called Prisma Clinic Marbella’s emergency line, and they saw me right away. The pain was gone within an hour, and I received exceptional care. I am so grateful they’re available 24/7!"
+      "quote": "I had a terrible toothache at 2 AM and didn't know what to do. I called Prisma Clinic Marbella's emergency line, and they saw me right away. The pain was gone within an hour, and I received exceptional care. I am so grateful they're available 24/7!"
     },
     "callToAction": {
       "title": "Need Emergency Dental Care?",
-      "description": "Don’t wait until it’s too late. Contact our emergency dental service in Marbella now.",
+      "description": "Don't wait until it's too late. Contact our emergency dental service in Marbella now.",
       "callNow": "Call Now: +34 673 290 786",
       "whatsapp": "WhatsApp"
     }
@@ -292,7 +292,7 @@
     },
     "services": {
       "title": "Our Services",
-      "description": "Our modern facilities and experienced medical team ensure patients receive the highest quality care for all their health needs. We pride ourselves on providing personalized treatment plans tailored to each patient’s specific requirements."
+      "description": "Our modern facilities and experienced medical team ensure patients receive the highest quality care for all their health needs. We pride ourselves on providing personalized treatment plans tailored to each patient's specific requirements."
     },
     "primaryCare": {
       "title": "Primary Care",
@@ -343,8 +343,20 @@
           "description": "Assessment and management of anxiety, depression, and stress"
         },
         "gender": {
-          "title": "Women’s & Men’s Health",
+          "title": "Women's & Men's Health",
           "description": "Gender-specific health screenings and consultations"
+        },
+        "bloodTests": {
+          "title": "Blood Tests & Check-ups",
+          "description": "Comprehensive blood analysis and health monitoring services"
+        },
+        "ivDrips": {
+          "title": "IV Drip Therapy",
+          "description": "Intravenous treatments for hydration, vitamins, and minerals"
+        },
+        "cocktails": {
+          "title": "IV Cocktails",
+          "description": "Specialized IV therapy combinations for specific health goals"
         }
       }
     },
@@ -403,7 +415,7 @@
     },
     "services": {
       "title": "Our Services",
-      "description": "Our modern facilities and experienced team ensure patients receive the highest quality care for all their dental needs. We pride ourselves on providing personalized treatment plans tailored to each patient’s specific requirements."
+      "description": "Our modern facilities and experienced team ensure patients receive the highest quality care for all their dental needs. We pride ourselves on providing personalized treatment plans tailored to each patient's specific requirements."
     },
     "stats": {
       "satisfaction": {

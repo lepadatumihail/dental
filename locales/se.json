@@ -81,6 +81,14 @@
   "contact": {
     "title": "Kontakta oss",
     "description": "Vi är här för att hjälpa dig med alla dina tand- och estetiska behandlingsbehov. Kontakta Prisma Clinic Marbella för att boka din tid eller ställa frågor.",
+    "conditions": {
+      "toothache": "Svår tandvärk",
+      "broken": "Spruckna eller flisade tänder",
+      "lost": "Förlorade kronor eller fyllningar",
+      "trauma": "Tandtrauma vid olyckor"
+    },
+    "learnMore": "Läs mer",
+    "emergencyHotline": "Akutlinje",
     "location": {
       "title": "Vår plats"
     }
@@ -335,8 +343,20 @@
           "description": "Utvärdering och hantering av ångest, depression och stress"
         },
         "gender": {
-          "title": "Kvinnors & mäns hälsa",
-          "description": "Könsspecifika hälsoundersökningar och konsultationer"
+          "title": "Kvinnors och Mäns Hälsa",
+          "description": "Könsspecifika hälsokontroller och konsultationer"
+        },
+        "bloodTests": {
+          "title": "Blodprov och Hälsokontroller",
+          "description": "Omfattande blodanalys och hälsövervakningstjänster"
+        },
+        "ivDrips": {
+          "title": "IV Droppterapi",
+          "description": "Intravenösa behandlingar för hydrering, vitaminer och mineraler"
+        },
+        "cocktails": {
+          "title": "IV Cocktails",
+          "description": "Specialiserade IV-terapikombinationer för specifika hälsomål"
         }
       }
     },

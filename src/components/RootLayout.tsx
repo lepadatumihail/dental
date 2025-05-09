@@ -126,7 +126,7 @@ function Header({
             <Image
               src={invert ? LogoLight : LogoDark}
               alt="Prisma Clinic Marbella"
-              width={200}
+              width={180}
               height={100}
             />
           </div>

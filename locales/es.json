@@ -449,8 +449,20 @@
           "description": "Evaluación y manejo de ansiedad, depresión y estrés"
         },
         "gender": {
-          "title": "Salud de la Mujer y del Hombre",
-          "description": "Evaluaciones de salud específicas por género y consultas"
+          "title": "Salud de Mujeres y Hombres",
+          "description": "Revisiones y consultas específicas por género"
+        },
+        "bloodTests": {
+          "title": "Análisis de Sangre y Chequeos",
+          "description": "Servicios completos de análisis sanguíneo y monitorización de salud"
+        },
+        "ivDrips": {
+          "title": "Terapia de Goteo Intravenoso",
+          "description": "Tratamientos intravenosos para hidratación, vitaminas y minerales"
+        },
+        "cocktails": {
+          "title": "Cócteles Intravenosos",
+          "description": "Combinaciones especializadas de terapia IV para objetivos de salud específicos"
         }
       }
     },

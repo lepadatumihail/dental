@@ -1,5 +1,4 @@
-import logo from '@/images/svg/first-aid.svg'
-import imageHero from '@/images/clinic/clinic1.jpg'
+import imageHero from '@/images/clinic/xray.jpg'
 import { StatList, StatListItem } from '@/components/StatList'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
@@ -210,6 +209,36 @@ export default function GeneralMedicineServices() {
                   </h4>
                   <p className="text-neutral-700">
                     {t('specialized.items.gender.description')}
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
+                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
+                    {t('specialized.items.bloodTests.title')}
+                  </h4>
+                  <p className="text-neutral-700">
+                    {t('specialized.items.bloodTests.description')}
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
+                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
+                    {t('specialized.items.ivDrips.title')}
+                  </h4>
+                  <p className="text-neutral-700">
+                    {t('specialized.items.ivDrips.description')}
+                  </p>
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
+                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
+                    {t('specialized.items.cocktails.title')}
+                  </h4>
+                  <p className="text-neutral-700">
+                    {t('specialized.items.cocktails.description')}
                   </p>
                 </div>
               </FadeIn>

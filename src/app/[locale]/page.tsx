@@ -19,7 +19,7 @@ import logoInvisalign from '@/images/clients/invisalign.svg'
 import { loadCaseStudies } from '@/lib/mdx'
 import CalendlyButton from '@/components/CalendlyButton'
 import Implants from '@/images/clinic/implant.jpg'
-import Dentists from '@/images/clinic/dentists.jpg'
+import Dentists from '@/images/clinic/xray.jpg'
 import { FirstAid, Syringe, Tooth } from '@phosphor-icons/react/dist/ssr'
 
 const clients = [
@@ -211,7 +211,7 @@ function Services({ translations }: { translations: ServicesTranslations }) {
                 src={Dentists}
                 sizes="(min-width: 1024px) 41rem, 31rem"
                 className="justify-center lg:justify-end"
-                shape={0}
+                shape={1}
               />
             </FadeIn>
           </div>
