@@ -1,18 +1,13 @@
 import logo from '@/images/svg/first-aid.svg'
 import imageHero from '@/images/clinic/clinic1.jpg'
-import imageDebraFiscal from '@/images/clinic/robin-colour.jpg'
 import { StatList, StatListItem } from '@/components/StatList'
-import { Blockquote } from '@/components/Blockquote'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { Border } from '@/components/Border'
 import {
   FirstAidKit,
   Smiley,
   ShieldStar,
-  Clock,
-  FirstAid,
   Stethoscope,
   User,
   Calendar,
@@ -22,28 +17,7 @@ import {
   Syringe,
 } from '@phosphor-icons/react/dist/ssr'
 import CalendlyButton from '@/components/CalendlyButton'
-import { Footer } from '@/components/Footer'
 import { useTranslations } from 'next-intl'
-
-export const caseStudy = {
-  client: 'General Medicine',
-  title: 'Comprehensive Primary Care Services',
-  description:
-    'State-of-the-art medical facility offering comprehensive general practitioner services from routine check-ups to chronic disease management, available 24/7 for emergencies.',
-  summary: [
-    'Prisma Clinic Marbella provides exceptional primary care combining leading medical expertise with personalized treatment plans for optimal health outcomes.',
-    'Our services include routine check-ups, chronic disease management, preventive care, minor surgical procedures, diagnostics, and more.',
-  ],
-  logo,
-  image: { src: imageHero },
-  date: '2025-01',
-  service: 'General Practice, Primary Care, Emergency Services',
-  testimonial: {
-    author: { name: 'Debra Fiscal', role: 'Patient' },
-    content:
-      'The team at Prisma Clinic Marbella provided exceptional care during my health journey. Their attention to detail and commitment to patient well-being made the entire experience outstanding.',
-  },
-}
 
 export const metadata = {
   title: 'Prisma Clinic Marbella - General Practice & Primary Care Services',

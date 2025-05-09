@@ -7,38 +7,11 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { useTranslations } from 'next-intl'
 import {
   Syringe,
-  Smiley,
-  ShieldStar,
-  FirstAid,
-  Stethoscope,
-  User,
-  Calendar,
-  ClockCounterClockwise,
   Sparkle,
   Scissors,
   Leaf,
 } from '@phosphor-icons/react/dist/ssr'
 import CalendlyButton from '@/components/CalendlyButton'
-
-export const caseStudy = {
-  client: 'Aesthetics',
-  title: 'Premium Aesthetic Treatments',
-  description:
-    'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial treatments, skin rejuvenation, and body contouring.',
-  summary: [
-    'Prisma Clinic Marbella provides exceptional aesthetic care combining cutting-edge technology with personalized treatment plans for optimal results.',
-    'Our services include facial treatments, skin rejuvenation, body contouring, and specialized aesthetic procedures.',
-  ],
-  logo,
-  image: { src: imageHero },
-  date: '2025-01',
-  service: 'Aesthetic Treatments, Beauty Services',
-  testimonial: {
-    author: { name: 'Debra Fiscal', role: 'Patient' },
-    content:
-      'The team at Prisma Clinic Marbella provided exceptional care during my aesthetic treatments. Their attention to detail and commitment to patient comfort made the entire experience outstanding.',
-  },
-}
 
 export const metadata = {
   title: 'Prisma Clinic Marbella - Premium Aesthetic Services',

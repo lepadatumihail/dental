@@ -33,26 +33,6 @@ type Feature = {
   description: string
 }
 
-export const caseStudy = {
-  client: 'Dental',
-  title: 'Premium Dental Care for Your Perfect Smile',
-  description:
-    'State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies.',
-  summary: [
-    'Prisma Clinic Marbella provides exceptional dental care combining cutting-edge technology with personalized treatment plans for optimal oral health.',
-    'Our services include smile design, Hollywood smile, teeth whitening, implants, dental surgery, emergency care, and more.',
-  ],
-  logo,
-  image: { src: imageHero },
-  date: '2025-01',
-  service: 'Dental Care, Emergency Services',
-  testimonial: {
-    author: { name: 'Debra Fiscal', role: 'Patient' },
-    content:
-      'The team at Prisma Clinic Marbella provided exceptional care during my smile makeover. Their attention to detail and commitment to patient comfort made the entire experience outstanding.',
-  },
-}
-
 export const metadata = {
   title: 'Prisma Clinic Marbella - Premium Dental Services',
   description:
