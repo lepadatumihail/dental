@@ -16,7 +16,7 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import logoNeos from '@/images/clients/neoss.svg'
 import logoStrauman from '@/images/clients/strauman.svg'
 import logoInvisalign from '@/images/clients/invisalign.svg'
-import { loadCaseStudies } from '@/lib/mdx'
+
 import CalendlyButton from '@/components/CalendlyButton'
 import Implants from '@/images/clinic/implant.jpg'
 import Dentists from '@/images/clinic/xray.jpg'
@@ -114,7 +114,7 @@ function ServiceCategory({
   return (
     <div id="services">
       <SectionIntro title={translations.title} className="pt-24">
-        <p className="sm:text-md font-display text-sm text-neutral-500">
+        <p className="font-display text-sm text-neutral-500 sm:text-lg">
           {translations.description}
         </p>
       </SectionIntro>
@@ -123,7 +123,10 @@ function ServiceCategory({
           <FadeIn className="flex">
             <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
               <h3>
-                <Link href="/services/general-medicine">
+                <Link
+                  href="/services/general-medicine"
+                  aria-label={`Learn more about ${translations.categories.general.title} services`}
+                >
                   <span className="absolute inset-0 rounded-3xl" />
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
                     <FirstAid size={32} />
@@ -145,7 +148,10 @@ function ServiceCategory({
           <FadeIn className="flex">
             <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
               <h3>
-                <Link href="/services/dental">
+                <Link
+                  href="/services/dental"
+                  aria-label={`Learn more about ${translations.categories.dental.title} services`}
+                >
                   <span className="absolute inset-0 rounded-3xl" />
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
                     <Tooth size={32} />
@@ -167,7 +173,10 @@ function ServiceCategory({
           <FadeIn className="flex">
             <article className="relative flex w-full flex-col rounded-3xl border border-white/20 bg-white/40 p-6 shadow-lg ring-1 ring-neutral-950/5 backdrop-blur-md backdrop-saturate-150 transition hover:bg-white/50 hover:shadow-xl sm:p-8">
               <h3>
-                <Link href="/services/aesthetics">
+                <Link
+                  href="/services/aesthetics"
+                  aria-label={`Learn more about ${translations.categories.aesthetics.title} services`}
+                >
                   <span className="absolute inset-0 rounded-3xl" />
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-neutral-100/80 to-neutral-200/80 shadow-inner backdrop-blur-sm">
                     <Syringe size={32} />
@@ -242,7 +251,6 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const t = await getTranslations('home')
-  const caseStudies = (await loadCaseStudies()).slice(0, 3)
 
   const serviceCategoryTranslations: ServiceCategoryTranslations = {
     title: t('services.title'),
@@ -293,7 +301,7 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-16 font-display">
-        <div className="flex flex-col gap-[140px] lg:flex-row">
+        <div className="flex flex-col lg:flex-row lg:gap-[140px]">
           <div className="sm:mt-32">
             <h1 className="font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
               {t('title')}
@@ -311,7 +319,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex justify-center lg:w-1/3">
-            <FadeIn className="w-[33.75rem] flex-none lg:w-[38rem]">
+            <FadeIn className="w-[22.75rem] flex-none md:w-[38rem]">
               <StylizedImage
                 src={Implants}
                 sizes="(min-width: 1024px) 41rem, 31rem"

@@ -145,6 +145,7 @@ function Header({
             href="/services/emergency"
             className="border border-red-400 text-red-500"
             invert
+            aria-label="Access emergency dental services"
           >
             {translations.header.emergency}
           </Button>
@@ -193,14 +194,17 @@ function NavigationRow({ children }: { children: React.ReactNode }) {
 function NavigationItem({
   href,
   children,
+  ariaLabel,
 }: {
   href: string
   children: React.ReactNode
+  ariaLabel?: string
 }) {
   return (
     <Link
       href={href}
       className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      aria-label={ariaLabel}
     >
       {children}
       <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
@@ -243,7 +247,10 @@ function Navigation() {
         </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/services/emergency">
+        <NavigationItem
+          href="/services/emergency"
+          ariaLabel="Access 24/7 emergency dental services"
+        >
           <span className="flex items-center">
             <span>{translations.navigation.emergency.title}</span>
             <span className="ml-4 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold tracking-wider uppercase">
@@ -407,6 +414,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             target="_blank"
             rel="noopener noreferrer"
             className="fixed right-10 bottom-10 rounded-full bg-green-400 p-3"
+            aria-label="Contact us on WhatsApp"
           >
             <WhatsappLogo size={20} className="text-white" />
           </a>
