@@ -20,12 +20,6 @@ export const metadata: Metadata = {
 export default async function Blog() {
   const articles = await loadArticles()
 
-  console.log(
-    'Blog articles loaded:',
-    articles.length,
-    articles.map((a) => a.title),
-  )
-
   return (
     <>
       <PageIntro eyebrow="Blog" title="Health News & Clinical Updates">
