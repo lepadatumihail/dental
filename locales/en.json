@@ -119,6 +119,7 @@
         "description": "Prisma Clinic Marbella provides a wide range of premium medical and dental services, including emergency care available 24/7. Our team of specialists is dedicated to providing exceptional care using cutting-edge technology.",
         "learnMore": "Learn more",
         "testimonial": {
+          "client": "Bright Smiles",
           "content": "The team at Prisma Clinic Marbella transformed my dental experience. Their professional approach and state-of-the-art technology made my treatment comfortable and effective. I couldn't be happier with the results."
         }
       },
@@ -126,6 +127,10 @@
         "title": "Premium Dental Services",
         "client": "Dental Care",
         "service": "Comprehensive Services",
+        "summary": [
+          "Our dental department offers a comprehensive range of services including general dentistry, cosmetic treatments, implants, orthodontics, and 24/7 emergency dental care.",
+          "Using the latest technology and the most advanced techniques, our experienced dentists provide personalized treatment plans to maintain and improve your oral health and smile's aesthetics."
+        ],
         "testimonial": {
           "author": "Maria L.",
           "role": "Patient from Marbella",
@@ -135,15 +140,116 @@
       "aesthetics": {
         "title": "Advanced Aesthetic Treatments",
         "client": "Aesthetics",
-        "service": "Beauty & Rejuvenation",
+        "service": "Beauty and Rejuvenation",
         "summary": [
-          "Our aesthetics department specializes in non-surgical rejuvenation treatments including Botox, dermal fillers, lip enhancement, and other facial aesthetic procedures.",
-          "Our qualified specialists create natural-looking results that enhance your features while maintaining facial harmony, helping you achieve a refreshed, youthful appearance."
+          "Our aesthetics department specializes in non-surgical rejuvenation treatments, including Botox, dermal fillers, lip enhancement, and other facial aesthetic procedures.",
+          "Our qualified specialists create natural-looking results that enhance your features while maintaining facial harmony, helping you achieve a rejuvenated and youthful appearance."
         ],
         "testimonial": {
           "author": "Sofia R.",
           "role": "Patient from Marbella",
-          "content": "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted—subtle enhancement that looks completely natural. The team's expertise and attention to detail is outstanding."
+          "content": "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted: a subtle improvement that looks completely natural. The experience and attention to detail of the team is outstanding."
+        },
+        "hero": {
+          "title": "Prisma Clinic Marbella Aesthetics",
+          "description": "State-of-the-art aesthetics clinic offering comprehensive beauty and rejuvenation services for natural and surprising results.",
+          "imageAlt": "Aesthetics Services"
+        },
+        "services": {
+          "title": "Our Services",
+          "description": "Our modern facilities and experienced aesthetic specialists ensure patients receive the highest quality care for all their beauty and rejuvenation needs. We pride ourselves on providing personalized treatment plans tailored to each patient's specific requirements."
+        },
+        "stats": {
+          "satisfaction": {
+            "value": "100%",
+            "label": "Patient satisfaction"
+          },
+          "experience": {
+            "value": "15+",
+            "label": "Years of experience"
+          },
+          "treatments": {
+            "value": "500+",
+            "label": "Successful treatments"
+          },
+          "options": {
+            "value": "20+",
+            "label": "Treatment options"
+          }
+        },
+        "facial": {
+          "title": "Facial Treatments",
+          "description": "Enhance your natural facial features with our premium treatments:",
+          "treatments": [
+            {
+              "title": "Lip Fill",
+              "description": "Add volume and definition to your lips"
+            },
+            {
+              "title": "Facial Harmony",
+              "description": "Create balanced and harmonious facial proportions"
+            },
+            {
+              "title": "5-Point Lifting",
+              "description": "Non-surgical facial lifting targeting key areas of the face"
+            },
+            {
+              "title": "PDRN Eye Contour",
+              "description": "Reduce dark circles and under-eye hollows"
+            },
+            {
+              "title": "Eyelid Lifting",
+              "description": "Rejuvenate tired eyes without surgery"
+            },
+            {
+              "title": "Nasal Tip Lifting",
+              "description": "Refine and enhance your nose without surgery"
+            }
+          ]
+        },
+        "skin": {
+          "title": "Skin Rejuvenation",
+          "description": "Revitalize your skin with our advanced procedures:",
+          "treatments": [
+            {
+              "title": "Bio Revitalizer",
+              "description": "Deep hydration and skin regeneration"
+            },
+            {
+              "title": "Skin Booster",
+              "description": "Improve skin texture and radiance"
+            },
+            {
+              "title": "Micro Needling",
+              "description": "Stimulate collagen production for firmer skin"
+            },
+            {
+              "title": "Chemical Peeling",
+              "description": "Remove damaged outer layers for renewed skin"
+            },
+            {
+              "title": "Exosomes",
+              "description": "Advanced cellular therapy for skin rejuvenation"
+            },
+            {
+              "title": "PRP Facial/Hair",
+              "description": "Harness your body's healing capabilities for skin and hair"
+            }
+          ]
+        },
+        "body": {
+          "title": "Body Contouring",
+          "description": "Shape and define your body contours:",
+          "treatments": [
+            {
+              "title": "Fat Dissolution",
+              "description": "Non-surgical reduction of localized fat deposits"
+            }
+          ]
+        },
+        "cta": {
+          "title": "Ready to Transform Your Appearance?",
+          "description": "Contact us today to schedule your consultation and experience premium aesthetic care at Prisma Clinic Marbella."
         }
       },
       "generalMedicine": {

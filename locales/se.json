@@ -119,6 +119,7 @@
         "description": "Prisma Clinic Marbella erbjuder ett brett utbud av premium medicinska och tandvårdstjänster, inklusive akutvård dygnet runt. Vårt specialistteam är dedikerat till att ge exceptionell vård med hjälp av den senaste tekniken.",
         "learnMore": "Läs mer",
         "testimonial": {
+          "client": "Bright Smiles",
           "content": "Teamet på Prisma Clinic Marbella förvandlade min tandvårdsupplevelse. Deras professionella arbetssätt och toppmoderna teknik gjorde min behandling både bekväm och effektiv. Jag kunde inte vara mer nöjd med resultatet."
         }
       },
@@ -126,6 +127,10 @@
         "title": "Premium tandvårdstjänster",
         "client": "Tandvård",
         "service": "Heltäckande tjänster",
+        "summary": [
+          "Vår tandvårdsdekning erbjuder heltäckande tjänster som inkluderar allmäntandvård, kosmetisk tandvård, rekonstruktiv tandvård och barn- och ungdomstandvård, tillgängliga dygnet runt för alla dina tandvårdsbehov.",
+          "Våra erfarna tandläkare använder den senaste tekniken och de mest avancerade teknikerna för att säkerställa att du får den bästa tandvården med högsta precision och komfort."
+        ],
         "testimonial": {
           "author": "Maria L.",
           "role": "Patient från Marbella",
@@ -135,15 +140,116 @@
       "aesthetics": {
         "title": "Avancerade estetiska behandlingar",
         "client": "Estetik",
-        "service": "Skönhet & föryngring",
+        "service": "Skönhet och förnyelse",
         "summary": [
-          "Vårt estetiska team är specialiserat på icke-kirurgiska föryngringsbehandlingar som Botox, dermala fillers, läppförstoring och andra ansiktsesthetic ingrepp.",
-          "Våra kvalificerade specialister skapar naturliga resultat som framhäver dina drag samtidigt som de bevarar ansiktets harmoni, och hjälper dig att uppnå ett fräscht, ungdomligt utseende."
+          "Vårt estetiska avdelning specialiserar sig på icke-kirurgiska förnyelsebehandlingar, inklusive Botox, dermala fillers, läppförstärkning och andra ansiktsestetiska procedurer.",
+          "Våra kvalificerade specialister skapar naturliga resultat som förbättrar dina drag samtidigt som de behåller ansiktsharmoni, vilket hjälper dig att uppnå ett förnyat och ungdomligt utseende."
         ],
         "testimonial": {
           "author": "Sofia R.",
           "role": "Patient från Marbella",
-          "content": "De estetiska behandlingarna på Prisma Clinic gav exakt det jag ville ha – subtila förbättringar som ser helt naturliga ut. Teamets expertis och noggrannhet är enastående."
+          "content": "De estetiska behandlingarna på Prisma Clinic levererade exakt vad jag ville ha: en subtil förbättring som ser helt naturlig ut. Teamets erfarenhet och uppmärksamhet på detaljer är enastående."
+        },
+        "hero": {
+          "title": "Prisma Clinic Marbella Estetik",
+          "description": "Toppmodern estetisklinik som erbjuder omfattande skönhets- och förnyelsetjänster för naturliga och överraskande resultat.",
+          "imageAlt": "Estetiska tjänster"
+        },
+        "services": {
+          "title": "Våra tjänster",
+          "description": "Våra moderna faciliteter och erfarna estetiska specialister säkerställer att patienter får den högsta kvaliteten på vård för alla sina skönhets- och förnyelsebehov. Vi är stolta över att erbjuda personliga behandlingsplaner skräddarsydda för varje patients specifika krav."
+        },
+        "stats": {
+          "satisfaction": {
+            "value": "100%",
+            "label": "Patientsatisfaktion"
+          },
+          "experience": {
+            "value": "15+",
+            "label": "Års erfarenhet"
+          },
+          "treatments": {
+            "value": "500+",
+            "label": "Framgångsrika behandlingar"
+          },
+          "options": {
+            "value": "20+",
+            "label": "Behandlingsalternativ"
+          }
+        },
+        "facial": {
+          "title": "Ansiktsbehandlingar",
+          "description": "Förbättra dina naturliga ansiktsdrag med våra premiumbehandlingar:",
+          "treatments": [
+            {
+              "title": "Läppfyllning",
+              "description": "Lägg till volym och definition till dina läppar"
+            },
+            {
+              "title": "Ansiktsharmoni",
+              "description": "Skapa balanserade och harmoniska ansiktsproportioner"
+            },
+            {
+              "title": "5-punkts lyftning",
+              "description": "Icke-kirurgisk ansiktslyftning som riktar sig mot nyckelområden i ansiktet"
+            },
+            {
+              "title": "PDRN ögonkontur",
+              "description": "Minska mörka ringar och underögonhåligheter"
+            },
+            {
+              "title": "Ögonlockslyftning",
+              "description": "Förnya trötta ögon utan kirurgi"
+            },
+            {
+              "title": "Nästiplyftning",
+              "description": "Förfina och förbättra din näsa utan kirurgi"
+            }
+          ]
+        },
+        "skin": {
+          "title": "Hudförnyelse",
+          "description": "Vitalisera din hud med våra avancerade procedurer:",
+          "treatments": [
+            {
+              "title": "Bio Revitalizer",
+              "description": "Djup hydrering och hudregenerering"
+            },
+            {
+              "title": "Skin Booster",
+              "description": "Förbättra hudtextur och glans"
+            },
+            {
+              "title": "Micro Needling",
+              "description": "Stimulera kollagenproduktion för fastare hud"
+            },
+            {
+              "title": "Kemisk peeling",
+              "description": "Ta bort skadade yttre lager för förnyad hud"
+            },
+            {
+              "title": "Exosomes",
+              "description": "Avancerad cellterapi för hudförnyelse"
+            },
+            {
+              "title": "PRP Ansikte/Hår",
+              "description": "Utnyttja kroppens läkande förmågor för hud och hår"
+            }
+          ]
+        },
+        "body": {
+          "title": "Kroppskonturering",
+          "description": "Forma och definiera dina kroppskonturer:",
+          "treatments": [
+            {
+              "title": "Fettupplösning",
+              "description": "Icke-kirurgisk minskning av lokalisade fettdepåer"
+            }
+          ]
+        },
+        "cta": {
+          "title": "Redo att förvandla ditt utseende?",
+          "description": "Kontakta oss idag för att boka din konsultation och upplev premium estetisk vård på Prisma Clinic Marbella."
         }
       },
       "generalMedicine": {
@@ -407,16 +513,141 @@
       "text": "Kontakta oss idag för att boka din konsultation och upplev förstklassig vård på Prisma Clinic Marbella."
     }
   },
-  "services": {
-    "page": {
+  "dental": {
+    "hero": {
+      "title": "Prisma Clinic Marbella Tandvårdstjänster",
+      "description": "Toppmodern tandvårdsklinik som erbjuder omfattande tandvårdstjänster från rutinvård till avancerade kosmetiska och kirurgiska ingrepp.",
+      "imageAlt": "Tandvårdstjänster"
+    },
+    "services": {
       "title": "Våra tjänster",
-      "subtitle": "Omfattande hälsolösningar i Marbella",
-      "description": "Prisma Clinic Marbella erbjuder ett brett utbud av premium medicinska och tandvårdstjänster, inklusive akutvård dygnet runt. Vårt specialistteam är dedikerat till att ge exceptionell vård med hjälp av den senaste tekniken.",
-      "learnMore": "Läs mer",
-      "testimonial": {
-        "client": "Bright Smiles",
-        "content": "Teamet på Prisma Clinic Marbella förvandlade min tandvårdsupplevelse. Deras professionella arbetssätt och toppmoderna teknik gjorde min behandling både bekväm och effektiv."
+      "description": "Våra moderna anläggningar och erfarna team säkerställer att patienter får vård av högsta kvalitet för alla sina tandvårdsbehov. Vi är stolta över att erbjuda personliga behandlingsplaner anpassade efter varje patients specifika krav."
+    },
+    "stats": {
+      "satisfaction": {
+        "value": "100%",
+        "label": "Patientsatisfaktion"
+      },
+      "availability": {
+        "value": "24/7",
+        "label": "Akutvård tillgänglig"
+      },
+      "experience": {
+        "value": "15+",
+        "label": "Års erfarenhet"
+      },
+      "treatments": {
+        "value": "500+",
+        "label": "Framgångsrika behandlingar"
       }
+    },
+    "cosmetic": {
+      "title": "Kosmetisk tandvård",
+      "description": "Förvandla ditt leende med våra avancerade kosmetiska procedurer:",
+      "treatments": [
+        {
+          "title": "Leendedesign",
+          "description": "Skräddarsydda leendeförvandlingar anpassade efter dina ansiktsdrag"
+        },
+        {
+          "title": "Hollywood-leende",
+          "description": "Uppnå det perfekta kändisleendet genom omfattande behandling"
+        },
+        {
+          "title": "Professionell tandblekning",
+          "description": "Avancerade blekningsmetoder för ett ljusare leende"
+        }
+      ]
+    },
+    "restorative": {
+      "title": "Rekonstruktiva procedurer",
+      "description": "Återställ både funktion och estetik med våra rekonstruktiva behandlingar:",
+      "treatments": [
+        {
+          "title": "Tandimplantat",
+          "description": "Permanenta tandersättningslösningar"
+        },
+        {
+          "title": "Fyllningar",
+          "description": "Tandfärgade reparationer för skadade tänder"
+        },
+        {
+          "title": "Protetiker",
+          "description": "Högkvalitativa proteser och broar"
+        }
+      ]
+    },
+    "surgical": {
+      "title": "Kirurgiska tjänster",
+      "description": "Expert kirurgisk vård med minimal obehag:",
+      "treatments": [
+        {
+          "title": "Extraktioner",
+          "description": "Enkla och komplexa tandextraktionsprocedurer"
+        },
+        {
+          "title": "Bihålelyft",
+          "description": "Förbereder överkäken för framgångsrik implantatplacering"
+        },
+        {
+          "title": "Tandkirurgi",
+          "description": "Specialiserade kirurgiska ingrepp för olika tillstånd"
+        }
+      ]
+    },
+    "emergency": {
+      "title": "Akutvård",
+      "description": "Vi förstår att tandakut kan uppstå när som helst:",
+      "conditions": [
+        {
+          "title": "Svår tandvärk",
+          "description": "Omedelbar smärtlindring och behandling för intensiv tandvärk"
+        },
+        {
+          "title": "Brutna eller avbrutna tänder",
+          "description": "Snabb reparation av skadade tänder för att förhindra ytterligare komplikationer"
+        },
+        {
+          "title": "Utfallna tänder",
+          "description": "Akut replantation och behandling för utfallna tänder"
+        }
+      ]
+    },
+    "whyChoose": {
+      "title": "Varför välja Prisma Clinic Marbella?",
+      "features": {
+        "expert": {
+          "title": "Expertteam",
+          "description": "Högt kvalificerade tandläkare med specialiserad utbildning"
+        },
+        "facility": {
+          "title": "Toppmodern anläggning",
+          "description": "Senaste tandvårdsteknik och utrustning"
+        },
+        "personalized": {
+          "title": "Personlig vård",
+          "description": "Skräddarsydda behandlingsplaner för varje patient"
+        },
+        "comfort": {
+          "title": "Bekväm miljö",
+          "description": "Avkopplande atmosfär för att minska tandvårdsångest"
+        },
+        "scheduling": {
+          "title": "Bekväm schemaläggning",
+          "description": "Flexibla bokningstider som passar ditt schema"
+        }
+      }
+    },
+    "testimonial": {
+      "author": {
+        "name": "Debra Fiscal",
+        "role": "Patient"
+      },
+      "content": "Teamet på Prisma Clinic Marbella gav exceptionell vård under min leendeförvandling. Deras uppmärksamhet på detaljer och engagemang för patientkomfort gjorde hela upplevelsen fantastisk."
+    },
+    "cta": {
+      "title": "Redo att förvandla ditt leende?",
+      "description": "Kontakta oss idag för att boka din konsultation och upplev premium tandvård på Prisma Clinic Marbella."
     }
   }
 }

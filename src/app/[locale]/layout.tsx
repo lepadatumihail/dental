@@ -30,13 +30,9 @@ export default async function LocaleLayout({
 
   // 3) Render provider with both locale + messages
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <RootLayout>{children}</RootLayout>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <RootLayout>{children}</RootLayout>
+    </NextIntlClientProvider>
   )
 }
 
