@@ -416,7 +416,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             className="fixed right-10 bottom-10 rounded-full bg-green-400 p-3"
             aria-label="Contact us on WhatsApp"
           >
-            <WhatsappLogo size={20} className="text-white" />
+            <WhatsappLogo size={26} className="text-white" />
           </a>
 
           <Footer />

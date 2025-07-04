@@ -45,10 +45,24 @@ export function Offices({
               <br />
             </div>
             <span className={invert ? 'text-white' : 'text-neutral-950'}>
-              {t('phone')}:
+              {t('phone')}:{' '}
             </span>
+
+            <a
+              href="tel:+34673290786"
+              className={invert ? 'text-white' : 'text-neutral-950'}
+            >
+              {t('phoneNumber')}
+            </a>
             <br />
-            {t('phoneNumber')}
+            <a
+              href="https://wa.me/+34673290786"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={'text-green-400 underline'}
+            >
+              WhatsApp
+            </a>
           </Office>
           <div
             className={clsx(
@@ -63,12 +77,6 @@ export function Offices({
             </span>
             <br />
             {t('weekdays')}
-            <br />
-            {t('saturday')}
-            <br />
-            {t('sunday')}
-            <br />
-            <br />
           </div>
         </div>
       </li>

@@ -77,7 +77,7 @@ export default async function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full bg-neutral-950 text-base antialiased">
+    <html className="h-full bg-neutral-950 text-base antialiased">
       <body className="flex min-h-full flex-col">
         {children}
         <Analytics />
