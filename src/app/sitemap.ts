@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://arts-clinic.com'
+  const baseUrl = 'https://www.prismaclinicmarbella.es'
   const locales = ['en', 'es', 'se']
   const currentDate = new Date().toISOString()
 

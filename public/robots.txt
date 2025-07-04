@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://arts-clinic.com/sitemap.xml
+Sitemap: https://www.prismaclinicmarbella.es/sitemap.xml
 
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
