@@ -58,7 +58,11 @@ export function ContactSection() {
             </ul>
           </div>
           <div className="mt-4 flex flex-wrap gap-4">
-            <Button href="/services/emergency" invert>
+            <Button
+              aria-label={translations.learnMore}
+              href="/services/emergency"
+              invert
+            >
               {translations.learnMore}
             </Button>
             <Button
