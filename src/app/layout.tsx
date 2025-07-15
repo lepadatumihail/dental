@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
+import Script from 'next/script'
 
 import { RootLayout } from '@/components/RootLayout'
 
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'Prisma Clinic Marbella' }],
   creator: 'Prisma Clinic Marbella',
   publisher: 'Prisma Clinic Marbella',
+  verification: {
+    google: 'chl-GKbeOp0emOcri6NNeNHbv7xcnBzi618ga8beWEI',
+  },
   openGraph: {
     images: [
       {
@@ -78,6 +82,28 @@ export default async function Layout({
 }) {
   return (
     <html className="h-full bg-neutral-950 text-base antialiased">
+      <head>
+        {/* Ahrefs Analytics */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="50Zg5u7x92m3eDyxjhSJww"
+          async
+        />
+
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-JHK75NLNSK"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JHK75NLNSK');
+          `}
+        </Script>
+      </head>
       <body className="flex min-h-full flex-col">
         {children}
         <Analytics />
