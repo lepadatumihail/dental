@@ -19,7 +19,7 @@ export default function CalendlyButton() {
 
   return (
     <PopupButton
-      url="https://calendly.com/robin-moazzez/30min"
+      url="https://calendly.com/robin-moazzez"
       rootElement={rootElement}
       text={t('button')}
       className={clsx(
