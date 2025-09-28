@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import { CookieSettings } from '@/components/CookieSettings'
 import Image from 'next/image'
 
 import Logo from '../../public/logo-dark.png'
@@ -137,9 +138,12 @@ export function Footer() {
               height={150}
             />
           </Link>
-          <p className="text-sm text-neutral-700">
-            © Prisma Clinic Marbella {new Date().getFullYear()}
-          </p>
+          <div className="flex flex-col items-end gap-4 sm:flex-row">
+            <CookieSettings />
+            <p className="text-sm text-neutral-700">
+              © Prisma Clinic Marbella {new Date().getFullYear()}
+            </p>
+          </div>
         </div>
       </FadeIn>
     </Container>

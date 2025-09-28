@@ -13,6 +13,11 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 import CalendlyButton from '@/components/CalendlyButton'
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export const metadata = {
   title: 'Prisma Clinic Marbella - Premium Aesthetic Services',
   description:

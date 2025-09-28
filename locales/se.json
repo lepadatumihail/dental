@@ -513,6 +513,23 @@
       "text": "Kontakta oss idag för att boka din konsultation och upplev förstklassig vård på Prisma Clinic Marbella."
     }
   },
+  "cookieBanner": {
+    "title": "Cookie-samtycke",
+    "description": "Vi använder cookies för att förbättra din surfupplevelse, visa personliga annonser eller innehåll och analysera vår trafik. Genom att klicka \"Acceptera alla\" samtycker du till vår användning av cookies.",
+    "necessaryTitle": "Nödvändiga Cookies",
+    "necessaryDescription": "Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt. De möjliggör grundläggande funktioner som sidnavigering och åtkomst till säkra områden.",
+    "analyticsTitle": "Analytiska Cookies",
+    "analyticsDescription": "Dessa cookies hjälper oss att förstå hur besökare interagerar med vår webbplats genom att samla in och rapportera information anonymt.",
+    "marketingTitle": "Marknadsföringscookies",
+    "marketingDescription": "Dessa cookies används för att spåra besökare över webbplatser för att visa relevanta och engagerande annonser.",
+    "acceptAll": "Acceptera alla",
+    "acceptNecessary": "Acceptera endast nödvändiga",
+    "customize": "Anpassa inställningar",
+    "save": "Spara preferenser",
+    "decline": "Avvisa alla",
+    "learnMore": "Läs mer om vår cookie-policy",
+    "cookiePolicy": "Cookie-policy"
+  },
   "dental": {
     "hero": {
       "title": "Prisma Clinic Marbella Tandvårdstjänster",

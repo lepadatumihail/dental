@@ -18,6 +18,11 @@ import { useTranslations } from 'next-intl'
 
 import { Blockquote } from '@/components/Blockquote'
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export const metadata = {
   title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
   description:

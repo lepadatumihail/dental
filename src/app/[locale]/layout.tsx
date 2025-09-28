@@ -5,6 +5,7 @@ import { hasLocale } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { RootLayout } from '@/components/RootLayout'
+import { CookieBanner } from '@/components/CookieBanner'
 interface Props {
   children: React.ReactNode
   params: { locale: string }
@@ -31,7 +32,10 @@ export default async function LocaleLayout({
   // 3) Render provider with both locale + messages
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <RootLayout>{children}</RootLayout>
+      <RootLayout>
+        {children}
+        <CookieBanner />
+      </RootLayout>
     </NextIntlClientProvider>
   )
 }

@@ -513,6 +513,23 @@
       "text": "Contact us today to schedule your consultation and experience premium healthcare at Prisma Clinic Marbella."
     }
   },
+  "cookieBanner": {
+    "title": "Cookie Consent",
+    "description": "We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "necessaryTitle": "Necessary Cookies",
+    "necessaryDescription": "These cookies are essential for the website to function properly. They enable basic features like page navigation and access to secure areas.",
+    "analyticsTitle": "Analytics Cookies",
+    "analyticsDescription": "These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+    "marketingTitle": "Marketing Cookies",
+    "marketingDescription": "These cookies are used to track visitors across websites to display relevant and engaging advertisements.",
+    "acceptAll": "Accept All",
+    "acceptNecessary": "Accept Necessary Only",
+    "customize": "Customize Settings",
+    "save": "Save Preferences",
+    "decline": "Decline All",
+    "learnMore": "Learn more about our cookie policy",
+    "cookiePolicy": "Cookie Policy"
+  },
   "dental": {
     "hero": {
       "title": "Prisma Clinic Marbella Dental Services",

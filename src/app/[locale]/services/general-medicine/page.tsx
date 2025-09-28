@@ -18,6 +18,11 @@ import {
 import CalendlyButton from '@/components/CalendlyButton'
 import { useTranslations } from 'next-intl'
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export const metadata = {
   title: 'Prisma Clinic Marbella - General Practice & Primary Care Services',
   description:

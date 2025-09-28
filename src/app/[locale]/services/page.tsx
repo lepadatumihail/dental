@@ -158,6 +158,11 @@ export const metadata: Metadata = {
     'Medical and dental services in Marbella including emergency 24/7 dental care, cosmetic dentistry, and aesthetic treatments.',
 }
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export default function ServicesPage() {
   const t = useTranslations('layout.services')
 

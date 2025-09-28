@@ -90,17 +90,34 @@ export default async function Layout({
           async
         />
 
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager with Consent Mode */}
+        <Script id="google-consent">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Default consent state for EU users
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500,
+            });
+            
+            gtag('js', new Date());
+          `}
+        </Script>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JHK75NLNSK"
         />
         <Script id="google-analytics">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JHK75NLNSK');
+            gtag('config', 'G-JHK75NLNSK', {
+              anonymize_ip: true,
+              cookie_flags: 'samesite=strict;secure'
+            });
           `}
         </Script>
       </head>

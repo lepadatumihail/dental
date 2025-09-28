@@ -39,6 +39,11 @@ export const metadata = {
     'State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies.',
 }
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export default function DentalServices() {
   const t = useTranslations('dental')
 

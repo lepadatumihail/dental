@@ -16,7 +16,11 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx']
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  // Uncomment the line below for full static export (for hosting on CDN/static hosts)
+  // output: 'export',
+  // trailingSlash: true,
+  // images: { unoptimized: true },
 }
 
 function remarkMDXLayout(source, metaName) {
