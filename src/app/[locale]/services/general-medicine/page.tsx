@@ -3,6 +3,8 @@ import { StatList, StatListItem } from '@/components/StatList'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { createCanonicalMetadata } from '@/lib/canonical'
+import type { Metadata } from 'next'
 import {
   FirstAidKit,
   Smiley,
@@ -23,10 +25,21 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export const metadata = {
-  title: 'Prisma Clinic Marbella - General Practice & Primary Care Services',
-  description:
-    'State-of-the-art medical facility offering comprehensive general practitioner services from routine check-ups to chronic disease management, available 24/7 for emergencies.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Prisma Clinic Marbella - General Practice & Primary Care Services',
+    description:
+      'State-of-the-art medical facility offering comprehensive general practitioner services from routine check-ups to chronic disease management, available 24/7 for emergencies.',
+    ...createCanonicalMetadata('services/general-medicine', locale),
+  }
 }
 
 export default function GeneralMedicineServices() {

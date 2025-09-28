@@ -52,7 +52,7 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const socialMediaProfiles = [
   {
     title: 'Facebook',
-    href: 'https://www.facebook.com/profile.php?id=61573908576793',
+    href: 'https://www.facebook.com/p/Prisma-Clinic-Marbella-61577789463482/',
     icon: FacebookIcon,
   },
   {

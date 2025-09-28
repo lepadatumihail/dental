@@ -10,11 +10,23 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
+import { createCanonicalMetadata } from '@/lib/canonical'
 
-export const metadata: Metadata = {
-  title: 'Blog',
-  description:
-    'Stay up-to-date with the latest health news, treatments, and advice from our experienced medical team.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Blog',
+    description:
+      'Stay up-to-date with the latest health news, treatments, and advice from our experienced medical team.',
+    ...createCanonicalMetadata('blog', locale),
+  }
 }
 
 export default async function Blog() {

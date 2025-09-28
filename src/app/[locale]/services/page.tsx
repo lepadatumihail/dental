@@ -12,6 +12,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
+import { createCanonicalMetadata } from '@/lib/canonical'
 import logoMailSmirk from '@/images/clients/phobia/logo-dark.svg'
 import { EmergencyServiceBanner } from '@/components/EmergencyServiceBanner'
 
@@ -152,10 +153,21 @@ function Services() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Our Services | Prisma Clinic Marbella',
-  description:
-    'Medical and dental services in Marbella including emergency 24/7 dental care, cosmetic dentistry, and aesthetic treatments.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Our Services | Prisma Clinic Marbella',
+    description:
+      'Medical and dental services in Marbella including emergency 24/7 dental care, cosmetic dentistry, and aesthetic treatments.',
+    ...createCanonicalMetadata('services', locale),
+  }
 }
 
 // Generate static params for all locales

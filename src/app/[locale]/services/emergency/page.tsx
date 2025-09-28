@@ -3,6 +3,8 @@ import { StatList, StatListItem } from '@/components/StatList'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { createCanonicalMetadata } from '@/lib/canonical'
+import type { Metadata } from 'next'
 import {
   Clock,
   FirstAid,
@@ -23,21 +25,27 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export const metadata = {
-  title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
-  description:
-    'Immediate emergency dental care available 24/7 in Marbella. Same-day appointments for dental emergencies including severe pain, broken teeth, and trauma. Call our hotline now!',
-  openGraph: {
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
     title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
     description:
       'Immediate emergency dental care available 24/7 in Marbella. Same-day appointments for dental emergencies including severe pain, broken teeth, and trauma. Call our hotline now!',
-    url: 'https://prismaclinicmarbella.es/services/emergency',
-    siteName: 'Prisma Clinic Marbella',
-    type: 'website',
-  },
-  alternates: {
-    canonical: 'https://prismaclinicmarbella.es/services/emergency',
-  },
+    openGraph: {
+      title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
+      description:
+        'Immediate emergency dental care available 24/7 in Marbella. Same-day appointments for dental emergencies including severe pain, broken teeth, and trauma. Call our hotline now!',
+      type: 'website',
+    },
+    ...createCanonicalMetadata('services/emergency', locale),
+  }
 }
 
 export default function EmergencyDentalServices() {

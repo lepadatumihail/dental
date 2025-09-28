@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { useTranslations } from 'next-intl'
+import { createCanonicalMetadata } from '@/lib/canonical'
+import type { Metadata } from 'next'
 
 import {
   Tooth,
@@ -33,10 +35,21 @@ type Feature = {
   description: string
 }
 
-export const metadata = {
-  title: 'Prisma Clinic Marbella - Premium Dental Services',
-  description:
-    'State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Prisma Clinic Marbella - Premium Dental Services',
+    description:
+      'State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies.',
+    ...createCanonicalMetadata('services/dental', locale),
+  }
 }
 
 // Generate static params for all locales

@@ -10,6 +10,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
+import { createCanonicalMetadata } from '@/lib/canonical'
 import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
 import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
 import imageBlakeReid from '@/images/team/blake-reid.jpg'
@@ -178,10 +179,21 @@ function Team() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'About Us',
-  description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'About Us',
+    description:
+      'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    ...createCanonicalMetadata('about', locale),
+  }
 }
 
 export default async function About() {

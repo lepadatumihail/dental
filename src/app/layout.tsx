@@ -3,11 +3,12 @@ import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 
 import { RootLayout } from '@/components/RootLayout'
+import { BASE_URL } from '@/lib/canonical'
 
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.prismaclinicmarbella.es'),
+  metadataBase: new URL(BASE_URL),
   title: {
     template: '%s - Prisma Clinic Marbella',
     default:

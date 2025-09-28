@@ -11,6 +11,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import SmoothScrollLink from '@/components/SmoothScrollLink'
+import { createCanonicalMetadata } from '@/lib/canonical'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import logoNeos from '@/images/clients/neoss.svg'
@@ -244,12 +245,23 @@ function Services({ translations }: { translations: ServicesTranslations }) {
   )
 }
 
-export const metadata: Metadata = {
-  description:
-    'Prisma Clinic Marbella offers comprehensive dental care with a focus on patient comfort and beautiful results.',
+interface PageProps {
+  params: { locale: string }
 }
 
-export default async function Home() {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    description:
+      'Prisma Clinic Marbella offers comprehensive dental care with a focus on patient comfort and beautiful results.',
+    ...createCanonicalMetadata('', locale),
+  }
+}
+
+export default async function Home({ params }: PageProps) {
   const t = await getTranslations('home')
 
   const serviceCategoryTranslations: ServiceCategoryTranslations = {

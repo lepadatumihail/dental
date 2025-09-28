@@ -11,6 +11,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
+import { createCanonicalMetadata } from '@/lib/canonical'
 import imageLaptop from '@/images/laptop.jpg'
 import imageMeeting from '@/images/meeting.jpg'
 import imageWhiteboard from '@/images/whiteboard.jpg'
@@ -239,10 +240,21 @@ function Values() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Our Process',
-  description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Our Process',
+    description:
+      'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    ...createCanonicalMetadata('process', locale),
+  }
 }
 
 export default function Process() {

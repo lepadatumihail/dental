@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { useTranslations } from 'next-intl'
+import { createCanonicalMetadata } from '@/lib/canonical'
+import type { Metadata } from 'next'
 import {
   Syringe,
   Sparkle,
@@ -18,10 +20,21 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export const metadata = {
-  title: 'Prisma Clinic Marbella - Premium Aesthetic Services',
-  description:
-    'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial treatments, skin rejuvenation, and body contouring.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Prisma Clinic Marbella - Premium Aesthetic Services',
+    description:
+      'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial treatments, skin rejuvenation, and body contouring.',
+    ...createCanonicalMetadata('services/aesthetics', locale),
+  }
 }
 
 export default function AestheticsServices() {

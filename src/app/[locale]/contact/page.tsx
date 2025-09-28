@@ -9,6 +9,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
+import { createCanonicalMetadata } from '@/lib/canonical'
 import { AppointmentForm } from './SubmitFormButton'
 
 function TextInput({
@@ -164,10 +165,21 @@ function ContactDetails() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Contact Us',
-  description:
-    'Schedule an appointment at our clinic. We look forward to helping you.',
+interface PageProps {
+  params: { locale: string }
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = params
+
+  return {
+    title: 'Contact Us',
+    description:
+      'Schedule an appointment at our clinic. We look forward to helping you.',
+    ...createCanonicalMetadata('contact', locale),
+  }
 }
 
 export default function Contact() {
