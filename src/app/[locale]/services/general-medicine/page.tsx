@@ -18,7 +18,7 @@ import {
   Syringe,
 } from '@phosphor-icons/react/dist/ssr'
 import CalendlyButton from '@/components/CalendlyButton'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 // Generate static params for all locales
 export function generateStaticParams() {
@@ -42,8 +42,8 @@ export async function generateMetadata({
   }
 }
 
-export default function GeneralMedicineServices() {
-  const t = useTranslations('generalMedicine')
+export default async function GeneralMedicineServices() {
+  const t = await getTranslations('generalMedicine')
 
   return (
     <div className="mx-auto max-w-7xl">

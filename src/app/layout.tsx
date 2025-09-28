@@ -84,11 +84,17 @@ export default async function Layout({
   return (
     <html className="h-full bg-neutral-950 text-base antialiased">
       <head>
+        {/* Resource hints for performance */}
+        <link rel="preconnect" href="https://analytics.ahrefs.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
         {/* Ahrefs Analytics */}
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="50Zg5u7x92m3eDyxjhSJww"
-          async
+          strategy="afterInteractive"
         />
 
         {/* Google Tag Manager with Consent Mode */}
@@ -112,6 +118,7 @@ export default async function Layout({
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JHK75NLNSK"
+          strategy="afterInteractive"
         />
         <Script id="google-analytics">
           {`

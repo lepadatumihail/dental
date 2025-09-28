@@ -261,6 +261,11 @@ export async function generateMetadata({
   }
 }
 
+// Generate static params for all locales to ensure static generation
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export default async function Home({ params }: PageProps) {
   const t = await getTranslations('home')
 

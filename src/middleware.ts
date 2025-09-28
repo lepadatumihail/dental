@@ -4,7 +4,7 @@ export default createMiddleware({
   locales: ['en', 'es', 'se'],
   defaultLocale: 'en',
   localePrefix: 'always',
-  localeDetection: true,
+  localeDetection: false, // Disable automatic locale detection to reduce redirects
   pathnames: {
     '/': '/',
     '/public/*': '/public/*',

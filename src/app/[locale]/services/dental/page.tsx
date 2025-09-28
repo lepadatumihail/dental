@@ -6,7 +6,7 @@ import { Blockquote } from '@/components/Blockquote'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
 
@@ -57,8 +57,8 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export default function DentalServices() {
-  const t = useTranslations('dental')
+export default async function DentalServices() {
+  const t = await getTranslations('dental')
 
   return (
     <div className="mx-auto max-w-7xl">

@@ -16,7 +16,7 @@ import {
   ShieldPlus,
 } from '@phosphor-icons/react/dist/ssr'
 import { Button } from '@/components/Button'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 
 import { Blockquote } from '@/components/Blockquote'
 
@@ -48,8 +48,8 @@ export async function generateMetadata({
   }
 }
 
-export default function EmergencyDentalServices() {
-  const t = useTranslations('emergencyPage')
+export default async function EmergencyDentalServices() {
+  const t = await getTranslations('emergencyPage')
 
   return (
     <div className="mx-auto max-w-7xl">

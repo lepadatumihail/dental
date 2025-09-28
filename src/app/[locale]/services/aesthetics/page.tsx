@@ -4,7 +4,7 @@ import { StatList, StatListItem } from '@/components/StatList'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
 import {
@@ -37,8 +37,8 @@ export async function generateMetadata({
   }
 }
 
-export default function AestheticsServices() {
-  const t = useTranslations('layout.services.aesthetics')
+export default async function AestheticsServices() {
+  const t = await getTranslations('layout.services.aesthetics')
 
   return (
     <div className="mx-auto max-w-7xl">

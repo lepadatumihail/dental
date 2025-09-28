@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import type { IconProps } from '@phosphor-icons/react'
 
 import { Blockquote } from '@/components/Blockquote'
@@ -35,8 +35,8 @@ interface Service {
   }
 }
 
-function Services() {
-  const t = useTranslations('layout.services')
+async function Services() {
+  const t = await getTranslations('layout.services')
   const services: Service[] = [
     {
       id: 1,
@@ -175,8 +175,8 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export default function ServicesPage() {
-  const t = useTranslations('layout.services')
+export default async function ServicesPage() {
+  const t = await getTranslations('layout.services')
 
   return (
     <>

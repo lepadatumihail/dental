@@ -169,6 +169,11 @@ interface PageProps {
   params: { locale: string }
 }
 
+// Generate static params for all locales
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
