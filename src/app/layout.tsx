@@ -94,7 +94,7 @@ export default async function Layout({
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="50Zg5u7x92m3eDyxjhSJww"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
         {/* Google Tag Manager */}
@@ -129,7 +129,7 @@ export default async function Layout({
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-JHK75NLNSK"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="google-analytics">
           {`
