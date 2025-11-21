@@ -151,105 +151,140 @@
           "content": "Los tratamientos estéticos en Prisma Clinic entregaron exactamente lo que quería: una mejora sutil que se ve completamente natural. La experiencia y atención al detalle del equipo es sobresaliente."
         },
         "hero": {
-          "title": "Prisma Clinic Marbella Estética",
-          "description": "Clínica estética de última generación que ofrece servicios integrales de belleza y rejuvenecimiento para resultados naturales y sorprendentes.",
-          "imageAlt": "Servicios Estéticos"
+          "headline": "Transforma Tu Belleza con Tratamientos Estéticos Premium",
+          "description": "Experimenta atención estética de última generación en Marbella. Nuestro equipo experto ofrece tratamientos personalizados para realzar tu belleza natural y aumentar tu confianza.",
+          "ctaButton": "Reserva Tu Consulta"
         },
-        "services": {
-          "title": "Nuestros Servicios",
-          "description": "Nuestras instalaciones modernas y especialistas estéticos experimentados garantizan que los pacientes reciban la atención de más alta calidad para todas sus necesidades de belleza y rejuvenecimiento. Nos enorgullecemos de proporcionar planes de tratamiento personalizados adaptados a los objetivos específicos de cada paciente."
+        "serviceNavigation": {
+          "category1": "Tratamientos Faciales",
+          "category2": "Rejuvenecimiento de la Piel",
+          "category3": "Contorno Corporal",
+          "fullList": "Lista Completa ↓"
         },
-        "stats": {
-          "satisfaction": {
-            "value": "100%",
-            "label": "Satisfacción del paciente"
-          },
-          "experience": {
-            "value": "15+",
-            "label": "Años de experiencia"
-          },
-          "treatments": {
-            "value": "500+",
-            "label": "Tratamientos exitosos"
-          },
-          "options": {
-            "value": "20+",
-            "label": "Opciones de tratamiento"
-          }
-        },
-        "facial": {
-          "title": "Tratamientos Faciales",
-          "description": "Mejore sus rasgos faciales naturales con nuestros tratamientos premium:",
-          "treatments": [
+        "category1": {
+          "headline": "Tratamientos Faciales",
+          "description": "Mejore sus rasgos faciales naturales con nuestros tratamientos premium no quirúrgicos. Nuestros expertos practicantes utilizan técnicas avanzadas para crear resultados equilibrados y armoniosos que se ven completamente naturales.",
+          "bookNow": "RESERVAR AHORA",
+          "moreInfo": "Más información",
+          "features": [
             {
-              "title": "Relleno Labial",
-              "description": "Añada volumen y definición a sus labios"
+              "title": "Característica 1",
+              "description": "Técnicas avanzadas de contorno facial que realzan su estructura ósea natural y crean proporciones armoniosas."
             },
             {
+              "title": "Característica 2",
+              "description": "Planes de tratamiento personalizados adaptados a sus rasgos faciales únicos y objetivos estéticos."
+            },
+            {
+              "title": "Característica 3",
+              "description": "Tiempo de recuperación mínimo con resultados de aspecto natural que mejoran su belleza sin verse excesivos."
+            }
+          ]
+        },
+        "category2": {
+          "headline": "Rejuvenecimiento de la Piel",
+          "description": "Revitalice su piel con nuestros procedimientos avanzados de rejuvenecimiento. Desde la hidratación profunda hasta la terapia celular, ofrecemos tratamientos de vanguardia para una piel radiante y con aspecto juvenil.",
+          "bookNow": "RESERVAR AHORA",
+          "moreInfo": "Más información",
+          "features": [
+            {
+              "title": "Característica 1",
+              "description": "Tratamientos de hidratación y regeneración profunda de la piel que restauran el brillo y la elasticidad naturales de su piel."
+            },
+            {
+              "title": "Característica 2",
+              "description": "Terapia celular avanzada y tratamientos con exosomas para un rejuvenecimiento integral de la piel desde adentro."
+            },
+            {
+              "title": "Característica 3",
+              "description": "Procedimientos no invasivos que estimulan la producción de colágeno para una piel más firme y con aspecto más juvenil."
+            }
+          ]
+        },
+        "category3": {
+          "headline": "Contorno Corporal",
+          "description": "Modele y defina sus contornos corporales con nuestros tratamientos de esculpido corporal no quirúrgicos. Logre su silueta deseada sin procedimientos invasivos o largos tiempos de recuperación.",
+          "bookNow": "RESERVAR AHORA",
+          "moreInfo": "Más información",
+          "features": [
+            {
+              "title": "Característica 1",
+              "description": "Tratamientos de reducción de grasa dirigidos que contornean eficazmente áreas específicas de su cuerpo."
+            },
+            {
+              "title": "Característica 2",
+              "description": "Técnicas de esculpido corporal no quirúrgicas que proporcionan resultados visibles con mínimas molestias."
+            },
+            {
+              "title": "Característica 3",
+              "description": "Planes de tratamiento personalizados diseñados para ayudarle a alcanzar sus objetivos de contorno corporal de forma segura y eficaz."
+            }
+          ]
+        },
+        "ctaBanner": {
+          "text": "Banner CTA para reservar una cita gratuita"
+        },
+        "doctor": {
+          "title": "CONOZCA A NUESTRO DOCTOR",
+          "bio": "La Dra. Bozana Krivošija es médico especializada en Medicina Estética y Antiaging, formada en la Universidad Complutense de Madrid. Originaria de Bosnia y viviendo en España desde hace más de 11 años, está comprometida con ofrecer resultados naturales, elegantes y personalizados con un enfoque delicado, seguro y profesional. La Dra. Bozana se especializa en neuromoduladores, ácido hialurónico, estimuladores de colágeno, PRP, infusiones de vitaminas y protocolos antiaging personalizados. Habla serbio, español e inglés, lo que le permite crear una experiencia cálida y confiable para pacientes de diversas culturas, viendo la medicina no solo como una carrera sino como una verdadera vocación de servicio y cuidado.",
+          "bookNow": "RESERVAR AHORA"
+        },
+        "treatments": {
+          "title": "CONSULTE TODOS NUESTROS TRATAMIENTOS",
+          "items": [
+            {
               "title": "Armonización Facial",
-              "description": "Cree proporciones faciales equilibradas y armoniosas"
+              "description": "Balance facial integral con rellenos dérmicos para lograr proporciones perfectas y simetría de aspecto natural."
             },
             {
               "title": "Lifting de 5 Puntos",
-              "description": "Lifting facial no quirúrgico dirigido a áreas clave del rostro"
+              "description": "Técnica avanzada de lifting no quirúrgico que se dirige a cinco puntos estratégicos para un levantamiento natural y juvenil."
             },
             {
-              "title": "PDRN Contorno de Ojos",
-              "description": "Reduzca las ojeras y la cavidad bajo los ojos"
-            },
-            {
-              "title": "Lifting de Párpados",
-              "description": "Rejuvenezca los ojos cansados sin cirugía"
-            },
-            {
-              "title": "Lifting de Punta Nasal",
-              "description": "Refine y mejore su nariz sin cirugía"
-            }
-          ]
-        },
-        "skin": {
-          "title": "Rejuvenecimiento de la Piel",
-          "description": "Revitalice su piel con nuestros procedimientos avanzados:",
-          "treatments": [
-            {
-              "title": "Bio Revitalizador",
-              "description": "Hidratación profunda y regeneración de la piel"
-            },
-            {
-              "title": "Skin Booster",
-              "description": "Mejore la textura y luminosidad de la piel"
-            },
-            {
-              "title": "Micro Needling",
-              "description": "Estimule la producción de colágeno para una piel más firme"
-            },
-            {
-              "title": "Peeling Químico",
-              "description": "Elimine las capas externas dañadas para una piel renovada"
+              "title": "Bio Revitalización",
+              "description": "Tratamiento de hidratación y regeneración profunda de la piel que restaura el brillo natural y la elasticidad de su piel."
             },
             {
               "title": "Exosomas",
-              "description": "Terapia celular avanzada para rejuvenecimiento de la piel"
+              "description": "Terapia celular avanzada para rejuvenecimiento integral de la piel utilizando tecnología regenerativa de vanguardia."
             },
             {
-              "title": "PRP Facial/Capilar",
-              "description": "Aproveche las capacidades curativas de su cuerpo para la piel y el cabello"
-            }
-          ]
-        },
-        "body": {
-          "title": "Contorno Corporal",
-          "description": "Modele y defina sus contornos corporales:",
-          "treatments": [
+              "title": "Tratamiento PRP",
+              "description": "Terapia de Plasma Rico en Plaquetas que aprovecha las capacidades curativas naturales de su cuerpo para la rejuvenecimiento de la piel y el cabello."
+            },
             {
               "title": "Disolución de Grasa",
-              "description": "Reducción no quirúrgica de depósitos de grasa localizados"
+              "description": "Reducción no quirúrgica de depósitos de grasa localizados para contorno corporal y esculpido dirigido."
             }
           ]
         },
-        "cta": {
-          "title": "¿Listo para Transformar tu Apariencia?",
-          "description": "Contáctenos hoy para programar su consulta y experimente la atención estética premium en Prisma Clinic Marbella."
+        "testimonials": {
+          "title": "LO QUE DICEN NUESTROS CLIENTES SOBRE NOSOTROS",
+          "items": [
+            {
+              "content": "Los tratamientos estéticos en Prisma Clinic entregaron exactamente lo que quería: una mejora sutil que se ve completamente natural. La experiencia y atención al detalle del equipo es sobresaliente.",
+              "author": "Sofia Rodriguez",
+              "role": "Paciente"
+            },
+            {
+              "content": "¡Estoy absolutamente encantada con mis resultados! El equipo me hizo sentir cómoda durante todo el proceso, y los tratamientos superaron mis expectativas.",
+              "author": "Maria Gonzalez",
+              "role": "Paciente"
+            },
+            {
+              "content": "La Dra. Bozana y el equipo son verdaderos profesionales. Se tomaron el tiempo para entender mis objetivos y crearon un plan de tratamiento personalizado que funcionó perfectamente para mí.",
+              "author": "Emma Thompson",
+              "role": "Paciente"
+            },
+            {
+              "content": "El ambiente de la clínica es tan acogedor, y el personal es increíblemente conocedor. Me sentí confiada en su experiencia desde la primera consulta.",
+              "author": "Sarah Williams",
+              "role": "Paciente"
+            }
+          ]
+        },
+        "location": {
+          "title": "Dónde estamos"
         }
       },
       "generalMedicine": {

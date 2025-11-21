@@ -151,105 +151,140 @@
           "content": "De estetiska behandlingarna på Prisma Clinic levererade exakt vad jag ville ha: en subtil förbättring som ser helt naturlig ut. Teamets erfarenhet och uppmärksamhet på detaljer är enastående."
         },
         "hero": {
-          "title": "Prisma Clinic Marbella Estetik",
-          "description": "Toppmodern estetisklinik som erbjuder omfattande skönhets- och förnyelsetjänster för naturliga och överraskande resultat.",
-          "imageAlt": "Estetiska tjänster"
+          "headline": "Förvandla din skönhet med premium estetiska behandlingar",
+          "description": "Upplev toppmodern estetisk vård i Marbella. Vårt experteam erbjuder personliga behandlingar för att förbättra din naturliga skönhet och öka ditt självförtroende.",
+          "ctaButton": "Boka din konsultation"
         },
-        "services": {
-          "title": "Våra tjänster",
-          "description": "Våra moderna faciliteter och erfarna estetiska specialister säkerställer att patienter får den högsta kvaliteten på vård för alla sina skönhets- och förnyelsebehov. Vi är stolta över att erbjuda personliga behandlingsplaner skräddarsydda för varje patients specifika krav."
+        "serviceNavigation": {
+          "category1": "Ansiktsbehandlingar",
+          "category2": "Hudförnyelse",
+          "category3": "Kroppskonturering",
+          "fullList": "Fullständig lista ↓"
         },
-        "stats": {
-          "satisfaction": {
-            "value": "100%",
-            "label": "Patientsatisfaktion"
-          },
-          "experience": {
-            "value": "15+",
-            "label": "Års erfarenhet"
-          },
-          "treatments": {
-            "value": "500+",
-            "label": "Framgångsrika behandlingar"
-          },
-          "options": {
-            "value": "20+",
-            "label": "Behandlingsalternativ"
-          }
-        },
-        "facial": {
-          "title": "Ansiktsbehandlingar",
-          "description": "Förbättra dina naturliga ansiktsdrag med våra premiumbehandlingar:",
-          "treatments": [
+        "category1": {
+          "headline": "Ansiktsbehandlingar",
+          "description": "Förbättra dina naturliga ansiktsdrag med våra premium icke-kirurgiska behandlingar. Våra experter använder avancerade tekniker för att skapa balanserade och harmoniska resultat som ser helt naturliga ut.",
+          "bookNow": "BOKA NU",
+          "moreInfo": "Mer information",
+          "features": [
             {
-              "title": "Läppfyllning",
-              "description": "Lägg till volym och definition till dina läppar"
+              "title": "Funktion 1",
+              "description": "Avancerade ansiktskontureringstekniker som förbättrar din naturliga benstruktur och skapar harmoniska proportioner."
             },
             {
+              "title": "Funktion 2",
+              "description": "Personliga behandlingsplaner skräddarsydda efter dina unika ansiktsdrag och estetiska mål."
+            },
+            {
+              "title": "Funktion 3",
+              "description": "Minimal återhämtningstid med naturliga resultat som förbättrar din skönhet utan att se överdrivna ut."
+            }
+          ]
+        },
+        "category2": {
+          "headline": "Hudförnyelse",
+          "description": "Vitalisera din hud med våra avancerade förnyelseprocedurer. Från djup hydrering till cellterapi, erbjuder vi banbrytande behandlingar för strålande, ungdomlig hud.",
+          "bookNow": "BOKA NU",
+          "moreInfo": "Mer information",
+          "features": [
+            {
+              "title": "Funktion 1",
+              "description": "Djupa hudhydrerings- och regenerationsbehandlingar som återställer din huds naturliga glöd och elasticitet."
+            },
+            {
+              "title": "Funktion 2",
+              "description": "Avancerad cellterapi och exosombehandlingar för omfattande hudförnyelse inifrån."
+            },
+            {
+              "title": "Funktion 3",
+              "description": "Icke-invasiva procedurer som stimulerar kollagenproduktion för fastare, mer ungdomlig hud."
+            }
+          ]
+        },
+        "category3": {
+          "headline": "Kroppskonturering",
+          "description": "Forma och definiera dina kroppskonturer med våra icke-kirurgiska kroppsskulpteringbehandlingar. Uppnå din önskade siluett utan invasiva procedurer eller långa återhämtningstider.",
+          "bookNow": "BOKA NU",
+          "moreInfo": "Mer information",
+          "features": [
+            {
+              "title": "Funktion 1",
+              "description": "Riktningsbehandlingar för fettreduktion som effektivt konturerar specifika områden av din kropp."
+            },
+            {
+              "title": "Funktion 2",
+              "description": "Icke-kirurgiska kroppsskulpteringstekniker som ger synliga resultat med minimalt obehag."
+            },
+            {
+              "title": "Funktion 3",
+              "description": "Personliga behandlingsplaner designade för att hjälpa dig uppnå dina kroppskontureringsmål säkert och effektivt."
+            }
+          ]
+        },
+        "ctaBanner": {
+          "text": "CTA-banner för att boka en gratis konsultation"
+        },
+        "doctor": {
+          "title": "TRÄFFA VÅR DOKTOR",
+          "bio": "Dr. Bozana Krivošija är läkare specialiserad på Estetisk och Anti-åldringsmedicin, utbildad vid Universidad Complutense de Madrid. Ursprungligen från Bosnien och har bott i Spanien i över 11 år, hon är engagerad i att erbjuda naturliga, eleganta och personliga resultat med en försiktig, säker och professionell approach. Dr. Bozana specialiserar sig på neuromodulatorer, hyaluronsyra, kollagenstimulatorer, PRP, vitamininfusioner och skräddarsydda anti-åldringsprotokoll. Hon talar serbiska, spanska och engelska, vilket gör att hon kan skapa en varm, pålitlig upplevelse för patienter från olika kulturer, och ser medicin inte bara som ett yrke utan som en sann kallelse för service och omsorg.",
+          "bookNow": "BOKA NU"
+        },
+        "treatments": {
+          "title": "KONTROLLERA ALLA VÅRA BEHANDLINGAR",
+          "items": [
+            {
               "title": "Ansiktsharmoni",
-              "description": "Skapa balanserade och harmoniska ansiktsproportioner"
+              "description": "Omfattande ansiktsbalansering med dermala fillers för att uppnå perfekta proportioner och naturlig symmetri."
             },
             {
               "title": "5-punkts lyftning",
-              "description": "Icke-kirurgisk ansiktslyftning som riktar sig mot nyckelområden i ansiktet"
+              "description": "Avancerad icke-kirurgisk lyftteknik som riktar sig mot fem strategiska punkter för en naturlig, ungdomlig lyftning."
             },
             {
-              "title": "PDRN ögonkontur",
-              "description": "Minska mörka ringar och underögonhåligheter"
-            },
-            {
-              "title": "Ögonlockslyftning",
-              "description": "Förnya trötta ögon utan kirurgi"
-            },
-            {
-              "title": "Nästiplyftning",
-              "description": "Förfina och förbättra din näsa utan kirurgi"
-            }
-          ]
-        },
-        "skin": {
-          "title": "Hudförnyelse",
-          "description": "Vitalisera din hud med våra avancerade procedurer:",
-          "treatments": [
-            {
-              "title": "Bio Revitalizer",
-              "description": "Djup hydrering och hudregenerering"
-            },
-            {
-              "title": "Skin Booster",
-              "description": "Förbättra hudtextur och glans"
-            },
-            {
-              "title": "Micro Needling",
-              "description": "Stimulera kollagenproduktion för fastare hud"
-            },
-            {
-              "title": "Kemisk peeling",
-              "description": "Ta bort skadade yttre lager för förnyad hud"
+              "title": "Bio Revitalisering",
+              "description": "Djup hudhydrering och regenerationsbehandling som återställer din huds naturliga glöd och elasticitet."
             },
             {
               "title": "Exosomes",
-              "description": "Avancerad cellterapi för hudförnyelse"
+              "description": "Avancerad cellterapi för omfattande hudförnyelse med banbrytande regenerativ teknologi."
             },
             {
-              "title": "PRP Ansikte/Hår",
-              "description": "Utnyttja kroppens läkande förmågor för hud och hår"
-            }
-          ]
-        },
-        "body": {
-          "title": "Kroppskonturering",
-          "description": "Forma och definiera dina kroppskonturer:",
-          "treatments": [
+              "title": "PRP-behandling",
+              "description": "Plättrik plasma-terapi som utnyttjar kroppens naturliga läkande förmågor för hud- och hårförnyelse."
+            },
             {
               "title": "Fettupplösning",
-              "description": "Icke-kirurgisk minskning av lokalisade fettdepåer"
+              "description": "Icke-kirurgisk minskning av lokalisade fettdepåer för riktad kroppskonturering och skulptering."
             }
           ]
         },
-        "cta": {
-          "title": "Redo att förvandla ditt utseende?",
-          "description": "Kontakta oss idag för att boka din konsultation och upplev premium estetisk vård på Prisma Clinic Marbella."
+        "testimonials": {
+          "title": "VAD VÅRA KLIENTER SÄGER OM OSS",
+          "items": [
+            {
+              "content": "De estetiska behandlingarna på Prisma Clinic levererade exakt vad jag ville ha: en subtil förbättring som ser helt naturlig ut. Teamets erfarenhet och uppmärksamhet på detaljer är enastående.",
+              "author": "Sofia Rodriguez",
+              "role": "Patient"
+            },
+            {
+              "content": "Jag är helt överlycklig med mina resultat! Teamet fick mig att känna mig bekväm under hela processen, och behandlingarna överträffade mina förväntningar.",
+              "author": "Maria Gonzalez",
+              "role": "Patient"
+            },
+            {
+              "content": "Dr. Bozana och teamet är sanna proffs. De tog sig tid att förstå mina mål och skapade en personlig behandlingsplan som fungerade perfekt för mig.",
+              "author": "Emma Thompson",
+              "role": "Patient"
+            },
+            {
+              "content": "Klinikens atmosfär är så välkomnande, och personalen är otroligt kunnig. Jag kände mig trygg i deras expertis redan från första konsultationen.",
+              "author": "Sarah Williams",
+              "role": "Patient"
+            }
+          ]
+        },
+        "location": {
+          "title": "Var vi befinner oss"
         }
       },
       "generalMedicine": {

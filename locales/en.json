@@ -151,105 +151,137 @@
           "content": "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted: a subtle improvement that looks completely natural. The experience and attention to detail of the team is outstanding."
         },
         "hero": {
-          "title": "Prisma Clinic Marbella Aesthetics",
-          "description": "State-of-the-art aesthetics clinic offering comprehensive beauty and rejuvenation services for natural and surprising results.",
-          "imageAlt": "Aesthetics Services"
+          "headline": "Transform Your Beauty with Premium Aesthetic Treatments",
+          "description": "Experience state-of-the-art aesthetic care in Marbella. Our expert team offers personalized treatments to enhance your natural beauty and boost your confidence.",
+          "ctaButton": "Book Your Consultation"
         },
-        "services": {
-          "title": "Our Services",
-          "description": "Our modern facilities and experienced aesthetic specialists ensure patients receive the highest quality care for all their beauty and rejuvenation needs. We pride ourselves on providing personalized treatment plans tailored to each patient's specific requirements."
+        "serviceNavigation": {
+          "category1": "Facial Harmonization",
+          "category2": "Botox",
+          "category3": "Anti Aging & Health",
+          "fullList": "Full List ↓"
         },
-        "stats": {
-          "satisfaction": {
-            "value": "100%",
-            "label": "Patient satisfaction"
-          },
-          "experience": {
-            "value": "15+",
-            "label": "Years of experience"
-          },
-          "treatments": {
-            "value": "500+",
-            "label": "Successful treatments"
-          },
-          "options": {
-            "value": "20+",
-            "label": "Treatment options"
-          }
-        },
-        "facial": {
-          "title": "Facial Treatments",
-          "description": "Enhance your natural facial features with our premium treatments:",
-          "treatments": [
+        "category1": {
+          "headline": "Facial Harmonization",
+          "description": "Achieve perfectly balanced facial proportions with our advanced filler treatments and comprehensive harmonization techniques. Our expert practitioners use premium dermal fillers to enhance your natural features, restore volume, and create harmonious facial symmetry that looks completely natural.",
+          "bookNow": "BOOK NOW",
+          "moreInfo": "More info",
+          "features": [
             {
-              "title": "Lip Fill",
-              "description": "Add volume and definition to your lips"
+              "title": "Dermal Fillers",
+              "description": "Premium hyaluronic acid fillers to restore volume, smooth wrinkles, and enhance facial contours. Customized treatment plans for natural-looking results."
             },
             {
+              "title": "Full Facial Harmonization",
+              "description": "Comprehensive facial balancing that considers your entire face structure. Achieve perfect proportions and symmetry through strategic filler placement."
+            },
+            {
+              "title": "Natural Results",
+              "description": "Our experienced practitioners ensure subtle, natural-looking enhancements that preserve your unique features while achieving facial harmony."
+            }
+          ]
+        },
+        "category2": {
+          "headline": "Botox",
+          "description": "Experience the power of Botox treatments for wrinkle reduction, facial lifting, and rejuvenation. Our 5-point lifting technique targets key areas for a natural, youthful lift, while general Botox treatments smooth fine lines and prevent future wrinkles.",
+          "bookNow": "BOOK NOW",
+          "moreInfo": "More info",
+          "features": [
+            {
+              "title": "5-Point Lifting",
+              "description": "Advanced non-surgical lifting technique targeting five strategic points on the face. Achieve a natural, youthful lift that opens and rejuvenates your appearance without surgery."
+            },
+            {
+              "title": "General Botox",
+              "description": "Precision Botox injections to smooth wrinkles, fine lines, and expression lines. Effective for forehead, crow's feet, and frown lines with minimal downtime."
+            },
+            {
+              "title": "Preventive Treatment",
+              "description": "Early Botox treatments can prevent deep wrinkles from forming, helping you maintain youthful-looking skin for longer with regular maintenance."
+            }
+          ]
+        },
+        "category3": {
+          "headline": "Anti Aging & Health",
+          "description": "Comprehensive rejuvenation treatments that work from within to restore your skin's vitality and overall health. From advanced cellular therapy to targeted body contouring, our anti-aging and health treatments promote long-term wellness and beauty.",
+          "bookNow": "BOOK NOW",
+          "moreInfo": "More info",
+          "features": [
+            {
+              "title": "Advanced Cellular Therapy",
+              "description": "Cutting-edge treatments including Exosomes and PRP therapy that harness your body's natural healing capabilities for comprehensive skin rejuvenation and regeneration."
+            },
+            {
+              "title": "Skin Rejuvenation",
+              "description": "Bio Revitalization and Skin Boosters deliver deep hydration, improve skin texture, and stimulate collagen production for radiant, youthful-looking skin from within."
+            },
+            {
+              "title": "Body Contouring & Wellness",
+              "description": "Fat Dissolution treatments for targeted body sculpting, combined with PRP therapy for overall health benefits and enhanced skin quality."
+            }
+          ]
+        },
+        "doctor": {
+          "title": "MEET OUR DOCTOR",
+          "bio": "Dr. Bozana Krivošija is a medical doctor specialized in Aesthetic and Anti-Aging Medicine, trained at the Complutense University of Madrid. Originally from Bosnia and living in Spain for over 11 years, she is committed to offering natural, elegant, and personalized results with a delicate, safe, and professional approach. Dr. Bozana specializes in neuromodulators, hyaluronic acid, collagen stimulators, PRP, IV drips, and tailored anti-aging protocols. Fluent in Serbian, Spanish, and English, she creates a warm, trustworthy experience for patients from diverse cultures, seeing medicine not only as a career but as a true vocation of service and care.",
+          "bookNow": "BOOK NOW"
+        },
+        "treatments": {
+          "title": "CHECK ALL OF OUR TREATMENTS",
+          "items": [
+            {
               "title": "Facial Harmony",
-              "description": "Create balanced and harmonious facial proportions"
+              "description": "Comprehensive facial balancing with dermal fillers to achieve perfect proportions and natural-looking symmetry."
             },
             {
               "title": "5-Point Lifting",
-              "description": "Non-surgical facial lifting targeting key areas of the face"
+              "description": "Advanced non-surgical lifting technique targeting five strategic points for a natural, youthful lift."
             },
             {
-              "title": "PDRN Eye Contour",
-              "description": "Reduce dark circles and under-eye hollows"
-            },
-            {
-              "title": "Eyelid Lifting",
-              "description": "Rejuvenate tired eyes without surgery"
-            },
-            {
-              "title": "Nasal Tip Lifting",
-              "description": "Refine and enhance your nose without surgery"
-            }
-          ]
-        },
-        "skin": {
-          "title": "Skin Rejuvenation",
-          "description": "Revitalize your skin with our advanced procedures:",
-          "treatments": [
-            {
-              "title": "Bio Revitalizer",
-              "description": "Deep hydration and skin regeneration"
-            },
-            {
-              "title": "Skin Booster",
-              "description": "Improve skin texture and radiance"
-            },
-            {
-              "title": "Micro Needling",
-              "description": "Stimulate collagen production for firmer skin"
-            },
-            {
-              "title": "Chemical Peeling",
-              "description": "Remove damaged outer layers for renewed skin"
+              "title": "Bio Revitalization",
+              "description": "Deep skin hydration and regeneration treatment that restores your skin's natural glow and elasticity."
             },
             {
               "title": "Exosomes",
-              "description": "Advanced cellular therapy for skin rejuvenation"
+              "description": "Advanced cellular therapy for comprehensive skin rejuvenation using cutting-edge regenerative technology."
             },
             {
-              "title": "PRP Facial/Hair",
-              "description": "Harness your body's healing capabilities for skin and hair"
-            }
-          ]
-        },
-        "body": {
-          "title": "Body Contouring",
-          "description": "Shape and define your body contours:",
-          "treatments": [
+              "title": "PRP Treatment",
+              "description": "Platelet-Rich Plasma therapy that harnesses your body's natural healing capabilities for skin and hair rejuvenation."
+            },
             {
               "title": "Fat Dissolution",
-              "description": "Non-surgical reduction of localized fat deposits"
+              "description": "Non-surgical reduction of localized fat deposits for targeted body contouring and sculpting."
             }
           ]
         },
-        "cta": {
-          "title": "Ready to Transform Your Appearance?",
-          "description": "Contact us today to schedule your consultation and experience premium aesthetic care at Prisma Clinic Marbella."
+        "testimonials": {
+          "title": "WHAT OUR CLIENTS SAY ABOUT US",
+          "items": [
+            {
+              "content": "The aesthetic treatments at Prisma Clinic delivered exactly what I wanted: a subtle improvement that looks completely natural. The experience and attention to detail of the team is outstanding.",
+              "author": "Sofia Rodriguez",
+              "role": "Patient"
+            },
+            {
+              "content": "I'm absolutely thrilled with my results! The team made me feel comfortable throughout the entire process, and the treatments exceeded my expectations.",
+              "author": "Maria Gonzalez",
+              "role": "Patient"
+            },
+            {
+              "content": "Dr. Bozana and the team are true professionals. They took the time to understand my goals and created a personalized treatment plan that worked perfectly for me.",
+              "author": "Emma Thompson",
+              "role": "Patient"
+            },
+            {
+              "content": "The clinic's atmosphere is so welcoming, and the staff is incredibly knowledgeable. I felt confident in their expertise from the first consultation.",
+              "author": "Sarah Williams",
+              "role": "Patient"
+            }
+          ]
+        },
+        "location": {
+          "title": "Where are we"
         }
       },
       "generalMedicine": {

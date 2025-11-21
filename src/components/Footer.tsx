@@ -117,6 +117,9 @@ export function Footer() {
   return (
     <Container as="footer" className="mt-12 w-full">
       <FadeIn>
+        <h2 className="mb-8 text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
+           Location
+        </h2>
         <div className="mt-6 overflow-hidden rounded-xl">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.0238356449193!2d-4.889272488857869!3d36.50901447991112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd73218056e8e6dd%3A0x2df2a27c598cc9fc!2sAv.%20de%20Nabeul%2C%2014%2C%2029601%20Marbella%2C%20M%C3%A1laga%2C%20Spain!5e0!3m2!1sen!2sus!4v1655308001000!5m2!1sen!2sus"
