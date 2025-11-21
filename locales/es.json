@@ -182,42 +182,42 @@
           ]
         },
         "category2": {
-          "headline": "Rejuvenecimiento de la Piel",
-          "description": "Revitalice su piel con nuestros procedimientos avanzados de rejuvenecimiento. Desde la hidratación profunda hasta la terapia celular, ofrecemos tratamientos de vanguardia para una piel radiante y con aspecto juvenil.",
+          "headline": "Botox",
+          "description": "Experimente el poder de los tratamientos de Botox para la reducción de arrugas, el lifting facial y el rejuvenecimiento. Nuestra técnica de lifting de 5 puntos se dirige a áreas clave para un levantamiento natural y juvenil, mientras que los tratamientos generales de Botox suavizan las líneas finas y previenen futuras arrugas.",
           "bookNow": "RESERVAR AHORA",
           "moreInfo": "Más información",
           "features": [
             {
-              "title": "Característica 1",
-              "description": "Tratamientos de hidratación y regeneración profunda de la piel que restauran el brillo y la elasticidad naturales de su piel."
+              "title": "Lifting de 5 Puntos",
+              "description": "Técnica avanzada de lifting no quirúrgico que se dirige a cinco puntos estratégicos en el rostro. Logre un levantamiento natural y juvenil que abre y rejuvenece su apariencia sin cirugía."
             },
             {
-              "title": "Característica 2",
-              "description": "Terapia celular avanzada y tratamientos con exosomas para un rejuvenecimiento integral de la piel desde adentro."
+              "title": "Botox General",
+              "description": "Inyecciones precisas de Botox para suavizar arrugas, líneas finas y líneas de expresión. Efectivo para la frente, patas de gallo y líneas del entrecejo con un tiempo de recuperación mínimo."
             },
             {
-              "title": "Característica 3",
-              "description": "Procedimientos no invasivos que estimulan la producción de colágeno para una piel más firme y con aspecto más juvenil."
+              "title": "Tratamiento Preventivo",
+              "description": "Los tratamientos tempranos de Botox pueden prevenir la formación de arrugas profundas, ayudándole a mantener una piel de aspecto juvenil por más tiempo con mantenimiento regular."
             }
           ]
         },
         "category3": {
-          "headline": "Contorno Corporal",
-          "description": "Modele y defina sus contornos corporales con nuestros tratamientos de esculpido corporal no quirúrgicos. Logre su silueta deseada sin procedimientos invasivos o largos tiempos de recuperación.",
+          "headline": "Anti Aging & Health",
+          "description": "Tratamientos integrales de rejuvenecimiento que trabajan desde adentro para restaurar la vitalidad de su piel y su salud general. Desde la terapia celular avanzada hasta el contorno corporal dirigido, nuestros tratamientos antienvejecimiento y de salud promueven el bienestar y la belleza a largo plazo.",
           "bookNow": "RESERVAR AHORA",
           "moreInfo": "Más información",
           "features": [
             {
-              "title": "Característica 1",
-              "description": "Tratamientos de reducción de grasa dirigidos que contornean eficazmente áreas específicas de su cuerpo."
+              "title": "Terapia Celular Avanzada",
+              "description": "Tratamientos de vanguardia que incluyen Exosomas y terapia PRP que aprovechan las capacidades curativas naturales de su cuerpo para un rejuvenecimiento y regeneración integral de la piel."
             },
             {
-              "title": "Característica 2",
-              "description": "Técnicas de esculpido corporal no quirúrgicas que proporcionan resultados visibles con mínimas molestias."
+              "title": "Rejuvenecimiento de la Piel",
+              "description": "La Bio Revitalización y los Skin Boosters proporcionan hidratación profunda, mejoran la textura de la piel y estimulan la producción de colágeno para una piel radiante y de aspecto juvenil desde adentro."
             },
             {
-              "title": "Característica 3",
-              "description": "Planes de tratamiento personalizados diseñados para ayudarle a alcanzar sus objetivos de contorno corporal de forma segura y eficaz."
+              "title": "Contorno Corporal y Bienestar",
+              "description": "Tratamientos de Disolución de Grasa para esculpido corporal dirigido, combinados con terapia PRP para beneficios generales de salud y calidad mejorada de la piel."
             }
           ]
         },

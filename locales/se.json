@@ -182,42 +182,42 @@
           ]
         },
         "category2": {
-          "headline": "Hudförnyelse",
-          "description": "Vitalisera din hud med våra avancerade förnyelseprocedurer. Från djup hydrering till cellterapi, erbjuder vi banbrytande behandlingar för strålande, ungdomlig hud.",
+          "headline": "Botox",
+          "description": "Upplev kraften i Botox-behandlingar för rynkreduktion, ansiktslyftning och förnyelse. Vår 5-punkts lyftteknik riktar sig mot nyckelområden för en naturlig, ungdomlig lyftning, medan allmänna Botox-behandlingar jämnar ut fina linjer och förhindrar framtida rynkor.",
           "bookNow": "BOKA NU",
           "moreInfo": "Mer information",
           "features": [
             {
-              "title": "Funktion 1",
-              "description": "Djupa hudhydrerings- och regenerationsbehandlingar som återställer din huds naturliga glöd och elasticitet."
+              "title": "5-punkts Lyftning",
+              "description": "Avancerad icke-kirurgisk lyftteknik som riktar sig mot fem strategiska punkter i ansiktet. Uppnå en naturlig, ungdomlig lyftning som öppnar och förnyar ditt utseende utan kirurgi."
             },
             {
-              "title": "Funktion 2",
-              "description": "Avancerad cellterapi och exosombehandlingar för omfattande hudförnyelse inifrån."
+              "title": "Allmän Botox",
+              "description": "Precisionsinjektioner av Botox för att jämna ut rynkor, fina linjer och mimiklinjer. Effektivt för pannan, fågelögon och rynkor mellan ögonbrynen med minimal återhämtningstid."
             },
             {
-              "title": "Funktion 3",
-              "description": "Icke-invasiva procedurer som stimulerar kollagenproduktion för fastare, mer ungdomlig hud."
+              "title": "Förebyggande Behandling",
+              "description": "Tidiga Botox-behandlingar kan förhindra att djupa rynkor bildas, vilket hjälper dig att behålla ungdomlig hud längre med regelbunden underhåll."
             }
           ]
         },
         "category3": {
-          "headline": "Kroppskonturering",
-          "description": "Forma och definiera dina kroppskonturer med våra icke-kirurgiska kroppsskulpteringbehandlingar. Uppnå din önskade siluett utan invasiva procedurer eller långa återhämtningstider.",
+          "headline": "Anti Aging & Health",
+          "description": "Omfattande förnyelsebehandlingar som fungerar inifrån för att återställa din huds vitalitet och allmänna hälsa. Från avancerad cellterapi till riktad kroppskonturering, våra anti-åldrings- och hälsobehandlingar främjar långsiktigt välbefinnande och skönhet.",
           "bookNow": "BOKA NU",
           "moreInfo": "Mer information",
           "features": [
             {
-              "title": "Funktion 1",
-              "description": "Riktningsbehandlingar för fettreduktion som effektivt konturerar specifika områden av din kropp."
+              "title": "Avancerad Cellterapi",
+              "description": "Banbrytande behandlingar inklusive Exosomer och PRP-terapi som utnyttjar kroppens naturliga läkande förmågor för omfattande hudförnyelse och regeneration."
             },
             {
-              "title": "Funktion 2",
-              "description": "Icke-kirurgiska kroppsskulpteringstekniker som ger synliga resultat med minimalt obehag."
+              "title": "Hudförnyelse",
+              "description": "Bio Revitalisering och Skin Boosters levererar djup hydrering, förbättrar hudtextur och stimulerar kollagenproduktion för strålande, ungdomlig hud inifrån."
             },
             {
-              "title": "Funktion 3",
-              "description": "Personliga behandlingsplaner designade för att hjälpa dig uppnå dina kroppskontureringsmål säkert och effektivt."
+              "title": "Kroppskonturering och Välbefinnande",
+              "description": "Fettupplösningsbehandlingar för riktad kroppsskulptering, kombinerat med PRP-terapi för allmänna hälsofördelar och förbättrad hudkvalitet."
             }
           ]
         },
