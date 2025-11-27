@@ -143,7 +143,7 @@ function Header({
           <LanguageSelector />
           <Button
             href="/services/emergency"
-            className="border border-red-400 text-red-500"
+            className="min-w-fit border border-red-400 text-xs text-red-500 sm:text-sm"
             invert
             aria-label="Access emergency dental services"
           >
@@ -326,7 +326,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute top-2 right-0 left-0 z-40 pt-14"
+          className="absolute top-2 right-0 left-0 z-40 pt-4 sm:pt-14"
           aria-hidden={expanded ? 'true' : false}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}

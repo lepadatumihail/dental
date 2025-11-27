@@ -1,4 +1,4 @@
-import imageHero from '@/images/clinic/aesthetics-2.jpg'
+import imageHero from '@/images/clinic/aesthetics-1.jpg'
 import Image from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -7,13 +7,6 @@ import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
 import { ContactSection } from '@/components/ContactSection'
 import CalendlyButton from '@/components/CalendlyButton'
-import {
-  Sparkle,
-  Scissors,
-  Leaf,
-  Flower,
-  Heart,
-} from '@phosphor-icons/react/dist/ssr'
 import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
 import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
 import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
@@ -48,7 +41,7 @@ export default async function AestheticsServices({ params }: PageProps) {
   return (
     <div className="mx-auto max-w-7xl">
       {/* Hero Section */}
-      <div className="relative mx-1 mt-12 mb-12 h-[400px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24">
+      <div className="relative mx-1 mt-2 mb-12 h-[400px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24 md:h-[400px]">
         <Image
           src={imageHero}
           alt="Aesthetics Services"
@@ -57,13 +50,14 @@ export default async function AestheticsServices({ params }: PageProps) {
           priority
         />
         <div className="absolute inset-0 flex items-center bg-gradient-to-r from-neutral-950/80 to-transparent">
-          <div className="max-w-2xl px-12">
-            <h1 className="mb-6 font-display text-6xl font-medium tracking-tight text-white">
+          <div className="max-w-4xl px-12">
+            <h1 className="mb-6 font-display text-3xl font-medium tracking-tight text-white sm:text-6xl">
               {t('hero.headline')}
             </h1>
-            <p className="mb-8 text-xl font-light text-white/80">
+            <p className="mb-8 text-sm text-white/80 sm:text-xl">
               {t('hero.description')}
             </p>
+            <CalendlyButton />
           </div>
         </div>
       </div>
@@ -73,18 +67,17 @@ export default async function AestheticsServices({ params }: PageProps) {
         <div className="border-t border-neutral-200"></div>
       </Container>
 
-      <Container className="my-20">
+      <Container className="my-10 sm:my-20">
         <FadeInStagger>
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
             <FadeIn>
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <Sparkle size={28} className="text-yellow-500" />
                   <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
                     {t('category1.headline')}
                   </h2>
                 </div>
-                <p className="mb-8 text-lg leading-relaxed text-neutral-500">
+                <p className="mb-8 text-sm leading-relaxed text-neutral-500 sm:text-lg">
                   {t('category1.description')}
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -125,8 +118,8 @@ export default async function AestheticsServices({ params }: PageProps) {
       {/* Category 2 Section */}
       <Container id="category2" className="mb-24">
         <FadeInStagger>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <div className="flex flex-col gap-6">
+          <div className="flex flex-col-reverse gap-12 md:flex-row">
+            <div className="flex min-w-1/2 flex-col gap-6">
               {t
                 .raw('category2.features')
                 .map(
@@ -153,9 +146,8 @@ export default async function AestheticsServices({ params }: PageProps) {
                   <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
                     {t('category2.headline')}
                   </h2>
-                  <Scissors size={28} className="text-pink-500" />
                 </div>
-                <p className="mb-8 text-end text-lg leading-relaxed text-neutral-600">
+                <p className="mb-8 text-end text-sm leading-relaxed text-neutral-600 sm:text-lg">
                   {t('category2.description')}
                 </p>
                 <div className="flex w-full justify-end gap-4">
@@ -179,12 +171,11 @@ export default async function AestheticsServices({ params }: PageProps) {
             <FadeIn>
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <Leaf size={28} className="text-green-500" />
                   <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
                     {t('category3.headline')}
                   </h2>
                 </div>
-                <p className="mb-8 text-lg leading-relaxed text-neutral-600">
+                <p className="mb-8 text-sm leading-relaxed text-neutral-600 sm:text-lg">
                   {t('category3.description')}
                 </p>
                 <div className="flex flex-wrap gap-4">
@@ -217,38 +208,32 @@ export default async function AestheticsServices({ params }: PageProps) {
         </FadeInStagger>
       </Container>
 
-      {/* Subtle Divider */}
-      <Container className="my-12">
-        <div className="border-t border-neutral-200"></div>
-      </Container>
-
       {/* Meet Our Doctor Section */}
       <Container className="mb-24">
         <FadeIn>
           <h2 className="my-8 text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
             {t('doctor.title')}
           </h2>
-          <div className="rounded-2xl border border-neutral-200 bg-neutral-100 px-6 py-10 sm:px-12">
-            {/* Centered Title */}
-            {/* Image and Text Grid */}
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
-              <div className="relative w-full overflow-hidden rounded-lg">
-                <Image
-                  src={BozanaKrivosija}
-                  alt="Dr. Bozana Krivošija"
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <h2 className="mb-4 font-display text-2xl font-medium tracking-tight text-neutral-900">
-                  Dr. Bozana Krivošija
-                </h2>
-                <p className="text-md mb-8 leading-relaxed text-neutral-600">
-                  {t('doctor.bio')}
-                </p>
-                <CalendlyButton />
-              </div>
+
+          {/* Centered Title */}
+          {/* Image and Text Grid */}
+          <div className="mt-5 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="relative min-h-96 w-full overflow-hidden rounded-lg md:min-h-[550px]">
+              <Image
+                src={BozanaKrivosija}
+                alt="Dr. Bozana Krivošija"
+                fill
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="flex flex-col justify-end">
+              <h2 className="mb-4 font-display text-3xl font-medium tracking-tight text-neutral-900">
+                Dr. Bozana Krivošija
+              </h2>
+              <p className="text-md mb-8 leading-relaxed text-neutral-600">
+                {t('doctor.bio')}
+              </p>
+              <CalendlyButton />
             </div>
           </div>
         </FadeIn>
@@ -262,7 +247,6 @@ export default async function AestheticsServices({ params }: PageProps) {
               <h2 className="text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
                 {t('treatments.title')}
               </h2>
-              <Flower size={32} className="text-purple-500" />
             </div>
           </FadeIn>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -302,7 +286,6 @@ export default async function AestheticsServices({ params }: PageProps) {
               <h2 className="text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
                 {t('testimonials.title')}
               </h2>
-              <Sparkle size={32} className="text-blue-500" />
             </div>
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
