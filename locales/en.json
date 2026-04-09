@@ -20,7 +20,7 @@
         "diagnosis": {
           "label": "02",
           "title": "Diagnosis",
-          "description": "Advanced diagnostics with cutting-edge imaging and technology for accurate, reliable results."
+          "description": "Advanced diagnostics with cutting-edge imaging and technology for accurate results."
         },
         "treatment": {
           "label": "03",
@@ -73,7 +73,7 @@
           },
           "pediatric": {
             "title": "Pediatric Dental Care",
-            "description": "Specialized gentle care for children, creating positive dental experiences and establishing good oral health habits from an early age."
+            "description": "Specialized gentle care for children, creating positive dental experiences and establishing oral health habits from an early age."
           }
         }
       }

@@ -10,22 +10,18 @@ import {
 } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
-import { GridPattern } from '@/components/GridPattern'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 import { WhatsappLogo } from '@phosphor-icons/react'
 import Image from 'next/image'
 import LanguageSelector from '@/components/LanguageSelector'
 
-import LogoSmall from '../../public/logo-small.png'
-import LogoLight from '../../public/logo-light.png'
 import LogoDark from '../../public/logo-dark.png'
 
 type LayoutTranslations = {
@@ -141,17 +137,17 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-4">
           <LanguageSelector />
-          <Button
+          <Link
             href="/services/emergency"
-            className="min-w-fit border border-red-500 bg-surface-100 text-xs text-red-500 hover:bg-red-500 hover:text-white sm:text-sm ring-0 transition-colors"
+            className="inline-flex min-w-fit items-center rounded-lg border border-red-500 bg-surface-100 px-3 py-2 text-xs font-medium text-red-500 transition-colors duration-150 hover:bg-red-500 hover:text-white sm:px-5 sm:py-3 sm:text-sm"
             aria-label="Access emergency dental services"
           >
-            {translations.header.emergency}
-          </Button>
+            <span className="relative top-px">
+              {translations.header.emergency}
+            </span>
+          </Link>
           <div className="hidden sm:block">
-            <Button href="/contact">
-              {translations.header.contact}
-            </Button>
+            <Button href="/contact">{translations.header.contact}</Button>
           </div>
           <button
             ref={toggleRef}
@@ -172,7 +168,7 @@ function Header({
 
 function NavigationRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="even:border-t even:border-warm-dark/10 bg-surface-200">
+    <div className="bg-surface-200 even:border-t even:border-warm-dark/10">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -226,7 +222,10 @@ function Navigation() {
   }
 
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-warm-dark" style={{ letterSpacing: '-2.16px' }}>
+    <nav
+      className="mt-px text-5xl font-semibold tracking-tight text-warm-dark"
+      style={{ letterSpacing: '-1.5px' }}
+    >
       <NavigationRow>
         <NavigationItem href="/services">
           {translations.navigation.services}
@@ -242,7 +241,7 @@ function Navigation() {
         >
           <span className="flex items-center">
             <span>{translations.navigation.emergency.title}</span>
-            <span className="ml-4 rounded-full bg-accent-hover px-3 py-1 text-sm font-semibold tracking-wider uppercase text-surface-200">
+            <span className="ml-4 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold tracking-wider text-white uppercase">
               {translations.navigation.emergency.badge}
             </span>
           </span>
@@ -337,8 +336,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
         <motion.div
           layout
           id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-surface-200 pt-2"
+          style={{ height: expanded ? 'auto' : '0rem' }}
+          className="relative z-50 overflow-hidden bg-surface-200"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
@@ -363,12 +362,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
                   <div>
-                    <Offices
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
+                    <Offices className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2" />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-warm-dark">
+                    <h2 className="text-base font-semibold text-warm-dark">
                       {translations.footer.followUs}
                     </h2>
                     <SocialMedia className="mt-6" />
@@ -388,10 +385,17 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-surface-300/50 stroke-surface-400"
-            yOffset={-96}
-            interactive
+          <div
+            className="pointer-events-none absolute inset-x-0 -top-14 -z-10 h-[1000px]"
+            aria-hidden="true"
+            style={{
+              background: [
+                'radial-gradient(ellipse 90% 60% at 50% -5%, rgba(206,194,181,0.55) 0%, rgba(206,194,181,0.12) 50%, transparent 80%)',
+                'radial-gradient(ellipse 70% 50% at 75% 8%, rgba(132,102,82,0.14) 0%, transparent 65%)',
+                'radial-gradient(ellipse 65% 45% at 25% 12%, rgba(206,194,181,0.25) 0%, transparent 60%)',
+                'radial-gradient(ellipse 40% 35% at 50% 25%, rgba(132,102,82,0.06) 0%, transparent 55%)',
+              ].join(', '),
+            }}
           />
 
           <main className="w-full flex-auto">{children}</main>

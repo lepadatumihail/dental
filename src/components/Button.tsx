@@ -8,19 +8,19 @@ type ButtonProps = {
   | (React.ComponentPropsWithoutRef<'button'> & { href?: undefined })
 )
 
-export function Button({
-  invert = false,
-  className,
-  children,
-  ...props
-}: ButtonProps) {
-    className = clsx(
+  export function Button({
+    invert = false,
     className,
-    'inline-flex rounded-lg px-5 py-3 font-display text-sm font-medium transition-colors duration-150 ring-1 ring-inset ring-warm-dark/10',
-    invert
-      ? 'bg-surface-100 text-warm-dark hover:text-accent-hover'
-      : 'bg-surface-300 text-warm-dark hover:text-accent-hover',
-  )
+    children,
+    ...props
+  }: ButtonProps) {
+      className = clsx(
+      'inline-flex rounded-lg px-5 py-3 text-sm font-medium transition-colors duration-150',
+      invert
+        ? 'bg-white text-forest hover:bg-surface-200'
+        : 'bg-mocha text-white hover:bg-mocha-dark',
+      className,
+    )
 
   let inner = <span className="relative top-px">{children}</span>
 

@@ -13,11 +13,11 @@ function Office({
   return (
     <address
       className={clsx(
-        'font-serif text-sm not-italic leading-relaxed',
-        invert ? 'text-warm-dark/55' : 'text-warm-dark/55',
+        'text-sm not-italic leading-relaxed',
+        invert ? 'text-taupe' : 'text-taupe',
       )}
     >
-      <strong className={invert ? 'font-display text-base font-semibold text-warm-dark' : 'font-display text-base font-semibold text-warm-dark'}>
+      <strong className="text-base font-semibold text-warm-dark">
         {name}
       </strong>
       <br />
@@ -44,13 +44,13 @@ export function Offices({
               <br />
               <br />
             </div>
-            <span className={invert ? 'font-medium text-warm-dark' : 'font-medium text-warm-dark'}>
+            <span className="font-medium text-warm-dark">
               {t('phone')}:{' '}
             </span>
 
             <a
               href="tel:+34673290786"
-              className={invert ? 'font-medium text-warm-dark hover:text-accent-hover transition-colors' : 'font-medium text-warm-dark hover:text-accent-hover transition-colors'}
+              className="font-medium text-warm-dark hover:text-mocha transition-colors"
             >
               {t('phoneNumber')}
             </a>
@@ -66,12 +66,11 @@ export function Offices({
           </Office>
           <div
             className={clsx(
-              'min-w-xs font-serif text-sm not-italic leading-relaxed mt-3',
-              invert ? 'text-warm-dark/55' : 'text-warm-dark/55',
+              'min-w-xs text-sm not-italic leading-relaxed mt-3',
+              invert ? 'text-taupe' : 'text-taupe',
             )}
           >
-            <span
-              className={invert ? 'font-display text-base font-semibold text-warm-dark' : 'font-display text-base font-semibold text-warm-dark'}
+            <span className="text-base font-semibold text-warm-dark"
             >
               {t('openingHours')}:
             </span>

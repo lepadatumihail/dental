@@ -79,8 +79,7 @@ export default async function EmergencyDentalServices() {
                 </Button>
                 <Button
                   href="https://wa.me/+34673290786"
-                  invert
-                  className="border border-white bg-transparent hover:bg-white/10"
+                  className="!border !border-white !bg-transparent !text-white hover:!bg-white/10"
                 >
                   <div className="flex flex-row items-center">
                     <Phone className="mr-2" size={20} />

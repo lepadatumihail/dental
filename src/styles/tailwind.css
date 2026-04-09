@@ -29,36 +29,43 @@
 
   --radius-4xl: 2.5rem;
 
-  --font-sans: Mona Sans, ui-sans-serif, system-ui, sans-serif,
+  --font-sans: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-  --font-display: Mona Sans, ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-display: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif;
 
-  --font-display--font-variation-settings: 'wdth' 125;
-
-  --font-display-length: 2;
-
-  --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L',
-    'P052', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-serif: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif;
 
   --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
 
-  --color-surface-100: #f7f7f4;
-  --color-surface-200: #f2f1ed;
-  --color-surface-300: #ebeae5;
-  --color-surface-400: #e6e5e0;
-  --color-surface-500: #e1e0db;
+  --color-mocha: #846652;
+  --color-mocha-light: #9A8070;
+  --color-mocha-dark: #6E523F;
+  --color-taupe: #958B81;
+  --color-sand: #CEC2B5;
+  --color-sand-light: #DDD4C9;
+  --color-forest: #32351A;
 
-  --color-warm-dark: #26251e;
-  --color-accent-orange: #f54e00;
-  --color-accent-hover: #cf2d56;
-  --color-gold: #c08532;
-  --color-warm-success: #1f8a65;
+  --color-surface-100: #FAF8F5;
+  --color-surface-200: #F5F1EC;
+  --color-surface-300: #EDE8E1;
+  --color-surface-400: #E5DFD7;
+  --color-surface-500: #DDD6CC;
 
-  --color-timeline-thinking: #dfa88f;
-  --color-timeline-grep: #9fc9a2;
-  --color-timeline-read: #9fbbe0;
-  --color-timeline-edit: #c0a8dd;
+  --color-warm-dark: #32351A;
+  --color-accent-orange: #846652;
+  --color-accent-hover: #6E523F;
+  --color-gold: #846652;
+  --color-warm-success: #5A7A5E;
+
+  --color-step-consult: #D4B9A0;
+  --color-step-diagnose: #A8BFA0;
+  --color-step-treat: #9AB4C4;
+  --color-step-care: #C4B0CC;
+
+  --color-timeline-thinking: #D4B9A0;
+  --color-timeline-grep: #A8BFA0;
+  --color-timeline-read: #9AB4C4;
+  --color-timeline-edit: #C4B0CC;
 }
