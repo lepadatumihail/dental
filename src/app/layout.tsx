@@ -82,7 +82,7 @@ export default async function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html className="h-full bg-neutral-950 text-base antialiased">
+    <html className="h-full bg-warm-dark text-base antialiased">
       <head>
         {/* Resource hints for performance */}
         <link rel="preconnect" href="https://analytics.ahrefs.com" />

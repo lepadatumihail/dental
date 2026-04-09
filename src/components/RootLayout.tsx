@@ -124,7 +124,7 @@ function Header({
         >
           <div className="hidden sm:block">
             <Image
-              src={invert ? LogoLight : LogoDark}
+              src={LogoDark}
               alt="Prisma Clinic Marbella"
               width={180}
               height={100}
@@ -143,14 +143,13 @@ function Header({
           <LanguageSelector />
           <Button
             href="/services/emergency"
-            className="min-w-fit border border-red-400 text-xs text-red-500 sm:text-sm"
-            invert
+            className="min-w-fit border border-red-500 bg-surface-100 text-xs text-red-500 hover:bg-red-500 hover:text-white sm:text-sm ring-0 transition-colors"
             aria-label="Access emergency dental services"
           >
             {translations.header.emergency}
           </Button>
           <div className="hidden sm:block">
-            <Button href="/contact" invert={invert}>
+            <Button href="/contact">
               {translations.header.contact}
             </Button>
           </div>
@@ -160,20 +159,10 @@ function Header({
             onClick={onToggle}
             aria-expanded={expanded ? 'true' : 'false'}
             aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert ? 'hover:bg-white/10' : 'hover:bg-neutral-950/10',
-            )}
+            className="group -m-2.5 rounded-full p-2.5 transition hover:bg-warm-dark/10"
             aria-label={translations.header.toggleNavigation}
           >
-            <Icon
-              className={clsx(
-                'h-6 w-6',
-                invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
-              )}
-            />
+            <Icon className="h-6 w-6 fill-warm-dark group-hover:fill-warm-dark/70" />
           </button>
         </div>
       </div>
@@ -183,7 +172,7 @@ function Header({
 
 function NavigationRow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="even:mt-px sm:bg-neutral-950">
+    <div className="even:border-t even:border-warm-dark/10 bg-surface-200">
       <Container>
         <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
       </Container>
@@ -203,11 +192,11 @@ function NavigationItem({
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className="group relative isolate -mx-6 bg-surface-200 px-6 py-10 even:border-t even:border-warm-dark/10 sm:mx-0 sm:px-0 sm:py-16 sm:odd:pr-16 sm:even:border-t-0 sm:even:border-l sm:even:border-warm-dark/10 sm:even:pl-16"
       aria-label={ariaLabel}
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-neutral-900 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-screen bg-surface-300 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }
@@ -237,7 +226,7 @@ function Navigation() {
   }
 
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-warm-dark" style={{ letterSpacing: '-2.16px' }}>
       <NavigationRow>
         <NavigationItem href="/services">
           {translations.navigation.services}
@@ -253,7 +242,7 @@ function Navigation() {
         >
           <span className="flex items-center">
             <span>{translations.navigation.emergency.title}</span>
-            <span className="ml-4 rounded-full bg-red-500 px-3 py-1 text-sm font-semibold tracking-wider uppercase">
+            <span className="ml-4 rounded-full bg-accent-hover px-3 py-1 text-sm font-semibold tracking-wider uppercase text-surface-200">
               {translations.navigation.emergency.badge}
             </span>
           </span>
@@ -349,15 +338,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           layout
           id={panelId}
           style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+          className="relative z-50 overflow-hidden bg-surface-200 pt-2"
           aria-hidden={expanded ? undefined : 'true'}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? undefined : ''}
         >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pt-14 pb-16">
+          <motion.div layout className="bg-warm-dark/5">
+            <div ref={navRef} className="bg-surface-200 pt-14 pb-16">
               <Header
-                invert
                 panelId={panelId}
                 icon={XIcon}
                 toggleRef={closeRef}
@@ -371,20 +359,19 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
               />
             </div>
             <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+            <div className="relative bg-surface-200 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-warm-dark/10">
               <Container>
                 <div className="grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <Offices
-                      invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
-                    <h2 className="font-display text-base font-semibold text-white">
+                    <h2 className="font-display text-base font-semibold text-warm-dark">
                       {translations.footer.followUs}
                     </h2>
-                    <SocialMedia className="mt-6" invert />
+                    <SocialMedia className="mt-6" />
                   </div>
                 </div>
               </Container>
@@ -395,15 +382,14 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-surface-200 pt-14"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
           <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-gray-100"
+            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-surface-300/50 stroke-surface-400"
             yOffset={-96}
             interactive
           />

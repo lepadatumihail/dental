@@ -13,11 +13,11 @@ function Office({
   return (
     <address
       className={clsx(
-        'text-sm not-italic',
-        invert ? 'text-neutral-300' : 'text-neutral-600',
+        'font-serif text-sm not-italic leading-relaxed',
+        invert ? 'text-warm-dark/55' : 'text-warm-dark/55',
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
+      <strong className={invert ? 'font-display text-base font-semibold text-warm-dark' : 'font-display text-base font-semibold text-warm-dark'}>
         {name}
       </strong>
       <br />
@@ -37,20 +37,20 @@ export function Offices({
       <li>
         <div className="flex w-full flex-col justify-between gap-6 sm:flex-row">
           <Office name={t('name')} invert={invert}>
-            <div className="min-w-xs">
+            <div className="min-w-xs mt-3">
               {t('address')}
               <br />
               {t('country')}
               <br />
               <br />
             </div>
-            <span className={invert ? 'text-white' : 'text-neutral-950'}>
+            <span className={invert ? 'font-medium text-warm-dark' : 'font-medium text-warm-dark'}>
               {t('phone')}:{' '}
             </span>
 
             <a
               href="tel:+34673290786"
-              className={invert ? 'text-white' : 'text-neutral-950'}
+              className={invert ? 'font-medium text-warm-dark hover:text-accent-hover transition-colors' : 'font-medium text-warm-dark hover:text-accent-hover transition-colors'}
             >
               {t('phoneNumber')}
             </a>
@@ -59,24 +59,26 @@ export function Offices({
               href="https://wa.me/+34673290786"
               target="_blank"
               rel="noopener noreferrer"
-              className={'text-green-400 underline'}
+              className="mt-1 inline-block font-medium text-warm-success underline hover:text-warm-success/80 transition-colors"
             >
               WhatsApp
             </a>
           </Office>
           <div
             className={clsx(
-              'min-w-xs text-sm not-italic',
-              invert ? 'text-neutral-300' : 'text-neutral-600',
+              'min-w-xs font-serif text-sm not-italic leading-relaxed mt-3',
+              invert ? 'text-warm-dark/55' : 'text-warm-dark/55',
             )}
           >
             <span
-              className={invert ? 'font-bold text-white' : 'text-neutral-950'}
+              className={invert ? 'font-display text-base font-semibold text-warm-dark' : 'font-display text-base font-semibold text-warm-dark'}
             >
               {t('openingHours')}:
             </span>
             <br />
-            {t('weekdays')}
+            <div className="mt-3">
+              {t('weekdays')}
+            </div>
           </div>
         </div>
       </li>

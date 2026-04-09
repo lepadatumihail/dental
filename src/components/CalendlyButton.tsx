@@ -23,7 +23,7 @@ export default function CalendlyButton() {
       rootElement={rootElement}
       text={t('button')}
       className={clsx(
-        'cursor-pointer rounded-lg px-5 py-3 font-display text-sm font-semibold transition',
+        'cursor-pointer rounded-lg px-3 py-2.5 sm:px-5 sm:py-3 font-display text-xs sm:text-sm font-semibold transition',
         'bg-neutral-950 text-white hover:bg-neutral-800',
       )}
     />

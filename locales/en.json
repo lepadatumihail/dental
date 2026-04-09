@@ -1,10 +1,38 @@
 {
   "home": {
-    "title": "Prisma Clinic Marbella",
-    "description": "At Prisma Clinic Marbella, we provide exceptional dental and aesthetic care with compassion and precision. Our team of experienced professionals uses advanced technology to ensure your comfort while delivering comprehensive treatments for all your oral health needs. From routine cleanings to cosmetic procedures, we are committed to giving you a healthy, beautiful smile.",
+    "title": "Your guide to a healthier, more beautiful you.",
+    "description": "Premium dental, aesthetic, and general healthcare in Marbella — maximum efficiency, comfort, and care.",
+    "tagline": "Prisma Clinic Marbella",
     "viewServices": "View our services",
+    "discoverMore": "Discover more",
     "clients": {
-      "title": "Using the latest technology"
+      "title": "Trusted by leading technology partners"
+    },
+    "journey": {
+      "title": "Your path to better health",
+      "description": "From your first visit to ongoing care, we guide you every step of the way with precision, compassion, and advanced technology.",
+      "steps": {
+        "consultation": {
+          "label": "01",
+          "title": "Consultation",
+          "description": "Schedule your first visit for a thorough assessment of your health and aesthetic needs."
+        },
+        "diagnosis": {
+          "label": "02",
+          "title": "Diagnosis",
+          "description": "Advanced diagnostics with cutting-edge imaging and technology for accurate, reliable results."
+        },
+        "treatment": {
+          "label": "03",
+          "title": "Treatment",
+          "description": "Personalized treatment plans crafted by our specialists, tailored to your unique situation."
+        },
+        "care": {
+          "label": "04",
+          "title": "Ongoing Care",
+          "description": "Continuous follow-up and preventive care to ensure lasting results and peace of mind."
+        }
+      }
     },
     "services": {
       "title": "Our Services",

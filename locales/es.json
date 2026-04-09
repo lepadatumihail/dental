@@ -1,10 +1,38 @@
 {
   "home": {
-    "title": "Prisma Clinic Marbella",
-    "description": "En Prisma Clinic Marbella, proporcionamos atención dental y estética excepcional con compasión y precisión. Nuestro equipo de profesionales experimentados utiliza tecnología avanzada para garantizar su comodidad mientras ofrece tratamientos integrales para todas sus necesidades de salud bucal. Desde limpiezas rutinarias hasta procedimientos cosméticos, estamos comprometidos a darle una sonrisa saludable y hermosa.",
+    "title": "Tu guía hacia una versión más sana y bella de ti.",
+    "description": "Salud dental, estética y medicina general premium en Marbella — máxima eficiencia, confort y cuidado.",
+    "tagline": "Prisma Clinic Marbella",
     "viewServices": "Ver nuestros servicios",
+    "discoverMore": "Descubre más",
     "clients": {
-      "title": "Utilizando la última tecnología"
+      "title": "Con la confianza de socios tecnológicos líderes"
+    },
+    "journey": {
+      "title": "Tu camino hacia una mejor salud",
+      "description": "Desde tu primera visita hasta el cuidado continuo, te guiamos en cada paso del camino con precisión, compasión y tecnología avanzada.",
+      "steps": {
+        "consultation": {
+          "label": "01",
+          "title": "Consulta",
+          "description": "Programa tu primera visita para una evaluación completa de tus necesidades de salud y estética."
+        },
+        "diagnosis": {
+          "label": "02",
+          "title": "Diagnóstico",
+          "description": "Diagnósticos avanzados con tecnología de imagen de vanguardia para resultados precisos y fiables."
+        },
+        "treatment": {
+          "label": "03",
+          "title": "Tratamiento",
+          "description": "Planes de tratamiento personalizados elaborados por nuestros especialistas, adaptados a tu situación única."
+        },
+        "care": {
+          "label": "04",
+          "title": "Cuidado Continuo",
+          "description": "Seguimiento continuo y cuidado preventivo para garantizar resultados duraderos y tranquilidad."
+        }
+      }
     },
     "services": {
       "title": "Nuestros Servicios",

@@ -1,10 +1,38 @@
 {
   "home": {
-    "title": "Prisma Clinic Marbella",
-    "description": "På Prisma Clinic Marbella erbjuder vi exceptionell tand- och estetisk vård med omtanke och precision. Vårt team av erfarna specialister använder avancerad teknik för att säkerställa din komfort samtidigt som vi levererar omfattande behandlingar för alla dina munhälsobehov. Från rutinrengöringar till kosmetiska ingrepp är vi engagerade i att ge dig ett friskt och vackert leende.",
+    "title": "Din guide till ett friskare och vackrare du.",
+    "description": "Premium tandvård, estetik och allmänmedicin i Marbella — maximal effektivitet, komfort och omsorg.",
+    "tagline": "Prisma Clinic Marbella",
     "viewServices": "Se våra tjänster",
+    "discoverMore": "Upptäck mer",
     "clients": {
-      "title": "Med den senaste teknologin"
+      "title": "Betrodd av ledande teknikpartners"
+    },
+    "journey": {
+      "title": "Din väg till bättre hälsa",
+      "description": "Från ditt första besök till pågående vård guidar vi dig varje steg på vägen med precision, omtanke och avancerad teknik.",
+      "steps": {
+        "consultation": {
+          "label": "01",
+          "title": "Konsultation",
+          "description": "Boka ditt första besök för en grundlig bedömning av dina hälso- och estetiska behov."
+        },
+        "diagnosis": {
+          "label": "02",
+          "title": "Diagnos",
+          "description": "Avancerad diagnostik med banbrytande bild- och teknik för korrekta, tillförlitliga resultat."
+        },
+        "treatment": {
+          "label": "03",
+          "title": "Behandling",
+          "description": "Personanpassade behandlingsplaner utformade av våra specialister, skräddarsydda för din unika situation."
+        },
+        "care": {
+          "label": "04",
+          "title": "Löpande vård",
+          "description": "Kontinuerlig uppföljning och förebyggande vård för att säkerställa varaktiga resultat och sinnesro."
+        }
+      }
     },
     "services": {
       "title": "Våra tjänster",
