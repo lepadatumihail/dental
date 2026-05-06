@@ -16,6 +16,8 @@ import { createCanonicalMetadata } from '@/lib/canonical'
 import dentalImage from '@/images/clinic/xray.jpg'
 import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
 import generalImage from '@/images/clinic/dentists.jpg'
+import bozanaPhoto from '@/images/bozana.jpeg'
+import robinPhoto from '@/images/clinic/robin-colour.jpg'
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
@@ -70,6 +72,74 @@ const statKeys = [
 ] as const
 
 const WHATSAPP_HREF = 'https://wa.me/+34673290786'
+
+type DoctorCardProps = {
+  name: string
+  role: string
+  bio: string
+  languages: string
+  languagesLabel: string
+  image?: import('next/image').StaticImageData
+  imageAlt?: string
+  initials?: string
+}
+
+function DoctorCard({
+  name,
+  role,
+  bio,
+  languages,
+  languagesLabel,
+  image,
+  imageAlt,
+  initials,
+}: DoctorCardProps) {
+  return (
+    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-mocha/10 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+      {image ? (
+        <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-200">
+          <Image
+            src={image}
+            alt={imageAlt ?? name}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div className="flex aspect-[4/3] w-full items-center justify-center bg-gradient-to-br from-mocha to-mocha-dark">
+          <span
+            aria-hidden="true"
+            className="text-6xl font-semibold tracking-tight text-white sm:text-7xl"
+            style={{ letterSpacing: '-1px' }}
+          >
+            {initials}
+          </span>
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-8 sm:p-10">
+        <p className="text-xs font-semibold tracking-[0.18em] text-mocha uppercase">
+          {role}
+        </p>
+        <h3
+          className="mt-3 text-2xl font-semibold text-warm-dark sm:text-3xl"
+          style={{ letterSpacing: '-0.3px' }}
+        >
+          {name}
+        </h3>
+        <p className="mt-5 text-base leading-relaxed text-taupe">{bio}</p>
+
+        <div className="mt-8 flex items-baseline gap-3 border-t border-mocha/10 pt-5">
+          <p className="text-xs font-semibold tracking-wider text-taupe uppercase">
+            {languagesLabel}
+          </p>
+          <p className="text-sm text-warm-dark">{languages}</p>
+        </div>
+      </div>
+    </article>
+  )
+}
 
 export default async function About() {
   const t = await getTranslations('about')
@@ -246,45 +316,31 @@ export default async function About() {
             </p>
           </FadeIn>
 
-          <FadeIn className="mt-14">
-            <article className="mx-auto max-w-4xl rounded-2xl border border-mocha/10 bg-white p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] sm:p-12">
-              <div className="grid grid-cols-1 gap-10 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-12">
-                <div className="flex shrink-0 flex-col items-center text-center lg:items-start lg:text-left">
-                  <div
-                    aria-hidden="true"
-                    className="flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-mocha to-mocha-dark text-3xl font-semibold tracking-tight text-white shadow-[0_8px_24px_rgba(132,102,82,0.25)]"
-                    style={{ letterSpacing: '-0.5px' }}
-                  >
-                    BK
-                  </div>
-                </div>
+          <FadeInStagger className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-6 lg:grid-cols-2">
+            <FadeIn className="flex">
+              <DoctorCard
+                name={t('team.lead.name')}
+                role={t('team.lead.role')}
+                bio={t('team.lead.bio')}
+                languages={t('team.lead.languages')}
+                languagesLabel={t('team.languagesLabel')}
+                image={bozanaPhoto}
+                imageAlt={t('team.lead.name')}
+              />
+            </FadeIn>
 
-                <div>
-                  <h3
-                    className="text-2xl font-semibold text-warm-dark sm:text-3xl"
-                    style={{ letterSpacing: '-0.3px' }}
-                  >
-                    {t('team.lead.name')}
-                  </h3>
-                  <p className="mt-2 text-sm font-semibold tracking-wide text-mocha uppercase">
-                    {t('team.lead.role')}
-                  </p>
-                  <p className="mt-5 text-base leading-relaxed text-taupe">
-                    {t('team.lead.bio')}
-                  </p>
-
-                  <div className="mt-6 flex items-baseline gap-3 border-t border-mocha/10 pt-5">
-                    <p className="text-xs font-semibold tracking-wider text-taupe uppercase">
-                      {t('team.lead.languagesLabel')}
-                    </p>
-                    <p className="text-sm text-warm-dark">
-                      {t('team.lead.languages')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </FadeIn>
+            <FadeIn className="flex">
+              <DoctorCard
+                name={t('team.lead2.name')}
+                role={t('team.lead2.role')}
+                bio={t('team.lead2.bio')}
+                languages={t('team.lead2.languages')}
+                languagesLabel={t('team.languagesLabel')}
+                image={robinPhoto}
+                imageAlt={t('team.lead2.name')}
+              />
+            </FadeIn>
+          </FadeInStagger>
 
           <FadeIn className="mx-auto mt-10 max-w-3xl text-center">
             <p className="text-base leading-relaxed text-taupe">

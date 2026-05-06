@@ -245,14 +245,20 @@
       "eyebrow": "Our specialists",
       "title": "Care with a name behind it.",
       "description": "Behind every result is a doctor who chose this work as a vocation — and a team that takes it personally.",
+      "languagesLabel": "Languages",
       "lead": {
         "name": "Dr. Bozana Krivošija",
         "role": "Aesthetic & Anti-Aging Medicine",
         "bio": "Medical doctor specialized in Aesthetic and Anti-Aging Medicine, trained at the Complutense University of Madrid. Originally from Bosnia and based in Spain for over a decade, Dr. Bozana focuses on natural, elegant results — neuromodulators, hyaluronic acid, collagen stimulators, PRP, IV drips, and tailored anti-aging protocols.",
-        "languages": "Serbian · Spanish · English",
-        "languagesLabel": "Languages"
+        "languages": "Serbian · Spanish · English"
       },
-      "rest": "Alongside Dr. Bozana, our dental and general medicine specialists bring decades of combined experience — including emergency-trained surgeons and dentists trained at institutions like King's College London. The whole team is fluent in at least one of Spanish, English, Swedish, German, or Farsi."
+      "lead2": {
+        "name": "Dr. Robbin",
+        "role": "Dental Surgeon & Cosmetic Dentistry",
+        "bio": "Dental surgeon trained at King's College London, with deep expertise in cosmetic dentistry, complex restorations, and 24/7 emergency dental care. Patients describe Dr. Robbin as patient, kind, and meticulous — explaining every step, and treating each case with the same level of attention whether it's a routine cleaning or a Saturday-night emergency.",
+        "languages": "English · Spanish"
+      },
+      "rest": "Alongside Dr. Bozana and Dr. Robbin, our dental and general medicine specialists bring decades of combined experience — including emergency-trained surgeons and clinicians fluent in at least one of Spanish, English, Swedish, German, or Farsi."
     },
     "cta": {
       "title": "Come visit us",
@@ -525,9 +531,9 @@
           },
           "leadExpert": {
             "eyebrow": "Lead Expert",
-            "title": "Dr. Afshin Moheb",
-            "body": "Dr. Afshin Moheb is an experienced plastic and aesthetic surgeon with more than 7,000 successful surgeries and many more non-surgical aesthetic treatments across Europe. Fluent in multiple languages, he is known for combining reconstructive precision with aesthetic sensitivity. His approach emphasises patient safety, clear expectations and harmonised, natural results.",
-            "imageAlt": "Dr. Afshin Moheb, plastic and aesthetic surgeon at Prisma Clinic Marbella"
+            "title": "Dr. Bozana Krivošija",
+            "body": "Dr. Bozana Krivošija is a medical doctor specialised in Aesthetic and Anti-Aging Medicine, trained at the Complutense University of Madrid. Originally from Bosnia and based in Spain for over a decade, she focuses on natural, elegant, and personalised results — neuromodulators, hyaluronic acid, collagen stimulators, PRP, IV drips, and tailored anti-aging protocols. Fluent in Serbian, Spanish, and English, Dr. Bozana creates a warm, trustworthy experience for patients from diverse cultures, treating medicine not just as a career but as a true vocation of service and care.",
+            "imageAlt": "Dr. Bozana Krivošija, aesthetic and anti-aging medicine specialist at Prisma Clinic Marbella"
           },
           "ribbon": {
             "title": "Ready for a refreshed, natural look?",

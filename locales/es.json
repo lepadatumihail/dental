@@ -245,14 +245,20 @@
       "eyebrow": "Nuestros especialistas",
       "title": "Atención con un nombre detrás.",
       "description": "Detrás de cada resultado hay un doctor que eligió este trabajo como vocación — y un equipo que se lo toma como algo personal.",
+      "languagesLabel": "Idiomas",
       "lead": {
         "name": "Dra. Bozana Krivošija",
         "role": "Medicina Estética y Antiedad",
         "bio": "Doctora en medicina especializada en Medicina Estética y Antiedad, formada en la Universidad Complutense de Madrid. De origen bosnio y residente en España desde hace más de una década, la Dra. Bozana se centra en resultados naturales y elegantes — neuromoduladores, ácido hialurónico, estimuladores de colágeno, PRP, sueros intravenosos y protocolos antiedad personalizados.",
-        "languages": "Serbio · Español · Inglés",
-        "languagesLabel": "Idiomas"
+        "languages": "Serbio · Español · Inglés"
       },
-      "rest": "Junto a la Dra. Bozana, nuestros especialistas en odontología y medicina general aportan décadas de experiencia conjunta — incluyendo cirujanos formados en urgencias y dentistas formados en instituciones como King's College London. Todo el equipo habla con fluidez al menos uno de los siguientes idiomas: español, inglés, sueco, alemán o farsi."
+      "lead2": {
+        "name": "Dr. Robbin",
+        "role": "Cirujano Dental y Odontología Cosmética",
+        "bio": "Cirujano dental formado en King's College London, con profunda experiencia en odontología cosmética, restauraciones complejas y atención dental de emergencia 24/7. Los pacientes describen al Dr. Robbin como paciente, amable y meticuloso — explicando cada paso y tratando cada caso con el mismo nivel de atención, ya sea una limpieza rutinaria o una emergencia un sábado por la noche.",
+        "languages": "Inglés · Español"
+      },
+      "rest": "Junto a la Dra. Bozana y el Dr. Robbin, nuestros especialistas en odontología y medicina general aportan décadas de experiencia conjunta — incluyendo cirujanos formados en urgencias y clínicos que hablan con fluidez al menos uno de los siguientes idiomas: español, inglés, sueco, alemán o farsi."
     },
     "cta": {
       "title": "Ven a visitarnos",
@@ -528,9 +534,9 @@
           },
           "leadExpert": {
             "eyebrow": "Especialista principal",
-            "title": "Dr. Afshin Moheb",
-            "body": "El Dr. Afshin Moheb es un cirujano plástico y estético con más de 7.000 cirugías exitosas y muchos más tratamientos estéticos no quirúrgicos en toda Europa. Domina varios idiomas y es conocido por combinar la precisión reconstructiva con la sensibilidad estética. Su enfoque enfatiza la seguridad del paciente, expectativas claras y resultados naturales y armónicos.",
-            "imageAlt": "Dr. Afshin Moheb, cirujano plástico y estético en Prisma Clinic Marbella"
+            "title": "Dra. Bozana Krivošija",
+            "body": "La Dra. Bozana Krivošija es médica especializada en Medicina Estética y Antiedad, formada en la Universidad Complutense de Madrid. De origen bosnio y residente en España desde hace más de una década, se centra en resultados naturales, elegantes y personalizados — neuromoduladores, ácido hialurónico, estimuladores de colágeno, PRP, sueros intravenosos y protocolos antiedad a medida. Habla con fluidez serbio, español e inglés, y crea una experiencia cálida y de confianza para pacientes de culturas diversas, viviendo la medicina no solo como una profesión sino como una verdadera vocación de servicio y cuidado.",
+            "imageAlt": "Dra. Bozana Krivošija, especialista en medicina estética y antiedad en Prisma Clinic Marbella"
           },
           "ribbon": {
             "title": "¿Listo para un look fresco y natural?",

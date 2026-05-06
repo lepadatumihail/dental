@@ -13,7 +13,6 @@ import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { createCanonicalMetadata } from '@/lib/canonical'
 
 import heroImage from '@/images/clinic/aesthetics-1.jpg'
-// TODO: replace with real Dr. Afshin Moheb headshot when provided
 import doctorImage from '@/images/bozana.jpeg'
 
 const WHATSAPP_HREF = 'https://wa.me/+34673290786'

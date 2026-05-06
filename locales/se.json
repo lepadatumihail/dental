@@ -245,14 +245,20 @@
       "eyebrow": "Våra specialister",
       "title": "Vård med ett namn bakom.",
       "description": "Bakom varje resultat finns en läkare som valt detta arbete som sitt kall — och ett team som tar det personligt.",
+      "languagesLabel": "Språk",
       "lead": {
         "name": "Dr. Bozana Krivošija",
         "role": "Estetisk medicin och anti-aging",
         "bio": "Legitimerad läkare specialiserad inom estetisk medicin och anti-aging, utbildad vid Complutense-universitetet i Madrid. Ursprungligen från Bosnien och bosatt i Spanien i över ett decennium, Dr. Bozana fokuserar på naturliga och eleganta resultat — neuromodulatorer, hyaluronsyra, kollagenstimulerare, PRP, IV-drypp och skräddarsydda anti-aging-protokoll.",
-        "languages": "Serbiska · Spanska · Engelska",
-        "languagesLabel": "Språk"
+        "languages": "Serbiska · Spanska · Engelska"
       },
-      "rest": "Vid sidan av Dr. Bozana har våra tandvårds- och allmänmedicinska specialister decennier av samlad erfarenhet — inklusive akutvana kirurger och tandläkare utbildade vid institutioner som King's College London. Hela teamet talar minst ett av spanska, engelska, svenska, tyska eller farsi flytande."
+      "lead2": {
+        "name": "Dr. Robbin",
+        "role": "Tandkirurg och kosmetisk tandvård",
+        "bio": "Tandkirurg utbildad vid King's College London, med djup expertis inom kosmetisk tandvård, komplexa restaurationer och akut tandvård dygnet runt. Patienter beskriver Dr. Robbin som tålmodig, vänlig och noggrann — han förklarar varje steg och behandlar varje fall med samma uppmärksamhet, oavsett om det rör sig om en rutinrengöring eller en akut situation en lördagskväll.",
+        "languages": "Engelska · Spanska"
+      },
+      "rest": "Vid sidan av Dr. Bozana och Dr. Robbin har våra tandvårds- och allmänmedicinska specialister decennier av samlad erfarenhet — inklusive akutvana kirurger och kliniker som talar minst ett av spanska, engelska, svenska, tyska eller farsi flytande."
     },
     "cta": {
       "title": "Kom och besök oss",
@@ -528,9 +534,9 @@
           },
           "leadExpert": {
             "eyebrow": "Ledande specialist",
-            "title": "Dr. Afshin Moheb",
-            "body": "Dr. Afshin Moheb är en erfaren plastik- och estetisk kirurg med över 7 000 lyckade operationer och många fler icke-kirurgiska estetiska behandlingar runt om i Europa. Han talar flera språk och är känd för att kombinera rekonstruktiv precision med estetisk känslighet. Hans arbetssätt betonar patientsäkerhet, tydliga förväntningar och harmoniska, naturliga resultat.",
-            "imageAlt": "Dr. Afshin Moheb, plastik- och estetisk kirurg på Prisma Clinic Marbella"
+            "title": "Dr. Bozana Krivošija",
+            "body": "Dr. Bozana Krivošija är legitimerad läkare specialiserad inom estetisk medicin och anti-aging, utbildad vid Complutense-universitetet i Madrid. Ursprungligen från Bosnien och bosatt i Spanien i över ett decennium, hon fokuserar på naturliga, eleganta och personliga resultat — neuromodulatorer, hyaluronsyra, kollagenstimulerare, PRP, IV-drypp och skräddarsydda anti-aging-protokoll. Hon talar serbiska, spanska och engelska flytande och skapar en varm och förtroendeingivande upplevelse för patienter från olika kulturer, där medicin inte bara är ett yrke utan en sann kallelse till tjänst och omsorg.",
+            "imageAlt": "Dr. Bozana Krivošija, specialist inom estetisk medicin och anti-aging på Prisma Clinic Marbella"
           },
           "ribbon": {
             "title": "Redo för ett fräscht och naturligt utseende?",
