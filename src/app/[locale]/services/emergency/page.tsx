@@ -1,26 +1,23 @@
-import imageHero from '@/images/clinic/dentists.jpg'
-import { StatList, StatListItem } from '@/components/StatList'
-import Image from 'next/image'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import {
   Clock,
   FirstAid,
   Phone,
   CalendarCheck,
   MapPin,
-  Car,
   CreditCard,
   ShieldPlus,
+  WhatsappLogo,
 } from '@phosphor-icons/react/dist/ssr'
-import { Button } from '@/components/Button'
 import { getTranslations } from 'next-intl/server'
 
-import { Blockquote } from '@/components/Blockquote'
+import { Container } from '@/components/Container'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { createCanonicalMetadata } from '@/lib/canonical'
 
-// Generate static params for all locales
+import imageHero from '@/images/clinic/dentists.jpg'
+
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
@@ -48,331 +45,324 @@ export async function generateMetadata({
   }
 }
 
+const conditionKeys = [
+  'toothache',
+  'broken',
+  'knockedOut',
+  'lostRestorations',
+  'abscess',
+  'trauma',
+] as const
+
+const whyChooseFeatures = [
+  { key: 'availability' as const, Icon: Clock },
+  { key: 'sameDay' as const, Icon: CalendarCheck },
+  { key: 'location' as const, Icon: MapPin },
+  { key: 'payment' as const, Icon: CreditCard },
+]
+
+const howWorksSteps = ['call', 'describe', 'come'] as const
+
 export default async function EmergencyDentalServices() {
   const t = await getTranslations('emergencyPage')
 
   return (
-    <div className="mx-auto max-w-7xl">
-      <FadeIn>
-        <div className="relative mx-1 mt-12 mb-20 h-[500px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24">
+    <>
+      {/* ───── Hero ───── */}
+      <section className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
           <Image
             src={imageHero}
-            alt={t('hero.title')}
+            alt=""
             fill
-            className="object-cover"
             priority
+            sizes="100vw"
+            className="object-cover"
           />
-          <div className="absolute inset-0 flex items-center bg-gradient-to-r from-neutral-950/80 to-transparent">
-            <div className="max-w-4xl px-12">
-              <h1 className="mb-6 font-display text-4xl font-medium tracking-tight text-white sm:text-6xl">
-                {t('hero.title')}
-              </h1>
-              <p className="text-md text-white/90 md:text-xl">
-                {t('hero.description')}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="tel:+34673290786" invert>
-                  <div className="flex flex-row items-center gap-2">
-                    <Phone size={20} />
-                    <p>{t('hero.emergencyHotline')}</p>
-                  </div>
-                </Button>
-                <Button
-                  href="https://wa.me/+34673290786"
-                  className="!border !border-white !bg-transparent !text-white hover:!bg-white/10"
-                >
-                  <div className="flex flex-row items-center">
-                    <Phone className="mr-2" size={20} />
-                    <p>{t('hero.whatsapp')}</p>
-                  </div>
-                </Button>
-              </div>
-            </div>
-          </div>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-gradient-to-r from-warm-dark/90 via-warm-dark/75 to-warm-dark/55"
+          />
         </div>
-      </FadeIn>
 
-      <Container className="my-8">
-        <FadeIn>
-          <div className="flex flex-col gap-12 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="mb-4 flex items-center gap-3">
-                <FirstAid size={32} />
-                <h2 className="font-display text-2xl font-medium tracking-tight text-neutral-900 sm:text-4xl">
+        <Container className="py-24 sm:py-32 lg:py-40">
+          <FadeIn className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-1.5 text-[11px] font-semibold tracking-[0.25em] text-red-200 uppercase backdrop-blur-sm">
+              <span
+                className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400"
+                aria-hidden="true"
+              />
+              24 / 7
+            </span>
+
+            <h1
+              className="mt-6 text-4xl font-semibold text-white sm:text-6xl lg:text-7xl"
+              style={{ letterSpacing: '-1px', lineHeight: 1.08 }}
+            >
+              {t('hero.title')}
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-xl">
+              {t('hero.description')}
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href="tel:+34673290786"
+                className="inline-flex items-center gap-2 rounded-lg bg-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-red-600"
+              >
+                <Phone weight="fill" className="h-4 w-4" />
+                {t('hero.emergencyHotline')}
+              </a>
+              <a
+                href="https://wa.me/+34673290786"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/40 bg-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors duration-150 hover:bg-white/20"
+              >
+                <WhatsappLogo weight="fill" className="h-4 w-4" />
+                {t('hero.whatsapp')}
+              </a>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* ───── Services Overview + Stats ───── */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <FadeIn>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+              <div>
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-mocha/10 text-mocha">
+                  <FirstAid weight="duotone" className="h-6 w-6" />
+                </span>
+                <h2
+                  className="mt-6 text-3xl font-semibold text-warm-dark sm:text-4xl"
+                  style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
+                >
                   {t('services.title')}
                 </h2>
-              </div>
-              <p className="text-lg leading-relaxed text-neutral-600">
-                {t('services.description')}
-              </p>
-            </div>
-            <div className="flex items-center justify-self-auto rounded-xl sm:justify-center sm:bg-neutral-100 sm:p-8">
-              <StatList>
-                <StatListItem
-                  value={t('services.stats.availability.value')}
-                  label={t('services.stats.availability.label')}
-                />
-                <StatListItem
-                  value={t('services.stats.response.value')}
-                  label={t('services.stats.response.label')}
-                />
-                <StatListItem
-                  value={t('services.stats.treatment.value')}
-                  label={t('services.stats.treatment.label')}
-                />
-                <StatListItem
-                  value={t('services.stats.insurance.value')}
-                  label={t('services.stats.insurance.label')}
-                />
-              </StatList>
-            </div>
-          </div>
-        </FadeIn>
-      </Container>
-
-      <Container className="my-20">
-        <FadeInStagger>
-          <section>
-            <FadeIn>
-              <div className="flex items-center gap-3">
-                <ShieldPlus size={28} />
-                <h3 className="font-display text-xl font-medium tracking-tight text-neutral-900 md:text-3xl">
-                  {t('conditions.title')}
-                </h3>
-              </div>
-              <p className="text-md my-2 text-neutral-600">
-                {t('conditions.description')}
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.toothache.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.toothache.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.broken.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.broken.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.knockedOut.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.knockedOut.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.lostRestorations.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.lostRestorations.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.abscess.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.abscess.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('conditions.items.trauma.title')}
-                  </h4>
-                  <p className="text-neutral-700">
-                    {t('conditions.items.trauma.description')}
-                  </p>
-                </div>
-              </FadeIn>
-            </div>
-          </section>
-
-          <section className="my-14">
-            <FadeIn>
-              <div className="mb-6 flex items-center gap-3">
-                <Clock size={32} className="text-neutral-900" />
-                <h3 className="font-display text-xl font-medium tracking-tight text-neutral-900 md:text-3xl">
-                  {t('whyChoose.title')}
-                </h3>
-              </div>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <FadeIn>
-                <div className="group flex h-full flex-col items-center rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-gray-300 hover:shadow-md">
-                  <div className="mb-4 rounded-full bg-neutral-100 p-4 text-neutral-800 transition-all duration-300 group-hover:bg-neutral-200">
-                    <Clock size={32} />
-                  </div>
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('whyChoose.features.availability.title')}
-                  </h4>
-                  <p className="text-sm text-neutral-700">
-                    {t('whyChoose.features.availability.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="group flex h-full flex-col items-center rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-gray-300 hover:shadow-md">
-                  <div className="mb-4 rounded-full bg-neutral-100 p-3 text-neutral-800 transition-all duration-300 group-hover:bg-neutral-200">
-                    <CalendarCheck size={32} />
-                  </div>
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('whyChoose.features.sameDay.title')}
-                  </h4>
-                  <p className="text-sm text-neutral-700">
-                    {t('whyChoose.features.sameDay.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="group flex h-full flex-col items-center rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-gray-300 hover:shadow-md">
-                  <div className="mb-4 rounded-full bg-neutral-100 p-3 text-neutral-800 transition-all duration-300 group-hover:bg-neutral-200">
-                    <MapPin size={32} />
-                  </div>
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('whyChoose.features.location.title')}
-                  </h4>
-                  <p className="text-sm text-neutral-700">
-                    {t('whyChoose.features.location.description')}
-                  </p>
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div className="group flex h-full flex-col items-center rounded-xl border border-gray-200 bg-white p-8 text-center shadow-sm transition-all duration-300 hover:border-gray-300 hover:shadow-md">
-                  <div className="mb-4 rounded-full bg-neutral-100 p-3 text-neutral-800 transition-all duration-300 group-hover:bg-neutral-200">
-                    <CreditCard size={32} />
-                  </div>
-                  <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                    {t('whyChoose.features.payment.title')}
-                  </h4>
-                  <p className="text-sm text-neutral-700">
-                    {t('whyChoose.features.payment.description')}
-                  </p>
-                </div>
-              </FadeIn>
-            </div>
-          </section>
-
-          <section className="my-14 rounded-2xl bg-gradient-to-br from-neutral-100 to-neutral-50 p-10 shadow-inner">
-            <FadeIn>
-              <div className="mb-8 flex items-center gap-3">
-                <h3 className="font-display text-xl font-medium tracking-tight text-neutral-900 md:text-3xl">
-                  {t('howWorks.title')}
-                </h3>
-              </div>
-              <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-3">
-                <div className="relative">
-                  <div className="absolute top-0 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white shadow-md">
-                    <span className="text-lg font-semibold">1</span>
-                  </div>
-                  <div className="ml-10 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
-                    <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                      {t('howWorks.steps.call.title')}
-                    </h4>
-                    <p className="text-neutral-700">
-                      {t('howWorks.steps.call.description')}
-                    </p>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="absolute top-0 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white shadow-md">
-                    <span className="text-lg font-semibold">2</span>
-                  </div>
-                  <div className="ml-10 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
-                    <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                      {t('howWorks.steps.describe.title')}
-                    </h4>
-                    <p className="text-neutral-700">
-                      {t('howWorks.steps.describe.description')}
-                    </p>
-                  </div>
-                </div>
-                <div className="relative">
-                  <div className="absolute top-0 -left-4 flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-white shadow-md">
-                    <span className="text-lg font-semibold">3</span>
-                  </div>
-                  <div className="ml-10 rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md">
-                    <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                      {t('howWorks.steps.come.title')}
-                    </h4>
-                    <p className="text-neutral-700">
-                      {t('howWorks.steps.come.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </section>
-
-          <section className="my-14">
-            <FadeIn>
-              <Blockquote
-                className="font-display"
-                author={{ name: 'Maria Rodriguez', role: 'Emergency Patient' }}
-                image={{
-                  src: imageHero,
-                  width: 300,
-                  height: 400,
-                  alt: 'Maria Rodriguez',
-                }}
-              >
-                {t('testimonial.quote')}
-              </Blockquote>
-            </FadeIn>
-          </section>
-
-          <section className="my-8">
-            <FadeIn>
-              <div className="rounded-2xl bg-neutral-900 p-12 text-white">
-                <h3 className="font-display text-xl font-medium tracking-tight md:text-3xl">
-                  {t('callToAction.title')}
-                </h3>
-                <p className="mt-2 text-neutral-300">
-                  {t('callToAction.description')}
+                <p className="mt-6 text-base leading-relaxed text-taupe sm:text-xl">
+                  {t('services.description')}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-4">
-                  <Button href="tel:+34673290786" invert>
-                    <div className="flex flex-row items-center gap-2">
-                      <Phone size={20} />
-                      <p>{t('callToAction.callNow')}</p>
-                    </div>
-                  </Button>
-                  <Button
-                    href="https://wa.me/+34673290786"
-                    invert
-                    className="border border-white bg-transparent hover:bg-white/10"
+              </div>
+
+              <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-mocha/10 bg-mocha/10 shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+                {(
+                  [
+                    'availability',
+                    'response',
+                    'treatment',
+                    'insurance',
+                  ] as const
+                ).map((key) => (
+                  <div
+                    key={key}
+                    className="flex flex-col justify-between bg-surface-100 p-6 sm:p-8"
                   >
-                    <div className="flex flex-row items-center gap-2">
-                      <Phone size={20} />
-                      <p>{t('callToAction.whatsapp')}</p>
-                    </div>
-                  </Button>
+                    <p className="text-3xl font-semibold text-mocha sm:text-4xl">
+                      {t(`services.stats.${key}.value`)}
+                    </p>
+                    <p className="mt-3 text-xs font-medium tracking-wider text-taupe uppercase">
+                      {t(`services.stats.${key}.label`)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* ───── Conditions ───── */}
+      <section className="border-y border-mocha/8 bg-surface-300 py-20 sm:py-24">
+        <Container>
+          <FadeIn className="max-w-2xl">
+            <div className="flex items-center gap-3">
+              <ShieldPlus weight="duotone" className="h-6 w-6 text-mocha" />
+              <p className="text-xs font-semibold tracking-wider text-mocha uppercase">
+                {t('hero.title')}
+              </p>
+            </div>
+            <h2
+              className="mt-4 text-3xl font-semibold text-warm-dark sm:text-4xl"
+              style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
+            >
+              {t('conditions.title')}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-taupe">
+              {t('conditions.description')}
+            </p>
+          </FadeIn>
+
+          <FadeInStagger className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {conditionKeys.map((key) => (
+              <FadeIn key={key}>
+                <div className="h-full rounded-2xl border border-mocha/8 bg-white p-7 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
+                  <h3 className="text-lg font-semibold text-warm-dark">
+                    {t(`conditions.items.${key}.title`)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-taupe">
+                    {t(`conditions.items.${key}.description`)}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </Container>
+      </section>
+
+      {/* ───── Why Choose Us ───── */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <FadeIn className="mx-auto max-w-2xl text-center">
+            <h2
+              className="text-3xl font-semibold text-warm-dark sm:text-4xl"
+              style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
+            >
+              {t('whyChoose.title')}
+            </h2>
+          </FadeIn>
+
+          <FadeInStagger className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {whyChooseFeatures.map(({ key, Icon }) => (
+              <FadeIn key={key}>
+                <div className="flex h-full flex-col items-center rounded-2xl border border-mocha/8 bg-white p-8 text-center shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-mocha/10 text-mocha">
+                    <Icon weight="duotone" className="h-6 w-6" />
+                  </span>
+                  <h3 className="mt-5 text-base font-semibold text-warm-dark">
+                    {t(`whyChoose.features.${key}.title`)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-taupe">
+                    {t(`whyChoose.features.${key}.description`)}
+                  </p>
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </Container>
+      </section>
+
+      {/* ───── How It Works ───── */}
+      <section className="border-y border-mocha/8 bg-surface-300 py-20 sm:py-24">
+        <Container>
+          <FadeIn className="mx-auto max-w-2xl text-center">
+            <h2
+              className="text-3xl font-semibold text-warm-dark sm:text-4xl"
+              style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
+            >
+              {t('howWorks.title')}
+            </h2>
+          </FadeIn>
+
+          <FadeInStagger className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {howWorksSteps.map((step, index) => (
+              <FadeIn key={step}>
+                <div className="relative h-full rounded-2xl border border-mocha/10 bg-white p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-mocha text-base font-semibold text-white">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="mt-6 text-lg font-semibold text-warm-dark">
+                    {t(`howWorks.steps.${step}.title`)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-taupe">
+                    {t(`howWorks.steps.${step}.description`)}
+                  </p>
+                  <div
+                    className="mt-6 h-1 w-12 rounded-full bg-mocha/30"
+                    aria-hidden="true"
+                  />
+                </div>
+              </FadeIn>
+            ))}
+          </FadeInStagger>
+        </Container>
+      </section>
+
+      {/* ───── Testimonial ───── */}
+      <section className="py-20 sm:py-24">
+        <Container>
+          <FadeIn>
+            <figure className="mx-auto max-w-3xl text-center">
+              <svg
+                className="mx-auto h-8 w-8 text-mocha/30"
+                fill="currentColor"
+                viewBox="0 0 32 32"
+                aria-hidden="true"
+              >
+                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+              </svg>
+              <blockquote className="mt-8">
+                <p className="text-xl leading-relaxed text-warm-dark italic sm:text-2xl">
+                  &ldquo;{t('testimonial.quote')}&rdquo;
+                </p>
+              </blockquote>
+              <figcaption className="mt-6 text-sm font-medium text-taupe">
+                Maria Rodriguez ·{' '}
+                <span className="text-mocha">Emergency Patient</span>
+              </figcaption>
+            </figure>
+          </FadeIn>
+        </Container>
+      </section>
+
+      {/* ───── Final CTA ───── */}
+      <section className="pb-24 sm:pb-32">
+        <Container>
+          <FadeIn>
+            <div className="relative overflow-hidden rounded-3xl bg-warm-dark p-10 sm:p-14">
+              <div
+                aria-hidden="true"
+                className="absolute -top-32 -right-32 h-80 w-80 rounded-full bg-red-500/15 blur-3xl"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-32 -left-32 h-80 w-80 rounded-full bg-mocha/20 blur-3xl"
+              />
+
+              <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-12">
+                <div>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-red-400/40 bg-red-500/15 px-4 py-1.5 text-[11px] font-semibold tracking-[0.25em] text-red-200 uppercase">
+                    <span
+                      className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400"
+                      aria-hidden="true"
+                    />
+                    24 / 7
+                  </span>
+                  <h2
+                    className="mt-5 text-3xl font-semibold text-white sm:text-4xl"
+                    style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
+                  >
+                    {t('callToAction.title')}
+                  </h2>
+                  <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80">
+                    {t('callToAction.description')}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="tel:+34673290786"
+                    className="inline-flex items-center gap-2 rounded-lg bg-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-red-600"
+                  >
+                    <Phone weight="fill" className="h-4 w-4" />
+                    {t('callToAction.callNow')}
+                  </a>
+                  <a
+                    href="https://wa.me/+34673290786"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg bg-warm-success px-6 py-3.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-warm-success/90"
+                  >
+                    <WhatsappLogo weight="fill" className="h-4 w-4" />
+                    {t('callToAction.whatsapp')}
+                  </a>
                 </div>
               </div>
-            </FadeIn>
-          </section>
-        </FadeInStagger>
-      </Container>
-    </div>
+            </div>
+          </FadeIn>
+        </Container>
+      </section>
+    </>
   )
 }

@@ -1,346 +1,103 @@
-import imageHero from '@/images/clinic/aesthetics-1.jpg'
-import Image from 'next/image'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { getTranslations } from 'next-intl/server'
-import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
-import { ContactSection } from '@/components/ContactSection'
-import CalendlyButton from '@/components/CalendlyButton'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
-import BozanaKrivosija from '@/images/bozana.jpeg'
+import { getTranslations } from 'next-intl/server'
 
-// Generate static params for all locales
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
-}
+import { Container } from '@/components/Container'
+import { CtaRibbon } from '@/components/CtaRibbon'
+import { InterestSection } from '@/components/InterestSection'
+import { LeadExpert } from '@/components/LeadExpert'
+import { LocationsSection } from '@/components/LocationsSection'
+import { PageHero } from '@/components/PageHero'
+import { PricingGroups, type PriceGroup } from '@/components/PricingGroups'
+import { ServicesSection } from '@/components/ServicesSection'
+import { TestimonialsGrid } from '@/components/TestimonialsGrid'
+import { createCanonicalMetadata } from '@/lib/canonical'
+
+import heroImage from '@/images/clinic/aesthetics-1.jpg'
+// TODO: replace with real Dr. Afshin Moheb headshot when provided
+import doctorImage from '@/images/bozana.jpeg'
+
+const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
 interface PageProps {
   params: { locale: string }
+}
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({
+    locale,
+    namespace: 'layout.services.aesthetics.v2',
+  })
 
   return {
-    title: 'Prisma Clinic Marbella - Premium Aesthetic Services',
-    description:
-      'State-of-the-art aesthetic clinic offering comprehensive beauty and rejuvenation services including facial harmonization, Botox treatments, anti-aging therapies, and body contouring in Marbella.',
+    title: `${t('hero.title')} — Prisma Clinic Marbella`,
+    description: t('hero.description'),
     ...createCanonicalMetadata('services/aesthetics', locale),
   }
 }
 
-export default async function AestheticsServices({ params }: PageProps) {
-  const t = await getTranslations('layout.services.aesthetics')
+export default async function AestheticsServices() {
+  const t = await getTranslations('layout.services.aesthetics.v2')
+  const prices = await getTranslations('prices')
+  const groups = prices.raw('aesthetic.groups') as PriceGroup[]
 
   return (
-    <div className="mx-auto max-w-7xl">
-      {/* Hero Section */}
-      <div className="relative mx-1 mt-2 mb-12 h-[400px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24 md:h-[400px]">
-        <Image
-          src={imageHero}
-          alt="Aesthetics Services"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center bg-gradient-to-r from-neutral-950/80 to-transparent">
-          <div className="max-w-4xl px-12">
-            <h1 className="mb-6 font-display text-3xl font-medium tracking-tight text-white sm:text-6xl">
-              {t('hero.headline')}
-            </h1>
-            <p className="mb-8 text-sm text-white/80 sm:text-xl">
-              {t('hero.description')}
-            </p>
-            <CalendlyButton />
-          </div>
-        </div>
-      </div>
+    <>
+      <PageHero
+        image={heroImage}
+        imageAlt={t('hero.imageAlt')}
+        title={t('hero.title')}
+        description={t('hero.description')}
+        ctaLabel={t('hero.ctaLabel')}
+        ctaHref="/contact"
+      />
 
-      {/* Subtle Divider */}
-      <Container className="my-12">
-        <div className="border-t border-neutral-200"></div>
-      </Container>
+      <InterestSection
+        eyebrow={t('interest.eyebrow')}
+        title={t('interest.title')}
+        subheadline={t('interest.subheadline')}
+        body={t('interest.body')}
+      />
 
-      <Container className="my-10 sm:my-20">
-        <FadeInStagger>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <FadeIn>
-              <div>
-                <div className="mb-4 flex items-center gap-3">
-                  <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
-                    {t('category1.headline')}
-                  </h2>
-                </div>
-                <p className="mb-8 text-sm leading-relaxed text-neutral-500 sm:text-lg">
-                  {t('category1.description')}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <CalendlyButton />
-                </div>
-              </div>
-            </FadeIn>
-            <div className="flex flex-col gap-6">
-              {t
-                .raw('category1.features')
-                .map(
-                  (
-                    feature: { title: string; description: string },
-                    index: number,
-                  ) => (
-                    <FadeIn key={index}>
-                      <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                        <h3 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                          {feature.title}
-                        </h3>
-                        <p className="text-sm text-neutral-700">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </FadeIn>
-                  ),
-                )}
-            </div>
-          </div>
-        </FadeInStagger>
-      </Container>
+      <ServicesSection
+        eyebrow={t('ourServices.eyebrow')}
+        title={t('ourServices.title')}
+        body={t('ourServices.body')}
+        ctaLabel={t('ourServices.ctaLabel')}
+        ctaHref={WHATSAPP_HREF}
+        ctaExternal
+      />
 
-      {/* Subtle Divider */}
-      <Container className="my-12">
-        <div className="border-t border-neutral-200"></div>
-      </Container>
+      <section className="pb-24 sm:pb-28">
+        <Container>
+          <PricingGroups groups={groups} withContainer={false} />
+        </Container>
+      </section>
 
-      {/* Category 2 Section */}
-      <Container id="category2" className="mb-24">
-        <FadeInStagger>
-          <div className="flex flex-col-reverse gap-12 md:flex-row">
-            <div className="flex min-w-1/2 flex-col gap-6">
-              {t
-                .raw('category2.features')
-                .map(
-                  (
-                    feature: { title: string; description: string },
-                    index: number,
-                  ) => (
-                    <FadeIn key={index}>
-                      <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                        <h3 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                          {feature.title}
-                        </h3>
-                        <p className="text-sm text-neutral-700">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </FadeIn>
-                  ),
-                )}
-            </div>
-            <FadeIn>
-              <div>
-                <div className="mb-4 flex items-center justify-end gap-3">
-                  <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
-                    {t('category2.headline')}
-                  </h2>
-                </div>
-                <p className="mb-8 text-end text-sm leading-relaxed text-neutral-600 sm:text-lg">
-                  {t('category2.description')}
-                </p>
-                <div className="flex w-full justify-end gap-4">
-                  <CalendlyButton />
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </FadeInStagger>
-      </Container>
+      <LeadExpert
+        image={doctorImage}
+        imageAlt={t('leadExpert.imageAlt')}
+        eyebrow={t('leadExpert.eyebrow')}
+        title={t('leadExpert.title')}
+        body={t('leadExpert.body')}
+      />
 
-      {/* Subtle Divider */}
-      <Container className="my-12">
-        <div className="border-t border-neutral-200"></div>
-      </Container>
+      <CtaRibbon
+        title={t('ribbon.title')}
+        subtitle={t('ribbon.subtitle')}
+        ctaLabel={t('ribbon.ctaLabel')}
+        ctaHref="/contact"
+      />
 
-      {/* Category 3 Section */}
-      <Container id="category3" className="mb-24">
-        <FadeInStagger>
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <FadeIn>
-              <div>
-                <div className="mb-4 flex items-center gap-3">
-                  <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
-                    {t('category3.headline')}
-                  </h2>
-                </div>
-                <p className="mb-8 text-sm leading-relaxed text-neutral-600 sm:text-lg">
-                  {t('category3.description')}
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <CalendlyButton />
-                </div>
-              </div>
-            </FadeIn>
-            <div className="flex flex-col gap-6">
-              {t
-                .raw('category3.features')
-                .map(
-                  (
-                    feature: { title: string; description: string },
-                    index: number,
-                  ) => (
-                    <FadeIn key={index}>
-                      <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                        <h3 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                          {feature.title}
-                        </h3>
-                        <p className="text-sm text-neutral-700">
-                          {feature.description}
-                        </p>
-                      </div>
-                    </FadeIn>
-                  ),
-                )}
-            </div>
-          </div>
-        </FadeInStagger>
-      </Container>
+      <TestimonialsGrid />
 
-      {/* Meet Our Doctor Section */}
-      <Container className="mb-24">
-        <FadeIn>
-          <h2 className="my-8 text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
-            {t('doctor.title')}
-          </h2>
-
-          {/* Centered Title */}
-          {/* Image and Text Grid */}
-          <div className="mt-5 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
-            <div className="relative min-h-96 w-full overflow-hidden rounded-lg md:min-h-[550px]">
-              <Image
-                src={BozanaKrivosija}
-                alt="Dr. Bozana Krivošija"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <div className="flex flex-col justify-end">
-              <h2 className="mb-4 font-display text-3xl font-medium tracking-tight text-neutral-900">
-                Dr. Bozana Krivošija
-              </h2>
-              <p className="text-md mb-8 leading-relaxed text-neutral-600">
-                {t('doctor.bio')}
-              </p>
-              <CalendlyButton />
-            </div>
-          </div>
-        </FadeIn>
-      </Container>
-
-      {/* Treatments Grid Section */}
-      <Container id="treatments" className="mb-24">
-        <FadeInStagger>
-          <FadeIn>
-            <div className="mb-12 flex items-center justify-center gap-3">
-              <h2 className="text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
-                {t('treatments.title')}
-              </h2>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {t
-              .raw('treatments.items')
-              .map(
-                (
-                  treatment: { title: string; description: string },
-                  index: number,
-                ) => (
-                  <FadeIn key={index}>
-                    <div className="h-full rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
-                      <h3 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                        {treatment.title}
-                      </h3>
-                      <p className="text-sm text-neutral-700">
-                        {treatment.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ),
-              )}
-          </div>
-        </FadeInStagger>
-      </Container>
-
-      {/* Subtle Divider */}
-      <Container className="my-12">
-        <div className="border-t border-neutral-200"></div>
-      </Container>
-
-      {/* Testimonials Section */}
-      <Container className="mb-24">
-        <FadeInStagger>
-          <FadeIn>
-            <div className="mb-12 flex items-center justify-center gap-3">
-              <h2 className="text-center font-display text-4xl font-medium tracking-tight text-neutral-900">
-                {t('testimonials.title')}
-              </h2>
-            </div>
-          </FadeIn>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {t.raw('testimonials.items').map(
-              (
-                testimonial: {
-                  content: string
-                  author: string
-                  role: string
-                },
-                index: number,
-              ) => {
-                const images = [
-                  imageEmmaDorsey,
-                  imageChelseaHagon,
-                  imageKathrynMurphy,
-                  imageWhitneyFrancis,
-                ]
-                return (
-                  <FadeIn key={index}>
-                    <div className="flex h-full flex-col rounded-xl border border-neutral-200 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md">
-                      <div className="mb-4 flex items-center gap-3">
-                        <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                          <Image
-                            src={images[index]}
-                            alt={testimonial.author}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="font-semibold text-neutral-900">
-                            {testimonial.author}
-                          </p>
-                          <p className="text-sm text-neutral-500">
-                            {testimonial.role}
-                          </p>
-                        </div>
-                      </div>
-                      <p className="flex-grow text-sm text-neutral-700">
-                        {testimonial.content}
-                      </p>
-                    </div>
-                  </FadeIn>
-                )
-              },
-            )}
-          </div>
-        </FadeInStagger>
-      </Container>
-
-      {/* Contact Section */}
-      <div id="contact">
-        <ContactSection />
-      </div>
-    </div>
+      <LocationsSection />
+    </>
   )
 }

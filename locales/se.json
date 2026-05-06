@@ -80,6 +80,185 @@
     },
     "testimonial": {
       "text": "Teamet på Prisma Clinic Marbella gjorde mitt tandläkarbesök så bekvämt och stressfritt. Deras varsamma tillvägagångssätt och noggrannhet förändrade helt min syn på tandvård."
+    },
+    "hero": {
+      "slides": {
+        "aesthetic": {
+          "h1": "Estetiska och Anti-aging-behandlingar",
+          "h2": "Möt högklassiga estetiska lösningar med ett världsklassteam av experter inom anti-aging-medicin — allt på ett ställe.",
+          "cta": "Se våra behandlingar"
+        },
+        "dental": {
+          "h1": "Tandvård och tandhälsa",
+          "h2": "Den mest avancerade tandvården i Spanien",
+          "cta": "Se våra behandlingar"
+        },
+        "medical": {
+          "h1": "Allmänmedicin och hälsooptimering",
+          "h2": "Omedelbar tillgång till hälsobehandlingar och vård",
+          "cta": "Ring oss nu"
+        }
+      }
+    },
+    "treatments": {
+      "title": "Allt på ett ställe",
+      "description": "Få tillgång till den enda anläggningen i Marbella med ett expertteam fokuserat på livslängd, skönhet och livskvalitet — allt på ett ställe",
+      "cards": {
+        "dental": {
+          "title": "Tandvård och estetik",
+          "description": "Från de mest komplexa fallen till de enklaste tar vi hand om varje detalj med excellens."
+        },
+        "antiAging": {
+          "title": "Anti-aging-behandlingar",
+          "description": "De senaste teknologierna inom estetiska behandlingar i Marbella"
+        },
+        "general": {
+          "title": "Allmänmedicin",
+          "description": "För dina vardagliga behov och din livskvalitet."
+        }
+      }
+    },
+    "whatsapp": {
+      "title": "Vi finns här 24/7 — för alla akuta behov",
+      "description": "Öppet dygnet runt för akuta fall, frågor eller en snabb pratstund. Vårt flerspråkiga team talar spanska, engelska, svenska, tyska och farsi — skriv till oss när som helst.",
+      "cta": "Skicka oss ett meddelande!"
+    },
+    "about": {
+      "eyebrow": "Om kliniken",
+      "title": "Prisma Clinic",
+      "body": "Prisma Clinic Marbella är en modern tandvårds- och estetikklinik i hjärtat av Marbella, dedikerad till att leverera vård av högsta kvalitet i en lugn och lyxig miljö. Vi specialiserar oss på heltäckande tandvård — från rutinkontroller och kosmetisk tandvård till avancerade behandlingar. Vår estetikavdelning erbjuder personliga icke-kirurgiska behandlingar som dermala fillers och Botox för att framhäva naturlig skönhet med subtila och effektiva resultat. För din trygghet erbjuder vi även akut tandvård dygnet runt så att expertstöd alltid finns tillgängligt när du behöver det som mest. På Prisma kommer din komfort, ditt självförtroende och ditt välbefinnande alltid först."
+    },
+    "testimonialsGrid": {
+      "title": "Vad folk säger om oss",
+      "description": "Riktiga recensioner som kan kontrolleras på Google",
+      "items": [
+        {
+          "name": "Ellinor Myhren",
+          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and Botox. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
+        },
+        {
+          "name": "Shahin gh",
+          "text": "I had a great experience at Prisma Clinic. You are seen directly by a specialist doctor who approaches her work with both medical expertise and an artistic eye. She pays close attention not only to your health but also to aesthetic detail, which makes a real difference in the results. I felt well cared for throughout my visit, and I will definitely come back again."
+        },
+        {
+          "name": "Kate M",
+          "text": "I'm just thrilled with the treatment. The doctor was just amazing. Before that, I was very afraid of dentists, but the doctor is really professional; he was genuinely interested in whether I was okay, the work was at the highest level, and I want to return to this place in the future so that the doctor can take care of my teeth. The doctor listened to me and explained all his actions, it was an emergency on Saturday evening due to a broken tooth, the doctor is patient and very professional. Dr. Robbin is very kind, friendly and helpful. I highly recommend it!"
+        },
+        {
+          "name": "Hazhir Javadi",
+          "text": "I would highly recommend Prisma Clinic in Marbella! I have just completed my treatment and cannot express enough gratitude for the professional service and fantastic care I received. From the very first visit, I felt well taken care of. The friendly and knowledgeable staff made the entire experience much more reassuring. The treatment was carried out meticulously, and I truly appreciate the time and attention given to explain each step of the process. A big thank you to the whole team at Prisma Clinic for making my dental care experience so positive!"
+        },
+        
+        {
+          "name": "India Keely",
+          "text": "5 star emergency service on Easter weekend. The skill, expertise and support I was given whilst in horrible pain with an infected tooth was fantastic. The understanding and knowledge of the dentist, who had trained at Kings College London and who is also a dental surgeon was both reassuring and welcome in an emergency situation. A difficult tooth extraction was done with patience and care. I highly recommend this practice for both emergency and routine dental work."
+        },
+        {
+          "name": "Krzysztof Krzymowski",
+          "text": "Very good, professional and nice, recommended in 100%"
+        },
+        {
+          "name": "R Faul",
+          "text": "I have always been very afraid of going to the dentist, but I am so much more confident after visiting Prisma. The care you receive is amazing and the staff go above and beyond to make you feel at ease. Highly recommended!"
+        }
+      ]
+    },
+    "locations": {
+      "title": "Hitta oss",
+      "description": "Vi finns mitt i Andalusien! Du hittar oss både i Puerto Banús och Marbellas gamla stan.",
+      "phoneLabel": "Telefon",
+      "phoneNumber": "+34 673 290 786",
+      "openingHoursLabel": "Öppettider",
+      "openingHoursValue": "Måndag - Söndag: 24/7",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Vägbeskrivning",
+      "banus": {
+        "name": "Prisma Clinic Banús",
+        "address": "Calle Ramón Areces, s/n, Plaza Marina Banús Frente El Corte Inglés, 29660 Marbella, Málaga"
+      },
+      "oldTown": {
+        "name": "Prisma Clinic Gamla stan",
+        "address": "Av. Nabeul, 14, room 14, 29601 Marbella, Málaga"
+      },
+      "emergency": {
+        "title": "Akut tandvård 24/7",
+        "description": "Tandakuter väntar inte på kontorstid. Vårt specialistteam finns tillgängligt dygnet runt för att ge omedelbar vård när du behöver det som mest.",
+        "learnMore": "Läs mer",
+        "hotline": "Akutlinje"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Om Prisma Clinic",
+      "title": "Modern medicin, formad för att kännas personlig.",
+      "lead": "Prisma Clinic Marbella är platsen där förstklassig tandvård, estetisk medicin och vardaglig sjukvård möts — under samma lugna och genomtänkta tak.",
+      "body1": "Vi startade Prisma för att exceptionell vård skulle kännas lika varm som den är precis. Två lägen i hjärtat av Marbella, ett team av specialister och ett enkelt löfte: varje patient lämnar oss med mer komfort, självförtroende och förtroende än när hen kom.",
+      "body2": "Från rutinkontroller till komplexa estetiska protokoll behandlar vi de små detaljerna med samma omsorg som de stora."
+    },
+    "stats": {
+      "availability": { "value": "24/7", "label": "Öppet dygnet runt" },
+      "languages": { "value": "5", "label": "Språk vi talar" },
+      "locations": { "value": "2", "label": "Lägen i Marbella" },
+      "specialties": { "value": "3", "label": "Specialiteter under ett tak" }
+    },
+    "values": {
+      "eyebrow": "Så här arbetar vi",
+      "title": "Tre principer, en känsla.",
+      "description": "Allt från hur vi tar emot dig vid dörren till hur vi avslutar dagens sista besök bottnar här.",
+      "items": {
+        "excellence": {
+          "title": "Stillsam expertis",
+          "description": "Utrustning i världsklass, använd med lugn och precision. Vi investerar i kunskap så att du slipper tänka på det."
+        },
+        "comfort": {
+          "title": "Skapat för komfort",
+          "description": "Mjukt ljus, besök utan stress och tydliga förklaringar. Varje detalj är formad efter hur du vill känna dig."
+        },
+        "personal": {
+          "title": "Personligt, inte procedur",
+          "description": "Behandlingar formade efter ditt ansikte, din hälsa, din historia — aldrig en mall. Vi lyssnar först, planerar tillsammans."
+        }
+      }
+    },
+    "specialties": {
+      "eyebrow": "Vad vi erbjuder",
+      "title": "Tre discipliner, ett samordnat team.",
+      "description": "Allt du behöver för livslängd, skönhet och livskvalitet — av specialister som faktiskt pratar med varandra.",
+      "discoverMore": "Läs mer",
+      "items": {
+        "dental": {
+          "title": "Tandvård och estetisk tandvård",
+          "description": "Rutinvård, fasader, implantat och akut tandvård dygnet runt."
+        },
+        "aesthetics": {
+          "title": "Estetik och anti-aging",
+          "description": "Icke-kirurgisk förnyelse, dermala fillers, Botox, PRP och längevitetsprotokoll."
+        },
+        "general": {
+          "title": "Allmänmedicin",
+          "description": "Primärvård, hälsooptimering och förebyggande medicin för vardagligt välbefinnande."
+        }
+      }
+    },
+    "team": {
+      "eyebrow": "Våra specialister",
+      "title": "Vård med ett namn bakom.",
+      "description": "Bakom varje resultat finns en läkare som valt detta arbete som sitt kall — och ett team som tar det personligt.",
+      "lead": {
+        "name": "Dr. Bozana Krivošija",
+        "role": "Estetisk medicin och anti-aging",
+        "bio": "Legitimerad läkare specialiserad inom estetisk medicin och anti-aging, utbildad vid Complutense-universitetet i Madrid. Ursprungligen från Bosnien och bosatt i Spanien i över ett decennium, Dr. Bozana fokuserar på naturliga och eleganta resultat — neuromodulatorer, hyaluronsyra, kollagenstimulerare, PRP, IV-drypp och skräddarsydda anti-aging-protokoll.",
+        "languages": "Serbiska · Spanska · Engelska",
+        "languagesLabel": "Språk"
+      },
+      "rest": "Vid sidan av Dr. Bozana har våra tandvårds- och allmänmedicinska specialister decennier av samlad erfarenhet — inklusive akutvana kirurger och tandläkare utbildade vid institutioner som King's College London. Hela teamet talar minst ett av spanska, engelska, svenska, tyska eller farsi flytande."
+    },
+    "cta": {
+      "title": "Kom och besök oss",
+      "description": "Två lägen i Marbella, öppet 24/7 för akuta fall. Boka en konsultation eller skicka oss ett meddelande — vi tar det därifrån.",
+      "primary": "Skicka oss ett meddelande",
+      "secondary": "Se våra lägen"
     }
   },
   "emergency": {
@@ -135,7 +314,21 @@
         "title": "Akutvård",
         "badge": "24/7"
       },
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "menu": "Meny",
+      "close": "Stäng",
+      "items": {
+        "treatments": {
+          "label": "Behandlingar",
+          "dental": "Tandvård",
+          "aesthetic": "Estetik",
+          "medical": "Medicin"
+        },
+        "theClinic": "Kliniken",
+        "ourPrices": "Priser",
+        "emergencies": "Akut",
+        "contact": "Kontakt"
+      }
     },
     "footer": {
       "followUs": "Följ oss"
@@ -313,6 +506,37 @@
         },
         "location": {
           "title": "Var vi befinner oss"
+        },
+        "v2": {
+          "hero": {
+            "title": "Estetiska och anti-aging-behandlingar",
+            "description": "Kirurgiska och icke-kirurgiska estetiska behandlingar med precision, säkerhet och personlig omsorg i Marbella.",
+            "ctaLabel": "Boka din konsultation",
+            "imageAlt": "Estetisk behandling på Prisma Clinic Marbella"
+          },
+          "interest": {
+            "eyebrow": "Vårt arbetssätt",
+            "title": "Avancerad estetisk medicin anpassad efter dina mål",
+            "subheadline": "Världsledande kirurgisk expertis och minimalt invasiva behandlingar för fräscha, självsäkra resultat.",
+            "body": "På Prisma Clinic kombinerar vår estetiska verksamhet flera decenniers kirurgisk erfarenhet med de senaste icke-kirurgiska teknikerna. Från hårtransplantationer till fillers, botox och kroppsformning levererar vi förutsägbara, naturliga resultat med fokus på säkerhet, snabb återhämtning och hållbara effekter. Behandlingsplanerna anpassas efter dina ansiktsproportioner och din livsstil så att du ser ut som den bästa versionen av dig själv."
+          },
+          "ourServices": {
+            "eyebrow": "Det här erbjuder vi",
+            "title": "Våra tjänster",
+            "body": "Vi erbjuder ett komplett utbud av estetisk vård: hår- och ögonbrynstransplantationer, kroppsformning, hårförnyelse samt icke-kirurgiska behandlingar — fillers, anti-rynkinjektioner, PRP och hudföryngring i medicinsk kvalitet. Alla ingrepp använder evidensbaserade tekniker och moderna protokoll för komfort och säkerhet.",
+            "ctaLabel": "Prata med oss!"
+          },
+          "leadExpert": {
+            "eyebrow": "Ledande specialist",
+            "title": "Dr. Afshin Moheb",
+            "body": "Dr. Afshin Moheb är en erfaren plastik- och estetisk kirurg med över 7 000 lyckade operationer och många fler icke-kirurgiska estetiska behandlingar runt om i Europa. Han talar flera språk och är känd för att kombinera rekonstruktiv precision med estetisk känslighet. Hans arbetssätt betonar patientsäkerhet, tydliga förväntningar och harmoniska, naturliga resultat.",
+            "imageAlt": "Dr. Afshin Moheb, plastik- och estetisk kirurg på Prisma Clinic Marbella"
+          },
+          "ribbon": {
+            "title": "Redo för ett fräscht och naturligt utseende?",
+            "subtitle": "Boka en konsultation så skräddarsyr vi en plan för dig.",
+            "ctaLabel": "Boka tid"
+          }
         }
       },
       "generalMedicine": {
@@ -574,6 +798,45 @@
     },
     "cta": {
       "text": "Kontakta oss idag för att boka din konsultation och upplev förstklassig vård på Prisma Clinic Marbella."
+    },
+    "v2": {
+      "hero": {
+        "title": "Allmänmedicin och hälsooptimering",
+        "description": "Kvällsöppna konsultationer, akuta bedömningar, dropp och personlig medicinsk rådgivning i Marbella.",
+        "ctaLabel": "Boka tid",
+        "imageAlt": "Allmänmedicinsk konsultation på Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Vårt arbetssätt",
+        "title": "Heltäckande primär- och akutvård för dig och din familj",
+        "subheadline": "Snabba och professionella bedömningar och behandlingar, dag eller natt.",
+        "body": "Prisma Clinic erbjuder lättillgängliga allmänmedicinska tjänster med fokus på snabba bedömningar, evidensbaserade recept och tydlig uppföljning. Vårt team gör grundliga utvärderingar för akuta besvär, kontroller av kroniska sjukdomar, rese- och hälsorådgivning samt dropp för rehydrering och återhämtning. Vi prioriterar snabb tillgänglighet, praktiska behandlingsplaner och samordnade remisser när specialistvård behövs."
+      },
+      "ourServices": {
+        "eyebrow": "Det här erbjuder vi",
+        "title": "Våra tjänster",
+        "body": "Tydlig och evidensbaserad vård inom primär-, akut- och förebyggande medicin — med dokumentation och remisser samordnade åt dig när specialistinsats behövs.",
+        "ctaLabel": "Prata med oss!",
+        "items": [
+          { "title": "Kvällsöppna konsultationer", "description": "Tider på kvällar och helger samt samordning av hembesök när du behöver vård som mest." },
+          { "title": "Akuta bedömningar", "description": "Kliniska bedömningar samma dag för akuta besvär, med tydliga nästa steg och dokumentation." },
+          { "title": "Recepthantering", "description": "Evidensbaserade recept och förnyelser med direktkommunikation till ditt apotek." },
+          { "title": "Dropp och vitaminer", "description": "Vätske-, återhämtnings- och vitamininfusioner anpassade efter dig i en bekväm miljö." },
+          { "title": "Rutinkontroller", "description": "Heltäckande hälsokontroller för resor, jobb, livsstilsförändringar eller sinnesro." },
+          { "title": "Vård av kroniska sjukdomar", "description": "Samordnad och löpande vård av långvariga tillstånd med remisser till specialister vid behov." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "Vårt team",
+        "title": "Vårt medicinska team",
+        "body": "Prisma Clinics allmänmedicinska team består av erfarna läkare och legitimerade kliniker som är engagerade i snabb, evidensbaserad vård. Medan vi rekryterar en permanent allmänläkare följer våra kliniker strikta protokoll för säkra bedömningar, recept och dropp och samarbetar nära med lokala sjukhus och specialister för att säkerställa kontinuitet i vården.",
+        "imageAlt": "Prisma Clinic Marbellas medicinska team"
+      },
+      "ribbon": {
+        "title": "Behöver du vård idag?",
+        "subtitle": "Vårt team är redo att hjälpa dig — boka en konsultation eller skriv till oss på WhatsApp.",
+        "ctaLabel": "Boka tid"
+      }
     }
   },
   "cookieBanner": {
@@ -728,6 +991,126 @@
     "cta": {
       "title": "Redo att förvandla ditt leende?",
       "description": "Kontakta oss idag för att boka din konsultation och upplev premium tandvård på Prisma Clinic Marbella."
+    },
+    "v2": {
+      "hero": {
+        "title": "Spaniens mest avancerade tandvård och tandhälsa",
+        "description": "Vi återställer självsäkra leenden med avancerade implantat, estetiska behandlingar och smärtfri vård mitt i Marbella.",
+        "ctaLabel": "Boka nu!",
+        "imageAlt": "Modern tandbehandlingsrum på Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Vårt arbetssätt",
+        "title": "Heltäckande tandvård anpassad för dig",
+        "subheadline": "Moderna behandlingar, personliga planer och resultat du kan lita på.",
+        "body": "På Prisma Clinic kombinerar vi den senaste tandvårdstekniken med varm omsorg. Oavsett om du behöver ett enstaka implantat, en estetisk leendeförbättring eller en specialiserad rotbehandling skapar vårt team en tydlig och bekväm plan som passar dina mål och din vardag. Vi fokuserar på minimalt invasiva tekniker, snabb återhämtning och hållbara resultat så att du kan njuta av ditt leende och livet i Marbella igen."
+      },
+      "ourServices": {
+        "eyebrow": "Det här erbjuder vi",
+        "title": "Våra tjänster",
+        "body": "Från precisionsimplantat och avancerad endodonti till kosmetisk tandvård och rutinhygien erbjuder vi ett komplett behandlingsutbud, levererat av specialister med digital diagnostik och material i implantatkvalitet.",
+        "ctaLabel": "Prata med oss!",
+        "items": [
+          { "title": "Tandimplantat", "description": "Permanenta lösningar med naturlig känsla för saknade tänder som återställer funktion och självförtroende." },
+          { "title": "Endodonti", "description": "Modern rotbehandling som räddar naturliga tänder bekvämt och med minimalt obehag efteråt." },
+          { "title": "Porslinsfasader", "description": "Specialdesignade porslinsfasader som förändrar ditt leende med minimal preparation av tanden." },
+          { "title": "Tandblekning", "description": "Professionell blekning för ett ljusare, fräschare leende med säkra och förutsägbara resultat." },
+          { "title": "Kronor och broar", "description": "Hållbara, naturligt utseende restaureringar för skadade eller saknade tänder, byggda för att hålla." },
+          { "title": "Förebyggande kontroller", "description": "Regelbundna kontroller, hygien och digitala scanningar för att upptäcka problem tidigt." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "Ledande specialist",
+        "title": "Dr. Robbin M.",
+        "body": "Dr. Robbin M. är en tandläkare specialist med över 10 års erfarenhet av endodonti, tandimplantat och estetiska tandvårdslösningar. Han är utbildad vid King's College London och kombinerar specialistkompetens med ett vänligt och patientnära arbetssätt. Dr. Robbin är känd för förutsägbara implantatresultat, smärtfria rotbehandlingar och naturligt utseende kosmetiska resultat — alltid anpassade efter varje patients ansiktsharmoni och livsstil.",
+        "imageAlt": "Dr. Robbin M., tandläkarspecialist på Prisma Clinic Marbella"
+      },
+      "ribbon": {
+        "title": "Redo att ta nästa steg med ditt leende?",
+        "subtitle": "Boka en konsultation så vägleder vårt team dig till rätt plan.",
+        "ctaLabel": "Boka tid"
+      }
+    }
+  },
+  "prices": {
+    "title": "Våra priser",
+    "subtitle": "Se våra priser och kontakta oss för möjliga paket och kampanjer.",
+    "aesthetic": {
+      "eyebrow": "Estetisk medicin",
+      "title": "Estetiska behandlingar",
+      "description": "De allra bästa estetiska lösningarna och ett världsledande team av experter inom anti-aging-medicin, samlat på ett ställe.",
+      "ctaWhatsapp": "Skriv till oss på WhatsApp",
+      "groups": [
+        {
+          "title": "Fillers",
+          "subtitle": "Skulptering & kontur",
+          "items": [
+            { "service": "Läppförstoring", "price": "350€" },
+            { "service": "Nasolabialveck", "price": "från 250€" },
+            { "service": "Marionettlinjer", "price": "från 350€" },
+            { "service": "Kindvolymisering", "price": "från 450€" },
+            { "service": "Käklinjedefinition", "price": "från 450€" },
+            { "service": "Hakprojektion", "price": "från 350€" },
+            { "service": "Komplett ansiktsharmonisering", "price": "Vid konsultation" }
+          ]
+        },
+        {
+          "title": "Botox & rynkbehandlingar",
+          "subtitle": "Utjämning & föryngring",
+          "items": [
+            { "service": "Botox övre ansiktet", "price": "från 350€" },
+            { "service": "Botox hela ansiktet", "price": "950€" },
+            { "service": "Bruxismbehandling", "price": "från 400€" },
+            { "service": "Nefertiti halslyft", "price": "550€" },
+            { "service": "Barbie Botox", "price": "380€" },
+            { "service": "Svettbehandling", "price": "600€" }
+          ]
+        },
+        {
+          "title": "PRP",
+          "subtitle": "Trombocytrik plasma",
+          "items": [
+            { "service": "Ansikte", "price": "180€ / session" },
+            { "service": "Hår", "price": "180€ / session" },
+            { "service": "Paket om 3 sessioner", "price": "450€" }
+          ]
+        },
+        {
+          "title": "Polynukleotider",
+          "subtitle": "Hudbioregenerering",
+          "items": [
+            { "service": "Ansikte", "price": "350€ / session" },
+            { "service": "Under ögonen", "price": "300€" },
+            { "service": "Hals & dekolletage", "price": "från 350€" },
+            { "service": "Hårbiostimulering", "price": "från 300€" },
+            { "service": "Inbiotec Amber", "price": "380€ / session" }
+          ]
+        },
+        {
+          "title": "Biostimulatorer (PLLA)",
+          "subtitle": "Kollagenstimulering",
+          "items": [
+            { "service": "Lanluma", "price": "900€ / session" },
+            { "service": "Ultracol", "price": "900€ / session" },
+            { "service": "Ultracol (paket om 3 sessioner)", "price": "2500€" },
+            { "service": "Ellanse", "price": "700€ / session" }
+          ]
+        },
+        {
+          "title": "IV-dropp & wellness",
+          "subtitle": "Vitamin- & hydreringsterapi",
+          "items": [
+            { "service": "Enstaka session", "price": "180€" },
+            { "service": "Paket om 4 sessioner", "price": "600€" },
+            { "service": "Paket om 8 sessioner", "price": "850€" }
+          ]
+        }
+      ]
+    },
+    "ribbon": {
+      "title": "Osäker på vilken behandling som passar dig?",
+      "subtitle": "Boka en konsultation så guidar vi dig genom alternativen.",
+      "cta": "Boka konsultation"
     }
   }
 }
