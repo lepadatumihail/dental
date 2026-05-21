@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 import { Container } from '@/components/Container'
+import { BookButton } from '@/components/booking/BookButton'
 
 import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
 import dentalImage from '@/images/clinic/dentists.jpg'
@@ -37,6 +38,7 @@ const PAUSE_AFTER_INTERACTION_MS = 12000
 
 export function HeroSlideshow() {
   const t = useTranslations('home.hero.slides')
+  const tBooking = useTranslations('booking')
   const shouldReduceMotion = useReducedMotion()
   const [active, setActive] = useState(0)
   const [pausedUntil, setPausedUntil] = useState(0)
@@ -110,20 +112,21 @@ export function HeroSlideshow() {
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-xl">
                 {t(`${slides[active].key}.h2`)}
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap items-center gap-3">
+                <BookButton label={tBooking('bookNow')} variant="hero" />
                 {slides[active].external ? (
                   <a
                     href={slides[active].href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-warm-dark transition-colors duration-150 hover:bg-surface-200"
+                    className="inline-flex items-center rounded-lg border border-white/40 bg-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/20"
                   >
                     {t(`${slides[active].key}.cta`)}
                   </a>
                 ) : (
                   <Link
                     href={slides[active].href}
-                    className="inline-flex items-center rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-warm-dark transition-colors duration-150 hover:bg-surface-200"
+                    className="inline-flex items-center rounded-lg border border-white/40 bg-white/10 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md transition-colors duration-150 hover:bg-white/20"
                   >
                     {t(`${slides[active].key}.cta`)}
                   </Link>

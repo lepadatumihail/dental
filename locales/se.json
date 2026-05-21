@@ -1121,6 +1121,7 @@
     }
   },
   "booking": {
+    "bookNow": "Boka nu",
     "meta": {
       "title": "Boka en tid — Prisma Clinic Marbella",
       "description": "Boka din tid på Prisma Clinic Marbella. Välj en tjänst, välj en tid som passar dig så bekräftar vi ditt besök."

@@ -1121,6 +1121,7 @@
     }
   },
   "booking": {
+    "bookNow": "Reservar ahora",
     "meta": {
       "title": "Reservar una cita — Prisma Clinic Marbella",
       "description": "Reserve su cita en Prisma Clinic Marbella. Elija un servicio, escoja la hora que mejor le convenga y le confirmaremos su visita."

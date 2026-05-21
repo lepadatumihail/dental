@@ -1118,6 +1118,7 @@
     }
   },
   "booking": {
+    "bookNow": "Book now",
     "meta": {
       "title": "Book an appointment — Prisma Clinic Marbella",
       "description": "Book your appointment at Prisma Clinic Marbella. Choose a service, pick a time that suits you, and we'll confirm your visit."

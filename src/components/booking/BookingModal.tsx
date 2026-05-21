@@ -45,7 +45,7 @@ export function BookingModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[70] flex items-start justify-center overflow-y-auto bg-warm-dark/60 p-4 backdrop-blur-sm sm:p-6"
+      className="fixed inset-0 z-[70] flex items-center justify-center overflow-y-auto bg-warm-dark/60 p-4 backdrop-blur-sm sm:p-6"
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) close()
       }}
@@ -56,9 +56,9 @@ export function BookingModal() {
         aria-modal="true"
         aria-labelledby="booking-modal-title"
         tabIndex={-1}
-        className="relative my-4 w-full max-w-xl rounded-3xl bg-surface-100 shadow-[0_24px_64px_rgba(50,53,26,0.28)] outline-none sm:my-8"
+        className="relative flex max-h-[90dvh] w-full max-w-xl flex-col overflow-hidden rounded-3xl bg-surface-100 shadow-[0_24px_64px_rgba(50,53,26,0.28)] outline-none"
       >
-        <div className="flex items-center justify-between border-b border-mocha/10 px-6 py-5 sm:px-8">
+        <div className="flex shrink-0 items-center justify-between border-b border-mocha/10 px-6 py-5 sm:px-8">
           <h2
             id="booking-modal-title"
             className="font-display text-lg font-semibold text-warm-dark"
@@ -74,7 +74,7 @@ export function BookingModal() {
             <CloseIcon className="h-5 w-5 fill-current" />
           </button>
         </div>
-        <div className="px-6 py-6 sm:px-8 sm:py-8">
+        <div className="min-h-0 overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
           <BookingWizard
             variant="modal"
             initialEventTypeId={initialEventTypeId}
