@@ -1,20 +1,14 @@
-import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
+import { BookButton } from '@/components/booking/BookButton'
 
 type CtaRibbonProps = {
   title: string
   subtitle?: string
   ctaLabel: string
-  ctaHref: string
 }
 
-export function CtaRibbon({
-  title,
-  subtitle,
-  ctaLabel,
-  ctaHref,
-}: CtaRibbonProps) {
+export function CtaRibbon({ title, subtitle, ctaLabel }: CtaRibbonProps) {
   return (
     <section className="border-y border-mocha-dark/20 bg-mocha py-10 sm:py-12">
       <Container>
@@ -33,13 +27,11 @@ export function CtaRibbon({
                 </p>
               ) : null}
             </div>
-            <Button
-              href={ctaHref}
-              invert
+            <BookButton
+              label={ctaLabel}
+              variant="invert"
               className="shrink-0 whitespace-nowrap"
-            >
-              {ctaLabel}
-            </Button>
+            />
           </div>
         </FadeIn>
       </Container>

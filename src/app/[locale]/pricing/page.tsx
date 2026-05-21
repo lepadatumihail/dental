@@ -76,9 +76,7 @@ export default async function PricingPage() {
       <CtaRibbon
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
-        ctaLabel={t('ribbon.cta')}
-        ctaHref="/contact"
-      />
+        ctaLabel={t('ribbon.cta')}      />
 
       <LocationsSection />
     </>

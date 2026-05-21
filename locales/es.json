@@ -131,6 +131,7 @@
     "testimonialsGrid": {
       "title": "Lo que dicen sobre nosotros",
       "description": "Reseñas reales que puedes consultar en Google",
+      "viewAll": "Ver todas las reseñas en Google",
       "items": [
         {
           "name": "Ellinor Myhren",
@@ -1117,6 +1118,104 @@
       "title": "¿No sabes qué tratamiento es el adecuado para ti?",
       "subtitle": "Reserva una consulta y te guiaremos entre las opciones.",
       "cta": "Reservar consulta"
+    }
+  },
+  "booking": {
+    "meta": {
+      "title": "Reservar una cita — Prisma Clinic Marbella",
+      "description": "Reserve su cita en Prisma Clinic Marbella. Elija un servicio, escoja la hora que mejor le convenga y le confirmaremos su visita."
+    },
+    "inline": {
+      "eyebrow": "Contacto",
+      "title": "Reserve su visita",
+      "intro": "Estaremos encantados de brindarle la atención que merece."
+    },
+    "contact": {
+      "locationTitle": "Ubicación de nuestra clínica",
+      "locationBody": "Visite nuestra clínica para una consulta personalizada. Estamos bien ubicados y ofrecemos un ambiente acogedor para todos nuestros pacientes.",
+      "followTitle": "Síganos"
+    },
+    "modal": {
+      "title": "Reservar una cita",
+      "close": "Cerrar"
+    },
+    "steps": {
+      "service": { "label": "Servicio", "stepName": "Elija un servicio" },
+      "datetime": { "label": "Fecha y hora", "stepName": "Elija fecha y hora" },
+      "location": { "label": "Ubicación", "stepName": "Elija una ubicación" },
+      "details": { "label": "Sus datos", "stepName": "Sus datos" },
+      "confirm": { "label": "Confirmar", "stepName": "Revisar y confirmar" }
+    },
+    "services": {
+      "dental": {
+        "name": "Consulta dental",
+        "description": "Revisiones, limpiezas, implantes y odontología estética."
+      },
+      "aesthetics": {
+        "name": "Consulta estética",
+        "description": "Tratamientos faciales y medicina estética."
+      },
+      "medical": {
+        "name": "Consulta médica",
+        "description": "Consultas médicas generales y revisiones."
+      }
+    },
+    "datetime": {
+      "selectDate": "Seleccione una fecha",
+      "selectTime": "Seleccione una hora",
+      "loading": "Cargando horas disponibles…",
+      "loadError": "No pudimos cargar las horas disponibles. Inténtelo de nuevo.",
+      "noAvailability": "No hay horas disponibles en este momento. Contáctenos directamente y estaremos encantados de ayudarle.",
+      "timezoneNote": "Todas las horas se muestran en hora local de Marbella."
+    },
+    "location": {
+      "predefinedTitle": "Elija una ubicación de la clínica",
+      "clientAddressTitle": "¿Dónde le visitamos?",
+      "addressLabel": "Dirección",
+      "zipLabel": "Código postal",
+      "noLocations": "No hay ubicaciones disponibles para este servicio. Contáctenos directamente."
+    },
+    "details": {
+      "nameLabel": "Nombre completo",
+      "emailLabel": "Correo electrónico",
+      "phoneLabel": "Teléfono",
+      "notesLabel": "Notas (opcional)",
+      "notesPlaceholder": "¿Algo que debamos saber antes de su visita?"
+    },
+    "confirm": {
+      "serviceLabel": "Servicio",
+      "whenLabel": "Cuándo",
+      "whereLabel": "Dónde",
+      "contactLabel": "Contacto",
+      "edit": "Editar",
+      "submit": "Confirmar reserva",
+      "submitting": "Confirmando…"
+    },
+    "success": {
+      "title": "Solicitud recibida",
+      "body": "Gracias. Hemos recibido su solicitud de cita — la clínica la confirmará en breve por correo electrónico o teléfono.",
+      "done": "Listo"
+    },
+    "actions": {
+      "next": "Continuar",
+      "back": "Atrás",
+      "retry": "Reintentar"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio.",
+      "invalidEmail": "Introduzca un correo electrónico válido."
+    },
+    "errors": {
+      "generic": "Algo salió mal. Inténtelo de nuevo.",
+      "network": "No pudimos conectar con nuestro sistema de reservas. Compruebe su conexión e inténtelo de nuevo.",
+      "validation": "Compruebe sus datos e inténtelo de nuevo.",
+      "sessionExpired": "Su selección ha caducado. Hemos actualizado las horas disponibles — elija un horario de nuevo.",
+      "slotTaken": "Esa hora acaba de reservarse. Elija otro horario.",
+      "rateLimited": "Demasiadas solicitudes en este momento. Espere un momento e inténtelo de nuevo.",
+      "tooLong": "Sus notas son demasiado largas. Acórtelas, por favor.",
+      "unavailable": "La reserva en línea no está disponible temporalmente. Llámenos o escríbanos y estaremos encantados de ayudarle.",
+      "fallbackCall": "Llámenos",
+      "fallbackWhatsapp": "Escríbanos por WhatsApp"
     }
   }
 }

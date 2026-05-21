@@ -53,9 +53,7 @@ export default async function AestheticsServices() {
         imageAlt={t('hero.imageAlt')}
         title={t('hero.title')}
         description={t('hero.description')}
-        ctaLabel={t('hero.ctaLabel')}
-        ctaHref="/contact"
-      />
+        ctaLabel={t('hero.ctaLabel')}      />
 
       <InterestSection
         eyebrow={t('interest.eyebrow')}
@@ -90,9 +88,7 @@ export default async function AestheticsServices() {
       <CtaRibbon
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
-        ctaLabel={t('ribbon.ctaLabel')}
-        ctaHref="/contact"
-      />
+        ctaLabel={t('ribbon.ctaLabel')}      />
 
       <TestimonialsGrid />
 

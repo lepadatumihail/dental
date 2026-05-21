@@ -1,8 +1,8 @@
 import Image, { type StaticImageData } from 'next/image'
-import Link from 'next/link'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
+import { BookButton } from '@/components/booking/BookButton'
 
 type PageHeroProps = {
   image: StaticImageData
@@ -11,8 +11,6 @@ type PageHeroProps = {
   title: string
   description: string
   ctaLabel: string
-  ctaHref: string
-  ctaExternal?: boolean
 }
 
 export function PageHero({
@@ -22,8 +20,6 @@ export function PageHero({
   title,
   description,
   ctaLabel,
-  ctaHref,
-  ctaExternal = false,
 }: PageHeroProps) {
   return (
     <section className="relative h-[88vh] min-h-[560px] w-full overflow-hidden">
@@ -60,23 +56,7 @@ export function PageHero({
               {description}
             </p>
             <div className="mt-10">
-              {ctaExternal ? (
-                <a
-                  href={ctaHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-warm-dark transition-colors duration-150 hover:bg-surface-200"
-                >
-                  {ctaLabel}
-                </a>
-              ) : (
-                <Link
-                  href={ctaHref}
-                  className="inline-flex items-center rounded-lg bg-white px-6 py-3.5 text-sm font-medium text-warm-dark transition-colors duration-150 hover:bg-surface-200"
-                >
-                  {ctaLabel}
-                </Link>
-              )}
+              <BookButton label={ctaLabel} variant="hero" />
             </div>
           </div>
         </FadeIn>

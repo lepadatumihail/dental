@@ -131,6 +131,7 @@
     "testimonialsGrid": {
       "title": "Vad folk säger om oss",
       "description": "Riktiga recensioner som kan kontrolleras på Google",
+      "viewAll": "Se alla recensioner på Google",
       "items": [
         {
           "name": "Ellinor Myhren",
@@ -1117,6 +1118,104 @@
       "title": "Osäker på vilken behandling som passar dig?",
       "subtitle": "Boka en konsultation så guidar vi dig genom alternativen.",
       "cta": "Boka konsultation"
+    }
+  },
+  "booking": {
+    "meta": {
+      "title": "Boka en tid — Prisma Clinic Marbella",
+      "description": "Boka din tid på Prisma Clinic Marbella. Välj en tjänst, välj en tid som passar dig så bekräftar vi ditt besök."
+    },
+    "inline": {
+      "eyebrow": "Kontakta oss",
+      "title": "Boka ditt besök",
+      "intro": "Vi ser fram emot att ge dig den vård du förtjänar."
+    },
+    "contact": {
+      "locationTitle": "Vår klinik",
+      "locationBody": "Besök vår klinik för en personlig konsultation. Vi ligger centralt och erbjuder en välkomnande miljö för alla våra patienter.",
+      "followTitle": "Följ oss"
+    },
+    "modal": {
+      "title": "Boka en tid",
+      "close": "Stäng"
+    },
+    "steps": {
+      "service": { "label": "Tjänst", "stepName": "Välj en tjänst" },
+      "datetime": { "label": "Datum & tid", "stepName": "Välj datum och tid" },
+      "location": { "label": "Plats", "stepName": "Välj en plats" },
+      "details": { "label": "Dina uppgifter", "stepName": "Dina uppgifter" },
+      "confirm": { "label": "Bekräfta", "stepName": "Granska och bekräfta" }
+    },
+    "services": {
+      "dental": {
+        "name": "Tandvårdskonsultation",
+        "description": "Kontroller, tandrengöring, implantat och kosmetisk tandvård."
+      },
+      "aesthetics": {
+        "name": "Estetisk konsultation",
+        "description": "Ansiktsbehandlingar och estetisk medicin."
+      },
+      "medical": {
+        "name": "Medicinsk konsultation",
+        "description": "Allmänna medicinska konsultationer och kontroller."
+      }
+    },
+    "datetime": {
+      "selectDate": "Välj ett datum",
+      "selectTime": "Välj en tid",
+      "loading": "Laddar lediga tider…",
+      "loadError": "Vi kunde inte ladda lediga tider. Försök igen.",
+      "noAvailability": "Det finns inga lediga tider just nu. Kontakta oss direkt så hjälper vi dig gärna.",
+      "timezoneNote": "Alla tider visas i lokal tid för Marbella."
+    },
+    "location": {
+      "predefinedTitle": "Välj en klinikplats",
+      "clientAddressTitle": "Var ska vi besöka dig?",
+      "addressLabel": "Gatuadress",
+      "zipLabel": "Postnummer",
+      "noLocations": "Inga platser är tillgängliga för den här tjänsten. Kontakta oss direkt."
+    },
+    "details": {
+      "nameLabel": "Fullständigt namn",
+      "emailLabel": "E-post",
+      "phoneLabel": "Telefon",
+      "notesLabel": "Meddelande (valfritt)",
+      "notesPlaceholder": "Något vi bör veta inför ditt besök?"
+    },
+    "confirm": {
+      "serviceLabel": "Tjänst",
+      "whenLabel": "När",
+      "whereLabel": "Var",
+      "contactLabel": "Kontakt",
+      "edit": "Ändra",
+      "submit": "Bekräfta bokning",
+      "submitting": "Bekräftar…"
+    },
+    "success": {
+      "title": "Förfrågan mottagen",
+      "body": "Tack. Din tidsförfrågan har mottagits — kliniken bekräftar den snart via e-post eller telefon.",
+      "done": "Klar"
+    },
+    "actions": {
+      "next": "Fortsätt",
+      "back": "Tillbaka",
+      "retry": "Försök igen"
+    },
+    "validation": {
+      "required": "Det här fältet är obligatoriskt.",
+      "invalidEmail": "Ange en giltig e-postadress."
+    },
+    "errors": {
+      "generic": "Något gick fel. Försök igen.",
+      "network": "Vi kunde inte nå vårt bokningssystem. Kontrollera din anslutning och försök igen.",
+      "validation": "Kontrollera dina uppgifter och försök igen.",
+      "sessionExpired": "Ditt val har gått ut. Vi har uppdaterat de lediga tiderna — välj en tid igen.",
+      "slotTaken": "Den tiden bokades precis. Välj en annan tid.",
+      "rateLimited": "För många förfrågningar just nu. Vänta en stund och försök igen.",
+      "tooLong": "Ditt meddelande är för långt. Korta ner det.",
+      "unavailable": "Onlinebokning är tillfälligt otillgänglig. Ring eller skriv till oss så hjälper vi dig gärna.",
+      "fallbackCall": "Ring oss",
+      "fallbackWhatsapp": "Skriv på WhatsApp"
     }
   }
 }

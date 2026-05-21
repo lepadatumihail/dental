@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { RootLayout } from '@/components/RootLayout'
 import { CookieBanner } from '@/components/CookieBanner'
+import { BookingModalProvider } from '@/components/booking/BookingProvider'
 interface Props {
   children: React.ReactNode
   params: { locale: string }
@@ -32,10 +33,12 @@ export default async function LocaleLayout({
   // 3) Render provider with both locale + messages
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <RootLayout>
-        {children}
-        <CookieBanner />
-      </RootLayout>
+      <BookingModalProvider>
+        <RootLayout>
+          {children}
+          <CookieBanner />
+        </RootLayout>
+      </BookingModalProvider>
     </NextIntlClientProvider>
   )
 }
