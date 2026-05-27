@@ -1,11 +1,19 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
+import { Raleway } from 'next/font/google'
 
 import { RootLayout } from '@/components/RootLayout'
 import { BASE_URL } from '@/lib/canonical'
 
 import '@/styles/tailwind.css'
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-raleway',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -82,7 +90,7 @@ export default async function Layout({
   children: React.ReactNode
 }) {
   return (
-    <html className="h-full bg-neutral-950 text-base antialiased">
+    <html className={`${raleway.variable} h-full bg-surface-200 text-base antialiased`}>
       <head>
         {/* Resource hints for performance */}
         <link rel="preconnect" href="https://analytics.ahrefs.com" />

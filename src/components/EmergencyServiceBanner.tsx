@@ -82,8 +82,7 @@ export function EmergencyServiceBanner() {
                 </Button>
                 <Button
                   href="tel:+34673290786"
-                  invert
-                  className="border border-white bg-transparent hover:bg-gray-100"
+                  className="!border !border-red-500 !bg-red-500 !text-white hover:!border-red-600 hover:!bg-red-600 transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <Phone className="mr-2" size={20} />

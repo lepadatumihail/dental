@@ -1,39 +1,22 @@
-import logo from '@/images/svg/tooth.svg'
-import imageHero from '@/images/clinic/implant.jpg'
-import imageDebraFiscal from '@/images/clinic/robin-colour.jpg'
-import { StatList, StatListItem } from '@/components/StatList'
-import { Blockquote } from '@/components/Blockquote'
-import Image from 'next/image'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { getTranslations } from 'next-intl/server'
-import { createCanonicalMetadata } from '@/lib/canonical'
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 
+import { CtaRibbon } from '@/components/CtaRibbon'
+import { InterestSection } from '@/components/InterestSection'
+import { LeadExpert } from '@/components/LeadExpert'
+import { LocationsSection } from '@/components/LocationsSection'
+import { PageHero } from '@/components/PageHero'
 import {
-  Tooth,
-  Smiley,
-  ShieldStar,
-  Clock,
-  FirstAid,
-  Stethoscope,
-  User,
-  Calendar,
-  ClockCounterClockwise,
-  FirstAidKit,
-} from '@phosphor-icons/react/dist/ssr'
-import CalendlyButton from '@/components/CalendlyButton'
-import { Footer } from '@/components/Footer'
+  ServicesSection,
+  type ServiceItem,
+} from '@/components/ServicesSection'
+import { TestimonialsGrid } from '@/components/TestimonialsGrid'
+import { createCanonicalMetadata } from '@/lib/canonical'
 
-type Treatment = {
-  title: string
-  description: string
-}
+import heroImage from '@/images/clinic/implant.jpg'
+import doctorImage from '@/images/clinic/robin-colour.jpg'
 
-type Feature = {
-  title: string
-  description: string
-}
+const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
 interface PageProps {
   params: { locale: string }
@@ -43,253 +26,64 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'dental.v2' })
 
   return {
-    title: 'Prisma Clinic Marbella - Premium Dental Services',
-    description:
-      'State-of-the-art dental facility offering comprehensive dental services from routine care to advanced cosmetic and surgical procedures, available 24/7 for emergencies.',
+    title: `${t('hero.title')} — Prisma Clinic Marbella`,
+    description: t('hero.description'),
     ...createCanonicalMetadata('services/dental', locale),
   }
 }
 
-// Generate static params for all locales
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
 export default async function DentalServices() {
-  const t = await getTranslations('dental')
+  const t = await getTranslations('dental.v2')
 
   return (
-    <div className="mx-auto max-w-7xl">
-      <div className="relative mx-1 mt-12 mb-20 h-[500px] overflow-hidden rounded-2xl sm:mx-0 sm:mt-24">
-        <Image
-          src={imageHero}
-          alt={t('hero.imageAlt')}
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 flex items-center bg-gradient-to-r from-neutral-950/80 to-transparent">
-          <div className="max-w-2xl px-12">
-            <h1 className="mb-6 font-display text-6xl font-medium tracking-tight text-white">
-              {t('hero.title')}
-            </h1>
-            <p className="text-xl font-light text-white/90">
-              {t('hero.description')}
-            </p>
-          </div>
-        </div>
-      </div>
+    <>
+      <PageHero
+        image={heroImage}
+        imageAlt={t('hero.imageAlt')}
+        title={t('hero.title')}
+        description={t('hero.description')}
+        ctaLabel={t('hero.ctaLabel')}      />
 
-      <Container className="my-8">
-        <FadeIn>
-          <div className="flex flex-col gap-12 md:flex-row">
-            <div className="md:w-1/2">
-              <div className="mb-4 flex items-center gap-3">
-                <Tooth size={32} />
-                <h2 className="font-display text-4xl font-medium tracking-tight text-neutral-900">
-                  {t('services.title')}
-                </h2>
-              </div>
-              <p className="text-lg leading-relaxed text-neutral-600">
-                {t('services.description')}
-              </p>
-            </div>
-            <div className="flex items-center justify-center rounded-xl bg-neutral-100 p-8">
-              <StatList>
-                <StatListItem
-                  value={t('stats.satisfaction.value')}
-                  label={t('stats.satisfaction.label')}
-                />
-                <StatListItem
-                  value={t('stats.availability.value')}
-                  label={t('stats.availability.label')}
-                />
-                <StatListItem
-                  value={t('stats.experience.value')}
-                  label={t('stats.experience.label')}
-                />
-                <StatListItem
-                  value={t('stats.treatments.value')}
-                  label={t('stats.treatments.label')}
-                />
-              </StatList>
-            </div>
-          </div>
-        </FadeIn>
-      </Container>
+      <InterestSection
+        eyebrow={t('interest.eyebrow')}
+        title={t('interest.title')}
+        subheadline={t('interest.subheadline')}
+        body={t('interest.body')}
+      />
 
-      <Container className="my-20">
-        <FadeInStagger>
-          <section>
-            <FadeIn>
-              <div className="flex items-center gap-3">
-                <FirstAidKit size={28} />
-                <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  {t('cosmetic.title')}
-                </h3>
-              </div>
-              <p className="text-md my-2 text-neutral-600">
-                {t('cosmetic.description')}
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {(t.raw('cosmetic.treatments') as Treatment[]).map(
-                (treatment, index) => (
-                  <FadeIn key={`cosmetic-${treatment.title}`}>
-                    <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                      <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                        {treatment.title}
-                      </h4>
-                      <p className="text-neutral-700">
-                        {treatment.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ),
-              )}
-            </div>
-          </section>
+      <ServicesSection
+        eyebrow={t('ourServices.eyebrow')}
+        title={t('ourServices.title')}
+        body={t('ourServices.body')}
+        ctaLabel={t('ourServices.ctaLabel')}
+        ctaHref={WHATSAPP_HREF}
+        ctaExternal
+        items={t.raw('ourServices.items') as ServiceItem[]}
+      />
 
-          <section className="my-14">
-            <FadeIn>
-              <div className="flex items-center gap-3">
-                <ShieldStar size={28} />
-                <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  {t('restorative.title')}
-                </h3>
-              </div>
-              <p className="text-md my-2 text-neutral-600">
-                {t('restorative.description')}
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {(t.raw('restorative.treatments') as Treatment[]).map(
-                (treatment, index) => (
-                  <FadeIn key={`restorative-${treatment.title}`}>
-                    <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                      <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                        {treatment.title}
-                      </h4>
-                      <p className="text-neutral-700">
-                        {treatment.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ),
-              )}
-            </div>
-          </section>
+      <LeadExpert
+        image={doctorImage}
+        imageAlt={t('leadExpert.imageAlt')}
+        eyebrow={t('leadExpert.eyebrow')}
+        title={t('leadExpert.title')}
+        body={t('leadExpert.body')}
+      />
 
-          <section className="my-14">
-            <FadeIn>
-              <div className="flex items-center gap-3">
-                <Stethoscope size={28} />
-                <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  {t('surgical.title')}
-                </h3>
-              </div>
-              <p className="text-md my-2 text-neutral-600">
-                {t('surgical.description')}
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {(t.raw('surgical.treatments') as Treatment[]).map(
-                (treatment, index) => (
-                  <FadeIn key={`surgical-${treatment.title}`}>
-                    <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                      <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                        {treatment.title}
-                      </h4>
-                      <p className="text-neutral-700">
-                        {treatment.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ),
-              )}
-            </div>
-          </section>
+      <CtaRibbon
+        title={t('ribbon.title')}
+        subtitle={t('ribbon.subtitle')}
+        ctaLabel={t('ribbon.ctaLabel')}      />
 
-          <section className="my-14">
-            <FadeIn>
-              <div className="flex items-center gap-3">
-                <Clock size={28} />
-                <h3 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                  {t('emergency.title')}
-                </h3>
-              </div>
-              <p className="text-md my-2 text-neutral-600">
-                {t('emergency.description')}
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {(t.raw('emergency.conditions') as Treatment[]).map(
-                (condition, index) => (
-                  <FadeIn key={`emergency-${condition.title}`}>
-                    <div className="rounded-xl border border-gray-300 bg-gray-50 p-6 shadow-md transition-all duration-200 hover:translate-y-[-2px] hover:shadow">
-                      <h4 className="mb-3 font-display text-xl font-semibold text-neutral-900">
-                        {condition.title}
-                      </h4>
-                      <p className="text-neutral-700">
-                        {condition.description}
-                      </p>
-                    </div>
-                  </FadeIn>
-                ),
-              )}
-            </div>
-          </section>
-        </FadeInStagger>
-      </Container>
+      <TestimonialsGrid />
 
-      <Container className="mb-20">
-        <FadeIn>
-          <section className="rounded-2xl bg-neutral-100 p-10">
-            <div className="mb-8 flex items-center gap-3">
-              <ShieldStar size={28} />
-              <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-                {t('whyChoose.title')}
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {Object.entries(
-                t.raw('whyChoose.features') as Record<string, Feature>,
-              ).map(([key, feature]) => (
-                <div
-                  key={`feature-${key}`}
-                  className="rounded-xl bg-white p-6 shadow-sm transition-all duration-200 hover:translate-y-[-2px] hover:shadow"
-                >
-                  <div className="mb-2 flex items-center gap-2">
-                    <User size={20} />
-                    <h4 className="font-display text-lg font-semibold text-neutral-900">
-                      {feature.title}
-                    </h4>
-                  </div>
-                  <p className="text-neutral-700">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        </FadeIn>
-      </Container>
-
-      <Container className="mb-20">
-        <FadeIn>
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-medium tracking-tight text-neutral-900">
-              {t('cta.title')}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600">
-              {t('cta.description')}
-            </p>
-            <div className="mt-8">
-              <CalendlyButton />
-            </div>
-          </div>
-        </FadeIn>
-      </Container>
-    </div>
+      <LocationsSection />
+    </>
   )
 }

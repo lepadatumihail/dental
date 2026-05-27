@@ -29,13 +29,43 @@
 
   --radius-4xl: 2.5rem;
 
-  --font-sans: Mona Sans, ui-sans-serif, system-ui, sans-serif,
+  --font-sans: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
-  --font-display: Mona Sans, ui-sans-serif, system-ui, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-display: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif;
 
-  --font-display--font-variation-settings: 'wdth' 125;
+  --font-serif: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif;
 
-  --font-display-length: 2;
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  --color-mocha: #846652;
+  --color-mocha-light: #9A8070;
+  --color-mocha-dark: #6E523F;
+  --color-taupe: #736a62;
+  --color-sand: #CEC2B5;
+  --color-sand-light: #DDD4C9;
+  --color-forest: #32351A;
+
+  --color-surface-100: #FAF8F5;
+  --color-surface-200: #F5F1EC;
+  --color-surface-300: #EDE8E1;
+  --color-surface-400: #E5DFD7;
+  --color-surface-500: #DDD6CC;
+
+  --color-warm-dark: #32351A;
+  --color-accent-orange: #846652;
+  --color-accent-hover: #6E523F;
+  --color-gold: #846652;
+  --color-warm-success: #5A7A5E;
+
+  --color-step-consult: #D4B9A0;
+  --color-step-diagnose: #A8BFA0;
+  --color-step-treat: #9AB4C4;
+  --color-step-care: #C4B0CC;
+
+  --color-timeline-thinking: #D4B9A0;
+  --color-timeline-grep: #A8BFA0;
+  --color-timeline-read: #9AB4C4;
+  --color-timeline-edit: #C4B0CC;
 }

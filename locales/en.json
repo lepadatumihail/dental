@@ -1,10 +1,38 @@
 {
   "home": {
-    "title": "Prisma Clinic Marbella",
-    "description": "At Prisma Clinic Marbella, we provide exceptional dental and aesthetic care with compassion and precision. Our team of experienced professionals uses advanced technology to ensure your comfort while delivering comprehensive treatments for all your oral health needs. From routine cleanings to cosmetic procedures, we are committed to giving you a healthy, beautiful smile.",
+    "title": "Your guide to a healthier, more beautiful you.",
+    "description": "Premium dental, aesthetic, and general healthcare in Marbella — maximum efficiency, comfort, and care.",
+    "tagline": "Prisma Clinic Marbella",
     "viewServices": "View our services",
+    "discoverMore": "Discover more",
     "clients": {
-      "title": "Using the latest technology"
+      "title": "Trusted by leading technology partners"
+    },
+    "journey": {
+      "title": "Your path to better health",
+      "description": "From your first visit to ongoing care, we guide you every step of the way with precision, compassion, and advanced technology.",
+      "steps": {
+        "consultation": {
+          "label": "01",
+          "title": "Consultation",
+          "description": "Schedule your first visit for a thorough assessment of your health and aesthetic needs."
+        },
+        "diagnosis": {
+          "label": "02",
+          "title": "Diagnosis",
+          "description": "Advanced diagnostics with cutting-edge imaging and technology for accurate results."
+        },
+        "treatment": {
+          "label": "03",
+          "title": "Treatment",
+          "description": "Personalized treatment plans crafted by our specialists, tailored to your unique situation."
+        },
+        "care": {
+          "label": "04",
+          "title": "Ongoing Care",
+          "description": "Continuous follow-up and preventive care to ensure lasting results and peace of mind."
+        }
+      }
     },
     "services": {
       "title": "Our Services",
@@ -45,13 +73,199 @@
           },
           "pediatric": {
             "title": "Pediatric Dental Care",
-            "description": "Specialized gentle care for children, creating positive dental experiences and establishing good oral health habits from an early age."
+            "description": "Specialized gentle care for children, creating positive dental experiences and establishing oral health habits from an early age."
           }
         }
       }
     },
     "testimonial": {
       "text": "The team at Prisma Clinic Marbella made my dental visit so comfortable and stress-free. Their gentle approach and attention to detail completely changed my perspective on dental care."
+    },
+    "hero": {
+      "slides": {
+        "aesthetic": {
+          "h1": "Aesthetic & Anti-Aging Treatments",
+          "h2": "Meet high-end aesthetic solutions with a world-class team of experts in anti-aging medicine in one place.",
+          "cta": "See Our Treatments"
+        },
+        "dental": {
+          "h1": "Dental Health & Care",
+          "h2": "The most advanced dental health and care in Spain",
+          "cta": "See Our Treatments"
+        },
+        "medical": {
+          "h1": "General Medicine & Health Optimization",
+          "h2": "Immediate Access to Health Treatments and Care",
+          "cta": "Call Us Now"
+        }
+      }
+    },
+    "treatments": {
+      "title": "Everything in One Place",
+      "description": "Get access to the only facility in Marbella with a group of experts with focus on longevity, beauty and quality of life — all in one place",
+      "cards": {
+        "dental": {
+          "title": "Dental Care & Aesthetic",
+          "description": "From complex cases to the simplest ones, we care for details and excellence."
+        },
+        "antiAging": {
+          "title": "Anti-Aging Treatments",
+          "description": "The latest technologies in aesthetic treatments in Marbella"
+        },
+        "general": {
+          "title": "General Medicine",
+          "description": "For your every day needs and quality of life."
+        }
+      }
+    },
+    "whatsapp": {
+      "title": "We're Here 24/7 — Anytime, Any Emergency",
+      "description": "Open around the clock for emergencies, questions, or quick chats. Our multilingual team speaks Spanish, English, Swedish, German and Farsi — message us anytime.",
+      "cta": "Send us a message!"
+    },
+    "about": {
+      "eyebrow": "About the Clinic",
+      "title": "Prisma Clinic",
+      "body": "Prisma Clinic Marbella is a modern dental and aesthetics clinic located in the heart of Marbella, dedicated to providing high-quality care in a serene, luxurious environment. We specialize in comprehensive dental services—from routine checkups and cosmetic dentistry to advanced treatments. Our aesthetics division offers personalized non-surgical treatments such as dermal fillers and Botox to enhance natural beauty with subtle, effective results. For your peace of mind, we also provide 24/7 emergency dental care, ensuring expert support is always available when you need it most. At Prisma, your comfort, confidence, and well-being come first."
+    },
+    "testimonialsGrid": {
+      "title": "What people are saying about us",
+      "description": "Real reviews that can be checked on Google",
+      "viewAll": "View all reviews on Google",
+      "items": [
+        {
+          "name": "Ellinor Myhren",
+          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and Botox. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
+        },
+        {
+          "name": "Shahin gh",
+          "text": "I had a great experience at Prisma Clinic. You are seen directly by a specialist doctor who approaches her work with both medical expertise and an artistic eye. She pays close attention not only to your health but also to aesthetic detail, which makes a real difference in the results. I felt well cared for throughout my visit, and I will definitely come back again."
+        },
+        {
+          "name": "Kate M",
+          "text": "I'm just thrilled with the treatment. The doctor was just amazing. Before that, I was very afraid of dentists, but the doctor is really professional; he was genuinely interested in whether I was okay, the work was at the highest level, and I want to return to this place in the future so that the doctor can take care of my teeth. The doctor listened to me and explained all his actions, it was an emergency on Saturday evening due to a broken tooth, the doctor is patient and very professional. Dr. Robbin is very kind, friendly and helpful. I highly recommend it!"
+        },
+        {
+          "name": "Hazhir Javadi",
+          "text": "I would highly recommend Prisma Clinic in Marbella! I have just completed my treatment and cannot express enough gratitude for the professional service and fantastic care I received. From the very first visit, I felt well taken care of. The friendly and knowledgeable staff made the entire experience much more reassuring. The treatment was carried out meticulously, and I truly appreciate the time and attention given to explain each step of the process. A big thank you to the whole team at Prisma Clinic for making my dental care experience so positive!"
+        },
+        
+        {
+          "name": "India Keely",
+          "text": "5 star emergency service on Easter weekend. The skill, expertise and support I was given whilst in horrible pain with an infected tooth was fantastic. The understanding and knowledge of the dentist, who had trained at Kings College London and who is also a dental surgeon was both reassuring and welcome in an emergency situation. A difficult tooth extraction was done with patience and care. I highly recommend this practice for both emergency and routine dental work."
+        },
+        {
+          "name": "Krzysztof Krzymowski",
+          "text": "Very good, professional and nice, recommended in 100%"
+        },
+        {
+          "name": "R Faul",
+          "text": "I have always been very afraid of going to the dentist, but I am so much more confident after visiting Prisma. The care you receive is amazing and the staff go above and beyond to make you feel at ease. Highly recommended!"
+        }
+      ]
+    },
+    "locations": {
+      "title": "Where to Find Us",
+      "description": "We're located in the heart of Andalucía! You can find us both in Puerto Banús and Marbella Old Town.",
+      "phoneLabel": "Phone",
+      "phoneNumber": "+34 673 290 786",
+      "openingHoursLabel": "Opening Hours",
+      "openingHoursValue": "Monday - Sunday: 24/7",
+      "whatsappLabel": "WhatsApp",
+      "directions": "Get directions",
+      "banus": {
+        "name": "Prisma Clinic Banús",
+        "address": "Calle Ramón Areces, s/n, Plaza Marina Banús Frente El Corte Inglés, 29660 Marbella, Málaga"
+      },
+      "oldTown": {
+        "name": "Prisma Clinic Old Town",
+        "address": "Av. Nabeul, 14, room 14, 29601 Marbella, Málaga"
+      },
+      "emergency": {
+        "title": "24/7 Emergency Dental Care",
+        "description": "Dental emergencies don't wait for business hours. Our team of specialists is available around the clock to provide immediate care when you need it most.",
+        "learnMore": "Learn more",
+        "hotline": "Emergency Hotline"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About Prisma Clinic",
+      "title": "Modern medicine, designed to feel personal.",
+      "lead": "Prisma Clinic Marbella is where high-end dentistry, aesthetic medicine, and everyday healthcare meet — under one calm, considered roof.",
+      "body1": "We started Prisma to make exceptional medical care feel as warm as it is precise. Two locations in the heart of Marbella, one team of specialists, and a simple promise: every patient leaves with more comfort, confidence, and trust than they walked in with.",
+      "body2": "From routine check-ups to complex aesthetic protocols, we treat the small details with the same care as the big ones."
+    },
+    "stats": {
+      "availability": { "value": "24/7", "label": "Open day & night" },
+      "languages": { "value": "5", "label": "Languages spoken" },
+      "locations": { "value": "2", "label": "Marbella locations" },
+      "specialties": { "value": "3", "label": "Specialties under one roof" }
+    },
+    "values": {
+      "eyebrow": "How we work",
+      "title": "Three principles, one feeling.",
+      "description": "Everything from how we welcome you at the door to how we close the last appointment of the day comes back to these.",
+      "items": {
+        "excellence": {
+          "title": "Quiet excellence",
+          "description": "World-class equipment, used with calm precision. We invest in mastery so you don't have to think about it."
+        },
+        "comfort": {
+          "title": "Designed for comfort",
+          "description": "Soft lighting, unhurried appointments, clear explanations. Every detail is shaped around how you'd want to feel."
+        },
+        "personal": {
+          "title": "Personal, not procedural",
+          "description": "Treatments built around your face, your health, your story — never a template. We listen first, plan together."
+        }
+      }
+    },
+    "specialties": {
+      "eyebrow": "What we offer",
+      "title": "Three disciplines, one coordinated team.",
+      "description": "Everything you need for longevity, beauty, and quality of life — handled by specialists who actually talk to each other.",
+      "discoverMore": "Learn more",
+      "items": {
+        "dental": {
+          "title": "Dental & Cosmetic Dentistry",
+          "description": "Routine care, veneers, implants, and 24/7 emergency dental care."
+        },
+        "aesthetics": {
+          "title": "Aesthetic & Anti-Aging",
+          "description": "Non-surgical rejuvenation, dermal fillers, Botox, PRP, and longevity protocols."
+        },
+        "general": {
+          "title": "General Medicine",
+          "description": "Primary care, health optimization, and preventive medicine for everyday well-being."
+        }
+      }
+    },
+    "team": {
+      "eyebrow": "Our specialists",
+      "title": "Care with a name behind it.",
+      "description": "Behind every result is a doctor who chose this work as a vocation — and a team that takes it personally.",
+      "languagesLabel": "Languages",
+      "lead": {
+        "name": "Dr. Bozana Krivošija",
+        "role": "Aesthetic & Anti-Aging Medicine",
+        "bio": "Medical doctor specialized in Aesthetic and Anti-Aging Medicine, trained at the Complutense University of Madrid. Originally from Bosnia and based in Spain for over a decade, Dr. Bozana focuses on natural, elegant results — neuromodulators, hyaluronic acid, collagen stimulators, PRP, IV drips, and tailored anti-aging protocols.",
+        "languages": "Serbian · Spanish · English"
+      },
+      "lead2": {
+        "name": "Dr. Robbin",
+        "role": "Dental Surgeon & Cosmetic Dentistry",
+        "bio": "Dental surgeon trained at King's College London, with deep expertise in cosmetic dentistry, complex restorations, and 24/7 emergency dental care. Patients describe Dr. Robbin as patient, kind, and meticulous — explaining every step, and treating each case with the same level of attention whether it's a routine cleaning or a Saturday-night emergency.",
+        "languages": "English · Spanish"
+      },
+      "rest": "Alongside Dr. Bozana and Dr. Robbin, our dental and general medicine specialists bring decades of combined experience — including emergency-trained surgeons and clinicians fluent in at least one of Spanish, English, Swedish, German, or Farsi."
+    },
+    "cta": {
+      "title": "Come visit us",
+      "description": "Two locations in Marbella, open 24/7 for emergencies. Book a consultation, or just send us a message — we'll take it from there.",
+      "primary": "Send us a message",
+      "secondary": "See our locations"
     }
   },
   "emergency": {
@@ -107,7 +321,21 @@
         "title": "Emergency Care",
         "badge": "24/7"
       },
-      "contact": "Contact"
+      "contact": "Contact",
+      "menu": "Menu",
+      "close": "Close",
+      "items": {
+        "treatments": {
+          "label": "Treatments",
+          "dental": "Dental",
+          "aesthetic": "Aesthetic",
+          "medical": "Medical"
+        },
+        "theClinic": "The Clinic",
+        "ourPrices": "Our Prices",
+        "emergencies": "Emergencies",
+        "contact": "Contact"
+      }
     },
     "footer": {
       "followUs": "Follow us"
@@ -282,6 +510,37 @@
         },
         "location": {
           "title": "Where are we"
+        },
+        "v2": {
+          "hero": {
+            "title": "Aesthetic & Anti-Aging Treatments",
+            "description": "Surgical and non-surgical aesthetic treatments with precision, safety and personalised care in Marbella.",
+            "ctaLabel": "Schedule Your Consultation",
+            "imageAlt": "Aesthetic treatment at Prisma Clinic Marbella"
+          },
+          "interest": {
+            "eyebrow": "Our approach",
+            "title": "Advanced aesthetic medicine tailored to your goals",
+            "subheadline": "World-class surgical expertise and minimally invasive treatments for refreshed, confident results.",
+            "body": "At Prisma Clinic our aesthetic practice combines decades of surgical experience with the latest non-surgical techniques. From hair transplants to fillers, botox and body contouring, we deliver predictable, natural outcomes with a focus on safety, rapid recovery and long-term results. Treatment plans are personalised to your facial proportions and lifestyle so you look like the best version of yourself."
+          },
+          "ourServices": {
+            "eyebrow": "What we offer",
+            "title": "Our Services",
+            "body": "We offer a full spectrum of aesthetic care: hair and brows transplants, body contouring, hair restoration, plus non-surgical treatments — dermal fillers, anti-wrinkle injections, PRP and medical-grade skin rejuvenation. All procedures use evidence-based techniques and modern protocols for comfort and safety.",
+            "ctaLabel": "Talk to Us!"
+          },
+          "leadExpert": {
+            "eyebrow": "Lead Expert",
+            "title": "Dr. Bozana Krivošija",
+            "body": "Dr. Bozana Krivošija is a medical doctor specialised in Aesthetic and Anti-Aging Medicine, trained at the Complutense University of Madrid. Originally from Bosnia and based in Spain for over a decade, she focuses on natural, elegant, and personalised results — neuromodulators, hyaluronic acid, collagen stimulators, PRP, IV drips, and tailored anti-aging protocols. Fluent in Serbian, Spanish, and English, Dr. Bozana creates a warm, trustworthy experience for patients from diverse cultures, treating medicine not just as a career but as a true vocation of service and care.",
+            "imageAlt": "Dr. Bozana Krivošija, aesthetic and anti-aging medicine specialist at Prisma Clinic Marbella"
+          },
+          "ribbon": {
+            "title": "Ready for a refreshed, natural look?",
+            "subtitle": "Book a consultation and we'll design a plan tailored to you.",
+            "ctaLabel": "Book an appointment"
+          }
         }
       },
       "generalMedicine": {
@@ -543,6 +802,45 @@
     },
     "cta": {
       "text": "Contact us today to schedule your consultation and experience premium healthcare at Prisma Clinic Marbella."
+    },
+    "v2": {
+      "hero": {
+        "title": "General Medicine & Health Optimization",
+        "description": "After-hours consultations, urgent evaluations, IV drips and personalised medical guidance in Marbella.",
+        "ctaLabel": "Request an Appointment",
+        "imageAlt": "General medicine consultation at Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Our approach",
+        "title": "Comprehensive primary and urgent care for you and your family",
+        "subheadline": "Fast, professional assessments and treatments, day or night.",
+        "body": "Prisma Clinic offers accessible general medicine services focused on timely evaluations, evidence-based prescriptions and clear follow-up care. Our team provides thorough assessments for acute issues, chronic condition checks, travel and preventive health advice, and IV therapy for rehydration and recovery. We prioritise rapid access, practical treatment plans and coordinated referrals when specialist care is needed."
+      },
+      "ourServices": {
+        "eyebrow": "What we offer",
+        "title": "Our Services",
+        "body": "Clear, evidence-based care across primary, urgent and preventive medicine — with documentation and referrals coordinated for you when specialist input is needed.",
+        "ctaLabel": "Talk to Us!",
+        "items": [
+          { "title": "After-Hours Consultations", "description": "Evening and weekend appointments and home-visit coordination for when you need care most." },
+          { "title": "Urgent Evaluations", "description": "Same-day clinical assessments for acute issues, with clear next steps and documentation." },
+          { "title": "Prescription Management", "description": "Evidence-based prescriptions and refills with direct communication to your pharmacy." },
+          { "title": "IV Drips & Vitamins", "description": "Hydration, recovery and tailored vitamin infusions delivered in a comfortable setting." },
+          { "title": "Routine Physicals", "description": "Comprehensive checkups for travel, work, lifestyle changes or peace of mind." },
+          { "title": "Chronic Disease Care", "description": "Coordinated, ongoing management of long-term conditions with specialist referrals as needed." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "Our Team",
+        "title": "Our Medical Team",
+        "body": "Prisma Clinic's general medicine team comprises experienced physicians and licensed clinicians committed to timely, evidence-based care. While we are currently hiring a permanent general practitioner, our clinicians follow strict clinical protocols for safe assessments, prescriptions and IV therapies, and work closely with local hospitals and specialists to ensure continuity of care.",
+        "imageAlt": "Prisma Clinic Marbella medical team"
+      },
+      "ribbon": {
+        "title": "Need medical care today?",
+        "subtitle": "Our team is ready to help — book a consultation or message us on WhatsApp.",
+        "ctaLabel": "Book an appointment"
+      }
     }
   },
   "cookieBanner": {
@@ -697,6 +995,226 @@
     "cta": {
       "title": "Ready to Transform Your Smile?",
       "description": "Contact us today to schedule your consultation and experience premium dental care at Prisma Clinic Marbella."
+    },
+    "v2": {
+      "hero": {
+        "title": "The most advanced dental health and care in Spain",
+        "description": "Restoring confident smiles with advanced implants, aesthetic treatments and pain-free care in the heart of Marbella.",
+        "ctaLabel": "Book Now!",
+        "imageAlt": "Modern dental treatment room at Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Our approach",
+        "title": "Comprehensive dental care tailored to you",
+        "subheadline": "Modern treatments, personalised plans, results you can trust.",
+        "body": "At Prisma Clinic we combine cutting-edge dental technology with compassionate care. Whether you need a single implant, aesthetic smile enhancement, or expert endodontic treatment, our team creates a clear, comfortable plan that fits your goals and schedule. We focus on minimally invasive techniques, fast recovery, and long-lasting results so you can enjoy your smile and local life again."
+      },
+      "ourServices": {
+        "eyebrow": "What we offer",
+        "title": "Our Services",
+        "body": "From precision dental implants and advanced endodontics to cosmetic dentistry and routine hygiene, we offer a full range of treatments delivered by specialists using digital diagnostics and implant-grade materials.",
+        "ctaLabel": "Talk to Us!",
+        "items": [
+          { "title": "Dental Implants", "description": "Permanent, natural-feeling solutions for missing teeth that restore full function and confidence." },
+          { "title": "Endodontics", "description": "Modern root canal therapy that saves natural teeth comfortably, with minimal post-op discomfort." },
+          { "title": "Veneers", "description": "Custom porcelain shells that transform your smile with minimal preparation of the natural tooth." },
+          { "title": "Teeth Whitening", "description": "Professional whitening treatments for a brighter, fresher smile with safe, predictable results." },
+          { "title": "Crowns & Bridges", "description": "Durable, natural-looking restorations for damaged or missing teeth, built to last." },
+          { "title": "Preventive Checkups", "description": "Regular reviews, hygiene and digital scans to catch issues early and keep treatment minimal." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "Lead Expert",
+        "title": "Dr. Robbin M.",
+        "body": "Dr. Robbin M. is a dental specialist with over 10 years' experience in endodontics, dental implants and aesthetic dental solutions. A King's College London graduate, he combines specialist training with a gentle, patient-first approach. Dr. Robbin is known for predictable implant outcomes, pain-minimising root canal procedures and natural-looking cosmetic results — always tailored to each patient's facial balance and lifestyle.",
+        "imageAlt": "Dr. Robbin M., dental specialist at Prisma Clinic Marbella"
+      },
+      "ribbon": {
+        "title": "Ready to take the next step with your smile?",
+        "subtitle": "Book a consultation and our team will guide you through the right plan.",
+        "ctaLabel": "Book an appointment"
+      }
+    }
+  },
+  "prices": {
+    "title": "Our prices",
+    "subtitle": "Check out our prices and contact us for possible packages and promotions.",
+    "aesthetic": {
+      "eyebrow": "Aesthetic Medicine",
+      "title": "Aesthetic Treatments",
+      "description": "The absolute best aesthetic solutions and a world-class team of experts in anti-aging medicine, all in one place.",
+      "ctaWhatsapp": "Message us on WhatsApp",
+      "groups": [
+        {
+          "title": "Dermal Fillers",
+          "subtitle": "Sculpting & contouring",
+          "items": [
+            { "service": "Lip Enhancement", "price": "350€" },
+            { "service": "Nasolabial Contouring", "price": "from 250€" },
+            { "service": "Marionette Lines", "price": "from 350€" },
+            { "service": "Cheek Volumization", "price": "from 450€" },
+            { "service": "Jawline Definition", "price": "from 450€" },
+            { "service": "Chin Projection", "price": "from 350€" },
+            { "service": "Full Facial Harmonization", "price": "On consultation" }
+          ]
+        },
+        {
+          "title": "Botox & Wrinkle Relaxers",
+          "subtitle": "Smoothing & rejuvenation",
+          "items": [
+            { "service": "Upper Face Botox", "price": "from 350€" },
+            { "service": "Full Face Botox", "price": "950€" },
+            { "service": "Bruxism Treatment", "price": "from 400€" },
+            { "service": "Nefertiti Neck Lift", "price": "550€" },
+            { "service": "Barbie Botox", "price": "380€" },
+            { "service": "Sweat Treatment", "price": "600€" }
+          ]
+        },
+        {
+          "title": "PRP",
+          "subtitle": "Platelet-rich plasma",
+          "items": [
+            { "service": "Face", "price": "180€ / session" },
+            { "service": "Hair", "price": "180€ / session" },
+            { "service": "3-sessions package", "price": "450€" }
+          ]
+        },
+        {
+          "title": "Polynucleotides",
+          "subtitle": "Skin bioregeneration",
+          "items": [
+            { "service": "Face", "price": "350€ / session" },
+            { "service": "Under-eye area", "price": "300€" },
+            { "service": "Neck & décolleté", "price": "from 350€" },
+            { "service": "Hair biostimulation", "price": "from 300€" },
+            { "service": "Inbiotec Amber", "price": "380€ / session" }
+          ]
+        },
+        {
+          "title": "PLLA Biostimulators",
+          "subtitle": "Collagen induction",
+          "items": [
+            { "service": "Lanluma", "price": "900€ / session" },
+            { "service": "Ultracol", "price": "900€ / session" },
+            { "service": "Ultracol (3-sessions package)", "price": "2500€" },
+            { "service": "Ellanse", "price": "700€ / session" }
+          ]
+        },
+        {
+          "title": "IV Drips & Wellness",
+          "subtitle": "Vitamin & hydration therapy",
+          "items": [
+            { "service": "Single session", "price": "180€" },
+            { "service": "4-sessions package", "price": "600€" },
+            { "service": "8-sessions package", "price": "850€" }
+          ]
+        }
+      ]
+    },
+    "ribbon": {
+      "title": "Not sure which treatment is right for you?",
+      "subtitle": "Book a consultation and we'll guide you through the options.",
+      "cta": "Book a consultation"
+    }
+  },
+  "booking": {
+    "bookNow": "Book now",
+    "meta": {
+      "title": "Book an appointment — Prisma Clinic Marbella",
+      "description": "Book your appointment at Prisma Clinic Marbella. Choose a service, pick a time that suits you, and we'll confirm your visit."
+    },
+    "inline": {
+      "eyebrow": "Contact us",
+      "title": "Schedule your visit",
+      "intro": "We look forward to providing the care you deserve."
+    },
+    "contact": {
+      "locationTitle": "Our clinic location",
+      "locationBody": "Visit our clinic for a personalized consultation. We're conveniently located and offer a welcoming environment for all our patients.",
+      "followTitle": "Follow us"
+    },
+    "modal": {
+      "title": "Book an appointment",
+      "close": "Close"
+    },
+    "steps": {
+      "service": { "label": "Service", "stepName": "Choose a service" },
+      "datetime": { "label": "Date & time", "stepName": "Pick a date and time" },
+      "location": { "label": "Location", "stepName": "Choose a location" },
+      "details": { "label": "Your details", "stepName": "Your details" },
+      "confirm": { "label": "Confirm", "stepName": "Review and confirm" }
+    },
+    "services": {
+      "dental": {
+        "name": "Dental consultation",
+        "description": "Check-ups, cleanings, implants and cosmetic dentistry."
+      },
+      "aesthetics": {
+        "name": "Aesthetic consultation",
+        "description": "Facial treatments and aesthetic medicine."
+      },
+      "medical": {
+        "name": "Medical consultation",
+        "description": "General medical consultations and check-ups."
+      }
+    },
+    "datetime": {
+      "selectDate": "Select a date",
+      "selectTime": "Select a time",
+      "loading": "Loading available times…",
+      "loadError": "We couldn't load available times. Please try again.",
+      "noAvailability": "No times are available right now. Please contact us directly and we'll be glad to help.",
+      "timezoneNote": "All times are shown in local Marbella time."
+    },
+    "location": {
+      "predefinedTitle": "Choose a clinic location",
+      "clientAddressTitle": "Where should we visit you?",
+      "addressLabel": "Street address",
+      "zipLabel": "Postal code",
+      "noLocations": "No locations are available for this service. Please contact us directly."
+    },
+    "details": {
+      "nameLabel": "Full name",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "notesLabel": "Notes (optional)",
+      "notesPlaceholder": "Anything we should know before your visit?"
+    },
+    "confirm": {
+      "serviceLabel": "Service",
+      "whenLabel": "When",
+      "whereLabel": "Where",
+      "contactLabel": "Contact",
+      "edit": "Edit",
+      "submit": "Confirm booking",
+      "submitting": "Confirming…"
+    },
+    "success": {
+      "title": "Request received",
+      "body": "Thank you. Your appointment request has been received — the clinic will confirm it shortly by email or phone.",
+      "done": "Done"
+    },
+    "actions": {
+      "next": "Continue",
+      "back": "Back",
+      "retry": "Try again"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "invalidPhone": "Please include your country code (e.g. +34)."
+    },
+    "errors": {
+      "generic": "Something went wrong. Please try again.",
+      "network": "We couldn't reach our booking system. Please check your connection and try again.",
+      "validation": "Please check your details and try again.",
+      "sessionExpired": "Your selection timed out. We've refreshed the available times — please pick a slot again.",
+      "slotTaken": "That time was just booked. Please choose another slot.",
+      "rateLimited": "Too many requests right now. Please wait a moment and try again.",
+      "tooLong": "Your notes are too long. Please shorten them.",
+      "unavailable": "Online booking is temporarily unavailable. Please call or message us and we'll be happy to help.",
+      "fallbackCall": "Call us",
+      "fallbackWhatsapp": "Message on WhatsApp"
     }
   }
 }
