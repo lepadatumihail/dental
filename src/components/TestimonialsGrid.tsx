@@ -78,7 +78,7 @@ export function TestimonialsGrid() {
         </FadeIn>
 
         <div
-          className="relative mt-16"
+          className="relative mt-16 max-h-[800px] overflow-hidden lg:max-h-none lg:overflow-visible"
           style={{
             maskImage:
               'linear-gradient(to bottom, black 0%, black 65%, transparent 100%)',

@@ -1204,7 +1204,8 @@
     },
     "validation": {
       "required": "Det här fältet är obligatoriskt.",
-      "invalidEmail": "Ange en giltig e-postadress."
+      "invalidEmail": "Ange en giltig e-postadress.",
+      "invalidPhone": "Inkludera landskoden (t.ex. +34)."
     },
     "errors": {
       "generic": "Något gick fel. Försök igen.",

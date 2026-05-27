@@ -4,7 +4,11 @@ import { useEffect, useReducer } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/Button'
-import type { AgendaErrorCode, CreateBookingPayload } from '@/lib/agenda/types'
+import type {
+  AgendaErrorCode,
+  CreateBookingPayload,
+  EventTypeClientForm,
+} from '@/lib/agenda/types'
 import { getAvailability, postBooking } from './api'
 import { ConfirmStep } from './steps/ConfirmStep'
 import { DateTimeStep } from './steps/DateTimeStep'
@@ -20,6 +24,16 @@ import {
 } from './wizard-state'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+// The agenda API requires `+` (or `00`) on `clientPhone` unless we also send
+// `clientCountryCode`. Enforce the prefix in the UI rather than passing
+// national-format numbers and getting a 400.
+const PHONE_PREFIX_RE = /^(\+|00)/
+const DEFAULT_CLIENT_FORM: EventTypeClientForm = {
+  name: 'required',
+  email: 'required',
+  phone: 'required',
+  additionalNotes: 'optional',
+}
 const PHONE_HREF = 'tel:+34673290786'
 const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
@@ -177,17 +191,32 @@ export function BookingWizard({
 
   function handleNext() {
     if (state.step === 'details') {
+      // Which client fields are required is server-driven via
+      // `availability.eventType.clientForm`. Falls back to all-required when
+      // the field is absent (legacy responses / mock without eventType).
+      const form =
+        state.availability?.eventType?.clientForm ?? DEFAULT_CLIENT_FORM
       const fieldErrors: Record<string, string> = {}
-      if (!state.clientName.trim()) {
+      const name = state.clientName.trim()
+      const email = state.clientEmail.trim()
+      const phone = state.clientPhone.trim()
+      const notes = state.notes.trim()
+
+      if (form.name === 'required' && !name) {
         fieldErrors.clientName = t('validation.required')
       }
-      if (!state.clientEmail.trim()) {
+      if (form.email === 'required' && !email) {
         fieldErrors.clientEmail = t('validation.required')
-      } else if (!EMAIL_RE.test(state.clientEmail.trim())) {
+      } else if (email && !EMAIL_RE.test(email)) {
         fieldErrors.clientEmail = t('validation.invalidEmail')
       }
-      if (!state.clientPhone.trim()) {
+      if (form.phone === 'required' && !phone) {
         fieldErrors.clientPhone = t('validation.required')
+      } else if (phone && !PHONE_PREFIX_RE.test(phone)) {
+        fieldErrors.clientPhone = t('validation.invalidPhone')
+      }
+      if (form.additionalNotes === 'required' && !notes) {
+        fieldErrors.notes = t('validation.required')
       }
       if (Object.keys(fieldErrors).length > 0) {
         dispatch({ type: 'invalid', fieldErrors })

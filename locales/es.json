@@ -1204,7 +1204,8 @@
     },
     "validation": {
       "required": "Este campo es obligatorio.",
-      "invalidEmail": "Introduzca un correo electrónico válido."
+      "invalidEmail": "Introduzca un correo electrónico válido.",
+      "invalidPhone": "Incluya el código de país (p. ej. +34)."
     },
     "errors": {
       "generic": "Algo salió mal. Inténtelo de nuevo.",

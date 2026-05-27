@@ -72,6 +72,19 @@ export function mockAvailability(
     locationType,
     addresses,
     availabilityToken: `mock.${eventTypeId}.${Date.now()}`,
+    eventType: {
+      name: key ? `Mock ${key} consultation` : 'Mock consultation',
+      duration: 60,
+      price: 5000,
+      currency: 'EUR',
+      clientForm: {
+        name: 'required',
+        email: 'required',
+        phone: 'required',
+        additionalNotes: 'optional',
+      },
+      complexPricing: null,
+    },
   }
 }
 

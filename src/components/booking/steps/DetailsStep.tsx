@@ -48,6 +48,7 @@ export function DetailsStep({
           error={state.fieldErrors.clientPhone}
           maxLength={30}
           autoComplete="tel"
+          placeholder="+34 600 000 000"
           onChange={update('clientPhone')}
         />
         <TextAreaField

@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { CaretDown, WhatsappLogo } from '@phosphor-icons/react'
 
+import { useBookingModal } from '@/components/booking/BookingProvider'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import LanguageSelector from '@/components/LanguageSelector'
@@ -129,6 +130,8 @@ function DesktopNav() {
 function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
   const t = useTranslations('layout.navigation')
   const tItems = useTranslations('layout.navigation.items')
+  const tBooking = useTranslations('booking')
+  const { open: openBooking } = useBookingModal()
   const shouldReduceMotion = useReducedMotion()
 
   useEffect(() => {
@@ -191,7 +194,7 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
               className="flex flex-col"
             >
               <div className="flex items-center justify-between pt-6 sm:pt-10">
-                <LanguageSelector />
+                <LanguageSelector align="left" />
                 <button
                   type="button"
                   onClick={onClose}
@@ -208,35 +211,56 @@ function MenuDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
 
               <nav className="mt-6 pb-16">
                 <ul className="flex flex-col gap-y-2">
-                  {NAV_ITEMS.map((item) => (
-                    <li key={item.key}>
-                      <Link
-                        href={item.href}
-                        onClick={onClose}
-                        className="block py-2 text-3xl font-semibold tracking-tight text-warm-dark transition-colors duration-150 hover:text-mocha sm:text-4xl"
-                        style={{ letterSpacing: '-0.5px' }}
-                      >
-                        {item.key === 'treatments'
-                          ? tItems('treatments.label')
-                          : tItems(item.key)}
-                      </Link>
-                      {item.children ? (
-                        <ul className="mt-1 ml-2 flex flex-col gap-y-1 border-l border-mocha/15 pl-5">
-                          {item.children.map((child) => (
-                            <li key={child.key}>
-                              <Link
-                                href={child.href}
-                                onClick={onClose}
-                                className="block py-1.5 text-base font-medium tracking-wide text-taupe transition-colors duration-150 hover:text-mocha sm:text-xl"
-                              >
-                                {tItems(`treatments.${child.key}`)}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </li>
-                  ))}
+                  {NAV_ITEMS.map((item) => {
+                    const isBookNow = item.key === 'contact'
+                    const label = isBookNow
+                      ? tBooking('bookNow')
+                      : item.key === 'treatments'
+                        ? tItems('treatments.label')
+                        : tItems(item.key)
+
+                    return (
+                      <li key={item.key}>
+                        {isBookNow ? (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              onClose()
+                              openBooking()
+                            }}
+                            className="block w-full py-2 text-left text-3xl font-semibold tracking-tight text-mocha transition-colors duration-150 hover:text-mocha-dark sm:text-4xl"
+                            style={{ letterSpacing: '-0.5px' }}
+                          >
+                            {label}
+                          </button>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            onClick={onClose}
+                            className="block py-2 text-3xl font-semibold tracking-tight text-warm-dark transition-colors duration-150 hover:text-mocha sm:text-4xl"
+                            style={{ letterSpacing: '-0.5px' }}
+                          >
+                            {label}
+                          </Link>
+                        )}
+                        {item.children ? (
+                          <ul className="mt-1 ml-2 flex flex-col gap-y-1 border-l border-mocha/15 pl-5">
+                            {item.children.map((child) => (
+                              <li key={child.key}>
+                                <Link
+                                  href={child.href}
+                                  onClick={onClose}
+                                  className="block py-1.5 text-base font-medium tracking-wide text-taupe transition-colors duration-150 hover:text-mocha sm:text-xl"
+                                >
+                                  {tItems(`treatments.${child.key}`)}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </li>
+                    )
+                  })}
                 </ul>
               </nav>
             </motion.div>

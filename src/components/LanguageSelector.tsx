@@ -12,7 +12,16 @@ const languages = [
   { code: 'se', name: 'Svenska' },
 ] as const
 
-export default function LanguageSelector() {
+type LanguageSelectorProps = {
+  /** Which edge of the trigger the dropdown panel anchors to. Use "left" when
+   * the trigger sits at the left side of a layout (e.g. inside the mobile
+   * menu drawer) so the panel doesn't overflow off-screen. Defaults to "right". */
+  align?: 'left' | 'right'
+}
+
+export default function LanguageSelector({
+  align = 'right',
+}: LanguageSelectorProps = {}) {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
@@ -77,7 +86,11 @@ export default function LanguageSelector() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: shouldReduceMotion ? 0 : -4 }}
             transition={{ duration: shouldReduceMotion ? 0 : 0.15 }}
-            className="absolute right-0 z-50 mt-2 w-44 origin-top-right overflow-hidden rounded-xl border border-mocha/10 bg-surface-100 shadow-[0_12px_32px_rgba(50,53,26,0.12)]"
+            className={`absolute z-50 mt-2 w-44 max-w-[calc(100vw-1.5rem)] overflow-hidden rounded-xl border border-mocha/10 bg-surface-100 shadow-[0_12px_32px_rgba(50,53,26,0.12)] ${
+              align === 'left'
+                ? 'left-0 origin-top-left'
+                : 'right-0 origin-top-right'
+            }`}
             role="listbox"
           >
             <ul className="py-1">

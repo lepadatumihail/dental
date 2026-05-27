@@ -1201,7 +1201,8 @@
     },
     "validation": {
       "required": "This field is required.",
-      "invalidEmail": "Please enter a valid email address."
+      "invalidEmail": "Please enter a valid email address.",
+      "invalidPhone": "Please include your country code (e.g. +34)."
     },
     "errors": {
       "generic": "Something went wrong. Please try again.",
