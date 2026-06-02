@@ -15,7 +15,7 @@ import { createCanonicalMetadata } from '@/lib/canonical'
 
 import dentalImage from '@/images/clinic/xray.jpg'
 import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
-import generalImage from '@/images/clinic/dentists.jpg'
+import generalImage from '@/images/clinic/general-medicine.jpg'
 import bozanaPhoto from '@/images/bozana.jpeg'
 import robinPhoto from '@/images/clinic/robin-colour.jpg'
 

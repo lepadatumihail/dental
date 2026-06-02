@@ -3,7 +3,7 @@
 // (route handlers / the agenda client), never by client components.
 
 const DEFAULT_API_BASE_URL = 'https://agenda.aceresearch.net'
-const DEFAULT_TENANT_ID = 'tenant-1779314436891'
+const DEFAULT_TENANT_ID = 'tenant-1780397603138'
 
 /** Agenda API base URL (override with AGENDA_API_BASE_URL for staging). */
 export function getApiBaseUrl(): string {

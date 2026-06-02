@@ -19,7 +19,7 @@ import logoInvisalign from '@/images/clients/invisalign.svg'
 
 import dentalImage from '@/images/clinic/xray.jpg'
 import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
-import generalImage from '@/images/clinic/dentists.jpg'
+import generalImage from '@/images/clinic/general-medicine.jpg'
 
 const clients = [
   ['Invisalign', logoInvisalign],

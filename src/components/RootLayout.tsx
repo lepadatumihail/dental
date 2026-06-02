@@ -68,6 +68,10 @@ function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function PrismaLogo({ size = 'md' }: { size?: 'sm' | 'md' }) {
   const dims = size === 'sm' ? { w: 110, h: 60 } : { w: 160, h: 80 }
+  // Shrink the header logo on mobile so the navbar isn't so thick;
+  // restore intrinsic size on sm+ and for the watermark (md).
+  const className =
+    size === 'sm' ? 'h-8 w-auto sm:h-auto' : 'h-auto w-auto'
   return (
     <Image
       src={LogoDark}
@@ -75,7 +79,7 @@ function PrismaLogo({ size = 'md' }: { size?: 'sm' | 'md' }) {
       width={dims.w}
       height={dims.h}
       priority
-      className="h-auto w-auto"
+      className={className}
     />
   )
 }
@@ -279,7 +283,7 @@ function Header({ open, onToggle }: { open: boolean; onToggle: () => void }) {
   }
 
   return (
-    <Container className="py-4 sm:py-4">
+    <Container className="py-3 sm:py-4">
       <div className="flex items-center justify-between gap-x-6">
         <Link
           href="/"

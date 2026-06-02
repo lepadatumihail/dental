@@ -1,4 +1,4 @@
-// Bookable services for Prisma Clinic Marbella (agenda tenant tenant-1779314436891).
+// Bookable services for Prisma Clinic Marbella (agenda tenant tenant-1780397603138).
 //
 // Each entry is one agenda "event-type". `key` maps to i18n strings under
 // `booking.services.<key>` (name + description). The wizard shows a service
@@ -10,9 +10,9 @@ export interface BookableEventType {
 }
 
 export const EVENT_TYPES: readonly BookableEventType[] = [
-  { id: 'evt-1779314660755-x04m67p', key: 'dental' },
-  { id: 'evt-1779314681830-g4u8ins', key: 'aesthetics' },
-  { id: 'evt-1779314699830-j95zf6g', key: 'medical' },
+  { id: 'evt-1780397835146-x72x5x5', key: 'dental' },
+  { id: 'evt-1780397865184-0uanogf', key: 'aesthetics' },
+  { id: 'evt-1780397850300-m056dna', key: 'medical' },
 ]
 
 export function findEventType(id: string): BookableEventType | undefined {

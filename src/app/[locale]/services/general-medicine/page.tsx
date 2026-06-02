@@ -13,7 +13,7 @@ import {
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { createCanonicalMetadata } from '@/lib/canonical'
 
-import heroImage from '@/images/clinic/dentists.jpg'
+import heroImage from '@/images/clinic/general-medicine.jpg'
 // TODO: replace with a dedicated medical-team photo when provided
 import teamImage from '@/images/clinic/clinic1.jpg'
 
