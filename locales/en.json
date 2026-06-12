@@ -126,7 +126,7 @@
     "about": {
       "eyebrow": "About the Clinic",
       "title": "Prisma Clinic",
-      "body": "Prisma Clinic Marbella is a modern dental and aesthetics clinic located in the heart of Marbella, dedicated to providing high-quality care in a serene, luxurious environment. We specialize in comprehensive dental services—from routine checkups and cosmetic dentistry to advanced treatments. Our aesthetics division offers personalized non-surgical treatments such as dermal fillers and Botox to enhance natural beauty with subtle, effective results. For your peace of mind, we also provide 24/7 emergency dental care, ensuring expert support is always available when you need it most. At Prisma, your comfort, confidence, and well-being come first."
+      "body": "Prisma Clinic Marbella is a modern dental and aesthetics clinic located in the heart of Marbella, dedicated to providing high-quality care in a serene, luxurious environment. We specialize in comprehensive dental services—from routine checkups and cosmetic dentistry to advanced treatments. Our aesthetics division offers personalized non-surgical treatments such as dermal fillers and neuromodulators to enhance natural beauty with subtle, effective results. For your peace of mind, we also provide 24/7 emergency dental care, ensuring expert support is always available when you need it most. At Prisma, your comfort, confidence, and well-being come first."
     },
     "testimonialsGrid": {
       "title": "What people are saying about us",
@@ -135,7 +135,7 @@
       "items": [
         {
           "name": "Ellinor Myhren",
-          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and Botox. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
+          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and neuromodulator treatments. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
         },
         {
           "name": "Shahin gh",
@@ -234,7 +234,7 @@
         },
         "aesthetics": {
           "title": "Aesthetic & Anti-Aging",
-          "description": "Non-surgical rejuvenation, dermal fillers, Botox, PRP, and longevity protocols."
+          "description": "Non-surgical rejuvenation, dermal fillers, neuromodulators, PRP, and longevity protocols."
         },
         "general": {
           "title": "General Medicine",
@@ -370,7 +370,7 @@
         "client": "Aesthetics",
         "service": "Beauty and Rejuvenation",
         "summary": [
-          "Our aesthetics department specializes in non-surgical rejuvenation treatments, including Botox, dermal fillers, lip enhancement, and other facial aesthetic procedures.",
+          "Our aesthetics department specializes in non-surgical rejuvenation treatments, including neuromodulators, dermal fillers, lip enhancement, and other facial aesthetic procedures.",
           "Our qualified specialists create natural-looking results that enhance your features while maintaining facial harmony, helping you achieve a rejuvenated and youthful appearance."
         ],
         "testimonial": {
@@ -385,7 +385,7 @@
         },
         "serviceNavigation": {
           "category1": "Facial Harmonization",
-          "category2": "Botox",
+          "category2": "Neuromodulator",
           "category3": "Anti Aging & Health",
           "fullList": "Full List ↓"
         },
@@ -410,8 +410,8 @@
           ]
         },
         "category2": {
-          "headline": "Botox",
-          "description": "Experience the power of Botox treatments for wrinkle reduction, facial lifting, and rejuvenation. Our 5-point lifting technique targets key areas for a natural, youthful lift, while general Botox treatments smooth fine lines and prevent future wrinkles.",
+          "headline": "Neuromodulator",
+          "description": "Experience the power of neuromodulator treatments for wrinkle reduction, facial lifting, and rejuvenation. Our 5-point lifting technique targets key areas for a natural, youthful lift, while general neuromodulator treatments smooth fine lines and prevent future wrinkles.",
           "bookNow": "BOOK NOW",
           "moreInfo": "More info",
           "features": [
@@ -420,12 +420,12 @@
               "description": "Advanced non-surgical lifting technique targeting five strategic points on the face. Achieve a natural, youthful lift that opens and rejuvenates your appearance without surgery."
             },
             {
-              "title": "General Botox",
-              "description": "Precision Botox injections to smooth wrinkles, fine lines, and expression lines. Effective for forehead, crow's feet, and frown lines with minimal downtime."
+              "title": "General Neuromodulator",
+              "description": "Precision neuromodulator injections to smooth wrinkles, fine lines, and expression lines. Effective for forehead, crow's feet, and frown lines with minimal downtime."
             },
             {
               "title": "Preventive Treatment",
-              "description": "Early Botox treatments can prevent deep wrinkles from forming, helping you maintain youthful-looking skin for longer with regular maintenance."
+              "description": "Early neuromodulator treatments can prevent deep wrinkles from forming, helping you maintain youthful-looking skin for longer with regular maintenance."
             }
           ]
         },
@@ -522,7 +522,7 @@
             "eyebrow": "Our approach",
             "title": "Advanced aesthetic medicine tailored to your goals",
             "subheadline": "World-class surgical expertise and minimally invasive treatments for refreshed, confident results.",
-            "body": "At Prisma Clinic our aesthetic practice combines decades of surgical experience with the latest non-surgical techniques. From hair transplants to fillers, botox and body contouring, we deliver predictable, natural outcomes with a focus on safety, rapid recovery and long-term results. Treatment plans are personalised to your facial proportions and lifestyle so you look like the best version of yourself."
+            "body": "At Prisma Clinic our aesthetic practice combines decades of surgical experience with the latest non-surgical techniques. From hair transplants to fillers, neuromodulators and body contouring, we deliver predictable, natural outcomes with a focus on safety, rapid recovery and long-term results. Treatment plans are personalised to your facial proportions and lifestyle so you look like the best version of yourself."
           },
           "ourServices": {
             "eyebrow": "What we offer",
@@ -804,42 +804,46 @@
       "text": "Contact us today to schedule your consultation and experience premium healthcare at Prisma Clinic Marbella."
     },
     "v2": {
+      "meta": {
+        "title": "Private English Speaking Doctor in Marbella & Puerto Banus | General Medicine",
+        "description": "Looking for an English-speaking private doctor in Marbella or Puerto Banús? Dr. Angelo Termini offers general medicine, minor surgery, urology, and 24/7 urgent care."
+      },
       "hero": {
-        "title": "General Medicine & Health Optimization",
-        "description": "After-hours consultations, urgent evaluations, IV drips and personalised medical guidance in Marbella.",
-        "ctaLabel": "Request an Appointment",
+        "title": "Premium Private Medical Clinic in Marbella & Puerto Banús",
+        "description": "Expert General Medicine, Minor Surgery, and 24/7 Urgent Care for expats and visitors. Led by Dr. Angelo Termini (MD, PhD). Consultations available in English, Swedish, Norwegian, Italian, and Spanish.",
+        "ctaLabel": "Book Your Appointment",
         "imageAlt": "General medicine consultation at Prisma Clinic Marbella"
       },
       "interest": {
-        "eyebrow": "Our approach",
-        "title": "Comprehensive primary and urgent care for you and your family",
-        "subheadline": "Fast, professional assessments and treatments, day or night.",
-        "body": "Prisma Clinic offers accessible general medicine services focused on timely evaluations, evidence-based prescriptions and clear follow-up care. Our team provides thorough assessments for acute issues, chronic condition checks, travel and preventive health advice, and IV therapy for rehydration and recovery. We prioritise rapid access, practical treatment plans and coordinated referrals when specialist care is needed."
+        "eyebrow": "Why choose us",
+        "title": "Premium Care on the Costa del Sol",
+        "subheadline": "30+ years of international experience, 24/7 telemedicine and prescriptions, and a multi-lingual team.",
+        "body": "No language barriers — communicate your symptoms comfortably in your native language. No waiting lists — fast access to a doctor when you need it most. Discreet and private — we guarantee absolute confidentiality in a premium clinic environment. And conveniently located, serving patients in both Marbella and Puerto Banús."
       },
       "ourServices": {
-        "eyebrow": "What we offer",
-        "title": "Our Services",
-        "body": "Clear, evidence-based care across primary, urgent and preventive medicine — with documentation and referrals coordinated for you when specialist input is needed.",
+        "eyebrow": "Our medical services",
+        "title": "Comprehensive Healthcare Services Tailored to You",
+        "body": "From comprehensive check-ups to 24/7 urgent care — expert, discreet medical services in Marbella and Puerto Banús.",
         "ctaLabel": "Talk to Us!",
         "items": [
-          { "title": "After-Hours Consultations", "description": "Evening and weekend appointments and home-visit coordination for when you need care most." },
-          { "title": "Urgent Evaluations", "description": "Same-day clinical assessments for acute issues, with clear next steps and documentation." },
-          { "title": "Prescription Management", "description": "Evidence-based prescriptions and refills with direct communication to your pharmacy." },
-          { "title": "IV Drips & Vitamins", "description": "Hydration, recovery and tailored vitamin infusions delivered in a comfortable setting." },
-          { "title": "Routine Physicals", "description": "Comprehensive checkups for travel, work, lifestyle changes or peace of mind." },
-          { "title": "Chronic Disease Care", "description": "Coordinated, ongoing management of long-term conditions with specialist referrals as needed." }
+          { "title": "General Medicine & Diagnostics", "description": "Comprehensive health check-ups with detailed blood panels (vitamins, minerals, hormones), blood pressure monitoring and ECGs — ideal for early detection and peace of mind — plus fast, professional prescription management and renewals." },
+          { "title": "24/7 Urgent Care & Telemedicine", "description": "An on-call doctor available around the clock for urgent medical needs, 24/7 virtual consultations from the comfort of your home or hotel, and secure digital prescriptions following a medical assessment." },
+          { "title": "Medical Weight Management", "description": "Doctor-supervised weight loss: a personalized, scientifically backed medical program utilizing advanced analogue therapies — with an initial medical consultation, a tailored health plan and ongoing follow-ups for sustainable results." },
+          { "title": "Men's Health & Urology", "description": "Expert diagnosis and treatment for men's health concerns, including prostate examinations, plus discreet, professional surgical interventions for intimate male health conditions." },
+          { "title": "Minor Surgery & Proctology", "description": "Quick, safe removal of moles, warts, lumps and lipomas, the König procedure for recurring ingrown toenails, rectoscopy and specialized hemorrhoid treatment, and professional blepharoplasty (eyelid surgery)." },
+          { "title": "Therapeutic Injections & Aesthetics", "description": "Clinically proven neuromodulator injections to prevent chronic migraines and stop excessive sweating, targeted cortisone injections for joint pain relief, and premium anti-wrinkle injections, dermal fillers and facial peels." }
         ]
       },
       "leadExpert": {
-        "eyebrow": "Our Team",
-        "title": "Our Medical Team",
-        "body": "Prisma Clinic's general medicine team comprises experienced physicians and licensed clinicians committed to timely, evidence-based care. While we are currently hiring a permanent general practitioner, our clinicians follow strict clinical protocols for safe assessments, prescriptions and IV therapies, and work closely with local hospitals and specialists to ensure continuity of care.",
-        "imageAlt": "Prisma Clinic Marbella medical team"
+        "eyebrow": "Meet Your Doctor",
+        "title": "Dr. Angelo Termini, MD, PhD, SGS, SCS",
+        "body": "With over three decades of clinical experience across Italy, Sweden, Norway and Spain, Dr. Angelo Termini is a highly respected specialist in General Surgery, Urology and Aesthetic Medicine. A Doctor of Medicine & Surgery (Siena, Italy) with advanced residencies and fellowships in Urology and Surgery at leading university hospitals in Sweden and Denmark, he also holds advanced aesthetic medicine and surgery training from the Royal College of Surgeons (England) and the European College of Aesthetic Medicine & Surgery (Ireland). From serving as an Emergency Red Cross Doctor in Italy and an ER Trauma Surgeon in Sweden to leading his own private clinics, he has served as Medical Director at top private Scandinavian clinics since 2012. Fluent in English, Swedish, Norwegian, Italian and Spanish, he ensures nothing is lost in translation when it comes to your health.",
+        "imageAlt": "Dr. Angelo Termini — Prisma Clinic Marbella"
       },
       "ribbon": {
-        "title": "Need medical care today?",
-        "subtitle": "Our team is ready to help — book a consultation or message us on WhatsApp.",
-        "ctaLabel": "Book an appointment"
+        "title": "Need a doctor today?",
+        "subtitle": "Fast access with no waiting lists — book a consultation or message us on WhatsApp, with a 24/7 emergency line for urgent needs.",
+        "ctaLabel": "Book Your Appointment"
       }
     }
   },
@@ -1059,14 +1063,14 @@
           ]
         },
         {
-          "title": "Botox & Wrinkle Relaxers",
+          "title": "Neuromodulators & Wrinkle Relaxers",
           "subtitle": "Smoothing & rejuvenation",
           "items": [
-            { "service": "Upper Face Botox", "price": "from 350€" },
-            { "service": "Full Face Botox", "price": "950€" },
+            { "service": "Upper Face Neuromodulator", "price": "from 350€" },
+            { "service": "Full Face Neuromodulator", "price": "950€" },
             { "service": "Bruxism Treatment", "price": "from 400€" },
             { "service": "Nefertiti Neck Lift", "price": "550€" },
-            { "service": "Barbie Botox", "price": "380€" },
+            { "service": "Barbie Neuromodulator", "price": "380€" },
             { "service": "Sweat Treatment", "price": "600€" }
           ]
         },

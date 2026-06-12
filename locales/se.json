@@ -126,7 +126,7 @@
     "about": {
       "eyebrow": "Om kliniken",
       "title": "Prisma Clinic",
-      "body": "Prisma Clinic Marbella är en modern tandvårds- och estetikklinik i hjärtat av Marbella, dedikerad till att leverera vård av högsta kvalitet i en lugn och lyxig miljö. Vi specialiserar oss på heltäckande tandvård — från rutinkontroller och kosmetisk tandvård till avancerade behandlingar. Vår estetikavdelning erbjuder personliga icke-kirurgiska behandlingar som dermala fillers och Botox för att framhäva naturlig skönhet med subtila och effektiva resultat. För din trygghet erbjuder vi även akut tandvård dygnet runt så att expertstöd alltid finns tillgängligt när du behöver det som mest. På Prisma kommer din komfort, ditt självförtroende och ditt välbefinnande alltid först."
+      "body": "Prisma Clinic Marbella är en modern tandvårds- och estetikklinik i hjärtat av Marbella, dedikerad till att leverera vård av högsta kvalitet i en lugn och lyxig miljö. Vi specialiserar oss på heltäckande tandvård — från rutinkontroller och kosmetisk tandvård till avancerade behandlingar. Vår estetikavdelning erbjuder personliga icke-kirurgiska behandlingar som dermala fillers och neuromodulatorer för att framhäva naturlig skönhet med subtila och effektiva resultat. För din trygghet erbjuder vi även akut tandvård dygnet runt så att expertstöd alltid finns tillgängligt när du behöver det som mest. På Prisma kommer din komfort, ditt självförtroende och ditt välbefinnande alltid först."
     },
     "testimonialsGrid": {
       "title": "Vad folk säger om oss",
@@ -135,7 +135,7 @@
       "items": [
         {
           "name": "Ellinor Myhren",
-          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and Botox. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
+          "text": "Excellent service and results! Everything is done with great care and professionalism. I'm a regular client at this amazing clinic. I did my veneers here and keep coming back for my cleanings and neuromodulator treatments. They have two departments, one for dental care and one for aesthetics, both super professional and friendly. Highly recommended!"
         },
         {
           "name": "Shahin gh",
@@ -234,7 +234,7 @@
         },
         "aesthetics": {
           "title": "Estetik och anti-aging",
-          "description": "Icke-kirurgisk förnyelse, dermala fillers, Botox, PRP och längevitetsprotokoll."
+          "description": "Icke-kirurgisk förnyelse, dermala fillers, neuromodulatorer, PRP och längevitetsprotokoll."
         },
         "general": {
           "title": "Allmänmedicin",
@@ -370,7 +370,7 @@
         "client": "Estetik",
         "service": "Skönhet och förnyelse",
         "summary": [
-          "Vårt estetiska avdelning specialiserar sig på icke-kirurgiska förnyelsebehandlingar, inklusive Botox, dermala fillers, läppförstärkning och andra ansiktsestetiska procedurer.",
+          "Vårt estetiska avdelning specialiserar sig på icke-kirurgiska förnyelsebehandlingar, inklusive neuromodulatorer, dermala fillers, läppförstärkning och andra ansiktsestetiska procedurer.",
           "Våra kvalificerade specialister skapar naturliga resultat som förbättrar dina drag samtidigt som de behåller ansiktsharmoni, vilket hjälper dig att uppnå ett förnyat och ungdomligt utseende."
         ],
         "testimonial": {
@@ -410,8 +410,8 @@
           ]
         },
         "category2": {
-          "headline": "Botox",
-          "description": "Upplev kraften i Botox-behandlingar för rynkreduktion, ansiktslyftning och förnyelse. Vår 5-punkts lyftteknik riktar sig mot nyckelområden för en naturlig, ungdomlig lyftning, medan allmänna Botox-behandlingar jämnar ut fina linjer och förhindrar framtida rynkor.",
+          "headline": "Neuromodulator",
+          "description": "Upplev kraften i neuromodulatorbehandlingar för rynkreduktion, ansiktslyftning och förnyelse. Vår 5-punkts lyftteknik riktar sig mot nyckelområden för en naturlig, ungdomlig lyftning, medan allmänna neuromodulatorbehandlingar jämnar ut fina linjer och förhindrar framtida rynkor.",
           "bookNow": "BOKA NU",
           "moreInfo": "Mer information",
           "features": [
@@ -420,12 +420,12 @@
               "description": "Avancerad icke-kirurgisk lyftteknik som riktar sig mot fem strategiska punkter i ansiktet. Uppnå en naturlig, ungdomlig lyftning som öppnar och förnyar ditt utseende utan kirurgi."
             },
             {
-              "title": "Allmän Botox",
-              "description": "Precisionsinjektioner av Botox för att jämna ut rynkor, fina linjer och mimiklinjer. Effektivt för pannan, fågelögon och rynkor mellan ögonbrynen med minimal återhämtningstid."
+              "title": "Allmän neuromodulator",
+              "description": "Precisionsinjektioner av neuromodulator för att jämna ut rynkor, fina linjer och mimiklinjer. Effektivt för pannan, fågelögon och rynkor mellan ögonbrynen med minimal återhämtningstid."
             },
             {
               "title": "Förebyggande Behandling",
-              "description": "Tidiga Botox-behandlingar kan förhindra att djupa rynkor bildas, vilket hjälper dig att behålla ungdomlig hud längre med regelbunden underhåll."
+              "description": "Tidiga neuromodulatorbehandlingar kan förhindra att djupa rynkor bildas, vilket hjälper dig att behålla ungdomlig hud längre med regelbunden underhåll."
             }
           ]
         },
@@ -525,7 +525,7 @@
             "eyebrow": "Vårt arbetssätt",
             "title": "Avancerad estetisk medicin anpassad efter dina mål",
             "subheadline": "Världsledande kirurgisk expertis och minimalt invasiva behandlingar för fräscha, självsäkra resultat.",
-            "body": "På Prisma Clinic kombinerar vår estetiska verksamhet flera decenniers kirurgisk erfarenhet med de senaste icke-kirurgiska teknikerna. Från hårtransplantationer till fillers, botox och kroppsformning levererar vi förutsägbara, naturliga resultat med fokus på säkerhet, snabb återhämtning och hållbara effekter. Behandlingsplanerna anpassas efter dina ansiktsproportioner och din livsstil så att du ser ut som den bästa versionen av dig själv."
+            "body": "På Prisma Clinic kombinerar vår estetiska verksamhet flera decenniers kirurgisk erfarenhet med de senaste icke-kirurgiska teknikerna. Från hårtransplantationer till fillers, neuromodulatorer och kroppsformning levererar vi förutsägbara, naturliga resultat med fokus på säkerhet, snabb återhämtning och hållbara effekter. Behandlingsplanerna anpassas efter dina ansiktsproportioner och din livsstil så att du ser ut som den bästa versionen av dig själv."
           },
           "ourServices": {
             "eyebrow": "Det här erbjuder vi",
@@ -807,42 +807,46 @@
       "text": "Kontakta oss idag för att boka din konsultation och upplev förstklassig vård på Prisma Clinic Marbella."
     },
     "v2": {
+      "meta": {
+        "title": "Privat svensktalande läkare i Marbella & Puerto Banús | Allmänmedicin",
+        "description": "Söker du en svensktalande privatläkare i Marbella eller Puerto Banús? Dr Angelo Termini erbjuder allmänmedicin, mindre kirurgi, urologi och akutvård dygnet runt."
+      },
       "hero": {
-        "title": "Allmänmedicin och hälsooptimering",
-        "description": "Kvällsöppna konsultationer, akuta bedömningar, dropp och personlig medicinsk rådgivning i Marbella.",
-        "ctaLabel": "Boka tid",
+        "title": "Premium privat läkarklinik i Marbella & Puerto Banús",
+        "description": "Expertis inom allmänmedicin, mindre kirurgi och akutvård dygnet runt för utlandsboende och besökare. Under ledning av Dr Angelo Termini (MD, PhD). Konsultationer på engelska, svenska, norska, italienska och spanska.",
+        "ctaLabel": "Boka din tid",
         "imageAlt": "Allmänmedicinsk konsultation på Prisma Clinic Marbella"
       },
       "interest": {
-        "eyebrow": "Vårt arbetssätt",
-        "title": "Heltäckande primär- och akutvård för dig och din familj",
-        "subheadline": "Snabba och professionella bedömningar och behandlingar, dag eller natt.",
-        "body": "Prisma Clinic erbjuder lättillgängliga allmänmedicinska tjänster med fokus på snabba bedömningar, evidensbaserade recept och tydlig uppföljning. Vårt team gör grundliga utvärderingar för akuta besvär, kontroller av kroniska sjukdomar, rese- och hälsorådgivning samt dropp för rehydrering och återhämtning. Vi prioriterar snabb tillgänglighet, praktiska behandlingsplaner och samordnade remisser när specialistvård behövs."
+        "eyebrow": "Varför välja oss",
+        "title": "Förstklassig vård på Costa del Sol",
+        "subheadline": "Över 30 års internationell erfarenhet, telemedicin och recept dygnet runt samt ett flerspråkigt team.",
+        "body": "Inga språkbarriärer — beskriv dina symtom bekvämt på ditt modersmål. Inga väntelistor — snabb tillgång till läkare när du behöver det som mest. Diskret och privat — vi garanterar fullständig konfidentialitet i en förstklassig klinikmiljö. Och bekvämt beläget — vi tar emot patienter i både Marbella och Puerto Banús."
       },
       "ourServices": {
-        "eyebrow": "Det här erbjuder vi",
-        "title": "Våra tjänster",
-        "body": "Tydlig och evidensbaserad vård inom primär-, akut- och förebyggande medicin — med dokumentation och remisser samordnade åt dig när specialistinsats behövs.",
+        "eyebrow": "Våra medicinska tjänster",
+        "title": "Heltäckande vårdtjänster anpassade efter dig",
+        "body": "Från kompletta hälsokontroller till akutvård dygnet runt — expertvård med diskretion i Marbella och Puerto Banús.",
         "ctaLabel": "Prata med oss!",
         "items": [
-          { "title": "Kvällsöppna konsultationer", "description": "Tider på kvällar och helger samt samordning av hembesök när du behöver vård som mest." },
-          { "title": "Akuta bedömningar", "description": "Kliniska bedömningar samma dag för akuta besvär, med tydliga nästa steg och dokumentation." },
-          { "title": "Recepthantering", "description": "Evidensbaserade recept och förnyelser med direktkommunikation till ditt apotek." },
-          { "title": "Dropp och vitaminer", "description": "Vätske-, återhämtnings- och vitamininfusioner anpassade efter dig i en bekväm miljö." },
-          { "title": "Rutinkontroller", "description": "Heltäckande hälsokontroller för resor, jobb, livsstilsförändringar eller sinnesro." },
-          { "title": "Vård av kroniska sjukdomar", "description": "Samordnad och löpande vård av långvariga tillstånd med remisser till specialister vid behov." }
+          { "title": "Allmänmedicin och diagnostik", "description": "Kompletta hälsokontroller med detaljerade blodpaneler (vitaminer, mineraler, hormoner), blodtrycksmätning och EKG — perfekt för tidig upptäckt och sinnesro — samt snabb och professionell hantering och förnyelse av recept." },
+          { "title": "Akutvård och telemedicin dygnet runt", "description": "Jourläkare tillgänglig dygnet runt för akuta behov, virtuella konsultationer 24/7 bekvämt från ditt hem eller hotell och säkra digitala recept efter medicinsk bedömning." },
+          { "title": "Medicinsk viktkontroll", "description": "Läkarövervakad viktminskning: ett personligt, vetenskapligt underbyggt medicinskt program med avancerade analogterapier — inledande läkarkonsultation, skräddarsydd hälsoplan och löpande uppföljningar för hållbara resultat." },
+          { "title": "Mäns hälsa och urologi", "description": "Expertdiagnos och behandling av manliga hälsobesvär, inklusive prostataundersökningar, samt diskreta, professionella kirurgiska ingrepp vid intima manliga tillstånd." },
+          { "title": "Mindre kirurgi och proktologi", "description": "Snabb och säker borttagning av födelsemärken, vårtor, knölar och lipom, König-ingrepp mot återkommande nageltrång, rektoskopi och specialiserad behandling av hemorrojder samt professionell blefaroplastik (ögonlockskirurgi)." },
+          { "title": "Terapeutiska injektioner och estetik", "description": "Kliniskt beprövade neuromodulatorinjektioner som förebygger kronisk migrän och stoppar överdriven svettning, riktade kortisoninjektioner mot ledvärk samt förstklassiga rynkbehandlingar, fillers och ansiktspeelingar." }
         ]
       },
       "leadExpert": {
-        "eyebrow": "Vårt team",
-        "title": "Vårt medicinska team",
-        "body": "Prisma Clinics allmänmedicinska team består av erfarna läkare och legitimerade kliniker som är engagerade i snabb, evidensbaserad vård. Medan vi rekryterar en permanent allmänläkare följer våra kliniker strikta protokoll för säkra bedömningar, recept och dropp och samarbetar nära med lokala sjukhus och specialister för att säkerställa kontinuitet i vården.",
-        "imageAlt": "Prisma Clinic Marbellas medicinska team"
+        "eyebrow": "Möt din läkare",
+        "title": "Dr Angelo Termini, MD, PhD, SGS, SCS",
+        "body": "Med över tre decenniers klinisk erfarenhet från Italien, Sverige, Norge och Spanien är Dr Angelo Termini en högt respekterad specialist inom allmänkirurgi, urologi och estetisk medicin. Han är utbildad läkare i medicin och kirurgi (Siena, Italien) med avancerade specialistutbildningar inom urologi och kirurgi vid ledande universitetssjukhus i Sverige och Danmark, samt vidareutbildad inom estetisk medicin och kirurgi vid Royal College of Surgeons (England) och European College of Aesthetic Medicine & Surgery (Irland). Från att ha arbetat som akutläkare för Röda Korset i Italien och traumakirurg på akuten i Sverige till att driva egna privatkliniker — sedan 2012 är han medicinsk chef vid ledande privata skandinaviska kliniker. Han talar flytande engelska, svenska, norska, italienska och spanska, så att inget går förlorat i översättningen när det gäller din hälsa.",
+        "imageAlt": "Dr Angelo Termini — Prisma Clinic Marbella"
       },
       "ribbon": {
-        "title": "Behöver du vård idag?",
-        "subtitle": "Vårt team är redo att hjälpa dig — boka en konsultation eller skriv till oss på WhatsApp.",
-        "ctaLabel": "Boka tid"
+        "title": "Behöver du en läkare idag?",
+        "subtitle": "Snabb tillgång utan väntelistor — boka en konsultation eller skriv till oss på WhatsApp, med akutlinje dygnet runt för brådskande behov.",
+        "ctaLabel": "Boka din tid"
       }
     }
   },
@@ -1062,14 +1066,14 @@
           ]
         },
         {
-          "title": "Botox & rynkbehandlingar",
+          "title": "Neuromodulatorer & rynkbehandlingar",
           "subtitle": "Utjämning & föryngring",
           "items": [
-            { "service": "Botox övre ansiktet", "price": "från 350€" },
-            { "service": "Botox hela ansiktet", "price": "950€" },
+            { "service": "Neuromodulator övre ansiktet", "price": "från 350€" },
+            { "service": "Neuromodulator hela ansiktet", "price": "950€" },
             { "service": "Bruxismbehandling", "price": "från 400€" },
             { "service": "Nefertiti halslyft", "price": "550€" },
-            { "service": "Barbie Botox", "price": "380€" },
+            { "service": "Barbie-neuromodulator", "price": "380€" },
             { "service": "Svettbehandling", "price": "600€" }
           ]
         },

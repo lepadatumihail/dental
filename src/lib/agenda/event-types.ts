@@ -19,6 +19,11 @@ export function findEventType(id: string): BookableEventType | undefined {
   return EVENT_TYPES.find((e) => e.id === id)
 }
 
+/** Look up an event type by its semantic key (e.g. 'dental', 'aesthetics'). */
+export function findEventTypeByKey(key: string): BookableEventType | undefined {
+  return EVENT_TYPES.find((e) => e.key === key)
+}
+
 export function isKnownEventType(id: string): boolean {
   return EVENT_TYPES.some((e) => e.id === id)
 }

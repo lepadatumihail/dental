@@ -1,6 +1,15 @@
 'use client'
 
-import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react'
+
+import { findEventTypeByKey } from '@/lib/agenda/event-types'
 
 import { BookingModal } from './BookingModal'
 
@@ -44,6 +53,23 @@ export function BookingModalProvider({ children }: { children: ReactNode }) {
     }),
     [isOpen, initialEventTypeId],
   )
+
+  // Deep link: a WhatsApp reply links here with ?book=<service> to open the
+  // wizard straight on the date-picker for that service ("all" → service
+  // picker). Runs once on mount.
+  useEffect(() => {
+    const book = new URLSearchParams(window.location.search).get('book')
+    if (!book) return
+    if (book === 'all') {
+      setIsOpen(true)
+      return
+    }
+    const evt = findEventTypeByKey(book)
+    if (evt) {
+      setInitialEventTypeId(evt.id)
+      setIsOpen(true)
+    }
+  }, [])
 
   return (
     <BookingModalContext.Provider value={value}>

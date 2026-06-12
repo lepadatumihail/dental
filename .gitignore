@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# WhatsApp campaign PII (recipient lists, opt-outs) — never commit
+.data/
+.env.local
+
+# local tool state
+.claude/
+.cursor/

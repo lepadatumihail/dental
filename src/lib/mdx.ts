@@ -41,9 +41,9 @@ export function loadArticles(): Array<MDXEntry<Article>> {
   const articles: Array<MDXEntry<Article>> = [
     {
       date: '2025-04-06',
-      title: 'Debunking Common Botox Myths: What You Need to Know in 2025',
+      title: 'Debunking Common Neuromodulator Myths: What You Need to Know in 2025',
       description:
-        "Let's explore the most persistent misconceptions about Botox treatments and provide evidence-based facts that can help you make informed decisions about aesthetic procedures.",
+        "Let's explore the most persistent misconceptions about neuromodulator treatments and provide evidence-based facts that can help you make informed decisions about aesthetic procedures.",
       author: {
         name: 'Chelsea Hagon',
         role: 'Aesthetic Specialist',
@@ -51,9 +51,9 @@ export function loadArticles(): Array<MDXEntry<Article>> {
       },
       metadata: {
         date: '2025-04-06',
-        title: 'Debunking Common Botox Myths: What You Need to Know in 2025',
+        title: 'Debunking Common Neuromodulator Myths: What You Need to Know in 2025',
         description:
-          "Let's explore the most persistent misconceptions about Botox treatments and provide evidence-based facts that can help you make informed decisions about aesthetic procedures.",
+          "Let's explore the most persistent misconceptions about neuromodulator treatments and provide evidence-based facts that can help you make informed decisions about aesthetic procedures.",
         author: {
           name: 'Chelsea Hagon',
           role: 'Aesthetic Specialist',

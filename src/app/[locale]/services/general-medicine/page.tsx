@@ -13,9 +13,8 @@ import {
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { createCanonicalMetadata } from '@/lib/canonical'
 
+import doctorImage from '@/images/clinic/angelo-termini.jpg'
 import heroImage from '@/images/clinic/general-medicine.jpg'
-// TODO: replace with a dedicated medical-team photo when provided
-import teamImage from '@/images/clinic/clinic1.jpg'
 
 const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
@@ -34,8 +33,8 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'generalMedicine.v2' })
 
   return {
-    title: `${t('hero.title')} — Prisma Clinic Marbella`,
-    description: t('hero.description'),
+    title: { absolute: t('meta.title') },
+    description: t('meta.description'),
     ...createCanonicalMetadata('services/general-medicine', locale),
   }
 }
@@ -70,7 +69,7 @@ export default async function GeneralMedicineServices() {
       />
 
       <LeadExpert
-        image={teamImage}
+        image={doctorImage}
         imageAlt={t('leadExpert.imageAlt')}
         eyebrow={t('leadExpert.eyebrow')}
         title={t('leadExpert.title')}
