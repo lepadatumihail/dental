@@ -329,7 +329,8 @@
           "label": "Treatments",
           "dental": "Dental",
           "aesthetic": "Aesthetic",
-          "medical": "Medical"
+          "medical": "Medical",
+          "massage": "Massage"
         },
         "theClinic": "The Clinic",
         "ourPrices": "Our Prices",
@@ -845,6 +846,59 @@
         "subtitle": "Fast access with no waiting lists — book a consultation or message us on WhatsApp, with a 24/7 emergency line for urgent needs.",
         "ctaLabel": "Book Your Appointment"
       }
+    }
+  },
+  "massageTherapy": {
+    "v2": {
+      "meta": {
+        "title": "Premium Therapeutical Massage in Marbella & Puerto Banús | Prisma Clinic",
+        "description": "Restore your body's natural balance with Yumeiho Therapeutical Massage at Prisma Clinic. Relieve back tension, improve posture, and release joint blockages. Book today!"
+      },
+      "hero": {
+        "title": "Restore Your Body's Natural Balance with Yumeiho Therapeutical Massage",
+        "description": "Exclusive to Prisma Clinic in Marbella & Puerto Banús. Experience a unique Japanese technique that combines deep tissue massage, stretching, and postural support to release years of tension.",
+        "ctaLabel": "Book Your Session Today",
+        "imageAlt": "Yumeiho therapeutical massage session at Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Therapeutical massage",
+        "title": "Are you living with constant tension, poor posture, or joint stiffness?",
+        "subheadline": "Over 20 years of expertise and an exclusive Japanese method — in Marbella & Puerto Banús.",
+        "body": "Modern life takes a toll on our bodies. Whether it's from sitting at a desk, playing golf, or simply the stress of daily life, muscular imbalances can lead to persistent discomfort. At Prisma Clinic, we offer an exclusive Therapeutical Massage based on the principles of Yumeiho — a renowned Japanese method designed to address the root cause of physical tension rather than just treating the symptoms."
+      },
+      "method": {
+        "eyebrow": "The method",
+        "title": "Discover Yumeiho: The Art of Japanese Therapeutical Massage",
+        "subheadline": "Developed by Saionji Masayuki, Yumeiho beautifully combines the wisdom of 4,000 years of Far Eastern practices with modern anatomical knowledge.",
+        "body": "This signature therapeutical massage integrates a dynamic 100-pressure therapy system with Shiatsu techniques for deep muscle relief, connective tissue massage to release tight fascia, lymphatic drainage to promote detoxification, and reflexology with targeted stretching to restore mobility. The primary aim is to promote complete muscular relaxation by supporting the natural alignment of the pelvis, spine and joints. By gently addressing postural imbalances, this treatment releases deep-seated physical blockages — many of which may have been present for years — leaving you with a profound feeling of lightness, mobility and deep relaxation.",
+        "videoAlt": "Yumeiho therapeutical massage demonstration at Prisma Clinic"
+      },
+      "benefits": {
+        "eyebrow": "Benefits",
+        "title": "Benefits of Our Therapeutical Massage",
+        "body": "Our Yumeiho-based therapeutical massage is highly sought after by patients in Marbella and Puerto Banús looking for effective, non-invasive relief and preventative healthcare. This therapy is highly effective in helping to manage and alleviate:",
+        "ctaLabel": "Secure Your Appointment",
+        "items": [
+          { "title": "Postural Imbalances", "description": "Supports the management of scoliosis-related tension and general poor posture." },
+          { "title": "Asymmetries", "description": "Helps address feelings of unevenness, such as perceived leg length differences and foot angle misalignment." },
+          { "title": "Back & Neck Tension", "description": "Releases stiffness in the lower back, shoulders, and neck." },
+          { "title": "Joint Discomfort", "description": "Improves natural mobility in the hips, knees, and shoulders." },
+          { "title": "Sciatic & Nerve Tension", "description": "Relieves the muscular pressure that often exacerbates sciatic discomfort." },
+          { "title": "Muscle Fatigue & Stress", "description": "Dissolves physical blockages, promoting a sense of whole-body wellness and energy flow." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "A master of the craft",
+        "title": "Behrouz Rajabi",
+        "body": "At Prisma Clinic, you are in the hands of a true expert. Behrouz Rajabi is a specialist with over 20 years of international experience and the official representative of the Japanese Yumeiho method for Germany since 2009. Founder of the Institute for Japanese Osteopathy in Germany (2015) and owner of the patent for Japanese osteopathy, he began his Yumeiho training in 2004. Originally trained as a Mechanical Engineer (Diplom, Hamburg 1995), Behrouz brings an engineer's deep understanding of structure, balance, and alignment to the human body, later expanding his medical knowledge at the Amara Alternative Medicine School (2010–2012). Through his extensive practice across Tehran and Hamburg, and his ongoing work hosting professional seminars, he brings a world-class level of therapeutic touch to Marbella.",
+        "imageAlt": "Behrouz Rajabi — Yumeiho specialist at Prisma Clinic Marbella"
+      },
+      "ribbon": {
+        "title": "Ready to release years of tension?",
+        "subtitle": "Join the hundreds of clients who have discovered the transformative feeling of lightness and balance through Yumeiho Therapeutical Massage.",
+        "ctaLabel": "Book Your Session Today"
+      },
+      "disclaimer": "Disclaimer: The Yumeiho Therapeutical Massage offered at Prisma Clinic is a holistic wellness and therapeutic massage service designed to promote relaxation, relieve muscle tension, and support postural balance. It is not intended to replace professional medical advice, diagnosis, or the treatment of severe medical conditions or diseases. If you have a severe medical condition, please consult with your physician prior to booking."
     }
   },
   "cookieBanner": {

@@ -22,7 +22,7 @@ type NavItemKey =
   | 'emergencies'
   | 'contact'
 
-type SubItemKey = 'dental' | 'aesthetic' | 'medical'
+type SubItemKey = 'dental' | 'aesthetic' | 'medical' | 'massage'
 
 const NAV_ITEMS: ReadonlyArray<{
   key: NavItemKey
@@ -36,6 +36,7 @@ const NAV_ITEMS: ReadonlyArray<{
       { key: 'dental', href: '/services/dental' },
       { key: 'aesthetic', href: '/services/aesthetics' },
       { key: 'medical', href: '/services/general-medicine' },
+      { key: 'massage', href: '/services/massage-therapy' },
     ],
   },
   { key: 'theClinic', href: '/about' },

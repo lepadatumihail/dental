@@ -15,6 +15,7 @@ const ROUTES = [
   '/services/dental',
   '/services/emergency',
   '/services/general-medicine',
+  '/services/massage-therapy',
   '/blog',
   '/blog/top-3-innovations-transforming-dental-patient-care',
   '/blog/a-short-guide-to-component-naming',

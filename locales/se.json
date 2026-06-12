@@ -329,7 +329,8 @@
           "label": "Behandlingar",
           "dental": "Tandvård",
           "aesthetic": "Estetik",
-          "medical": "Medicin"
+          "medical": "Medicin",
+          "massage": "Massage"
         },
         "theClinic": "Kliniken",
         "ourPrices": "Priser",
@@ -848,6 +849,59 @@
         "subtitle": "Snabb tillgång utan väntelistor — boka en konsultation eller skriv till oss på WhatsApp, med akutlinje dygnet runt för brådskande behov.",
         "ctaLabel": "Boka din tid"
       }
+    }
+  },
+  "massageTherapy": {
+    "v2": {
+      "meta": {
+        "title": "Förstklassig terapeutisk massage i Marbella & Puerto Banús | Prisma Clinic",
+        "description": "Återställ kroppens naturliga balans med terapeutisk Yumeiho-massage på Prisma Clinic. Lindra ryggspänningar, förbättra hållningen och lös upp ledblockeringar. Boka idag!"
+      },
+      "hero": {
+        "title": "Återställ kroppens naturliga balans med terapeutisk Yumeiho-massage",
+        "description": "Exklusivt hos Prisma Clinic i Marbella & Puerto Banús. Upplev en unik japansk teknik som kombinerar djupgående massage, stretching och hållningsstöd för att lösa upp år av spänningar.",
+        "ctaLabel": "Boka din behandling idag",
+        "imageAlt": "Terapeutisk Yumeiho-massage på Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Terapeutisk massage",
+        "title": "Lever du med ständiga spänningar, dålig hållning eller stela leder?",
+        "subheadline": "Över 20 års erfarenhet och en exklusiv japansk metod — i Marbella & Puerto Banús.",
+        "body": "Det moderna livet sliter på våra kroppar. Oavsett om det beror på skrivbordsarbete, golf eller vardagens stress kan muskulära obalanser leda till ihållande besvär. På Prisma Clinic erbjuder vi en exklusiv terapeutisk massage baserad på principerna i Yumeiho — en erkänd japansk metod utformad för att åtgärda grundorsaken till fysiska spänningar i stället för att bara behandla symtomen."
+      },
+      "method": {
+        "eyebrow": "Metoden",
+        "title": "Upptäck Yumeiho: den japanska terapeutiska massagens konst",
+        "subheadline": "Yumeiho utvecklades av Saionji Masayuki och förenar visdomen från 4 000 år av österländska traditioner med modern anatomisk kunskap.",
+        "body": "Denna signaturmassage integrerar ett dynamiskt 100-tryckssystem med shiatsutekniker för djupgående muskelavslappning, bindvävsmassage som löser upp spänd fascia, lymfdränage som främjar utrensning samt zonterapi och riktad stretching som återställer rörligheten. Det främsta målet är fullständig muskulär avslappning genom att stödja bäckenets, ryggradens och ledernas naturliga position. Genom att varsamt åtgärda hållningsobalanser löser behandlingen upp djupt rotade fysiska blockeringar — många som kan ha funnits i åratal — och lämnar dig med en djup känsla av lätthet, rörlighet och avslappning.",
+        "videoAlt": "Demonstration av terapeutisk Yumeiho-massage på Prisma Clinic"
+      },
+      "benefits": {
+        "eyebrow": "Fördelar",
+        "title": "Fördelar med vår terapeutiska massage",
+        "body": "Vår Yumeiho-baserade terapeutiska massage är mycket eftertraktad bland patienter i Marbella och Puerto Banús som söker effektiv, icke-invasiv lindring och förebyggande hälsovård. Terapin är mycket effektiv för att hantera och lindra:",
+        "ctaLabel": "Säkra din tid",
+        "items": [
+          { "title": "Hållningsobalanser", "description": "Stödjer hanteringen av skoliosrelaterade spänningar och allmänt dålig hållning." },
+          { "title": "Asymmetrier", "description": "Hjälper mot känslor av ojämnhet, som upplevda skillnader i benlängd och felställda fötter." },
+          { "title": "Spänningar i rygg och nacke", "description": "Löser upp stelhet i ländrygg, axlar och nacke." },
+          { "title": "Ledbesvär", "description": "Förbättrar den naturliga rörligheten i höfter, knän och axlar." },
+          { "title": "Ischias- och nervspänningar", "description": "Lindrar det muskulära tryck som ofta förvärrar ischiasbesvär." },
+          { "title": "Muskeltrötthet och stress", "description": "Löser upp fysiska blockeringar och främjar välbefinnande och energiflöde i hela kroppen." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "En mästare på sitt hantverk",
+        "title": "Behrouz Rajabi",
+        "body": "På Prisma Clinic är du i händerna på en verklig expert. Behrouz Rajabi är specialist med över 20 års internationell erfarenhet och officiell representant för den japanska Yumeiho-metoden i Tyskland sedan 2009. Han grundade Institutet för japansk osteopati i Tyskland (2015), innehar patentet för japansk osteopati och började sin Yumeiho-utbildning 2004. Med en bakgrund som maskiningenjör (Diplom, Hamburg 1995) tar Behrouz med sig en ingenjörs djupa förståelse för struktur, balans och linjering till människokroppen, och han breddade senare sina medicinska kunskaper vid Amara-skolan för alternativmedicin (2010–2012). Genom sin omfattande praktik i Teheran och Hamburg och sitt fortlöpande arbete med professionella seminarier tar han ett terapeutiskt hantverk i världsklass till Marbella.",
+        "imageAlt": "Behrouz Rajabi — Yumeiho-specialist på Prisma Clinic Marbella"
+      },
+      "ribbon": {
+        "title": "Redo att släppa år av spänningar?",
+        "subtitle": "Gör som hundratals klienter och upptäck den omvälvande känslan av lätthet och balans med terapeutisk Yumeiho-massage.",
+        "ctaLabel": "Boka din behandling idag"
+      },
+      "disclaimer": "Ansvarsfriskrivning: Den terapeutiska Yumeiho-massage som erbjuds på Prisma Clinic är en holistisk friskvårds- och massagebehandling som främjar avslappning, lindrar muskelspänningar och stödjer hållningsbalansen. Den är inte avsedd att ersätta professionell medicinsk rådgivning, diagnos eller behandling av allvarliga medicinska tillstånd eller sjukdomar. Har du ett allvarligt medicinskt tillstånd, rådgör med din läkare innan du bokar."
     }
   },
   "cookieBanner": {

@@ -329,7 +329,8 @@
           "label": "Tratamientos",
           "dental": "Dental",
           "aesthetic": "Estética",
-          "medical": "Medicina"
+          "medical": "Medicina",
+          "massage": "Masaje"
         },
         "theClinic": "La Clínica",
         "ourPrices": "Precios",
@@ -848,6 +849,59 @@
         "subtitle": "Acceso rápido y sin listas de espera: reserva una consulta o escríbenos por WhatsApp, con línea de urgencias 24/7 para casos urgentes.",
         "ctaLabel": "Reserva tu cita"
       }
+    }
+  },
+  "massageTherapy": {
+    "v2": {
+      "meta": {
+        "title": "Masaje terapéutico premium en Marbella y Puerto Banús | Prisma Clinic",
+        "description": "Recupera el equilibrio natural de tu cuerpo con el masaje terapéutico Yumeiho en Prisma Clinic. Alivia la tensión de espalda, mejora la postura y libera bloqueos articulares. ¡Reserva hoy!"
+      },
+      "hero": {
+        "title": "Recupera el equilibrio natural de tu cuerpo con el masaje terapéutico Yumeiho",
+        "description": "Exclusivo de Prisma Clinic en Marbella y Puerto Banús. Descubre una técnica japonesa única que combina masaje de tejido profundo, estiramientos y apoyo postural para liberar años de tensión.",
+        "ctaLabel": "Reserva tu sesión hoy",
+        "imageAlt": "Sesión de masaje terapéutico Yumeiho en Prisma Clinic Marbella"
+      },
+      "interest": {
+        "eyebrow": "Masaje terapéutico",
+        "title": "¿Vives con tensión constante, mala postura o rigidez articular?",
+        "subheadline": "Más de 20 años de experiencia y un método japonés exclusivo, en Marbella y Puerto Banús.",
+        "body": "La vida moderna pasa factura a nuestro cuerpo. Ya sea por trabajar sentado frente al escritorio, jugar al golf o simplemente por el estrés del día a día, los desequilibrios musculares pueden provocar molestias persistentes. En Prisma Clinic ofrecemos un masaje terapéutico exclusivo basado en los principios del Yumeiho, un reconocido método japonés diseñado para abordar la causa raíz de la tensión física en lugar de tratar solo los síntomas."
+      },
+      "method": {
+        "eyebrow": "El método",
+        "title": "Descubre Yumeiho: el arte del masaje terapéutico japonés",
+        "subheadline": "Desarrollado por Saionji Masayuki, Yumeiho combina la sabiduría de 4.000 años de prácticas de Extremo Oriente con el conocimiento anatómico moderno.",
+        "body": "Este masaje terapéutico exclusivo integra un sistema dinámico de terapia de 100 presiones con técnicas de Shiatsu para un alivio muscular profundo, masaje del tejido conectivo para liberar la fascia tensa, drenaje linfático para favorecer la desintoxicación, y reflexología con estiramientos dirigidos para recuperar la movilidad. El objetivo principal es lograr una relajación muscular completa apoyando la alineación natural de la pelvis, la columna y las articulaciones. Al corregir suavemente los desequilibrios posturales, este tratamiento libera bloqueos físicos profundos, muchos presentes desde hace años, dejándote una profunda sensación de ligereza, movilidad y relajación.",
+        "videoAlt": "Demostración del masaje terapéutico Yumeiho en Prisma Clinic"
+      },
+      "benefits": {
+        "eyebrow": "Beneficios",
+        "title": "Beneficios de nuestro masaje terapéutico",
+        "body": "Nuestro masaje terapéutico basado en Yumeiho es muy solicitado por pacientes de Marbella y Puerto Banús que buscan un alivio eficaz, no invasivo y una salud preventiva. Esta terapia es muy eficaz para ayudar a controlar y aliviar:",
+        "ctaLabel": "Asegura tu cita",
+        "items": [
+          { "title": "Desequilibrios posturales", "description": "Ayuda a gestionar la tensión relacionada con la escoliosis y la mala postura en general." },
+          { "title": "Asimetrías", "description": "Ayuda a abordar sensaciones de desigualdad, como diferencias percibidas en la longitud de las piernas o la alineación de los pies." },
+          { "title": "Tensión de espalda y cuello", "description": "Libera la rigidez de la zona lumbar, los hombros y el cuello." },
+          { "title": "Molestias articulares", "description": "Mejora la movilidad natural de caderas, rodillas y hombros." },
+          { "title": "Tensión ciática y nerviosa", "description": "Alivia la presión muscular que suele agravar las molestias del nervio ciático." },
+          { "title": "Fatiga muscular y estrés", "description": "Disuelve bloqueos físicos, favoreciendo el bienestar de todo el cuerpo y el flujo de energía." }
+        ]
+      },
+      "leadExpert": {
+        "eyebrow": "Un maestro del oficio",
+        "title": "Behrouz Rajabi",
+        "body": "En Prisma Clinic estás en manos de un verdadero experto. Behrouz Rajabi es un especialista con más de 20 años de experiencia internacional y representante oficial del método japonés Yumeiho para Alemania desde 2009. Fundador del Instituto de Osteopatía Japonesa en Alemania (2015) y titular de la patente de la osteopatía japonesa, comenzó su formación en Yumeiho en 2004. Formado originalmente como ingeniero mecánico (Diplom, Hamburgo 1995), Behrouz aporta la profunda comprensión de la estructura, el equilibrio y la alineación propia de un ingeniero al cuerpo humano, y amplió después sus conocimientos médicos en la escuela de medicina alternativa Amara (2010–2012). Gracias a su amplia práctica entre Teherán y Hamburgo y a su labor continua impartiendo seminarios profesionales, trae a Marbella un toque terapéutico de primer nivel mundial.",
+        "imageAlt": "Behrouz Rajabi, especialista en Yumeiho en Prisma Clinic Marbella"
+      },
+      "ribbon": {
+        "title": "¿Listo para liberar años de tensión?",
+        "subtitle": "Únete a los cientos de clientes que ya han descubierto la sensación transformadora de ligereza y equilibrio del masaje terapéutico Yumeiho.",
+        "ctaLabel": "Reserva tu sesión hoy"
+      },
+      "disclaimer": "Aviso: el masaje terapéutico Yumeiho que se ofrece en Prisma Clinic es un servicio holístico de bienestar y masaje terapéutico diseñado para favorecer la relajación, aliviar la tensión muscular y apoyar el equilibrio postural. No pretende sustituir el consejo médico profesional, el diagnóstico ni el tratamiento de afecciones o enfermedades graves. Si padeces una afección médica grave, consulta con tu médico antes de reservar."
     }
   },
   "cookieBanner": {

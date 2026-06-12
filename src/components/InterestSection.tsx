@@ -6,6 +6,7 @@ type InterestSectionProps = {
   title: string
   subheadline?: string
   body: string
+  media?: React.ReactNode
 }
 
 export function InterestSection({
@@ -13,6 +14,7 @@ export function InterestSection({
   title,
   subheadline,
   body,
+  media,
 }: InterestSectionProps) {
   return (
     <section className="border-y border-mocha/8 bg-surface-200 py-24 sm:py-28">
@@ -45,6 +47,7 @@ export function InterestSection({
               </p>
             </div>
           </div>
+          {media ? <div className="mt-12 lg:mt-16">{media}</div> : null}
         </FadeIn>
       </Container>
     </section>
