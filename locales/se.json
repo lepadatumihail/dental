@@ -576,14 +576,14 @@
   },
   "emergencyPage": {
     "hero": {
-      "title": "Akut tandvård 24/7",
-      "description": "Omedelbar tandvård när du behöver det som mest. Tillgängligt dygnet runt, året om i Marbella.",
+      "title": "Akut tandvårdsklinik 24/7 i Marbella",
+      "description": "Vi är specialister på rotfyllningar, visdomständer, smärtlindring, tandkirurgi, tandutdragningar, abscesser och många andra behandlingar.\nEngelsk-, svensk- och tysktalande tandläkare finns tillgängliga.",
       "emergencyHotline": "Akutlinje",
       "whatsapp": "WhatsApp"
     },
     "services": {
       "title": "Akuta tjänster",
-      "description": "Tandvårdsnödsituationer kan inträffa när som helst. På Prisma Clinic Marbella erbjuder vi omedelbar vård för alla tandvårdssituationer, 24 timmar om dygnet, 7 dagar i veckan. Vårt specialistteam är alltid redo att ge snabb behandling för att lindra din smärta och hantera akuta tandproblem.",
+      "description": "Akuta tandproblem kan uppstå när som helst. På Prisma Clinic erbjuder vi omedelbar vård vid alla akuta tandbesvär, dygnet runt, alla dagar i veckan.\nLita på vår expertis vid de vanligaste problemen: tandvärk, trasiga tänder, infektioner, käkledsbesvär (TMJ), tandköttssjukdomar, rotfyllningar, tandutdragningar, hål och att rädda tänder som de flesta tandläkare ger upp om.\nFå omedelbar hjälp när du behöver det som mest.",
       "stats": {
         "availability": {
           "value": "24/7",
@@ -597,9 +597,9 @@
           "value": "100%",
           "label": "Behandling samma dag"
         },
-        "insurance": {
-          "value": "Alla",
-          "label": "Godkända försäkringar"
+        "reviews": {
+          "value": "5★",
+          "label": "Betygsatta recensioner"
         }
       }
     },
@@ -816,12 +816,13 @@
         "title": "Premium privat läkarklinik i Marbella & Puerto Banús",
         "description": "Expertis inom allmänmedicin, mindre kirurgi och akutvård dygnet runt för utlandsboende och besökare. Under ledning av Dr Angelo Termini (MD, PhD). Konsultationer på engelska, svenska, norska, italienska och spanska.",
         "ctaLabel": "Boka din tid",
+        "emergencyCtaLabel": "Medicinsk akutlinje – dygnet runt",
         "imageAlt": "Allmänmedicinsk konsultation på Prisma Clinic Marbella"
       },
       "interest": {
         "eyebrow": "Varför välja oss",
         "title": "Förstklassig vård på Costa del Sol",
-        "subheadline": "Över 30 års internationell erfarenhet, telemedicin och recept dygnet runt samt ett flerspråkigt team.",
+        "subheadline": "Över 30 års internationell erfarenhet, vård på plats och telemedicin dygnet runt med ett flerspråkigt team.",
         "body": "Inga språkbarriärer — beskriv dina symtom bekvämt på ditt modersmål. Inga väntelistor — snabb tillgång till läkare när du behöver det som mest. Diskret och privat — vi garanterar fullständig konfidentialitet i en förstklassig klinikmiljö. Och bekvämt beläget — vi tar emot patienter i både Marbella och Puerto Banús."
       },
       "ourServices": {
@@ -830,8 +831,8 @@
         "body": "Från kompletta hälsokontroller till akutvård dygnet runt — expertvård med diskretion i Marbella och Puerto Banús.",
         "ctaLabel": "Prata med oss!",
         "items": [
-          { "title": "Allmänmedicin och diagnostik", "description": "Kompletta hälsokontroller med detaljerade blodpaneler (vitaminer, mineraler, hormoner), blodtrycksmätning och EKG — perfekt för tidig upptäckt och sinnesro — samt snabb och professionell hantering och förnyelse av recept." },
-          { "title": "Akutvård och telemedicin dygnet runt", "description": "Jourläkare tillgänglig dygnet runt för akuta behov, virtuella konsultationer 24/7 bekvämt från ditt hem eller hotell och säkra digitala recept efter medicinsk bedömning." },
+          { "title": "Allmänmedicin och diagnostik", "description": "Kompletta hälsokontroller med detaljerade blodpaneler (vitaminer, mineraler, hormoner), blodtrycksmätning och EKG — perfekt för tidig upptäckt och sinnesro — samt snabb och professionell hantering och förnyelse av dokumentation." },
+          { "title": "Akutvård och telemedicin dygnet runt", "description": "Jourläkare tillgänglig dygnet runt för akuta behov, virtuella konsultationer 24/7 bekvämt från ditt hem eller hotell och säker digital dokumentation efter medicinsk bedömning." },
           { "title": "Medicinsk viktkontroll", "description": "Läkarövervakad viktminskning: ett personligt, vetenskapligt underbyggt medicinskt program med avancerade analogterapier — inledande läkarkonsultation, skräddarsydd hälsoplan och löpande uppföljningar för hållbara resultat." },
           { "title": "Mäns hälsa och urologi", "description": "Expertdiagnos och behandling av manliga hälsobesvär, inklusive prostataundersökningar, samt diskreta, professionella kirurgiska ingrepp vid intima manliga tillstånd." },
           { "title": "Mindre kirurgi och proktologi", "description": "Snabb och säker borttagning av födelsemärken, vårtor, knölar och lipom, König-ingrepp mot återkommande nageltrång, rektoskopi och specialiserad behandling av hemorrojder samt professionell blefaroplastik (ögonlockskirurgi)." },
@@ -848,6 +849,10 @@
         "title": "Behöver du en läkare idag?",
         "subtitle": "Snabb tillgång utan väntelistor — boka en konsultation eller skriv till oss på WhatsApp, med akutlinje dygnet runt för brådskande behov.",
         "ctaLabel": "Boka din tid"
+      },
+      "emergencyBanner": {
+        "title": "Akut sjukvård 24/7",
+        "description": "Medicinska akutfall väntar inte på kontorstid. Vårt medicinska team finns tillgängligt dygnet runt för att ge omedelbar vård när du behöver det som mest."
       }
     }
   },

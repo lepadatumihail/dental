@@ -1,3 +1,4 @@
+import { Phone } from '@phosphor-icons/react/dist/ssr'
 import Image, { type StaticImageData } from 'next/image'
 
 import { Container } from '@/components/Container'
@@ -11,6 +12,8 @@ type PageHeroProps = {
   title: string
   description: string
   ctaLabel: string
+  emergencyCtaLabel?: string
+  emergencyCtaHref?: string
 }
 
 export function PageHero({
@@ -20,6 +23,8 @@ export function PageHero({
   title,
   description,
   ctaLabel,
+  emergencyCtaLabel,
+  emergencyCtaHref,
 }: PageHeroProps) {
   return (
     <section className="relative h-[88vh] min-h-[560px] w-full overflow-hidden">
@@ -55,8 +60,17 @@ export function PageHero({
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-xl">
               {description}
             </p>
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-3">
               <BookButton label={ctaLabel} variant="hero" />
+              {emergencyCtaLabel && emergencyCtaHref ? (
+                <a
+                  href={emergencyCtaHref}
+                  className="inline-flex items-center gap-2 rounded-lg bg-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-red-600"
+                >
+                  <Phone weight="fill" className="h-4 w-4" />
+                  {emergencyCtaLabel}
+                </a>
+              ) : null}
             </div>
           </div>
         </FadeIn>

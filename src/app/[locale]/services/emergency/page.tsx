@@ -14,6 +14,7 @@ import { getTranslations } from 'next-intl/server'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { createCanonicalMetadata } from '@/lib/canonical'
 
 import imageHero from '@/images/clinic/dentists.jpg'
@@ -101,7 +102,7 @@ export default async function EmergencyDentalServices() {
             >
               {t('hero.title')}
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed whitespace-pre-line text-white/85 sm:text-xl">
               {t('hero.description')}
             </p>
 
@@ -142,7 +143,7 @@ export default async function EmergencyDentalServices() {
                 >
                   {t('services.title')}
                 </h2>
-                <p className="mt-6 text-base leading-relaxed text-taupe sm:text-xl">
+                <p className="mt-6 text-base leading-relaxed whitespace-pre-line text-taupe sm:text-xl">
                   {t('services.description')}
                 </p>
               </div>
@@ -153,7 +154,7 @@ export default async function EmergencyDentalServices() {
                     'availability',
                     'response',
                     'treatment',
-                    'insurance',
+                    'reviews',
                   ] as const
                 ).map((key) => (
                   <div
@@ -280,32 +281,8 @@ export default async function EmergencyDentalServices() {
         </Container>
       </section>
 
-      {/* ───── Testimonial ───── */}
-      <section className="py-20 sm:py-24">
-        <Container>
-          <FadeIn>
-            <figure className="mx-auto max-w-3xl text-center">
-              <svg
-                className="mx-auto h-8 w-8 text-mocha/30"
-                fill="currentColor"
-                viewBox="0 0 32 32"
-                aria-hidden="true"
-              >
-                <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-              </svg>
-              <blockquote className="mt-8">
-                <p className="text-xl leading-relaxed text-warm-dark italic sm:text-2xl">
-                  &ldquo;{t('testimonial.quote')}&rdquo;
-                </p>
-              </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-taupe">
-                Maria Rodriguez ·{' '}
-                <span className="text-mocha">Emergency Patient</span>
-              </figcaption>
-            </figure>
-          </FadeIn>
-        </Container>
-      </section>
+      {/* ───── Reviews ───── */}
+      <TestimonialsGrid />
 
       {/* ───── Final CTA ───── */}
       <section className="pb-24 sm:pb-32">

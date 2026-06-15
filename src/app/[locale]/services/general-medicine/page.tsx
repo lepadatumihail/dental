@@ -49,7 +49,10 @@ export default async function GeneralMedicineServices() {
         imageAlt={t('hero.imageAlt')}
         title={t('hero.title')}
         description={t('hero.description')}
-        ctaLabel={t('hero.ctaLabel')}      />
+        ctaLabel={t('hero.ctaLabel')}
+        emergencyCtaLabel={t('hero.emergencyCtaLabel')}
+        emergencyCtaHref="tel:+34673290786"
+      />
 
       <InterestSection
         eyebrow={t('interest.eyebrow')}
@@ -83,7 +86,10 @@ export default async function GeneralMedicineServices() {
 
       <TestimonialsGrid />
 
-      <LocationsSection />
+      <LocationsSection
+        emergencyTitle={t('emergencyBanner.title')}
+        emergencyDescription={t('emergencyBanner.description')}
+      />
     </>
   )
 }

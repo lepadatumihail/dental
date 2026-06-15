@@ -107,7 +107,17 @@ function OfficeCard({
   )
 }
 
-export function LocationsSection() {
+type LocationsSectionProps = {
+  /** Override the emergency banner title (defaults to the dental copy). */
+  emergencyTitle?: string
+  /** Override the emergency banner description (defaults to the dental copy). */
+  emergencyDescription?: string
+}
+
+export function LocationsSection({
+  emergencyTitle,
+  emergencyDescription,
+}: LocationsSectionProps = {}) {
   const t = useTranslations('home.locations')
 
   const offices = [
@@ -166,10 +176,10 @@ export function LocationsSection() {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <h3 className="text-xl font-semibold text-warm-dark sm:text-2xl">
-                {t('emergency.title')}
+                {emergencyTitle ?? t('emergency.title')}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-taupe sm:text-base">
-                {t('emergency.description')}
+                {emergencyDescription ?? t('emergency.description')}
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

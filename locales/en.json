@@ -573,14 +573,14 @@
   },
   "emergencyPage": {
     "hero": {
-      "title": "24/7 Emergency Dental Care",
-      "description": "Immediate dental attention when you need it most. Available 24 hours a day, every day of the year in Marbella.",
+      "title": "24/7 Emergency Dental Clinic in Marbella",
+      "description": "We are specialists in root canals, wisdom tooth, pain relief, dental surgery, extractions, abscesses and many other treatments.\nEnglish, Swedish and German speaking doctors available.",
       "emergencyHotline": "Emergency Hotline",
       "whatsapp": "WhatsApp"
     },
     "services": {
       "title": "Emergency Services",
-      "description": "Dental emergencies can happen at any time. At Prisma Clinic Marbella, we provide immediate care for all dental emergencies, 24 hours a day, 7 days a week. Our team of specialists is always ready to provide prompt treatment to relieve your pain and address urgent dental issues.",
+      "description": "Dental emergencies can happen at any time. At Prisma Clinic, we provide immediate care for all dental emergencies, 24 hours a day, 7 days a week.\nCount on our expertise for these most common issues: toothaches, broken teeth, infections, TMJ, gum diseases, root canals, tooth extractions, cavities, and saving teeth that most dentists treat as a lost cause.\nGet immediate help when you need it most.",
       "stats": {
         "availability": {
           "value": "24/7",
@@ -594,9 +594,9 @@
           "value": "100%",
           "label": "Same-day treatment"
         },
-        "insurance": {
-          "value": "All",
-          "label": "Insurance accepted"
+        "reviews": {
+          "value": "5★",
+          "label": "Rated reviews"
         }
       }
     },
@@ -813,12 +813,13 @@
         "title": "Premium Private Medical Clinic in Marbella & Puerto Banús",
         "description": "Expert General Medicine, Minor Surgery, and 24/7 Urgent Care for expats and visitors. Led by Dr. Angelo Termini (MD, PhD). Consultations available in English, Swedish, Norwegian, Italian, and Spanish.",
         "ctaLabel": "Book Your Appointment",
+        "emergencyCtaLabel": "24/7 Medical Emergencies Hotline",
         "imageAlt": "General medicine consultation at Prisma Clinic Marbella"
       },
       "interest": {
         "eyebrow": "Why choose us",
         "title": "Premium Care on the Costa del Sol",
-        "subheadline": "30+ years of international experience, 24/7 telemedicine and prescriptions, and a multi-lingual team.",
+        "subheadline": "30+ years of international experience, 24/7 in-person and telemedicine with a multi-lingual team.",
         "body": "No language barriers — communicate your symptoms comfortably in your native language. No waiting lists — fast access to a doctor when you need it most. Discreet and private — we guarantee absolute confidentiality in a premium clinic environment. And conveniently located, serving patients in both Marbella and Puerto Banús."
       },
       "ourServices": {
@@ -827,8 +828,8 @@
         "body": "From comprehensive check-ups to 24/7 urgent care — expert, discreet medical services in Marbella and Puerto Banús.",
         "ctaLabel": "Talk to Us!",
         "items": [
-          { "title": "General Medicine & Diagnostics", "description": "Comprehensive health check-ups with detailed blood panels (vitamins, minerals, hormones), blood pressure monitoring and ECGs — ideal for early detection and peace of mind — plus fast, professional prescription management and renewals." },
-          { "title": "24/7 Urgent Care & Telemedicine", "description": "An on-call doctor available around the clock for urgent medical needs, 24/7 virtual consultations from the comfort of your home or hotel, and secure digital prescriptions following a medical assessment." },
+          { "title": "General Medicine & Diagnostics", "description": "Comprehensive health check-ups with detailed blood panels (vitamins, minerals, hormones), blood pressure monitoring and ECGs — ideal for early detection and peace of mind — plus fast and professional paperwork management and renewals." },
+          { "title": "24/7 Urgent Care & Telemedicine", "description": "An on-call doctor available around the clock for urgent medical needs, 24/7 virtual consultations from the comfort of your home or hotel, and secure digital paperwork following a medical assessment." },
           { "title": "Medical Weight Management", "description": "Doctor-supervised weight loss: a personalized, scientifically backed medical program utilizing advanced analogue therapies — with an initial medical consultation, a tailored health plan and ongoing follow-ups for sustainable results." },
           { "title": "Men's Health & Urology", "description": "Expert diagnosis and treatment for men's health concerns, including prostate examinations, plus discreet, professional surgical interventions for intimate male health conditions." },
           { "title": "Minor Surgery & Proctology", "description": "Quick, safe removal of moles, warts, lumps and lipomas, the König procedure for recurring ingrown toenails, rectoscopy and specialized hemorrhoid treatment, and professional blepharoplasty (eyelid surgery)." },
@@ -845,6 +846,10 @@
         "title": "Need a doctor today?",
         "subtitle": "Fast access with no waiting lists — book a consultation or message us on WhatsApp, with a 24/7 emergency line for urgent needs.",
         "ctaLabel": "Book Your Appointment"
+      },
+      "emergencyBanner": {
+        "title": "24/7 Emergency Medical Care",
+        "description": "Medical emergencies don't wait for business hours. Our medical team is available around the clock to provide immediate care when you need it most."
       }
     }
   },

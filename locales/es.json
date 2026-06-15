@@ -576,14 +576,14 @@
   },
   "emergencyPage": {
     "hero": {
-      "title": "Atención Dental de Emergencia 24/7",
-      "description": "Atención dental inmediata cuando más la necesite. Disponible las 24 horas del día, todos los días del año en Marbella.",
+      "title": "Clínica Dental de Urgencias 24/7 en Marbella",
+      "description": "Somos especialistas en endodoncias, muelas del juicio, alivio del dolor, cirugía dental, extracciones, abscesos y muchos otros tratamientos.\nDisponemos de doctores que hablan inglés, sueco y alemán.",
       "emergencyHotline": "Línea de Emergencia",
       "whatsapp": "WhatsApp"
     },
     "services": {
       "title": "Servicios de Emergencia",
-      "description": "Las emergencias dentales pueden ocurrir en cualquier momento. En Prisma Clinic Marbella, proporcionamos atención inmediata para todas las emergencias dentales, las 24 horas del día, los 7 días de la semana. Nuestro equipo de especialistas está siempre listo para proporcionar un tratamiento rápido para aliviar su dolor y abordar problemas dentales urgentes.",
+      "description": "Las emergencias dentales pueden ocurrir en cualquier momento. En Prisma Clinic ofrecemos atención inmediata para todas las emergencias dentales, las 24 horas del día, los 7 días de la semana.\nConfía en nuestra experiencia para los problemas más comunes: dolor de muelas, dientes rotos, infecciones, ATM, enfermedades de las encías, endodoncias, extracciones dentales, caries y salvar dientes que la mayoría de los dentistas dan por perdidos.\nRecibe ayuda inmediata cuando más la necesitas.",
       "stats": {
         "availability": {
           "value": "24/7",
@@ -597,9 +597,9 @@
           "value": "100%",
           "label": "Tratamiento el mismo día"
         },
-        "insurance": {
-          "value": "Todos",
-          "label": "Seguros aceptados"
+        "reviews": {
+          "value": "5★",
+          "label": "Reseñas valoradas"
         }
       }
     },
@@ -816,12 +816,13 @@
         "title": "Clínica médica privada premium en Marbella y Puerto Banús",
         "description": "Medicina general experta, cirugía menor y urgencias 24/7 para residentes internacionales y visitantes. Dirigida por el Dr. Angelo Termini (MD, PhD). Consultas disponibles en inglés, sueco, noruego, italiano y español.",
         "ctaLabel": "Reserva tu cita",
+        "emergencyCtaLabel": "Línea de urgencias médicas 24/7",
         "imageAlt": "Consulta de medicina general en Prisma Clinic Marbella"
       },
       "interest": {
         "eyebrow": "Por qué elegirnos",
         "title": "Atención premium en la Costa del Sol",
-        "subheadline": "Más de 30 años de experiencia internacional, telemedicina y recetas 24/7, y un equipo multilingüe.",
+        "subheadline": "Más de 30 años de experiencia internacional, atención presencial y telemedicina 24/7 con un equipo multilingüe.",
         "body": "Sin barreras de idioma: comunica tus síntomas cómodamente en tu lengua materna. Sin listas de espera: acceso rápido a un médico cuando más lo necesitas. Discreción y privacidad: garantizamos confidencialidad absoluta en un entorno clínico premium. Y una ubicación cómoda, atendiendo a pacientes tanto en Marbella como en Puerto Banús."
       },
       "ourServices": {
@@ -830,8 +831,8 @@
         "body": "Desde chequeos completos hasta urgencias 24/7: atención médica experta y discreta en Marbella y Puerto Banús.",
         "ctaLabel": "¡Habla con nosotros!",
         "items": [
-          { "title": "Medicina general y diagnóstico", "description": "Chequeos médicos completos con análisis de sangre detallados (vitaminas, minerales, hormonas), control de la tensión arterial y electrocardiogramas — ideales para la detección precoz y tu tranquilidad — además de una gestión y renovación de recetas rápida y profesional." },
-          { "title": "Urgencias y telemedicina 24/7", "description": "Médico de guardia disponible las 24 horas para necesidades urgentes, consultas virtuales 24/7 desde la comodidad de tu casa u hotel y recetas digitales seguras tras una valoración médica." },
+          { "title": "Medicina general y diagnóstico", "description": "Chequeos médicos completos con análisis de sangre detallados (vitaminas, minerales, hormonas), control de la tensión arterial y electrocardiogramas — ideales para la detección precoz y tu tranquilidad — además de una gestión y renovación de documentación rápida y profesional." },
+          { "title": "Urgencias y telemedicina 24/7", "description": "Médico de guardia disponible las 24 horas para necesidades urgentes, consultas virtuales 24/7 desde la comodidad de tu casa u hotel y documentación digital segura tras una valoración médica." },
           { "title": "Control de peso médico", "description": "Pérdida de peso supervisada por un médico: un programa personalizado y con respaldo científico que utiliza terapias análogas avanzadas — con consulta médica inicial, plan de salud a medida y seguimientos continuos para resultados sostenibles." },
           { "title": "Salud masculina y urología", "description": "Diagnóstico y tratamiento experto de los problemas de salud masculina, incluidos los exámenes de próstata, además de intervenciones quirúrgicas discretas y profesionales para afecciones íntimas masculinas." },
           { "title": "Cirugía menor y proctología", "description": "Extirpación rápida y segura de lunares, verrugas, bultos y lipomas, procedimiento de König para uñas encarnadas recurrentes, rectoscopia y tratamiento especializado de hemorroides, y blefaroplastia profesional (cirugía de párpados)." },
@@ -848,6 +849,10 @@
         "title": "¿Necesitas un médico hoy?",
         "subtitle": "Acceso rápido y sin listas de espera: reserva una consulta o escríbenos por WhatsApp, con línea de urgencias 24/7 para casos urgentes.",
         "ctaLabel": "Reserva tu cita"
+      },
+      "emergencyBanner": {
+        "title": "Atención Médica de Emergencia 24/7",
+        "description": "Las emergencias médicas no esperan al horario comercial. Nuestro equipo médico está disponible las 24 horas para brindar atención inmediata cuando más la necesite."
       }
     }
   },
