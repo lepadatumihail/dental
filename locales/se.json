@@ -1115,43 +1115,68 @@
           "title": "Fillers",
           "subtitle": "Skulptering & kontur",
           "items": [
-            { "service": "Läppförstoring", "price": "350€" },
-            { "service": "Nasolabialveck", "price": "från 250€" },
-            { "service": "Marionettlinjer", "price": "från 350€" },
-            { "service": "Kindvolymisering", "price": "från 450€" },
-            { "service": "Käklinjedefinition", "price": "från 450€" },
-            { "service": "Hakprojektion", "price": "från 350€" },
-            { "service": "Komplett ansiktsharmonisering", "price": "Vid konsultation" }
+            { "service": "Läppförstoring", "price": "450€" },
+            { "service": "Nasolabialveck", "price": "450€" },
+            { "service": "Marionettlinjer", "price": "450€" },
+            { "service": "Kindvolymisering", "price": "500€" },
+            { "service": "Käklinjedefinition", "price": "från 500€" },
+            { "service": "Hakprojektion", "price": "från 500€" },
+            { "service": "Näsmodellering (icke-kirurgisk rinoplastik)", "price": "500€" },
+            { "service": "Komplett ansiktsharmonisering", "price": "Vid konsultation" },
+            { "service": "5-punktslyft", "price": "från 1600€ – 2000€" }
+          ]
+        },
+        {
+          "title": "Hudföryngring",
+          "subtitle": "Återfuktning & hudkvalitet",
+          "items": [
+            { "service": "Biorevitalisering (cellföryngring)", "price": "450€" },
+            { "service": "Skinbooster ansikte & hals (K-Surgery)", "price": "600€" },
+            { "service": "Profhilo", "price": "600€" },
+            { "service": "Hydrering under ögonen PDRN (2 sessioner)", "price": "450€" },
+            { "service": "Micro Needling (1 session)", "price": "150€" },
+            { "service": "Micro Needling (3 sessioner)", "price": "330€" },
+            { "service": "Kemisk peeling", "price": "300€" },
+            { "service": "Ögonlockslyft (plasmafibroblast)", "price": "från 450€" },
+            { "service": "Fettupplösning (per område)", "price": "350€" },
+            { "service": "Exosombehandling", "price": "Vid konsultation" }
           ]
         },
         {
           "title": "Neuromodulatorer & rynkbehandlingar",
           "subtitle": "Utjämning & föryngring",
           "items": [
-            { "service": "Neuromodulator övre ansiktet", "price": "från 350€" },
-            { "service": "Neuromodulator hela ansiktet", "price": "950€" },
-            { "service": "Bruxismbehandling", "price": "från 400€" },
-            { "service": "Nefertiti halslyft", "price": "550€" },
-            { "service": "Barbie-neuromodulator", "price": "380€" },
-            { "service": "Svettbehandling", "price": "600€" }
+            { "service": "Neuromodulator övre ansiktet (3 områden)", "price": "450€" },
+            { "service": "Neuromodulator hela ansiktet", "price": "1200€" },
+            { "service": "Bruxismbehandling", "price": "600€" },
+            { "service": "Nefertiti halslyft", "price": "600€" },
+            { "service": "Barbie-neuromodulator (trapezius)", "price": "700€" },
+            { "service": "Svettbehandling", "price": "700€" },
+            { "service": "Ansiktsslimning", "price": "600€" },
+            { "service": "Nässpetslyft", "price": "250€" },
+            { "service": "Gummy smile", "price": "250€" },
+            { "service": "Lip flip", "price": "250€" },
+            { "service": "Mungipslyft (depressor)", "price": "250€" },
+            { "service": "Ögonbrynslyft", "price": "200€" }
           ]
         },
         {
           "title": "PRP",
           "subtitle": "Trombocytrik plasma",
           "items": [
-            { "service": "Ansikte", "price": "180€ / session" },
-            { "service": "Hår", "price": "180€ / session" },
-            { "service": "Paket om 3 sessioner", "price": "450€" }
+            { "service": "Ansikte", "price": "250€ / session" },
+            { "service": "Hår", "price": "250€ / session" },
+            { "service": "Paket om 3 sessioner", "price": "600€" }
           ]
         },
         {
           "title": "Polynukleotider",
           "subtitle": "Hudbioregenerering",
           "items": [
-            { "service": "Ansikte", "price": "350€ / session" },
-            { "service": "Under ögonen", "price": "300€" },
-            { "service": "Hals & dekolletage", "price": "från 350€" },
+            { "service": "Ansikte", "price": "600€ / session" },
+            { "service": "Under ögonen", "price": "450€" },
+            { "service": "Hals & dekolletage", "price": "600€" },
+            { "service": "Händer", "price": "600€" },
             { "service": "Hårbiostimulering", "price": "från 300€" },
             { "service": "Inbiotec Amber", "price": "380€ / session" }
           ]

@@ -1115,43 +1115,68 @@
           "title": "Rellenos dérmicos",
           "subtitle": "Esculpido y contorno",
           "items": [
-            { "service": "Aumento de labios", "price": "350€" },
-            { "service": "Surco nasolabial", "price": "desde 250€" },
-            { "service": "Líneas de marioneta", "price": "desde 350€" },
-            { "service": "Volumización de pómulos", "price": "desde 450€" },
-            { "service": "Definición mandibular", "price": "desde 450€" },
-            { "service": "Proyección del mentón", "price": "desde 350€" },
-            { "service": "Armonización facial completa", "price": "Bajo consulta" }
+            { "service": "Aumento de labios", "price": "450€" },
+            { "service": "Surco nasolabial", "price": "450€" },
+            { "service": "Líneas de marioneta", "price": "450€" },
+            { "service": "Volumización de pómulos", "price": "500€" },
+            { "service": "Definición mandibular", "price": "desde 500€" },
+            { "service": "Proyección del mentón", "price": "desde 500€" },
+            { "service": "Modelado de nariz (rinoplastia sin cirugía)", "price": "500€" },
+            { "service": "Armonización facial completa", "price": "Bajo consulta" },
+            { "service": "Lifting de 5 puntos", "price": "desde 1600€ – 2000€" }
+          ]
+        },
+        {
+          "title": "Rejuvenecimiento cutáneo",
+          "subtitle": "Hidratación y calidad de la piel",
+          "items": [
+            { "service": "Biorrevitalizante (rejuvenecedor celular)", "price": "450€" },
+            { "service": "Skinbooster rostro y cuello (K-Surgery)", "price": "600€" },
+            { "service": "Profhilo", "price": "600€" },
+            { "service": "Hidratación de ojeras PDRN (2 sesiones)", "price": "450€" },
+            { "service": "Micro Needling (1 sesión)", "price": "150€" },
+            { "service": "Micro Needling (3 sesiones)", "price": "330€" },
+            { "service": "Peeling químico", "price": "300€" },
+            { "service": "Lifting de párpados (plasma fibroblast)", "price": "desde 450€" },
+            { "service": "Disolución de grasa (por zona)", "price": "350€" },
+            { "service": "Tratamiento con exosomas", "price": "Bajo consulta" }
           ]
         },
         {
           "title": "Neuromoduladores y relajantes",
           "subtitle": "Suavizado y rejuvenecimiento",
           "items": [
-            { "service": "Neuromodulador tercio superior", "price": "desde 350€" },
-            { "service": "Neuromodulador facial completo", "price": "950€" },
-            { "service": "Tratamiento del bruxismo", "price": "desde 400€" },
-            { "service": "Lifting de cuello Nefertiti", "price": "550€" },
-            { "service": "Neuromodulador Barbie", "price": "380€" },
-            { "service": "Tratamiento de sudoración", "price": "600€" }
+            { "service": "Neuromodulador tercio superior (3 zonas)", "price": "450€" },
+            { "service": "Neuromodulador facial completo", "price": "1200€" },
+            { "service": "Tratamiento del bruxismo", "price": "600€" },
+            { "service": "Lifting de cuello Nefertiti", "price": "600€" },
+            { "service": "Neuromodulador Barbie (trapecio)", "price": "700€" },
+            { "service": "Tratamiento de sudoración", "price": "700€" },
+            { "service": "Afinamiento facial", "price": "600€" },
+            { "service": "Elevación de la punta nasal", "price": "250€" },
+            { "service": "Sonrisa gingival", "price": "250€" },
+            { "service": "Lip flip", "price": "250€" },
+            { "service": "Comisuras labiales (depresor)", "price": "250€" },
+            { "service": "Elevación de cejas", "price": "200€" }
           ]
         },
         {
           "title": "PRP",
           "subtitle": "Plasma rico en plaquetas",
           "items": [
-            { "service": "Rostro", "price": "180€ / sesión" },
-            { "service": "Cabello", "price": "180€ / sesión" },
-            { "service": "Paquete de 3 sesiones", "price": "450€" }
+            { "service": "Rostro", "price": "250€ / sesión" },
+            { "service": "Cabello", "price": "250€ / sesión" },
+            { "service": "Paquete de 3 sesiones", "price": "600€" }
           ]
         },
         {
           "title": "Polinucleótidos",
           "subtitle": "Bioregeneración cutánea",
           "items": [
-            { "service": "Rostro", "price": "350€ / sesión" },
-            { "service": "Contorno de ojos", "price": "300€" },
-            { "service": "Cuello y escote", "price": "desde 350€" },
+            { "service": "Rostro", "price": "600€ / sesión" },
+            { "service": "Contorno de ojos", "price": "450€" },
+            { "service": "Cuello y escote", "price": "600€" },
+            { "service": "Manos", "price": "600€" },
             { "service": "Bioestimulación capilar", "price": "desde 300€" },
             { "service": "Inbiotec Amber", "price": "380€ / sesión" }
           ]

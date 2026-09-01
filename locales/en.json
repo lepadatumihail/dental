@@ -1112,43 +1112,68 @@
           "title": "Dermal Fillers",
           "subtitle": "Sculpting & contouring",
           "items": [
-            { "service": "Lip Enhancement", "price": "350€" },
-            { "service": "Nasolabial Contouring", "price": "from 250€" },
-            { "service": "Marionette Lines", "price": "from 350€" },
-            { "service": "Cheek Volumization", "price": "from 450€" },
-            { "service": "Jawline Definition", "price": "from 450€" },
-            { "service": "Chin Projection", "price": "from 350€" },
-            { "service": "Full Facial Harmonization", "price": "On consultation" }
+            { "service": "Lip Enhancement", "price": "450€" },
+            { "service": "Nasolabial Contouring", "price": "450€" },
+            { "service": "Marionette Lines", "price": "450€" },
+            { "service": "Cheek Volumization", "price": "500€" },
+            { "service": "Jawline Definition", "price": "from 500€" },
+            { "service": "Chin Projection", "price": "from 500€" },
+            { "service": "Nose Modeling (non-surgical rhinoplasty)", "price": "500€" },
+            { "service": "Full Facial Harmonization", "price": "On consultation" },
+            { "service": "5-Point Lift", "price": "from 1600€ – 2000€" }
+          ]
+        },
+        {
+          "title": "Skin Rejuvenation",
+          "subtitle": "Hydration & skin quality",
+          "items": [
+            { "service": "Bio Revitalizer (cell rejuvenator)", "price": "450€" },
+            { "service": "Skinbooster face & neck (K-Surgery)", "price": "600€" },
+            { "service": "Profhilo", "price": "600€" },
+            { "service": "Under-eye Hydration PDRN (2 sessions)", "price": "450€" },
+            { "service": "Micro Needling (1 session)", "price": "150€" },
+            { "service": "Micro Needling (3 sessions)", "price": "330€" },
+            { "service": "Chemical Peel", "price": "300€" },
+            { "service": "Eyelid Lift (plasma fibroblast)", "price": "from 450€" },
+            { "service": "Fat Dissolving (per area)", "price": "350€" },
+            { "service": "Exosome Treatment", "price": "On consultation" }
           ]
         },
         {
           "title": "Neuromodulators & Wrinkle Relaxers",
           "subtitle": "Smoothing & rejuvenation",
           "items": [
-            { "service": "Upper Face Neuromodulator", "price": "from 350€" },
-            { "service": "Full Face Neuromodulator", "price": "950€" },
-            { "service": "Bruxism Treatment", "price": "from 400€" },
-            { "service": "Nefertiti Neck Lift", "price": "550€" },
-            { "service": "Barbie Neuromodulator", "price": "380€" },
-            { "service": "Sweat Treatment", "price": "600€" }
+            { "service": "Upper Face Neuromodulator (3 areas)", "price": "450€" },
+            { "service": "Full Face Neuromodulator", "price": "1200€" },
+            { "service": "Bruxism Treatment", "price": "600€" },
+            { "service": "Nefertiti Neck Lift", "price": "600€" },
+            { "service": "Barbie Neuromodulator (trapezius)", "price": "700€" },
+            { "service": "Sweat Treatment", "price": "700€" },
+            { "service": "Face Slimming", "price": "600€" },
+            { "service": "Nose Tip Lift", "price": "250€" },
+            { "service": "Gummy Smile", "price": "250€" },
+            { "service": "Lip Flip", "price": "250€" },
+            { "service": "Marionette Depressor", "price": "250€" },
+            { "service": "Brow Lift", "price": "200€" }
           ]
         },
         {
           "title": "PRP",
           "subtitle": "Platelet-rich plasma",
           "items": [
-            { "service": "Face", "price": "180€ / session" },
-            { "service": "Hair", "price": "180€ / session" },
-            { "service": "3-sessions package", "price": "450€" }
+            { "service": "Face", "price": "250€ / session" },
+            { "service": "Hair", "price": "250€ / session" },
+            { "service": "3-sessions package", "price": "600€" }
           ]
         },
         {
           "title": "Polynucleotides",
           "subtitle": "Skin bioregeneration",
           "items": [
-            { "service": "Face", "price": "350€ / session" },
-            { "service": "Under-eye area", "price": "300€" },
-            { "service": "Neck & décolleté", "price": "from 350€" },
+            { "service": "Face", "price": "600€ / session" },
+            { "service": "Under-eye area", "price": "450€" },
+            { "service": "Neck & décolleté", "price": "600€" },
+            { "service": "Hands", "price": "600€" },
             { "service": "Hair biostimulation", "price": "from 300€" },
             { "service": "Inbiotec Amber", "price": "380€ / session" }
           ]
