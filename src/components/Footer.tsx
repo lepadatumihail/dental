@@ -141,10 +141,22 @@ export function Footer() {
               height={150}
             />
           </Link>
-          <div className="flex flex-col items-end gap-4 sm:flex-row">
+          <div className="flex flex-col items-end gap-4 sm:flex-row sm:items-center">
             <CookieSettings />
             <p className="text-sm text-neutral-700">
               © Prisma Clinic Marbella {new Date().getFullYear()}
+            </p>
+            <p className="text-sm text-neutral-500">
+              Website by{' '}
+              <a
+                href="https://lepadatu.dev"
+                target="_blank"
+                rel="noopener"
+                title="Mihail Lepadatu — web development"
+                className="text-neutral-700 underline decoration-neutral-300 underline-offset-4 transition hover:text-neutral-950 hover:decoration-neutral-950"
+              >
+                Lepadatu.dev
+              </a>
             </p>
           </div>
         </div>
