@@ -1,4 +1,32 @@
 {
+  "meta": {
+    "home": {
+      "title": "Prisma Clinic Marbella | Tandvård, estetik och allmänmedicin",
+      "description": "Privat klinik för tandvård, estetisk medicin och allmänmedicin i Marbella och Puerto Banús. Svensk- och engelsktalande läkare, två kliniker och akutvård dygnet runt."
+    },
+    "about": {
+      "title": "Om vår klinik",
+      "description": "Avancerad tandvård, estetisk medicin och vardaglig sjukvård under ett tak. Två Prisma Clinic-kliniker i Marbella och Puerto Banús, öppna dygnet runt för akuta ärenden."
+    },
+    "services": {
+      "title": "Våra behandlingar i Marbella",
+      "description": "Tandvård, estetisk medicin, allmänmedicin och terapeutisk massage i Marbella och Puerto Banús, samt akut tandvård dygnet runt."
+    },
+    "dental": {
+      "title": "Tandläkare i Marbella & Puerto Banús | Prisma Clinic"
+    },
+    "aesthetics": {
+      "title": "Estetisk medicin & anti-aging i Marbella | Prisma Clinic"
+    },
+    "pricing": {
+      "title": "Priser för behandlingar",
+      "description": "Priser för estetiska behandlingar på Prisma Clinic Marbella: fillers, neuromodulatorer, hudföryngring, PRP, polynukleotider, biostimulatorer och IV-dropp."
+    },
+    "emergency": {
+      "title": "Akut tandläkare dygnet runt i Marbella | Prisma Clinic",
+      "description": "Akut tandvård dygnet runt i Marbella. Tider samma dag vid svår tandvärk, trasiga tänder, abscesser och tandskador. Ring eller skicka WhatsApp till vår jourlinje."
+    }
+  },
   "home": {
     "title": "Din guide till ett friskare och vackrare du.",
     "description": "Premium tandvård, estetik och allmänmedicin i Marbella — maximal effektivitet, komfort och omsorg.",
@@ -6,7 +34,7 @@
     "viewServices": "Se våra tjänster",
     "discoverMore": "Upptäck mer",
     "clients": {
-      "title": "Betrodd av ledande teknikpartners"
+      "title": "Vi arbetar med världsledande varumärken inom tandvård"
     },
     "journey": {
       "title": "Din väg till bättre hälsa",
@@ -339,7 +367,10 @@
       }
     },
     "footer": {
-      "followUs": "Följ oss"
+      "followUs": "Följ oss",
+      "clinic": "Kliniken",
+      "blog": "Blogg",
+      "visitUs": "Besök oss"
     },
     "services": {
       "page": {

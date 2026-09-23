@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import {
   Diamond,
   HandHeart,
@@ -11,7 +11,9 @@ import { getTranslations } from 'next-intl/server'
 
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { simplePageJsonLd } from '@/lib/page-graphs'
 
 import dentalImage from '@/images/clinic/xray.jpg'
 import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
@@ -31,13 +33,14 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'meta.about' })
 
-  return {
-    title: 'About | Prisma Clinic Marbella',
-    description:
-      'Prisma Clinic Marbella — high-end dentistry, aesthetic medicine, and everyday healthcare under one calm, considered roof. Two locations in Marbella, open 24/7 for emergencies.',
-    ...createCanonicalMetadata('about', locale),
-  }
+  return createPageMetadata({
+    path: 'about',
+    locale,
+    title: t('title'),
+    description: t('description'),
+  })
 }
 
 const valueItems = [
@@ -146,6 +149,7 @@ export default async function About() {
 
   return (
     <>
+      <JsonLd data={await simplePageJsonLd('about')} />
       {/* ───── Hero / Intro ───── */}
       <section className="pt-20 pb-16 sm:pt-28 sm:pb-24">
         <Container>

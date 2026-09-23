@@ -10,7 +10,9 @@ import { PageHero } from '@/components/PageHero'
 import { PricingGroups, type PriceGroup } from '@/components/PricingGroups'
 import { ServicesSection } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/aesthetics-1.jpg'
 import doctorImage from '@/images/bozana.jpeg'
@@ -34,11 +36,14 @@ export async function generateMetadata({
     namespace: 'layout.services.aesthetics.v2',
   })
 
-  return {
-    title: `${t('hero.title')} — Prisma Clinic Marbella`,
+  const tMeta = await getTranslations({ locale, namespace: 'meta.aesthetics' })
+
+  return createPageMetadata({
+    path: 'services/aesthetics',
+    locale,
+    title: { absolute: tMeta('title') },
     description: t('hero.description'),
-    ...createCanonicalMetadata('services/aesthetics', locale),
-  }
+  })
 }
 
 export default async function AestheticsServices() {
@@ -48,6 +53,7 @@ export default async function AestheticsServices() {
 
   return (
     <>
+      <JsonLd data={await servicePageJsonLd('aesthetics')} />
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}

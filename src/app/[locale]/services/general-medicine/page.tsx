@@ -11,7 +11,9 @@ import {
   type ServiceItem,
 } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import doctorImage from '@/images/clinic/angelo-termini.jpg'
 import heroImage from '@/images/clinic/general-medicine.jpg'
@@ -32,11 +34,12 @@ export async function generateMetadata({
   const { locale } = params
   const t = await getTranslations({ locale, namespace: 'generalMedicine.v2' })
 
-  return {
+  return createPageMetadata({
+    path: 'services/general-medicine',
+    locale,
     title: { absolute: t('meta.title') },
     description: t('meta.description'),
-    ...createCanonicalMetadata('services/general-medicine', locale),
-  }
+  })
 }
 
 export default async function GeneralMedicineServices() {
@@ -44,6 +47,7 @@ export default async function GeneralMedicineServices() {
 
   return (
     <>
+      <JsonLd data={await servicePageJsonLd('generalMedicine')} />
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}

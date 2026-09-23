@@ -17,6 +17,22 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  async redirects() {
+    return [
+      // Old template slug for the dermal fillers article.
+      {
+        source: '/:locale(en|es|se)/blog/a-short-guide-to-component-naming',
+        destination: '/:locale/blog/dermal-fillers-types-and-longevity',
+        permanent: true,
+      },
+      // Template "process" page, removed.
+      {
+        source: '/:locale(en|es|se)/process',
+        destination: '/:locale/about',
+        permanent: true,
+      },
+    ]
+  },
   // Uncomment the line below for full static export (for hosting on CDN/static hosts)
   // output: 'export',
   // trailingSlash: true,
@@ -74,12 +90,10 @@ export default async function config() {
         [
           unifiedConditional,
           [
-            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/blog'))}`),
-            [[remarkMDXLayout, '@/app/blog/wrapper', 'article']],
-          ],
-          [
-            new RegExp(`^${escapeStringRegexp(path.resolve('src/app/work'))}`),
-            [[remarkMDXLayout, '@/app/work/wrapper', 'caseStudy']],
+            new RegExp(
+              `^${escapeStringRegexp(path.resolve('src/app/[locale]/blog'))}`,
+            ),
+            [[remarkMDXLayout, '@/app/[locale]/blog/wrapper', 'article']],
           ],
         ],
       ],

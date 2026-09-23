@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
-const BASE_URL = 'https://www.prismaclinicmarbella.es'
-const LOCALES = ['en', 'es', 'se']
+import { BASE_URL } from '@/lib/canonical'
+import { LOCALES } from '@/lib/locales'
 
 export async function GET() {
   const body = [
@@ -9,12 +9,7 @@ export async function GET() {
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...LOCALES.map((locale) => {
       const loc = `${BASE_URL}/${locale}/sitemap.xml`
-      return [
-        '  <sitemap>',
-        `    <loc>${loc}</loc>`,
-        `    <lastmod>${new Date().toISOString()}</lastmod>`,
-        '  </sitemap>',
-      ].join('\n')
+      return ['  <sitemap>', `    <loc>${loc}</loc>`, '  </sitemap>'].join('\n')
     }),
     '</sitemapindex>',
   ].join('\n')

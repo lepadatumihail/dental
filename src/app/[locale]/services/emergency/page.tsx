@@ -15,7 +15,9 @@ import { getTranslations } from 'next-intl/server'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { emergencyPageJsonLd } from '@/lib/page-graphs'
 
 import imageHero from '@/images/clinic/dentists.jpg'
 
@@ -31,19 +33,14 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'meta.emergency' })
 
-  return {
-    title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
-    description:
-      'Immediate emergency dental care available 24/7 in Marbella. Same-day appointments for dental emergencies including severe pain, broken teeth, and trauma. Call our hotline now!',
-    openGraph: {
-      title: '24/7 Emergency Dental Care in Marbella | Prisma Clinic Marbella',
-      description:
-        'Immediate emergency dental care available 24/7 in Marbella. Same-day appointments for dental emergencies including severe pain, broken teeth, and trauma. Call our hotline now!',
-      type: 'website',
-    },
-    ...createCanonicalMetadata('services/emergency', locale),
-  }
+  return createPageMetadata({
+    path: 'services/emergency',
+    locale,
+    title: { absolute: t('title') },
+    description: t('description'),
+  })
 }
 
 const conditionKeys = [
@@ -69,6 +66,7 @@ export default async function EmergencyDentalServices() {
 
   return (
     <>
+      <JsonLd data={await emergencyPageJsonLd()} />
       {/* ───── Hero ───── */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 import type { IconProps } from '@phosphor-icons/react'
 
@@ -12,7 +12,9 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { simplePageJsonLd } from '@/lib/page-graphs'
 import logoMailSmirk from '@/images/clients/phobia/logo-dark.svg'
 import { EmergencyServiceBanner } from '@/components/EmergencyServiceBanner'
 
@@ -161,13 +163,14 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'meta.services' })
 
-  return {
-    title: 'Our Services | Prisma Clinic Marbella',
-    description:
-      'Medical and dental services in Marbella including emergency 24/7 dental care, cosmetic dentistry, and aesthetic treatments.',
-    ...createCanonicalMetadata('services', locale),
-  }
+  return createPageMetadata({
+    path: 'services',
+    locale,
+    title: t('title'),
+    description: t('description'),
+  })
 }
 
 // Generate static params for all locales
@@ -180,6 +183,7 @@ export default async function ServicesPage() {
 
   return (
     <>
+      <JsonLd data={await simplePageJsonLd('services')} />
       <PageIntro eyebrow={t('page.title')} title={t('page.subtitle')}>
         <p>{t('page.description')}</p>
       </PageIntro>

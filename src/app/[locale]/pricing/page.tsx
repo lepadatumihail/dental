@@ -7,7 +7,9 @@ import { CtaRibbon } from '@/components/CtaRibbon'
 import { FadeIn } from '@/components/FadeIn'
 import { LocationsSection } from '@/components/LocationsSection'
 import { PricingGroups, type PriceGroup } from '@/components/PricingGroups'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { pricingPageJsonLd } from '@/lib/page-graphs'
 
 const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
@@ -19,13 +21,14 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: 'prices' })
+  const t = await getTranslations({ locale, namespace: 'meta.pricing' })
 
-  return {
-    title: `${t('title')} — Prisma Clinic Marbella`,
-    description: t('subtitle'),
-    ...createCanonicalMetadata('pricing', locale),
-  }
+  return createPageMetadata({
+    path: 'pricing',
+    locale,
+    title: t('title'),
+    description: t('description'),
+  })
 }
 
 export function generateStaticParams() {
@@ -38,6 +41,7 @@ export default async function PricingPage() {
 
   return (
     <>
+      <JsonLd data={await pricingPageJsonLd(groups)} />
       {/* ───── Aesthetic Treatments ───── */}
       <section className="py-24 sm:py-32">
         <Container>

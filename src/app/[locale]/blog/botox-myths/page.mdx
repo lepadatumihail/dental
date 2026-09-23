@@ -1,31 +1,9 @@
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
+import { createArticleMetadata, getArticle } from '@/lib/mdx'
 
-export const article = {
-  date: '2025-04-06',
-  title: 'Debunking Common Neuromodulator Myths: What You Need to Know in 2025',
-  description:
-    "Let's explore the most persistent misconceptions about neuromodulator treatments and provide evidence-based facts that can help you make informed decisions about aesthetic procedures.",
-  author: {
-    name: 'Chelsea Hagon',
-    role: 'Aesthetic Specialist',
-    image: { src: imageChelseaHagon },
-  },
-}
+export const article = getArticle('botox-myths')
 
-export const metadata = {
-  title: article.title,
-  description: article.description,
-  alternates: {
-    canonical: 'https://www.prismaclinicmarbella.es/en/blog/botox-myths',
-    languages: {
-      en: 'https://www.prismaclinicmarbella.es/en/blog/botox-myths',
-      es: 'https://www.prismaclinicmarbella.es/es/blog/botox-myths',
-      se: 'https://www.prismaclinicmarbella.es/se/blog/botox-myths',
-    },
-  },
-}
+export const metadata = createArticleMetadata(article)
 
-<div style={{ height: '40px' }} />
 ## 1. Myth: Neuromodulators Make Your Face Look Frozen and Unnatural
 
 One of the most persistent myths about neuromodulators is that they inevitably lead to a "frozen" appearance where you can't express emotions. The reality is that modern neuromodulator techniques focus on strategic muscle relaxation rather than complete immobilization. When administered by a skilled practitioner, neuromodulators should preserve natural facial expressions while reducing unwanted wrinkles.

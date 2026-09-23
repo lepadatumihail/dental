@@ -13,7 +13,9 @@ import {
   type ServiceItem,
 } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/massage-therapy.jpg'
 import therapistImage from '@/images/clinic/behrouz-rajabi.jpg'
@@ -34,11 +36,12 @@ export async function generateMetadata({
   const { locale } = params
   const t = await getTranslations({ locale, namespace: 'massageTherapy.v2' })
 
-  return {
+  return createPageMetadata({
+    path: 'services/massage-therapy',
+    locale,
     title: { absolute: t('meta.title') },
     description: t('meta.description'),
-    ...createCanonicalMetadata('services/massage-therapy', locale),
-  }
+  })
 }
 
 export default async function MassageTherapyServices() {
@@ -46,6 +49,7 @@ export default async function MassageTherapyServices() {
 
   return (
     <>
+      <JsonLd data={await servicePageJsonLd('massage')} />
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}

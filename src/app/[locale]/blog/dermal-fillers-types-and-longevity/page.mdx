@@ -1,31 +1,9 @@
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
+import { createArticleMetadata, getArticle } from '@/lib/mdx'
 
-export const article = {
-  date: '2025-02-01',
-  title: 'A Complete Guide to Dermal Fillers: Types and Longevity',
-  description:
-    'Understanding the different types of dermal fillers available and how long each lasts can help you make informed decisions about your aesthetic treatments. This guide breaks down what you need to know.',
-  author: {
-    name: 'Angela Fisher',
-    role: 'Aesthetic Nurse Specialist',
-    image: { src: imageAngelaFisher },
-  },
-}
+export const article = getArticle('dermal-fillers-types-and-longevity')
 
-export const metadata = {
-  title: article.title,
-  description: article.description,
-  alternates: {
-    canonical: 'https://www.prismaclinicmarbella.es/en/blog/a-short-guide-to-component-naming',
-    languages: {
-      en: 'https://www.prismaclinicmarbella.es/en/blog/a-short-guide-to-component-naming',
-      es: 'https://www.prismaclinicmarbella.es/es/blog/a-short-guide-to-component-naming',
-      se: 'https://www.prismaclinicmarbella.es/se/blog/a-short-guide-to-component-naming',
-    },
-  },
-}
+export const metadata = createArticleMetadata(article)
 
-<div style={{ height: '40px' }} />
 ## 1. Hyaluronic Acid Fillers: Versatile and Reversible
 
 Hyaluronic acid (HA) fillers remain the most popular category due to their versatility, predictable results, and reversibility. These fillers typically last between 6-18 months depending on the specific product and treatment area.

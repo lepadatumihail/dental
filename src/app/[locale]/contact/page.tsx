@@ -8,7 +8,9 @@ import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import { ContactBooking } from '@/components/booking/ContactBooking'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { simplePageJsonLd } from '@/lib/page-graphs'
 
 interface PageProps {
   params: { locale: string }
@@ -24,11 +26,12 @@ export async function generateMetadata({
   const { locale } = params
   const t = await getTranslations({ locale, namespace: 'booking' })
 
-  return {
-    title: t('meta.title'),
+  return createPageMetadata({
+    path: 'contact',
+    locale,
+    title: { absolute: t('meta.title') },
     description: t('meta.description'),
-    ...createCanonicalMetadata('contact', locale),
-  }
+  })
 }
 
 export default async function Contact() {
@@ -36,6 +39,7 @@ export default async function Contact() {
 
   return (
     <>
+      <JsonLd data={await simplePageJsonLd('contact')} />
       <PageIntro eyebrow={t('inline.eyebrow')} title={t('inline.title')}>
         <p>{t('inline.intro')}</p>
       </PageIntro>

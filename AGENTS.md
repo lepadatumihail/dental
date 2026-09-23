@@ -9,5 +9,9 @@
 ## Learned Workspace Facts
 
 - Production canonical URLs and sitemaps target `https://www.prismaclinicmarbella.es` (see `src/lib/canonical.ts` and sitemap routes); confirm the domain before changing SEO or metadata.
-- The per-locale sitemap uses an explicit `ROUTES` list in `src/app/[locale]/sitemap.xml/route.ts`; new `[locale]` pages must be added there or they will not appear in the sitemap.
+- The per-locale sitemap uses an explicit `ROUTES` list in `src/app/[locale]/sitemap.xml/route.ts`; new `[locale]` pages must be added there or they will not appear in the sitemap. Blog posts are added automatically from `loadArticles()` in `src/lib/mdx.ts` (English only, `/en` sitemap).
+- Page metadata goes through `createPageMetadata` in `src/lib/canonical.ts` (canonical, hreflang with `se` → `sv` and `x-default`, per-page Open Graph/Twitter). Pass a short title (the root template appends the brand) or `{ absolute }`.
+- Clinic facts (addresses, phone, hours, languages, specialists, services) live in `src/lib/clinic.ts` and feed the footer, JSON-LD (`src/lib/structured-data.ts`, `src/lib/page-graphs.ts`) and `/llms.txt`; keep them in sync with `locales/*.json`.
+- Internal links must use `Link` from `@/i18n/navigation`, not `next/link`, so they keep the current locale prefix.
+- `<html>`/`<body>` live in `src/app/[locale]/layout.tsx` (for `lang`); `src/app/not-found.tsx` renders its own. Don't gate layout rendering on client mount: crawlers need server-rendered content.
 - Open Graph and Twitter image URLs resolve from `metadataBase` in `src/app/layout.tsx` (fed from the same canonical base); if dev still warns about localhost, verify the running tree, clear `.next`, and restart.

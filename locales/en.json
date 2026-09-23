@@ -1,4 +1,32 @@
 {
+  "meta": {
+    "home": {
+      "title": "Prisma Clinic Marbella | Dental, Aesthetic & Medical Clinic",
+      "description": "Private dental, aesthetic and general medicine clinic in Marbella and Puerto Banús. English-speaking doctors, two locations and 24/7 emergency care."
+    },
+    "about": {
+      "title": "About Our Clinic",
+      "description": "High-end dentistry, aesthetic medicine and everyday healthcare under one roof. Two Prisma Clinic locations in Marbella and Puerto Banús, open 24/7 for emergencies."
+    },
+    "services": {
+      "title": "Our Treatments in Marbella",
+      "description": "Dentistry, aesthetic medicine, general medicine and therapeutic massage in Marbella and Puerto Banús, plus 24/7 emergency dental care."
+    },
+    "dental": {
+      "title": "Dentist in Marbella & Puerto Banús | Prisma Clinic"
+    },
+    "aesthetics": {
+      "title": "Aesthetic & Anti-Aging Medicine in Marbella | Prisma Clinic"
+    },
+    "pricing": {
+      "title": "Treatment Prices",
+      "description": "Aesthetic treatment prices at Prisma Clinic Marbella: dermal fillers, neuromodulators, skin rejuvenation, PRP, polynucleotides, biostimulators and IV drips."
+    },
+    "emergency": {
+      "title": "24/7 Emergency Dentist in Marbella | Prisma Clinic",
+      "description": "Emergency dental care 24/7 in Marbella. Same-day appointments for severe tooth pain, broken teeth, abscesses and dental trauma. Call or WhatsApp our hotline."
+    }
+  },
   "home": {
     "title": "Your guide to a healthier, more beautiful you.",
     "description": "Premium dental, aesthetic, and general healthcare in Marbella — maximum efficiency, comfort, and care.",
@@ -6,7 +34,7 @@
     "viewServices": "View our services",
     "discoverMore": "Discover more",
     "clients": {
-      "title": "Trusted by leading technology partners"
+      "title": "We work with world-leading dental brands"
     },
     "journey": {
       "title": "Your path to better health",
@@ -339,7 +367,10 @@
       }
     },
     "footer": {
-      "followUs": "Follow us"
+      "followUs": "Follow us",
+      "clinic": "Clinic",
+      "blog": "Blog",
+      "visitUs": "Visit us"
     },
     "services": {
       "page": {

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
@@ -10,7 +10,7 @@ import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { createPageMetadata } from '@/lib/canonical'
 
 interface PageProps {
   params: { locale: string }
@@ -26,16 +26,20 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale } = params
 
-  return {
-    title: 'Blog',
+  // The index and its articles are English only, so every locale
+  // canonicalises to `/en/blog`.
+  return createPageMetadata({
+    path: 'blog',
+    locale,
+    englishOnly: true,
+    title: 'Health News & Clinical Updates',
     description:
       'Stay up-to-date with the latest health news, treatments, and advice from our experienced medical team.',
-    ...createCanonicalMetadata('blog', locale),
-  }
+  })
 }
 
 export default async function Blog() {
-  const articles = await loadArticles()
+  const articles = loadArticles()
 
   return (
     <>
@@ -70,7 +74,7 @@ export default async function Blog() {
                             <Image
                               alt=""
                               {...article.author.image}
-                              className="h-12 w-12 object-cover grayscale"
+                              className="h-12 w-12 object-contain p-1.5"
                             />
                           </div>
                           <div className="text-sm text-neutral-950">

@@ -1,31 +1,9 @@
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
+import { createArticleMetadata, getArticle } from '@/lib/mdx'
 
-export const article = {
-  date: '2025-02-18',
-  title: 'Top 3 Innovations Transforming Dental Patient Care in 2025',
-  description:
-    'Discover the latest advances in dental care that are making treatments more comfortable, effective, and affordable. From pain-free injections to same-day restorations, these innovations are changing the dental experience.',
-  author: {
-    name: 'Leslie Alexander',
-    role: 'Co-Founder / Lead Dentist',
-    image: { src: imageLeslieAlexander },
-  },
-}
+export const article = getArticle('top-3-innovations-transforming-dental-patient-care')
 
-export const metadata = {
-  title: article.title,
-  description: article.description,
-  alternates: {
-    canonical: 'https://www.prismaclinicmarbella.es/en/blog/top-3-innovations-transforming-dental-patient-care',
-    languages: {
-      en: 'https://www.prismaclinicmarbella.es/en/blog/top-3-innovations-transforming-dental-patient-care',
-      es: 'https://www.prismaclinicmarbella.es/es/blog/top-3-innovations-transforming-dental-patient-care',
-      se: 'https://www.prismaclinicmarbella.es/se/blog/top-3-innovations-transforming-dental-patient-care',
-    },
-  },
-}
+export const metadata = createArticleMetadata(article)
 
-<div style={{ height: '40px' }} />
 ## 1. Pain-Free Dentistry: How Modern Techniques Eliminate Dental Anxiety
 
 Dental anxiety affects nearly 60% of patients, with many avoiding necessary treatment due to fear of pain. At our practice, we've implemented several breakthrough techniques that have transformed the experience for even our most anxious patients.

@@ -11,7 +11,9 @@ import {
   type ServiceItem,
 } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { JsonLd } from '@/components/JsonLd'
+import { createPageMetadata } from '@/lib/canonical'
+import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/implant.jpg'
 import doctorImage from '@/images/clinic/robin-colour.jpg'
@@ -27,12 +29,14 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { locale } = params
   const t = await getTranslations({ locale, namespace: 'dental.v2' })
+  const tMeta = await getTranslations({ locale, namespace: 'meta.dental' })
 
-  return {
-    title: `${t('hero.title')} — Prisma Clinic Marbella`,
+  return createPageMetadata({
+    path: 'services/dental',
+    locale,
+    title: { absolute: tMeta('title') },
     description: t('hero.description'),
-    ...createCanonicalMetadata('services/dental', locale),
-  }
+  })
 }
 
 export function generateStaticParams() {
@@ -44,6 +48,7 @@ export default async function DentalServices() {
 
   return (
     <>
+      <JsonLd data={await servicePageJsonLd('dental')} />
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}

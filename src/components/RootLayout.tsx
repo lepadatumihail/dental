@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useId, useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
@@ -327,16 +327,7 @@ function Header({ open, onToggle }: { open: boolean; onToggle: () => void }) {
 function RootLayoutInner({ children }: { children: React.ReactNode }) {
   const panelId = useId()
   const [open, setOpen] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
   const shouldReduceMotion = useReducedMotion()
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  if (!isMounted) {
-    return null
-  }
 
   return (
     <>

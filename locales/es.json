@@ -1,4 +1,32 @@
 {
+  "meta": {
+    "home": {
+      "title": "Prisma Clinic Marbella | Clínica dental, estética y médica",
+      "description": "Clínica privada de odontología, medicina estética y medicina general en Marbella y Puerto Banús. Médicos que hablan inglés, dos centros y urgencias 24/7."
+    },
+    "about": {
+      "title": "Sobre nuestra clínica",
+      "description": "Odontología de alto nivel, medicina estética y atención médica diaria bajo un mismo techo. Dos centros Prisma Clinic en Marbella y Puerto Banús, abiertos 24/7 para urgencias."
+    },
+    "services": {
+      "title": "Nuestros tratamientos en Marbella",
+      "description": "Odontología, medicina estética, medicina general y masaje terapéutico en Marbella y Puerto Banús, además de urgencias dentales 24/7."
+    },
+    "dental": {
+      "title": "Dentista en Marbella y Puerto Banús | Prisma Clinic"
+    },
+    "aesthetics": {
+      "title": "Medicina estética y antienvejecimiento en Marbella | Prisma Clinic"
+    },
+    "pricing": {
+      "title": "Precios de tratamientos",
+      "description": "Precios de tratamientos estéticos en Prisma Clinic Marbella: rellenos dérmicos, neuromoduladores, rejuvenecimiento cutáneo, PRP, polinucleótidos, bioestimuladores y sueros IV."
+    },
+    "emergency": {
+      "title": "Dentista de urgencias 24/7 en Marbella | Prisma Clinic",
+      "description": "Urgencias dentales 24/7 en Marbella. Citas el mismo día para dolor de muelas intenso, dientes rotos, abscesos y traumatismos dentales. Llama o escríbenos por WhatsApp."
+    }
+  },
   "home": {
     "title": "Tu guía hacia una versión más sana y bella de ti.",
     "description": "Salud dental, estética y medicina general premium en Marbella — máxima eficiencia, confort y cuidado.",
@@ -6,7 +34,7 @@
     "viewServices": "Ver nuestros servicios",
     "discoverMore": "Descubre más",
     "clients": {
-      "title": "Con la confianza de socios tecnológicos líderes"
+      "title": "Trabajamos con marcas dentales líderes a nivel mundial"
     },
     "journey": {
       "title": "Tu camino hacia una mejor salud",
@@ -339,7 +367,10 @@
       }
     },
     "footer": {
-      "followUs": "Síguenos"
+      "followUs": "Síguenos",
+      "clinic": "Clínica",
+      "blog": "Blog",
+      "visitUs": "Visítanos"
     },
     "services": {
       "page": {

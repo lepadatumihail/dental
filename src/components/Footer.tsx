@@ -1,115 +1,87 @@
-import Link from 'next/link'
+import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { socialMediaProfiles } from '@/components/SocialMedia'
 import { CookieSettings } from '@/components/CookieSettings'
-import Image from 'next/image'
+import { FadeIn } from '@/components/FadeIn'
+import { Link } from '@/i18n/navigation'
+import { CLINIC_PHONE, CLINIC_PHONE_E164 } from '@/lib/clinic'
 
 import Logo from '../../public/logo-dark.png'
 
-const navigation = [
-  {
-    title: 'Work',
-    links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
-      {
-        title: (
-          <>
-            See all <span aria-hidden="true">&rarr;</span>
-          </>
-        ),
-        href: '/work',
-      },
-    ],
-  },
-  {
-    title: 'Company',
-    links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
-    ],
-  },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
-  },
-]
+function FooterNav() {
+  const t = useTranslations('layout')
+  const tLocations = useTranslations('home.locations')
 
-// function Navigation() {
-//   return (
-//     <nav>
-//       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-//         {navigation.map((section, sectionIndex) => (
-//           <li key={sectionIndex}>
-//             <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-//               {section.title}
-//             </div>
-//             <ul role="list" className="mt-4 text-sm text-neutral-700">
-//               {section.links.map((link, linkIndex) => (
-//                 <li key={linkIndex} className="mt-4">
-//                   <Link
-//                     href={link.href}
-//                     className="transition hover:text-neutral-950"
-//                   >
-//                     {link.title}
-//                   </Link>
-//                 </li>
-//               ))}
-//             </ul>
-//           </li>
-//         ))}
-//       </ul>
-//     </nav>
-//   )
-// }
+  const columns = [
+    {
+      title: t('navigation.items.treatments.label'),
+      links: [
+        { label: t('navigation.items.treatments.dental'), href: '/services/dental' },
+        { label: t('navigation.items.treatments.aesthetic'), href: '/services/aesthetics' },
+        { label: t('navigation.items.treatments.medical'), href: '/services/general-medicine' },
+        { label: t('navigation.items.treatments.massage'), href: '/services/massage-therapy' },
+        { label: t('navigation.items.emergencies'), href: '/services/emergency' },
+      ],
+    },
+    {
+      title: t('footer.clinic'),
+      links: [
+        { label: t('navigation.items.theClinic'), href: '/about' },
+        { label: t('navigation.items.ourPrices'), href: '/pricing' },
+        { label: t('footer.blog'), href: '/blog' },
+        { label: t('navigation.items.contact'), href: '/contact' },
+      ],
+    },
+  ]
 
-function ArrowIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 16 6" aria-hidden="true" {...props}>
-      <path
-        fill="currentColor"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 3 10 .5v2H0v1h10v2L16 3Z"
-      />
-    </svg>
-  )
-}
+    <div className="mt-20 grid grid-cols-2 gap-10 sm:grid-cols-3">
+      {columns.map((column) => (
+        <nav key={column.title} aria-label={column.title}>
+          <h2 className="text-[11px] font-semibold tracking-[0.25em] text-taupe uppercase">
+            {column.title}
+          </h2>
+          <ul role="list" className="mt-5 space-y-3 text-sm">
+            {column.links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-warm-dark transition-colors duration-150 hover:text-mocha"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))}
 
-function NewsletterForm() {
-  return (
-    <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
-        Sign up for our newsletter
-      </h2>
-      <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest design news, articles, resources and
-        inspiration.
-      </p>
-      <div className="relative mt-6">
-        <input
-          type="email"
-          placeholder="Email address"
-          autoComplete="email"
-          aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pr-20 pl-6 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:ring-neutral-950/5 focus:outline-hidden"
-        />
-        <div className="absolute inset-y-1 right-1 flex justify-end">
-          <button
-            type="submit"
-            aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
-          >
-            <ArrowIcon className="w-4" />
-          </button>
-        </div>
+      <div className="col-span-2 sm:col-span-1">
+        <h2 className="text-[11px] font-semibold tracking-[0.25em] text-taupe uppercase">
+          {t('footer.visitUs')}
+        </h2>
+        <address className="mt-5 space-y-4 text-sm text-warm-dark not-italic">
+          {(['banus', 'oldTown'] as const).map((key) => (
+            <p key={key}>
+              <span className="font-semibold">{tLocations(`${key}.name`)}</span>
+              <br />
+              {tLocations(`${key}.address`)}
+            </p>
+          ))}
+          <p>
+            <a
+              href={`tel:${CLINIC_PHONE_E164}`}
+              className="font-semibold transition-colors duration-150 hover:text-mocha"
+            >
+              {CLINIC_PHONE}
+            </a>
+            <br />
+            {tLocations('openingHoursValue')}
+          </p>
+        </address>
       </div>
-    </form>
+    </div>
   )
 }
 
@@ -132,7 +104,8 @@ export function Footer() {
             title="Prisma Clinic Marbella Location Map"
           />
         </div>
-        <div className="mt-24 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
+        <FooterNav />
+        <div className="mt-16 mb-20 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
             <Image
               src={Logo}

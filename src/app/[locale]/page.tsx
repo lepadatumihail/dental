@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 
 import { AboutClinic } from '@/components/AboutClinic'
@@ -10,7 +10,7 @@ import { HeroSlideshow } from '@/components/HeroSlideshow'
 import { LocationsSection } from '@/components/LocationsSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { WhatsappCta } from '@/components/WhatsappCta'
-import { createCanonicalMetadata } from '@/lib/canonical'
+import { createPageMetadata } from '@/lib/canonical'
 
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import logoNeos from '@/images/clients/neoss.svg'
@@ -81,12 +81,13 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
+  const t = await getTranslations({ locale, namespace: 'meta.home' })
 
-  return {
-    description:
-      'Prisma Clinic Marbella offers comprehensive dental care with a focus on patient comfort and beautiful results.',
-    ...createCanonicalMetadata('', locale),
-  }
+  return createPageMetadata({
+    locale,
+    title: { absolute: t('title') },
+    description: t('description'),
+  })
 }
 
 export function generateStaticParams() {
