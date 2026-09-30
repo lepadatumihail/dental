@@ -4650,3 +4650,58 @@
     margin-top: auto;
   }
 }
+
+@layer components {
+  /* Price list: the hero already closes with a rule, so no top border,
+     and no bottom rule on the last group before the section ends. */
+  .price-grid {
+    border-top: 0;
+  }
+  .price-grid article:first-child {
+    padding-top: 0;
+  }
+  .price-grid article:last-child {
+    border-bottom: 0;
+  }
+  .price-row {
+    font-size: 0.95rem;
+  }
+  .price-row span {
+    font-weight: 400;
+  }
+
+  /* Nav: the current page gets a solid underline, hover only a faint one. */
+  .nav a:not([aria-current='page']):after {
+    opacity: 0.3;
+  }
+  .nav .emergency-nav {
+    color: #dc2626;
+  }
+  .nav .emergency-nav:after {
+    background: currentColor;
+  }
+}
+
+@media (width<=1180px) {
+  @layer components {
+    .nav .emergency-nav {
+      color: #f87171;
+    }
+  }
+}
+
+@layer components {
+  /* The grey panel's colour change is the divider; drop the rule above it. */
+  :has(
+      + :is(
+          .compact-emergency,
+          .cta-band,
+          .care-cta,
+          .profile-cta,
+          .influencer-membership,
+          .emergency-hotline
+        )
+    ) {
+    border-bottom: 0;
+  }
+}

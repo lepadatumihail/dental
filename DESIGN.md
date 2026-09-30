@@ -23,7 +23,7 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 | — | — | `#333` / `#383838` / `#555` | Rules and borders on black sections |
 | — | — | `#aaa` / `#777` | Secondary copy on black sections |
 
-**Emergency / urgent:** Tailwind `red-500` (`#ef4444`, hover `#dc2626`) via `.button.urgent` — the only colour in the interface, reserved for "call now" actions on emergency and general-medicine pages.
+**Emergency / urgent:** the only colour in the interface. Tailwind `red-500` (`#ef4444`, hover `#dc2626`) for `.button.urgent` "call now" buttons on emergency and general-medicine pages; `red-600` (`#dc2626`) for the "Emergency 24/7" nav link (legible as small text on white) and `red-400` (`#f87171`) for it in the black mobile menu.
 
 **Legacy tokens:** `mocha`, `taupe`, `sand`, `forest`, `warm-dark`, `surface-*` still exist but are remapped to the monochrome values above so older markup (booking wizard, cookie banner, blog) follows the design. Don't use them in new code — use `ink`, `muted`, `line`, `black`, `white`.
 
