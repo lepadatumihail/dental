@@ -40,9 +40,10 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 | Role | Size | Details |
 |------|------|---------|
-| h1 | `clamp(4.2rem, 6.6vw, 7rem)`, line-height 0.9 | **Uppercase** for short titles. Service heroes (`.service-hero h1`) carry full-sentence titles, so they are sentence case at `clamp(2.8rem, 4vw, 4.6rem)` |
-| h2 | `clamp(2.8rem, 4.8vw, 5.4rem)`, line-height 0.96 | Sentence case; second line often `<em>` italic |
-| Section h2 (content pages) | `clamp(2.6rem, 4.6vw, 5.4rem)` | `.split-heading`, `.statement`, `.expert-feature` |
+| h1 (inner hero) | `clamp(3rem, 4.8vw, 5.2rem)`, line-height 0.92 | **Uppercase** for short titles. Home hero `clamp(3.2rem, 4.4vw, 5rem)`; profile `clamp(2.8rem, 4vw, 4.6rem)`; split heroes `clamp(2.6rem, 3.8vw, 4.2rem)` |
+| h1 (service hero) | `clamp(2.4rem, 3.4vw, 3.8rem)` | Sentence/title case — these titles are full sentences |
+| h2 | `clamp(2.4rem, 3.8vw, 4.2rem)`, line-height 0.96 | Homepage and closing CTA statements; second line often `<em>` italic |
+| Section h2 (content pages) | `clamp(2.2rem, 3.2vw, 3.6rem)` | `.split-heading`, `.statement`, `.expert-feature` and friends |
 | h3 | ~1.7–2.2rem | Playfair, used in grids and cards |
 | Eyebrow (`.eyebrow`) | 0.68rem, weight 500 | Uppercase, letter-spacing 0.21em |
 | Body | ~0.85–1.1rem, line-height 1.7–1.85 | Muted colour for supporting copy |
@@ -50,6 +51,7 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 ### Principles
 
+- **The scale lives in one place:** the "Type scale" block at the end of `prisma.css`. Change sizes there, not in individual components.
 - **Serif for statements, sans for structure.** Playfair for headlines, quotes and big numbers; Raleway for everything functional.
 - **Two-line headlines.** Most section titles are two short lines, the second in italic: `"Your next chapter<br></br><em>starts here.</em>"` (rendered with `t.rich(key, richTags)` from `src/lib/rich.tsx`).
 - **Uppercase only for short h1s, eyebrows, buttons and nav micro-labels.** Anything longer than ~5 words stays in sentence case.
