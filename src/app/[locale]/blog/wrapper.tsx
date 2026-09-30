@@ -31,10 +31,10 @@ export default async function BlogArticleWrapper({
           authorName: article.author.name,
         })}
       />
-      <Container as="article" className="mt-24 sm:mt-32 lg:mt-40">
+      <Container as="article" className="page-offset mt-16 sm:mt-24">
         <FadeIn>
           <header className="mx-auto flex max-w-5xl flex-col text-center">
-            <h1 className="mt-6 font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl">
+            <h1 className="mt-6 text-5xl [text-wrap:balance] text-neutral-950 normal-case sm:text-6xl">
               {article.title}
             </h1>
             <time

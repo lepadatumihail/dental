@@ -257,6 +257,37 @@ export function servicePageGraph({
   }
 }
 
+/** A specialist's profile: ProfilePage about the Person + breadcrumbs. */
+export function profilePageGraph({
+  locale,
+  person,
+  name,
+  description,
+  breadcrumbs,
+}: {
+  locale: string
+  person: ClinicSpecialist
+  name: string
+  description: string
+  breadcrumbs: Array<BreadcrumbItem>
+}): Thing {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      webPage({
+        locale,
+        path: person.path,
+        name,
+        description,
+        type: 'ProfilePage',
+        about: { '@id': specialistId(person.id) },
+      }),
+      specialistPerson(person, locale),
+      breadcrumbList(locale, breadcrumbs),
+    ],
+  }
+}
+
 /** A plain page with breadcrumbs (about, services index, contact, blog index). */
 export function simplePageGraph({
   locale,

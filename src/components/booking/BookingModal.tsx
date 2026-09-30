@@ -45,7 +45,7 @@ export function BookingModal() {
 
   return (
     <div
-      className="fixed inset-0 z-[70] flex items-center justify-center overflow-y-auto bg-warm-dark/60 p-4 backdrop-blur-sm sm:p-6"
+      className="fixed inset-0 z-[90] flex items-center justify-center overflow-y-auto bg-warm-dark/60 p-4 backdrop-blur-sm sm:p-6"
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) close()
       }}

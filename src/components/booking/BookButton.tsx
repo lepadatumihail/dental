@@ -2,6 +2,8 @@
 
 import clsx from 'clsx'
 
+import { findEventTypeByKey } from '@/lib/agenda/event-types'
+
 import { useBookingModal } from './BookingProvider'
 
 type BookButtonVariant = 'primary' | 'invert' | 'hero'
@@ -39,6 +41,37 @@ export function BookButton({
       )}
     >
       {label}
+    </button>
+  )
+}
+
+/**
+ * Unstyled booking trigger for server-rendered layouts that bring their own
+ * classes (e.g. `button dark`). Opens the booking modal like BookButton;
+ * `service` pre-selects an event type by key (e.g. 'dental').
+ */
+export function BookTrigger({
+  service,
+  className,
+  children,
+  onClick,
+}: {
+  service?: string
+  className?: string
+  children: React.ReactNode
+  onClick?: () => void
+}) {
+  const { open } = useBookingModal()
+  return (
+    <button
+      type="button"
+      onClick={() => {
+        onClick?.()
+        open(service ? findEventTypeByKey(service)?.id : undefined)
+      }}
+      className={className}
+    >
+      {children}
     </button>
   )
 }

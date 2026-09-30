@@ -32,36 +32,6 @@
     "description": "Premium tandvård, estetik och allmänmedicin i Marbella — maximal effektivitet, komfort och omsorg.",
     "tagline": "Prisma Clinic Marbella",
     "viewServices": "Se våra tjänster",
-    "discoverMore": "Upptäck mer",
-    "clients": {
-      "title": "Vi arbetar med världsledande varumärken inom tandvård"
-    },
-    "journey": {
-      "title": "Din väg till bättre hälsa",
-      "description": "Från ditt första besök till pågående vård guidar vi dig varje steg på vägen med precision, omtanke och avancerad teknik.",
-      "steps": {
-        "consultation": {
-          "label": "01",
-          "title": "Konsultation",
-          "description": "Boka ditt första besök för en grundlig bedömning av dina hälso- och estetiska behov."
-        },
-        "diagnosis": {
-          "label": "02",
-          "title": "Diagnos",
-          "description": "Avancerad diagnostik med banbrytande bild- och teknik för korrekta, tillförlitliga resultat."
-        },
-        "treatment": {
-          "label": "03",
-          "title": "Behandling",
-          "description": "Personanpassade behandlingsplaner utformade av våra specialister, skräddarsydda för din unika situation."
-        },
-        "care": {
-          "label": "04",
-          "title": "Löpande vård",
-          "description": "Kontinuerlig uppföljning och förebyggande vård för att säkerställa varaktiga resultat och sinnesro."
-        }
-      }
-    },
     "services": {
       "title": "Våra tjänster",
       "description": "Vi använder banbrytande tand- och estetiska teknologier för att erbjuda vård av högsta kvalitet. Vår avancerade utrustning säkerställer precision och komfort, vilket förbättrar både ditt leende och ditt ansiktes utseende med exceptionella resultat.",
@@ -108,53 +78,6 @@
     },
     "testimonial": {
       "text": "Teamet på Prisma Clinic Marbella gjorde mitt tandläkarbesök så bekvämt och stressfritt. Deras varsamma tillvägagångssätt och noggrannhet förändrade helt min syn på tandvård."
-    },
-    "hero": {
-      "slides": {
-        "aesthetic": {
-          "h1": "Estetiska och Anti-aging-behandlingar",
-          "h2": "Möt högklassiga estetiska lösningar med ett världsklassteam av experter inom anti-aging-medicin — allt på ett ställe.",
-          "cta": "Se våra behandlingar"
-        },
-        "dental": {
-          "h1": "Tandvård och tandhälsa",
-          "h2": "Den mest avancerade tandvården i Spanien",
-          "cta": "Se våra behandlingar"
-        },
-        "medical": {
-          "h1": "Allmänmedicin och hälsooptimering",
-          "h2": "Omedelbar tillgång till hälsobehandlingar och vård",
-          "cta": "Ring oss nu"
-        }
-      }
-    },
-    "treatments": {
-      "title": "Allt på ett ställe",
-      "description": "Få tillgång till den enda anläggningen i Marbella med ett expertteam fokuserat på livslängd, skönhet och livskvalitet — allt på ett ställe",
-      "cards": {
-        "dental": {
-          "title": "Tandvård och estetik",
-          "description": "Från de mest komplexa fallen till de enklaste tar vi hand om varje detalj med excellens."
-        },
-        "antiAging": {
-          "title": "Anti-aging-behandlingar",
-          "description": "De senaste teknologierna inom estetiska behandlingar i Marbella"
-        },
-        "general": {
-          "title": "Allmänmedicin",
-          "description": "För dina vardagliga behov och din livskvalitet."
-        }
-      }
-    },
-    "whatsapp": {
-      "title": "Vi finns här 24/7 — för alla akuta behov",
-      "description": "Öppet dygnet runt för akuta fall, frågor eller en snabb pratstund. Vårt flerspråkiga team talar spanska, engelska, svenska, tyska och farsi — skriv till oss när som helst.",
-      "cta": "Skicka oss ett meddelande!"
-    },
-    "about": {
-      "eyebrow": "Om kliniken",
-      "title": "Prisma Clinic",
-      "body": "Prisma Clinic Marbella är en modern tandvårds- och estetikklinik i hjärtat av Marbella, dedikerad till att leverera vård av högsta kvalitet i en lugn och lyxig miljö. Vi specialiserar oss på heltäckande tandvård — från rutinkontroller och kosmetisk tandvård till avancerade behandlingar. Vår estetikavdelning erbjuder personliga icke-kirurgiska behandlingar som dermala fillers och neuromodulatorer för att framhäva naturlig skönhet med subtila och effektiva resultat. För din trygghet erbjuder vi även akut tandvård dygnet runt så att expertstöd alltid finns tillgängligt när du behöver det som mest. På Prisma kommer din komfort, ditt självförtroende och ditt välbefinnande alltid först."
     },
     "testimonialsGrid": {
       "title": "Vad folk säger om oss",
@@ -1337,6 +1260,679 @@
       "unavailable": "Onlinebokning är tillfälligt otillgänglig. Ring eller skriv till oss så hjälper vi dig gärna.",
       "fallbackCall": "Ring oss",
       "fallbackWhatsapp": "Skriv på WhatsApp"
+    }
+  },
+  "site": {
+    "bookConsultation": "Boka en konsultation",
+    "bookYourConsultation": "Boka din konsultation",
+    "nav": {
+      "label": "Huvudnavigering",
+      "home": "Prisma Clinic – startsida",
+      "menu": "Öppna meny",
+      "close": "Stäng meny",
+      "bookNow": "Boka nu",
+      "treatments": "Behandlingar",
+      "specialists": "Specialister",
+      "prices": "Priser",
+      "memberships": "Medlemskap",
+      "doctorOnline": "Doctor Online",
+      "dentalTourism": "Tandvårdsturism",
+      "prismaCare": "Prisma Care",
+      "clinics": "Kliniker",
+      "emergency": "Akut 24/7"
+    },
+    "footer": {
+      "tagline": "Avancerad vård. Personlig omsorg.",
+      "explore": "Utforska",
+      "visit": "Besök",
+      "connect": "Håll kontakten",
+      "results": "Patientberättelser",
+      "ourClinics": "Våra kliniker",
+      "about": "Om kliniken",
+      "contact": "Kontakt",
+      "blog": "Blogg",
+      "email": "E-post",
+      "disclaimer": "Medicinsk information är allmän och ersätter inte en individuell konsultation.",
+      "websiteBy": "Webbplats av"
+    },
+    "finalCta": {
+      "eyebrow": "Börja med ett samtal",
+      "title": "Ditt nästa kapitel<br></br><em>börjar här.</em>"
+    },
+    "whatsapp": {
+      "label": "Kontakta Prisma Clinic",
+      "eyebrow": "Hur kan vi hjälpa dig?",
+      "title": "Kontakta Prisma",
+      "topicLabel": "Vad gäller din förfrågan?",
+      "messageLabel": "Ditt meddelande",
+      "messagePlaceholder": "Skriv ett kort meddelande (valfritt)",
+      "write": "Skriv på WhatsApp",
+      "call": "Ring oss: {topic}",
+      "emergencyNote": "Vid livshotande nödsituationer, ring 112.",
+      "trigger": "WhatsApp & telefon",
+      "close": "Stäng",
+      "closeLabel": "Stäng kontaktrutan",
+      "template": "Hej Prisma Clinic! Jag skulle vilja ha hjälp med: {topic}.",
+      "topics": {
+        "dental": "Tandbehandling",
+        "dentalTourism": "Tandvårdsturism",
+        "emergency": "Akut tandvård 24/7",
+        "aesthetic": "Estetisk behandling",
+        "medical": "Allmänmedicin",
+        "surgery": "Kirurgi & mäns hälsa",
+        "massage": "Massage & Yumeiho-terapi",
+        "doctorOnline": "Doctor Online",
+        "memberships": "Medlemskap",
+        "prismaCare": "Prisma Care",
+        "other": "Vägbeskrivning eller annan fråga"
+      }
+    }
+  },
+  "areas": {
+    "dental": {
+      "title": "Tandvård",
+      "lead": "Avancerad tandvård och munhälsa",
+      "services": [
+        "Tandimplantat",
+        "Endodonti & rotbehandling",
+        "Skalfasader & leendedesign",
+        "Kronor & broar",
+        "Professionell tandblekning",
+        "Förebyggande kontroller",
+        "Extraktioner & sinuslyft",
+        "Akut tandvård 24/7"
+      ]
+    },
+    "aesthetics": {
+      "title": "Estetisk medicin",
+      "lead": "Förfinade resultat, aldrig överdrivna",
+      "services": [
+        "Dermala fillers",
+        "Läppförstoring",
+        "Ansiktsharmonisering",
+        "Neuromodulatorer",
+        "Bruxism- & svettbehandling",
+        "PRP för ansikte & hår",
+        "Polynukleotider",
+        "PLLA-biostimulatorer"
+      ]
+    },
+    "medical": {
+      "title": "Allmänmedicin",
+      "lead": "Privat vård, utan vårdköer",
+      "services": [
+        "Akutvård 24/7",
+        "Medicinsk viktbehandling",
+        "Mindre kirurgi",
+        "Mäns hälsa & urologi",
+        "IV-dropp & välmående",
+        "Blodprover & hälsokontroller",
+        "Resemedicin",
+        "Telemedicin"
+      ]
+    },
+    "massage": {
+      "title": "Massageterapi",
+      "lead": "Exklusiv japansk Yumeiho-metod",
+      "services": [
+        "Terapeutisk Yumeiho-massage",
+        "Djupgående tryckterapi",
+        "Hållningsobalanser",
+        "Spänningar i rygg & nacke",
+        "Ledrörlighet",
+        "Ischias & nervspänningar",
+        "Lymfdränage",
+        "Zonterapi & stretching"
+      ]
+    }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Tandvård  /  Estetisk medicin  /  Allmänmedicin",
+      "title": "Konsten att<br></br>vårda väl.",
+      "lead": "Expertis i världsklass. Personligt anpassade behandlingar. Exceptionella resultat i Marbella och Puerto Banús.",
+      "explore": "Utforska behandlingar",
+      "imageAlt": "Specialistteamet på Prisma Clinic inne på kliniken"
+    },
+    "proof": {
+      "locations": "Två ikoniska adresser",
+      "specialists": "Sex engagerade specialister",
+      "care": "Personlig vård"
+    },
+    "intro": {
+      "label": "Prisma-standarden",
+      "eyebrow": "En modern, tvärprofessionell klinik",
+      "title": "Allt du behöver.<br></br><em>En genomtänkt upplevelse.</em>",
+      "p1": "Prisma samlar förstklassig tandvård, estetisk medicin och vardaglig sjukvård under ett och samma lugna, genomtänkta tak.",
+      "p2": "Varje detalj hanteras med precision, diskretion och personlig omsorg — från första konsultation till uppföljning."
+    },
+    "access": {
+      "online": {
+        "eyebrow": "Prisma Doctor Online",
+        "title": "Träffa en läkare<br></br>var du än befinner dig.",
+        "cta": "Videokonsultation — 25€"
+      },
+      "memberships": {
+        "eyebrow": "Vård året runt",
+        "title": "Upptäck Prismas<br></br>medlemskap.",
+        "cta": "Utforska medlemskap"
+      }
+    },
+    "treatments": {
+      "eyebrow": "Expertis under ett tak",
+      "title": "Behandlingar formade<br></br>efter <em>dig.</em>",
+      "viewAll": "Se alla behandlingar",
+      "discover": "Utforska området"
+    },
+    "specialists": {
+      "eyebrow": "Människorna bakom vården",
+      "title": "Möt dina<br></br><em>specialister.</em>",
+      "body": "Ett tvärprofessionellt team förenat av klinisk precision, ärlig vägledning och en naturlig känsla för personlig omsorg.",
+      "cta": "Möt hela teamet"
+    },
+    "reviews": {
+      "eyebrow": "Patientupplevelser",
+      "title": "Vård som<br></br><em>man minns.</em>",
+      "source": "verifierad Google-recension",
+      "cta": "Läs alla patientberättelser"
+    },
+    "find": {
+      "eyebrow": "Hitta hit",
+      "title": "Två kliniker.<br></br><em>Samma standard.</em>",
+      "cta": "Utforska båda klinikerna"
+    },
+    "emergency": {
+      "eyebrow": "När vården inte kan vänta",
+      "title": "Här för dig.<br></br><em>Dygnet runt.</em>",
+      "body": "Omedelbar tandvård vid svår smärta, trasiga tänder, infektioner, trauma, lossnade fyllningar eller kronor och andra akuta tillstånd — även helger och helgdagar.",
+      "call": "Ring {phone}",
+      "info": "Information om akutvård"
+    }
+  },
+  "specialists": {
+    "meta": {
+      "title": "Våra specialister",
+      "description": "Möt teamet på Prisma Clinic Marbella: estetisk tandvård och implantat, estetisk och regenerativ medicin, hårtransplantation, allmänkirurgi och Yumeiho-terapi."
+    },
+    "hero": {
+      "eyebrow": "Våra specialister",
+      "title": "Expertis med<br></br>mänsklig värme.",
+      "intro": "Ett tvärprofessionellt team förenat av klinisk precision, ärlig vägledning och en naturlig känsla för personlig omsorg."
+    },
+    "card": {
+      "explore": "Se profil",
+      "teaser": "Möt {name} och upptäck expertis och signaturbehandlingar."
+    },
+    "profile": {
+      "back": "← Alla specialister",
+      "bookWith": "Boka hos {name}",
+      "approach": "Vårdfilosofi",
+      "languages": "Språk",
+      "expertise": "Expertområden",
+      "howCanHelp": "Så kan {name} hjälpa dig.",
+      "galleryLabel": "{name} på Prisma Clinic",
+      "galleryAlt": {
+        "intro": "{name} — introduktion",
+        "expertise": "{name} — expertis",
+        "treatments": "{name} — signaturbehandlingar"
+      },
+      "ctaEyebrow": "Personlig konsultation",
+      "ctaTitle": "Börja med<br></br><em>ett samtal.</em>"
+    },
+    "people": {
+      "behrouz-rajabi": {
+        "role": "Specialist i Yumeiho-terapi",
+        "detail": "Personligt anpassad Yumeiho-terapi med fokus på hållningsbalans, rörlighet, muskelspänningar och att återfå lätthet i rörelserna.",
+        "experience": "Officiell representant för Yumeiho-terapin med mer än 20 års erfarenhet av att återställa balans, lindra smärta och förbättra rörligheten.",
+        "philosophy": "Att stödja kroppens naturliga hållning för att främja rörlighet, balans och varaktigt välbefinnande.",
+        "languages": [
+          "Persiska",
+          "Tyska",
+          "Engelska",
+          "Spanska"
+        ],
+        "treatments": [
+          "Ryggsmärta & spänningar",
+          "Nack- & axelsmärta",
+          "Obalans i bäckenet",
+          "Besvär i höft & leder",
+          "Hållningsobalanser",
+          "Ryggradens hållning",
+          "Muskelspänningar",
+          "Rörlighet & kroppsbalans"
+        ]
+      },
+      "dr-afshin-moheb": {
+        "role": "Ansiktsplastikkirurgi & hårtransplantation",
+        "detail": "Specialistledd ansiktskirurgi och hårtransplantation med noggrann planering, naturliga proportioner och diskret uppföljning.",
+        "experience": "En internationellt erkänd specialist med decennier av kirurgisk erfarenhet och fler än 7 000 utförda hårtransplantationer.",
+        "philosophy": "Att återge självförtroendet genom naturlig, personligt anpassad hårtransplantation.",
+        "languages": [
+          "Engelska",
+          "Tyska",
+          "Persiska"
+        ],
+        "treatments": [
+          "FUE-hårtransplantation",
+          "Rekonstruktion av hårfästet",
+          "Ökad hårtäthet",
+          "Skäggtransplantation",
+          "Ögonbrynstransplantation",
+          "PRP & regenerativ hårbehandling"
+        ]
+      },
+      "dr-angelo-termini": {
+        "role": "Allmänkirurgi & mäns hälsa",
+        "detail": "Privat medicinsk och kirurgisk vård med särskilt fokus på mäns hälsa, tydlig diagnostik och konfidentiell vägledning.",
+        "experience": "En senior specialistläkare med nästan 40 års erfarenhet som förenar kirurgisk expertis med omtänksam, patientnära vård.",
+        "philosophy": "God medicin börjar med att lyssna. Varje patient ska känna sig sedd, respekterad och delaktig i sin egen vård.",
+        "languages": [
+          "Svenska",
+          "Engelska",
+          "Norska",
+          "Italienska",
+          "Spanska"
+        ],
+        "treatments": [
+          "Allmänmedicin & diagnostik",
+          "Akutvård 24/7 & telemedicin",
+          "Allmänkirurgi",
+          "Urologi",
+          "Medicinsk viktbehandling",
+          "Mäns hälsa & proktologi",
+          "Förebyggande hälsovård",
+          "Terapeutiska injektioner & estetik"
+        ]
+      },
+      "dr-bozana-krivosija": {
+        "role": "Estetisk & regenerativ medicin",
+        "detail": "Förfinade estetiska och regenerativa behandlingar utformade kring ansiktets balans, hudens kvalitet och resultat som känns äkta och helt dina.",
+        "experience": "Hängiven att skapa naturliga, balanserade resultat som stärker självförtroendet, genom personlig bedömning och ett regenerativt förhållningssätt.",
+        "philosophy": "Att hjälpa dig att se utvilad och självsäker ut — som den bästa versionen av dig själv.",
+        "languages": [
+          "Engelska",
+          "Serbiska",
+          "Spanska"
+        ],
+        "treatments": [
+          "Rynkbehandling med injektioner",
+          "Dermala fillers",
+          "Skinboosters",
+          "Polynukleotider",
+          "Kollagenstimulatorer",
+          "PRP (trombocytrik plasma)",
+          "Microneedling",
+          "IV-vitaminterapi"
+        ]
+      },
+      "dr-darina-sansasvili": {
+        "role": "Specialist i dentofacial estetik",
+        "detail": "Personligt anpassad estetisk ansiktsmedicin med ett precist, genomtänkt förhållningssätt till harmoni, föryngring och naturliga resultat.",
+        "experience": "Tandläkare, internationell föreläsare och utbildare med mer än 17 års klinisk erfarenhet inom tandvård och ansiktsestetik.",
+        "philosophy": "Förändra inte ditt ansikte — framhäv det.",
+        "languages": [
+          "Engelska",
+          "Tjeckiska",
+          "Italienska",
+          "Ryska",
+          "Spanska",
+          "Georgiska"
+        ],
+        "treatments": [
+          "Avancerad Botox",
+          "Terapeutisk Botox",
+          "Ansiktsharmonisering",
+          "Läpp- & kindförstärkning",
+          "Konturering av haka & käklinje",
+          "Icke-kirurgisk näskorrigering",
+          "Polynukleotider",
+          "Skinboosters"
+        ]
+      },
+      "dr-robbin": {
+        "role": "Estetisk, kosmetisk & implantattandvård",
+        "detail": "Kosmetisk tandvård och implantat, komplexa rekonstruktioner och akut tandvård dygnet runt — utfört med lugn och noggrann omsorg.",
+        "experience": "Tandläkare i fjärde generationen, specialiserad på kosmetisk tandvård och implantat, med fokus på att skapa naturliga, självsäkra leenden som håller.",
+        "philosophy": "Varje leende är unikt. Mitt jobb är att lyfta fram det bästa i ditt.",
+        "languages": [
+          "Svenska",
+          "Engelska",
+          "Persiska",
+          "Tyska",
+          "Litauiska",
+          "Norska"
+        ],
+        "treatments": [
+          "Tandimplantat",
+          "Skalfasader",
+          "Tandblekning",
+          "Kronor & broar",
+          "Förebyggande kontroller",
+          "Endodonti (rotbehandling)",
+          "Akut tandvård 24/7"
+        ]
+      }
+    }
+  },
+  "memberships": {
+    "meta": {
+      "title": "Tandvårdsmedlemskap",
+      "description": "Tandvårdsmedlemskap på Prisma Clinic Marbella: tandrengöring, blekning, akut tandvård och 10% rabatt på alla behandlingar. För individer, par och familjer."
+    },
+    "hero": {
+      "eyebrow": "Prisma-medlemskap",
+      "title": "Vård som stannar<br></br>hos dig.",
+      "intro": "Välj ett årligt tandvårdsmedlemskap med förebyggande vård, förmånliga priser och akut tandvård inkluderat.",
+      "cta": "Utforska medlemskap"
+    },
+    "intro": {
+      "eyebrow": "Årliga medlemskap",
+      "title": "Välj den vård<br></br><em>som passar ditt liv.</em>",
+      "body": "Varje medlemskap är personligt, enkelt att använda och gäller i tolv månader från aktiveringen."
+    },
+    "group": {
+      "eyebrow": "Tandvårdsmedlemskap",
+      "title": "Ett friskare leende, året runt."
+    },
+    "perYear": "/ år",
+    "join": "Bli medlem",
+    "joinMessage": "Hej Prisma Clinic! Jag vill gärna bli medlem: {plan} ({price} / år).",
+    "plans": {
+      "individual": {
+        "name": "Individ",
+        "note": "För en medlem",
+        "benefits": [
+          "2 tandrengöringar per år",
+          "1 tandblekning per år",
+          "Akut tandvård ingår",
+          "10% rabatt på alla behandlingar"
+        ]
+      },
+      "couple": {
+        "name": "Par",
+        "note": "För två medlemmar",
+        "benefits": [
+          "4 tandrengöringar per år",
+          "2 tandblekningar per år",
+          "Akut tandvård ingår för båda medlemmarna",
+          "10% rabatt på alla behandlingar"
+        ]
+      },
+      "family": {
+        "name": "Familj",
+        "note": "För hela familjen",
+        "benefits": [
+          "8 tandrengöringar per år",
+          "4 tandblekningar per år",
+          "Akut tandvård ingår för hela familjen",
+          "10% rabatt på alla behandlingar"
+        ]
+      }
+    },
+    "influencer": {
+      "eyebrow": "Prisma Influencer",
+      "title": "Intresserad av ett<br></br><em>kreativt samarbete?</em>",
+      "body": "Influencermedlemskap bedöms individuellt och kan inte köpas online. Kontakta Prisma Clinic för att diskutera rätt samarbetsnivå.",
+      "cta": "Kontakta Prisma",
+      "message": "Hej Prisma Clinic! Jag skulle vilja prata om ett influencermedlemskap."
+    }
+  },
+  "doctorOnline": {
+    "meta": {
+      "title": "Doctor Online — videokonsultation",
+      "description": "Träffa en läkare på Prisma Clinic Marbella via video för €25 – tandvård, hår, hud, estetik och allmänmedicin. Avgiften dras av vid behandling på kliniken."
+    },
+    "hero": {
+      "eyebrow": "Prisma Doctor Online",
+      "title": "Din läkare.<br></br>Var du än är.",
+      "intro": "Prata privat med en behandlare från Prisma via video för €25. Få tydlig vägledning, rätt specialist och en enkel väg vidare till vård på kliniken när det behövs.",
+      "cta": "Boka onlinekonsultation — 25€"
+    },
+    "steps": [
+      {
+        "title": "Välj ditt ärende",
+        "body": "Berätta vad du behöver hjälp med och välj en passande tid."
+      },
+      {
+        "title": "Träffas via video",
+        "body": "Prata med rätt behandlare från Prisma i en privat onlinekonsultation."
+      },
+      {
+        "title": "Fortsätt din vård",
+        "body": "Om du går vidare med en behandling på Prisma dras hela konsultationsavgiften på €25 av från behandlingskostnaden."
+      }
+    ],
+    "routing": {
+      "eyebrow": "Vägledning från specialister",
+      "title": "Börja med<br></br><em>rätt samtal.</em>",
+      "body": "Tillgängligt på engelska, spanska, svenska och persiska. Förfrågningar om recept bedöms endast när det är medicinskt och juridiskt lämpligt.",
+      "bookLabel": "Boka {area}",
+      "areas": {
+        "dental": {
+          "label": "Tandvård",
+          "who": "Dr. Robbin",
+          "body": "Smärta, tandbesvär och vägledning kring behandling"
+        },
+        "hair": {
+          "label": "Hårtransplantation",
+          "who": "Dr. Afshin",
+          "body": "Håravfall och behandlingsalternativ"
+        },
+        "skin": {
+          "label": "Hud & estetik",
+          "who": "Dr. Darina / Dr. Bozana",
+          "body": "Hud, ansiktsestetik och regenerativ vård"
+        },
+        "medical": {
+          "label": "Allmänmedicin",
+          "who": "Dr. Angelo / Dr. Bozana",
+          "body": "Allmän hälsa, privat medicinsk rådgivning och nästa steg"
+        }
+      }
+    },
+    "message": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (25€). Område: {area}.",
+    "messageGeneral": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (25€).",
+    "note": {
+      "label": "Tjänsten är inte avsedd för livshotande nödsituationer.",
+      "body": "Vid akuta eller allvarliga symtom, ring 112. För akut tandvård, ring Prisma 24/7 på <phone></phone>."
+    },
+    "cta": {
+      "eyebrow": "Vård online",
+      "title": "Börja där<br></br><em>du är.</em>",
+      "button": "Boka för 25€"
+    }
+  },
+  "dentalTourism": {
+    "meta": {
+      "title": "Tandvårdsturism i Marbella",
+      "description": "Planera din tandbehandling i Marbella med Prisma Clinic: bedömning online, en transparent behandlingsplan, samordnade besök och flerspråkig support."
+    },
+    "hero": {
+      "eyebrow": "Prisma Tandvårdsturism · Marbella",
+      "title": "Tandvård i världsklass.<br></br><em>Med Marbella som fond.</em>",
+      "intro": "Planera din tandbehandling i Marbella med ett och samma kliniska team — från bedömning online och en transparent behandlingsplan till besök, återhämtning och stöd på plats.",
+      "cta": "Planera min tandvårdsresa",
+      "imageAlt": "Tandbehandling på Prisma Clinic Marbella"
+    },
+    "proof": [
+      "Bedömning online innan du reser",
+      "Ett samordnat behandlingsschema",
+      "Två centrala kliniker i Marbella",
+      "Personlig, flerspråkig support"
+    ],
+    "process": {
+      "eyebrow": "En samordnad resa",
+      "title": "Din behandling,<br></br><em>planerad kring dig.</em>",
+      "steps": [
+        {
+          "title": "Berätta om ditt fall",
+          "body": "Berätta vad du vill förbättra och dela gärna befintliga röntgenbilder eller skanningar."
+        },
+        {
+          "title": "Träffas online",
+          "body": "Börja med en bedömning via video så att rätt tandläkare kan gå igenom dina behov innan du reser."
+        },
+        {
+          "title": "Få din plan",
+          "body": "Få en personlig klinisk plan, beräknad längd på vistelsen och en transparent offert."
+        },
+        {
+          "title": "Res till Marbella",
+          "body": "Vi samordnar dina klinikbesök och det lokala stöd du valt för din resa."
+        },
+        {
+          "title": "Behandling & eftervård",
+          "body": "Få din behandling av Prismas tandvårdsteam, med tydlig uppföljning när du är hemma igen."
+        }
+      ]
+    },
+    "planner": {
+      "eyebrow": "Skapa din första plan",
+      "title": "Berätta om<br></br><em>din tandvårdsresa.</em>",
+      "body": "Det här första steget ger Prisma-teamet tillräckligt med information för att förbereda rätt samtal. Din slutliga plan och offert bekräftas efter en klinisk bedömning.",
+      "treatmentLabel": "Önskad behandling",
+      "monthLabel": "Önskad resmånad",
+      "stayLabel": "Beräknad vistelse",
+      "supportLabel": "Resestöd",
+      "summaryEyebrow": "Din förfrågan",
+      "flexible": "Flexibla datum",
+      "notDecided": "ej bestämt",
+      "send": "Skicka min plan till Prisma",
+      "orBook": "Eller boka en tandvårdskonsultation",
+      "message": "Hej Prisma Clinic! Jag skulle vilja få en plan för tandvårdsturism. Behandling: {treatment}. Önskad månad: {month}. Beräknad vistelse: {stay}. Resestöd: {support}.",
+      "treatments": [
+        "Tandimplantat",
+        "Skalfasader & leendedesign",
+        "Kronor & broar",
+        "Rekonstruktion av hela bettet",
+        "Tandblekning",
+        "Komplex tandbehandling",
+        "Jag är inte säker än"
+      ],
+      "stays": [
+        "2–3 dagar",
+        "3–5 dagar",
+        "5–7 dagar",
+        "Mer än en vecka",
+        "Inte säker än"
+      ],
+      "supports": [
+        "Endast behandlingsplanering",
+        "Klinikschema & flygplatstransfer",
+        "Klinikschema, transfer & hotelltips",
+        "Jag vill att Prisma ger mig råd"
+      ]
+    },
+    "included": {
+      "eyebrow": "Behandling i Marbella",
+      "title": "Klinisk precision.<br></br><em>Personlig samordning.</em>",
+      "items": [
+        {
+          "title": "Före ankomst",
+          "body": "Onlinekonsultation, genomgång av ditt fall, preliminär behandlingsplan och en tydlig lista över vad du ska ta med."
+        },
+        {
+          "title": "Under vistelsen",
+          "body": "Samordnade besök, flerspråkig kontakt och behandling i Puerto Banús eller i Marbellas gamla stad."
+        },
+        {
+          "title": "Efter hemkomsten",
+          "body": "Digital uppföljning, råd om eftervård och direktkontakt med Prisma-teamet när frågor dyker upp."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Börja hemifrån",
+      "title": "Ditt Marbella-leende<br></br><em>börjar med en plan.</em>",
+      "button": "Planera din resa"
+    }
+  },
+  "prismaCare": {
+    "meta": {
+      "title": "Prisma Care — Maiti Nepal",
+      "description": "Prisma Care: Prisma Clinic Marbella stöttar Maiti Nepal med ekonomiska bidrag och tandvårdsuppdrag som ger utsatta barn tillgång till vård."
+    },
+    "hero": {
+      "eyebrow": "Prisma Care · Maiti Nepal",
+      "title": "Omsorg bortom<br></br><em>våra kliniker.</em>",
+      "intro": "Prisma Clinic stöttar Maiti Nepal med ekonomiska bidrag och praktiska tandvårdsuppdrag — och hjälper utsatta barn till friskare leenden och medmänsklig vård.",
+      "cta": "Upptäck uppdraget",
+      "imageAlt": "Teamet på Prisma Clinic"
+    },
+    "statement": {
+      "eyebrow": "Vårt åtagande",
+      "title": "Klinisk expertis kan<br></br><em>förändra mer än ett leende.</em>",
+      "body": "Vårt ansvar slutar inte vid klinikens dörr. Genom Prisma Care stöttar vi Maiti Nepals arbete med att skydda och stärka barn och kvinnor, samtidigt som vi förbereder tandvårdsteam att ge praktisk vård där den behövs som mest."
+    },
+    "pillars": [
+      {
+        "title": "Direkt stöd",
+        "body": "Ekonomiska bidrag hjälper Maiti Nepal att fortsätta sitt arbete med skydd, utbildning, rehabilitering och lokalsamhället."
+      },
+      {
+        "title": "Tandvårdsuppdrag",
+        "body": "Prismas tandvårdspersonal reser till Nepal för att undersöka, behandla och hjälpa barn att förstå vardaglig munhälsa."
+      },
+      {
+        "title": "Långsiktig omsorg",
+        "body": "Målet är en hållbar effekt genom förebyggande vård, utbildning, uppföljning och återkommande samarbete."
+      }
+    ],
+    "feature": {
+      "eyebrow": "Från Marbella till Nepal",
+      "title": "Kunskap, tid och<br></br><em>omsorg i praktiken.</em>",
+      "body": "Varje uppdrag utgår från verkliga behov: tandundersökningar, akut behandling, förebyggande vård och praktisk utbildning. Prisma Care förenar patienter, partner och det kliniska teamet kring ett gemensamt syfte.",
+      "cta": "Stötta eller samarbeta med Prisma Care",
+      "message": "Hej Prisma Clinic! Jag vill gärna stötta Prisma Care och Maiti Nepal.",
+      "imageAlt": "Loungen på Prisma Clinic"
+    },
+    "cta": {
+      "eyebrow": "Var en del av förändringen",
+      "title": "Hjälp oss att föra<br></br><em>omsorgen vidare.</em>",
+      "button": "Kontakta Prisma Care",
+      "message": "Hej Prisma Clinic! Jag vill gärna veta mer om Prisma Care."
+    }
+  },
+  "clinics": {
+    "meta": {
+      "title": "Våra kliniker i Marbella & Puerto Banús",
+      "description": "Besök Prisma Clinic i Puerto Banús (Plaza Marina Banús) eller i Marbellas gamla stad (Av. Nabeul). Adresser, vägbeskrivning och akutkontakt dygnet runt."
+    },
+    "hero": {
+      "eyebrow": "Marbella · Puerto Banús",
+      "title": "Två kliniker.<br></br>Samma standard.",
+      "intro": "Oavsett om du bor i Marbella, besöker Puerto Banús eller reser till Costa del Sol finns förstklassig vård alltid nära."
+    },
+    "banusLabel": "Puerto Banús",
+    "oldTownLabel": "Marbella centrum",
+    "body": "Planerade konsultationer, uppföljning och akut hjälp i en diskret, central miljö.",
+    "directions": "Vägbeskrivning",
+    "banusImageAlt": "Receptionen på Prisma Clinic Banús",
+    "oldTownImageAlt": "Prisma Clinic i Marbellas gamla stad"
+  },
+  "results": {
+    "meta": {
+      "title": "Patientrecensioner",
+      "description": "Verifierade Google-recensioner från patienter på Prisma Clinic Marbella: tandvård, estetisk medicin och akut tandvård dygnet runt."
+    },
+    "hero": {
+      "eyebrow": "Verifierade patientupplevelser",
+      "title": "Resultat som märks<br></br>bortom spegeln.",
+      "intro": "Det bästa resultatet är att känna sig trygg i sin vård. Här är orden från patienter som har anförtrott sig åt Prisma."
+    },
+    "score": "Google-recensioner",
+    "verified": "Verifierad Google-recension"
+  },
+  "treatmentsPage": {
+    "hero": {
+      "eyebrow": "Vår expertis",
+      "title": "Behandlingar,<br></br>med omsorg.",
+      "intro": "Fyra discipliner, en samordnad vårdstandard. Utforska varje behandlingsområde och börja hos den specialist som passar dig bäst."
+    },
+    "explore": "Utforska {area}",
+    "hotline": {
+      "eyebrow": "Akut tandvård dygnet runt",
+      "note": "Ring först så att teamet kan bedöma din situation och förbereda ditt besök."
     }
   }
 }

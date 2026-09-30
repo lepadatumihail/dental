@@ -2,285 +2,123 @@
 
 ## 1. Brand Identity
 
-Prisma Clinic Marbella (PRISMA) is a cosmetic & general dentistry and advanced aesthetics clinic in the heart of Marbella. The brand experience is defined by refined luxury, medical expertise, and timeless elegance. Every touchpoint — from the website to social media — should feel like visiting a high-end wellness destination, not a clinical office.
+Prisma Clinic Marbella (PRISMA) is a private dental, aesthetic-medicine and general-medicine clinic with two locations in Marbella and Puerto Banús. The site should feel like an editorial luxury brand — calm, precise and confident — rather than a clinical office.
 
 **Brand voice:** Warm, confident, elevated. Professional without being cold. Luxurious without being ostentatious.
 
-**Design philosophy:** Warm minimalism. Generous whitespace, muted earth tones, and restrained typography create a sense of calm and trust. Accents are used sparingly to guide attention without competing for it.
+**Design philosophy:** Monochrome editorial minimalism. Black and white only, large serif headlines, hairline rules instead of cards and shadows, generous whitespace and square corners. Photography carries the warmth; the interface stays quiet.
 
 ## 2. Color Palette
 
-### Brand Colors (from Brandbook)
+The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css`; Tailwind tokens in `src/styles/tailwind.css`.
 
-| Name | Hex | Role |
-|------|-----|------|
-| **Mocha** | `#846652` | Primary accent — warm brown used for headings, accent borders, highlights, and interactive elements. The signature brand tone. |
-| **Taupe** | `#958B81` | Secondary/muted — subtle text, captions, borders, and inactive states. Sophisticated neutral warmth. |
-| **Sand** | `#CEC2B5` | Surface/canvas — warm beige for page backgrounds, section fills, and card surfaces. The "cream" of the brand. |
-| **Forest** | `#32351A` | Primary text — deep dark olive for headings and body text. Rich and grounded, not a cold black. |
-| **White** | `#FFFFFF` | Clean surface — cards, modals, areas needing maximum contrast against sand backgrounds. |
-| **Black** | `#000000` | Minimal use — reserved for high-contrast text in specific contexts (footer, overlays). |
+| Variable | Tailwind token | Value | Role |
+|----------|----------------|-------|------|
+| `--black` | `black` | `#050505` | Dark sections, primary buttons, footer, mobile menu |
+| `--ink` / `--gold` | `ink` | `#111111` | Text and "accent" (the accent *is* ink) |
+| `--white` / `--ivory` | `white` | `#ffffff` | Page background, light buttons |
+| `--line` | `line` | `#d8d8d8` | Hairline rules and grid borders on white |
+| `--muted` | `muted` | `#505050` | Secondary copy, numbers, captions |
+| — | — | `#333` / `#383838` / `#555` | Rules and borders on black sections |
+| — | — | `#aaa` / `#777` | Secondary copy on black sections |
 
-### Extended Palette
+**Emergency / urgent:** Tailwind `red-500` (`#ef4444`, hover `#dc2626`) via `.button.urgent` — the only colour in the interface, reserved for "call now" actions on emergency and general-medicine pages.
 
-Derived from the core palette for UI needs:
+**Legacy tokens:** `mocha`, `taupe`, `sand`, `forest`, `warm-dark`, `surface-*` still exist but are remapped to the monochrome values above so older markup (booking wizard, cookie banner, blog) follows the design. Don't use them in new code — use `ink`, `muted`, `line`, `black`, `white`.
 
-| Token | Value | Use |
-|-------|-------|-----|
-| `sand-light` | `#DDD4C9` | Lighter sand for hover states, subtle fills |
-| `sand-dark` | `#B8AA9C` | Darker sand for pressed states, deeper surfaces |
-| `mocha-light` | `#9A8070` | Lighter mocha for hover accents |
-| `mocha-dark` | `#6E523F` | Darker mocha for pressed/active accent states |
-
-### Semantic Colors
-
-| Role | Value | Notes |
-|------|-------|-------|
-| **Emergency/Urgent** | Tailwind `red-500` (`#ef4444`) | Standard red for medical urgency — not the brand accent. Used for emergency CTA borders and badges. |
-| **Success** | `#5A7A5E` | Warm muted green, nature-aligned with the brand |
-| **Warning** | `#C4943A` | Warm amber |
-| **Info** | `#6B8CA6` | Muted slate blue |
-
-### Surface Scale (Current Implementation)
-
-The codebase currently uses a warm cream surface scale. These should trend toward the brandbook Sand (`#CEC2B5`):
-
-| Token | Current Value | Notes |
-|-------|---------------|-------|
-| `surface-100` | `#f7f7f4` | Lightest surface |
-| `surface-200` | `#f2f1ed` | Primary page background |
-| `surface-300` | `#ebeae5` | Button default, subtle emphasis |
-| `surface-400` | `#e6e5e0` | Card backgrounds |
-| `surface-500` | `#e1e0db` | Deeper emphasis |
+**Photography:** treatment-area and atmosphere images are shown in grayscale (`filter: grayscale()`); portraits of specialists and clinic interiors stay in colour.
 
 ## 3. Typography
 
-### Font Families (from Brandbook)
+| Role | Font | Notes |
+|------|------|-------|
+| Display (h1–h3, blockquotes, numbers) | **Playfair Display** (variable, normal + italic) via `next/font` → `--font-playfair`, Tailwind `font-display` | Weight 400, letter-spacing `-0.035em` |
+| Body / UI | **Raleway** via `next/font` → `--font-raleway`, Tailwind `font-sans` | Body weight 300; labels 500 |
 
-| Role | Font | Style | Fallbacks |
-|------|------|-------|-----------|
-| **Display / Headlines** | Dream Avenue | Decorative script | cursive, serif |
-| **Body / UI** | Raleway | Regular (400) | system-ui, -apple-system, sans-serif |
-| **Body Light** | Raleway | ExtraLight (200) | system-ui, -apple-system, sans-serif |
+### Scale
 
-**Dream Avenue** is a flowing, elegant script typeface used exclusively for display moments — hero headlines, section titles, and brand signatures. It communicates luxury and personal touch. Never use it for body text or UI labels.
-
-**Raleway** is a clean, geometric sans-serif with excellent readability. The Regular weight handles body text, buttons, and navigation. ExtraLight provides an airy, sophisticated voice for subheadings, pull quotes, and decorative labels.
-
-### Current Implementation
-
-The codebase currently uses **Mona Sans** (variable font, weight 200–900) as the primary typeface via `@font-face`. It serves both `--font-sans` and `--font-display` roles. This should be migrated toward the brandbook fonts.
-
-### Hierarchy
-
-| Role | Font | Size | Weight | Letter Spacing | Use |
-|------|------|------|--------|----------------|-----|
-| Display Hero | Dream Avenue | 48–72px | 400 | normal | Hero headlines, brand statements |
-| Section Title | Dream Avenue | 32–40px | 400 | normal | Section introductions |
-| Heading 1 | Raleway | 28–36px | 600 | -0.02em | Page headings, service titles |
-| Heading 2 | Raleway | 22–28px | 600 | -0.01em | Sub-sections, card headings |
-| Heading 3 | Raleway | 18–22px | 600 | normal | Small headings, list titles |
-| Body | Raleway | 16–18px | 400 | normal | Paragraphs, descriptions |
-| Body Light | Raleway | 16–18px | 200 | 0.02em | Subheadings, pull quotes, decorative labels |
-| Button Label | Raleway | 14–16px | 500 | 0.05em | Button text, CTAs |
-| Caption | Raleway | 12–14px | 400 | 0.02em | Meta text, timestamps, fine print |
-| Micro | Raleway | 11–12px | 500 | 0.05em | Badges, tags, uppercase labels |
+| Role | Size | Details |
+|------|------|---------|
+| h1 | `clamp(4.7rem, 7.2vw, 7.6rem)`, line-height 0.88 | **Uppercase**. Smaller on service heroes (`.service-hero h1`) and profiles |
+| h2 | `clamp(3.6rem, 6.1vw, 7rem)`, line-height 0.96 | Sentence case; second line often `<em>` italic |
+| Section h2 (content pages) | `clamp(2.6rem, 4.6vw, 5.4rem)` | `.split-heading`, `.statement`, `.expert-feature` |
+| h3 | ~1.7–2.2rem | Playfair, used in grids and cards |
+| Eyebrow (`.eyebrow`) | 0.68rem, weight 500 | Uppercase, letter-spacing 0.21em |
+| Body | ~0.85–1.1rem, line-height 1.7–1.85 | Muted colour for supporting copy |
+| Button label | 0.69rem, weight 500 | Uppercase, letter-spacing 0.15em |
 
 ### Principles
 
-- **Script for soul, sans for structure.** Dream Avenue creates emotional moments; Raleway handles everything functional.
-- **Weight restraint.** Raleway hierarchy relies on size and spacing more than weight. Regular (400) for body, SemiBold (600) for headings, ExtraLight (200) for decorative elegance.
-- **Generous line height.** Body text at 1.6–1.75 line-height for comfortable reading. Headings tighter at 1.2–1.3.
-- **Uppercase sparingly.** Reserve all-caps for micro labels, badges, and navigation items. Never for body text or headings.
+- **Serif for statements, sans for structure.** Playfair for headlines, quotes and big numbers; Raleway for everything functional.
+- **Two-line headlines.** Most section titles are two short lines, the second in italic: `"Your next chapter<br></br><em>starts here.</em>"` (rendered with `t.rich(key, richTags)` from `src/lib/rich.tsx`).
+- **Uppercase only for h1, eyebrows, buttons and nav micro-labels.**
 
-## 4. Component Styling
+## 4. Components
 
-### Buttons
+All components are semantic classes in `src/styles/prisma.css` (inside `@layer components`, so Tailwind utilities can still override them).
 
-**Primary CTA**
-- Background: `#846652` (Mocha)
-- Text: `#FFFFFF` (White)
-- Padding: 12px 24px
-- Radius: 8px
-- Hover: `#6E523F` (Mocha Dark)
-- Font: Raleway 500, 14–16px, letter-spacing 0.05em
-- Transition: background-color 150ms ease
+### Buttons & links
+- `.button.dark` — black fill, white text, 64px tall, square, trailing `↗` (`<Arrow />`). Primary action.
+- `.button.light` — white fill, black text; used on black sections (on `.final-cta` it renders dark).
+- `.button.urgent` — red-500 fill for emergency calls only.
+- `.button.wide` — full width (forms, membership cards).
+- `.text-link` — uppercase micro-label link with trailing arrow; `.light-link` on black.
+- Booking buttons use `BookTrigger` (`src/components/booking/BookButton.tsx`) with these classes; pass `service="dental" | "aesthetics" | "medical"` to pre-select a service.
 
-**Secondary CTA**
-- Background: transparent
-- Text: `#846652` (Mocha)
-- Border: 1px solid `#846652`
-- Padding: 12px 24px
-- Radius: 8px
-- Hover: background shifts to `#846652` at 10% opacity
-- Font: Raleway 500, 14–16px
+### Shared page parts
+- **Header** (`SiteHeader`): absolute over the first section, utility bar (locations + EN · ES · SE), wordmark, nav, "Book a consultation". Collapses to a full-screen black menu below 1450px.
+- **Footer** (`Footer`): black, wordmark (inverted), four columns, copyright + cookie settings + credit.
+- **WhatsApp widget** (`WhatsAppWidget`): black pill bottom-right that opens a topic picker and hands off to WhatsApp or a call.
+- **Inner hero** (`InnerHero` / `PageIntro`): white, monogram watermark, eyebrow, uppercase h1, intro, CTA. Accounts for the absolute header (padding-top 230px desktop).
+- **Final CTA** (`FinalCta`): "Your next chapter starts here." band before the footer.
+- **Split heroes**: `.tourism-hero` (+ `.service-hero`), `.care-hero`, `.profile-hero` — copy beside an image.
 
-**Emergency CTA**
-- Background: `#FFFFFF` or `surface-100`
-- Text: `red-500`
-- Border: 1px solid `red-500`
-- Hover: background `red-500`, text white
-- Transition: background-color 150ms, color 150ms
+### Section patterns
+- `.split-heading` — eyebrow + h2 left, supporting copy right.
+- `.statement` — headline left, lead (`.statement-lead`) + body right.
+- Numbered hairline grids: `.service-grid`, `.condition-grid`, `.price-grid`, `.review-grid`, `.steps` — cells separated by 1px `--line` borders, a small muted `01` number, Playfair h3, muted copy.
+- Lists with rules: `.home-specialist-list`, `.profile-treatment-list`, `.routing-list`, `.tourism-process`.
+- Black bands: `.dark-section`, `.cta-band`, `.care-cta`, `.profile-cta`, `.emergency-hotline`, `.emergency-strip`.
+- Tags: `.detail-tags span`, `.service-list span` — 1px bordered chips, no radius.
 
-**Ghost / Tertiary**
-- Background: transparent
-- Text: `#958B81` (Taupe)
-- Hover: text shifts to `#846652` (Mocha)
-- No border
+### Forms
+- Underline inputs in modals (`.booking-modal`), bordered inputs on black (`.planner-form`), square corners everywhere.
 
-### Cards
+## 5. Layout
 
-- Background: `#FFFFFF` or `surface-100`
-- Border: 1px solid `#CEC2B5` (Sand) or `rgba(50, 53, 26, 0.08)`
-- Radius: 12px
-- Shadow: `0 2px 12px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02)`
-- Hover: shadow intensifies to `0 8px 32px rgba(0, 0, 0, 0.08)`
-- Padding: 24–32px
+- Horizontal page padding: `7vw` desktop, `1.2rem` mobile (≤700px).
+- Section padding: `8–10rem` vertical desktop, `6–6.5rem` mobile.
+- Grids use fractional columns (`1.2fr 1fr`, `0.85fr 1.15fr`) rather than a 12-column system.
+- **No border radius** (Tailwind radius tokens are 0; pills via `rounded-full` only for the WhatsApp trigger and round icon buttons).
+- **No shadows** except floating UI (WhatsApp widget, modals).
+- Separation comes from 1px rules, black/white section alternation and whitespace.
 
-### Navigation
+## 6. Motion
 
-- Background: warm cream surface with backdrop blur
-- Font: Raleway 500, 14px
-- Text: `#32351A` (Forest)
-- Active link: `#846652` (Mocha) with subtle underline or weight shift
-- CTA button: Primary style (Mocha bg, white text)
-- Mobile: slide-out panel on warm cream surface
+- Hover: buttons lift `translateY(-2px)`; nav links grow an underline; grid cards shift to `#f5f5f5`; access tiles invert to black.
+- Hero image fades/scales in (`heroScale`, 1.1s).
+- `prefers-reduced-motion` disables all transitions and animations.
 
-### Forms & Inputs
+## 7. Responsive
 
-- Background: `#FFFFFF`
-- Border: 1px solid `#CEC2B5` (Sand)
-- Focus border: `#846652` (Mocha)
-- Text: `#32351A` (Forest)
-- Placeholder: `#958B81` (Taupe)
-- Radius: 8px
-- Padding: 12px 16px
-- Label: Raleway 500, 14px, `#32351A`
+| Breakpoint | Changes |
+|------------|---------|
+| ≤1450px | Nav collapses to the full-screen black menu (with language links) |
+| ≤1180px | Smaller header, 2-column grids, treatment tabs stack |
+| ≤700px | Single column, 1.2rem gutters, h1 ~3.5rem, hero CTAs stack full width, footer 2 columns |
 
-## 5. Layout Principles
+Mobile: hero actions stack; keep tap targets ≥44px.
 
-### Spacing
+## 8. Logo
 
-- Base unit: 8px
-- Scale: 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128px
-- Section padding: 64–96px vertical on desktop, 40–64px on mobile
-- Container max-width: ~1200px, centered
+- Wordmark: `src/images/prisma/brand/prisma-wordmark.png` (inverted in the footer).
+- Monogram: `src/images/prisma/brand/prisma-monogram.png`, used as a faint watermark (opacity ~0.04–0.06) in inner heroes and the homepage intro.
 
-### Grid
+## 9. Agent Prompt Guide
 
-- 12-column grid on desktop
-- 2-column for service cards, comparison layouts
-- Single column on mobile
-- Generous gutters: 24–32px
-
-### Whitespace Philosophy
-
-Whitespace is a luxury signal. The warm Sand/cream backgrounds give empty space texture and warmth — large open areas feel intentional and inviting, not empty. Prefer fewer elements with more breathing room over dense layouts.
-
-### Border Radius Scale
-
-| Level | Value | Use |
-|-------|-------|-----|
-| Subtle | 4px | Small inline elements, tags |
-| Standard | 8px | Buttons, inputs, small cards |
-| Comfortable | 12px | Cards, content containers |
-| Rounded | 16px | Featured cards, image frames |
-| Pill | 9999px | Pill buttons, badges, tags |
-
-## 6. Depth & Elevation
-
-| Level | Treatment | Use |
-|-------|-----------|-----|
-| Flat (0) | No shadow | Page background, inline text |
-| Subtle (1) | `0 1px 3px rgba(0,0,0,0.04)` | Default cards, inputs |
-| Raised (2) | `0 4px 16px rgba(0,0,0,0.06)` | Hover cards, dropdowns |
-| Elevated (3) | `0 8px 32px rgba(0,0,0,0.08)` | Modals, popovers, featured elements |
-| Overlay | `0 16px 48px rgba(0,0,0,0.12)` | Full-screen overlays, lightboxes |
-
-Shadow philosophy: Subtle and diffused. Shadows should feel like natural light, never hard-edged. The warm surface backgrounds reduce the need for heavy shadows — tonal shifts between Sand and White already create visual separation.
-
-## 7. Interaction & Motion
-
-### Hover States
-- Buttons: smooth background/color transition (150ms ease)
-- Cards: shadow elevation increase + subtle scale (1.01) on hover
-- Links: color shift to Mocha (`#846652`) or underline fade-in
-- Images: subtle scale (1.03) with overflow hidden, 300ms ease
-
-### Focus States
-- Ring: 2px solid `#846652` with 2px offset
-- Inputs: border color transition to Mocha
-- Consistent warm tone — no cold blue focus rings
-
-### Transitions
-- Color/opacity: 150ms ease
-- Shadow/transform: 200ms ease
-- Layout shifts: 300ms ease
-- Page transitions: fade-in 400ms with subtle upward translate
-
-### Scroll Animations
-- Elements fade in and translate up (20px) on scroll intersection
-- Stagger delay of 100–150ms between sibling elements
-- Use `prefers-reduced-motion` to disable all motion
-
-## 8. Responsive Behavior
-
-### Breakpoints
-
-| Name | Width | Key Changes |
-|------|-------|-------------|
-| Mobile | <640px | Single column, reduced padding, stacked CTAs |
-| Tablet | 640–1024px | 2-column grids, sidebar collapses |
-| Desktop | >1024px | Full layout, max content width |
-
-### Mobile Specifics (from learned preferences)
-- Hero CTAs: keep primary and secondary on one row with smaller padding and type so both fit
-- Dream Avenue display sizes scale down proportionally (72px → ~36px)
-- Touch targets: minimum 44px height for buttons and interactive elements
-- Section spacing compresses: 96px → 48–64px
-
-### Image Treatment
-- Service/treatment photos: warm color grading, natural lighting
-- Rounded corners (12–16px) with subtle border
-- Responsive: maintain aspect ratio, never crop faces
-- Lazy loading with blur placeholder
-
-## 9. Logo Usage
-
-Two variants per the brandbook:
-- **Full logo**: used for website header, signage, flyers
-- **Compact mark**: used for social media, watermarks, small stamps (favicon)
-
-Minimum clear space: equal to the height of the "P" in PRISMA on all sides.
-
-## 10. Agent Prompt Guide
-
-### Quick Color Reference
-- Page background: Sand `#CEC2B5` or current `surface-200` (`#f2f1ed`)
-- Primary text: Forest `#32351A`
-- Secondary text: Taupe `#958B81`
-- Primary accent: Mocha `#846652`
-- Emergency: Tailwind `red-500` (`#ef4444`)
-- Cards/white surface: `#FFFFFF`
-- Borders: Sand `#CEC2B5` or `rgba(50, 53, 26, 0.08)`
-
-### Example Component Prompts
-
-- "Create a hero section with warm cream background (`surface-200`). Headline in Dream Avenue at 48–72px, color `#32351A`. Subtitle in Raleway ExtraLight 18px, color `#958B81`. Primary CTA button (Mocha `#846652` bg, white text, 8px radius, 12px 24px padding). Secondary CTA with Mocha border, transparent bg."
-
-- "Design a service card: white bg, 1px border `#CEC2B5`, 12px radius, subtle shadow. Title in Raleway 600 at 22px, color `#32351A`. Description in Raleway 400 at 16px, color `#958B81`. Link accent in `#846652`."
-
-- "Build navigation: sticky warm cream bg with backdrop blur. Raleway 500 at 14px for links, `#32351A` text. CTA button right-aligned with Mocha bg (`#846652`) and white text. Emergency button with `red-500` border and text."
-
-### Iteration Guide
-
-1. Always use warm earth tones — never pure white backgrounds for main surfaces; use Sand/cream instead
-2. Two fonts, two voices: Dream Avenue for display/emotional moments, Raleway for everything functional
-3. Mocha (`#846652`) is the primary accent — use it for CTAs, links, and interactive elements
-4. Forest (`#32351A`) for text, not pure black — keeps everything warm
-5. Emergency elements use standard `red-500`, not brand accent colors
-6. Shadows are diffused and subtle — the warm surface tones do most of the visual separation work
-7. Mobile CTAs stay on one row; use smaller padding and type to fit both
-8. No decorative icons when sections already have enough visual weight — keep it clean
-9. Generous whitespace is intentional — it signals luxury and calm
-10. Dream Avenue should never appear in body text, buttons, or UI controls — it's strictly decorative display
+1. Black, white and greys only; red-500 exclusively for emergency call buttons.
+2. Playfair Display for headlines (uppercase h1, sentence-case h2 with an italic second line); Raleway 300 for body.
+3. Reuse the semantic classes in `src/styles/prisma.css` before writing new CSS; add new ones there, in the same vocabulary.
+4. Hairline rules, square corners, no shadows, no decorative icons — use numbers (`01`, `02`) and the `↗` arrow instead.
+5. Every page starts with a hero that clears the absolute header (`InnerHero`, a split hero, or `.page-offset`).
+6. Copy goes in `locales/{en,es,se}.json`; headings with line breaks use `<br></br>` and `<em>` with `t.rich(key, richTags)`.

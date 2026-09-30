@@ -1,77 +1,18 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 
-import { AboutClinic } from '@/components/AboutClinic'
-import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { HeroSlideshow } from '@/components/HeroSlideshow'
-import { LocationsSection } from '@/components/LocationsSection'
-import { TestimonialsGrid } from '@/components/TestimonialsGrid'
-import { WhatsappCta } from '@/components/WhatsappCta'
+import { BookTrigger } from '@/components/booking/BookButton'
+import { FinalCta } from '@/components/FinalCta'
+import { TreatmentTabs } from '@/components/TreatmentTabs'
+import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
+import { CLINIC_PHONE, CLINIC_PHONE_E164 } from '@/lib/clinic'
+import { Arrow, richTags } from '@/lib/rich'
+import { SPECIALIST_PROFILES } from '@/lib/specialists'
 
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
-import logoNeos from '@/images/clients/neoss.svg'
-import logoStrauman from '@/images/clients/strauman.svg'
-import logoInvisalign from '@/images/clients/invisalign.svg'
-
-import dentalImage from '@/images/clinic/xray.jpg'
-import aestheticsImage from '@/images/clinic/aesthetics-1.jpg'
-import generalImage from '@/images/clinic/general-medicine.jpg'
-
-const clients = [
-  ['Invisalign', logoInvisalign],
-  ['Neos', logoNeos],
-  ['Strauman', logoStrauman],
-  ['Unseal', logoUnseal],
-]
-
-const journeySteps = [
-  {
-    key: 'consultation' as const,
-    color: 'bg-step-consult',
-    textColor: 'text-step-consult',
-    borderColor: 'border-step-consult/30',
-  },
-  {
-    key: 'diagnosis' as const,
-    color: 'bg-step-diagnose',
-    textColor: 'text-step-diagnose',
-    borderColor: 'border-step-diagnose/30',
-  },
-  {
-    key: 'treatment' as const,
-    color: 'bg-step-treat',
-    textColor: 'text-step-treat',
-    borderColor: 'border-step-treat/30',
-  },
-  {
-    key: 'care' as const,
-    color: 'bg-step-care',
-    textColor: 'text-step-care',
-    borderColor: 'border-step-care/30',
-  },
-]
-
-const treatmentCards = [
-  {
-    key: 'dental' as const,
-    href: '/services/dental',
-    image: dentalImage,
-  },
-  {
-    key: 'antiAging' as const,
-    href: '/services/aesthetics',
-    image: aestheticsImage,
-  },
-  {
-    key: 'general' as const,
-    href: '/services/general-medicine',
-    image: generalImage,
-  },
-]
+import teamInside from '@/images/prisma/team-inside.jpg'
+import monogram from '@/images/prisma/brand/prisma-monogram.png'
 
 interface PageProps {
   params: { locale: string }
@@ -94,153 +35,177 @@ export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
-export default async function Home({ params }: PageProps) {
-  const t = await getTranslations('home')
+export default async function Home() {
+  const t = await getTranslations('landing')
+  const tSite = await getTranslations('site')
+  const tPeople = await getTranslations('specialists.people')
+  const tLocations = await getTranslations('home.locations')
+  const reviews = (await getTranslations('home.testimonialsGrid')).raw(
+    'items',
+  ) as Array<{ name: string; text: string }>
+  const review = reviews[0]
 
   return (
     <>
-      {/* ───── Hero Slideshow ───── */}
-      <HeroSlideshow />
-
-      {/* ───── Clients ───── */}
-      <section className="border-y border-mocha/8 bg-surface-300 py-14">
-        <Container>
-          <FadeIn className="flex items-center gap-x-8">
-            <h2 className="shrink-0 text-sm font-semibold tracking-wide text-taupe">
-              {t('clients.title')}
-            </h2>
-            <div className="h-px flex-auto bg-mocha/10" />
-          </FadeIn>
-          <FadeInStagger faster>
-            <ul className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
-              {clients.map(([client, logo]) => (
-                <li key={client} className="flex items-center">
-                  <FadeIn>
-                    <Image
-                      src={logo}
-                      alt={client}
-                      unoptimized
-                      className={`brightness-0 ${
-                        (logo as { src: string }).src?.includes('neos')
-                          ? 'max-w-20'
-                          : ''
-                      }`}
-                    />
-                  </FadeIn>
-                </li>
-              ))}
-            </ul>
-          </FadeInStagger>
-        </Container>
+      {/* ───── Hero ───── */}
+      <section className="hero team-hero" id="top">
+        <div className="hero-image">
+          <Image
+            src={teamInside}
+            alt={t('hero.imageAlt')}
+            fill
+            priority
+            sizes="(min-width: 700px) 75vw, 100vw"
+          />
+        </div>
+        <div className="hero-shade" />
+        <div className="hero-copy">
+          <p className="eyebrow gold">{t('hero.eyebrow')}</p>
+          <h1>{t.rich('hero.title', richTags)}</h1>
+          <p className="hero-lead">{t('hero.lead')}</p>
+          <div className="hero-actions">
+            <BookTrigger className="button dark">
+              {tSite('bookConsultation')} <Arrow />
+            </BookTrigger>
+            <Link className="text-link" href="/services">
+              {t('hero.explore')} <span>→</span>
+            </Link>
+          </div>
+        </div>
+        <div className="hero-proof">
+          <div>
+            <strong aria-hidden="true">⌖</strong>
+            <span>{t('proof.locations')}</span>
+          </div>
+          <div>
+            <strong aria-hidden="true">◎</strong>
+            <span>{t('proof.specialists')}</span>
+          </div>
+          <div>
+            <strong aria-hidden="true">✦</strong>
+            <span>{t('proof.care')}</span>
+          </div>
+        </div>
       </section>
 
-      {/* ───── Treatments — Everything in One Place ───── */}
-      <section id="treatments" className="py-24">
-        <Container>
-          <FadeIn className="mx-auto max-w-2xl text-center">
-            <h2
-              className="text-4xl font-semibold text-warm-dark sm:text-5xl"
-              style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
-            >
-              {t('treatments.title')}
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-taupe">
-              {t('treatments.description')}
-            </p>
-          </FadeIn>
-
-          <FadeInStagger className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {treatmentCards.map(({ key, href, image }) => (
-              <FadeIn key={key} className="flex">
-                <Link href={href} className="flex w-full">
-                  <article className="group relative flex w-full flex-col overflow-hidden rounded-xl border border-mocha/8 bg-white transition-all duration-200 hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)]">
-                    <div className="relative h-48 overflow-hidden sm:h-56">
-                      <Image
-                        src={image}
-                        alt={t(`treatments.cards.${key}.title`)}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        sizes="(min-width: 768px) 33vw, 100vw"
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col justify-between p-8 sm:p-10">
-                      <div>
-                        <h3
-                          className="text-2xl font-semibold text-warm-dark"
-                          style={{ letterSpacing: '-0.3px', lineHeight: 1.25 }}
-                        >
-                          {t(`treatments.cards.${key}.title`)}
-                        </h3>
-                        <p className="mt-4 text-base leading-relaxed text-taupe">
-                          {t(`treatments.cards.${key}.description`)}
-                        </p>
-                      </div>
-                      <span className="mt-8 inline-flex w-fit items-center rounded-full border border-mocha/10 bg-surface-100 px-4 py-2 text-sm text-mocha transition-colors duration-150 group-hover:bg-mocha group-hover:text-white">
-                        {t('discoverMore')} &rarr;
-                      </span>
-                    </div>
-                  </article>
-                </Link>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-        </Container>
+      {/* ───── Prisma standard ───── */}
+      <section className="intro light-section">
+        <Image className="intro-monogram" src={monogram} alt="" sizes="520px" />
+        <div className="section-label">
+          <span>01</span>
+          <p>{t('intro.label')}</p>
+        </div>
+        <div className="intro-main">
+          <p className="eyebrow">{t('intro.eyebrow')}</p>
+          <h2>{t.rich('intro.title', richTags)}</h2>
+          <div className="intro-columns">
+            <p>{t('intro.p1')}</p>
+            <p>{t('intro.p2')}</p>
+          </div>
+        </div>
       </section>
 
-      {/* ───── Patient Journey ───── */}
-      <section className="border-y border-mocha/8 bg-surface-300 py-24">
-        <Container>
-          <FadeIn className="mx-auto max-w-2xl text-center">
-            <h2
-              className="text-4xl font-semibold text-warm-dark sm:text-5xl"
-              style={{ letterSpacing: '-0.5px', lineHeight: 1.15 }}
-            >
-              {t('journey.title')}
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-taupe">
-              {t('journey.description')}
-            </p>
-          </FadeIn>
-
-          <FadeInStagger className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {journeySteps.map(({ key, color, borderColor }) => (
-              <FadeIn key={key}>
-                <div
-                  className={`relative flex flex-col rounded-xl border ${borderColor} bg-white p-8 transition-shadow duration-200 hover:shadow-[0_4px_16px_rgba(0,0,0,0.06)]`}
-                >
-                  <span
-                    className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${color} text-sm font-semibold text-forest`}
-                  >
-                    {t(`journey.steps.${key}.label`)}
-                  </span>
-                  <h3 className="mt-6 text-xl font-semibold text-warm-dark">
-                    {t(`journey.steps.${key}.title`)}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-taupe">
-                    {t(`journey.steps.${key}.description`)}
-                  </p>
-                  <div
-                    className={`mt-6 h-1 w-12 rounded-full ${color}`}
-                    aria-hidden="true"
-                  />
-                </div>
-              </FadeIn>
-            ))}
-          </FadeInStagger>
-        </Container>
+      {/* ───── Doctor Online / Memberships ───── */}
+      <section className="access-grid">
+        <Link href="/doctor-online">
+          <p className="eyebrow">{t('access.online.eyebrow')}</p>
+          <h3>{t.rich('access.online.title', richTags)}</h3>
+          <span>
+            {t('access.online.cta')} <Arrow />
+          </span>
+        </Link>
+        <Link href="/memberships">
+          <p className="eyebrow">{t('access.memberships.eyebrow')}</p>
+          <h3>{t.rich('access.memberships.title', richTags)}</h3>
+          <span>
+            {t('access.memberships.cta')} <Arrow />
+          </span>
+        </Link>
       </section>
 
-      {/* ───── WhatsApp CTA ───── */}
-      <WhatsappCta />
+      {/* ───── Treatments ───── */}
+      <section className="treatments home-treatments light-section">
+        <div className="treatment-heading">
+          <div>
+            <p className="eyebrow">{t('treatments.eyebrow')}</p>
+            <h2>{t.rich('treatments.title', richTags)}</h2>
+          </div>
+          <Link className="text-link" href="/services">
+            {t('treatments.viewAll')} <Arrow />
+          </Link>
+        </div>
+        <TreatmentTabs />
+      </section>
 
-      {/* ───── About Clinic ───── */}
-      <AboutClinic />
+      {/* ───── Specialists ───── */}
+      <section className="home-split light-section">
+        <div>
+          <p className="eyebrow gold">{t('specialists.eyebrow')}</p>
+          <h2>{t.rich('specialists.title', richTags)}</h2>
+          <p>{t('specialists.body')}</p>
+          <Link className="button dark" href="/specialists">
+            {t('specialists.cta')} <Arrow />
+          </Link>
+        </div>
+        <div className="home-specialist-list">
+          {SPECIALIST_PROFILES.map((person) => (
+            <Link key={person.slug} href={`/specialists/${person.slug}`}>
+              <div>
+                <strong>{person.name}</strong>
+                <small>{tPeople(`${person.slug}.role`)}</small>
+              </div>
+              <Arrow />
+            </Link>
+          ))}
+        </div>
+      </section>
 
-      {/* ───── Testimonials Grid ───── */}
-      <TestimonialsGrid />
+      {/* ───── Reviews + locations ───── */}
+      <section className="home-proof light-section">
+        <div>
+          <p className="eyebrow">{t('reviews.eyebrow')}</p>
+          <h2>{t.rich('reviews.title', richTags)}</h2>
+          <blockquote>“{review.text}”</blockquote>
+          <p>
+            — {review.name}, {t('reviews.source')}
+          </p>
+          <Link className="text-link" href="/results">
+            {t('reviews.cta')} <Arrow />
+          </Link>
+        </div>
+        <div>
+          <p className="eyebrow">{t('find.eyebrow')}</p>
+          <h2>{t.rich('find.title', richTags)}</h2>
+          {(['banus', 'oldTown'] as const).map((key) => (
+            <article key={key}>
+              <strong>{tLocations(`${key}.name`)}</strong>
+              <span>{tLocations(`${key}.address`)}</span>
+            </article>
+          ))}
+          <Link className="text-link" href="/clinics">
+            {t('find.cta')} <Arrow />
+          </Link>
+        </div>
+      </section>
 
-      {/* ───── Locations + Emergency ───── */}
-      <LocationsSection />
+      {/* ───── Emergency ───── */}
+      <section className="emergency compact-emergency dark-section">
+        <div>
+          <p className="eyebrow gold">{t('emergency.eyebrow')}</p>
+          <h2>{t.rich('emergency.title', richTags)}</h2>
+        </div>
+        <div className="emergency-copy">
+          <p>{t('emergency.body')}</p>
+          <a className="button light" href={`tel:${CLINIC_PHONE_E164}`}>
+            {t('emergency.call', { phone: CLINIC_PHONE })} <Arrow />
+          </a>
+          <Link className="text-link light-link" href="/services/emergency">
+            {t('emergency.info')} <Arrow />
+          </Link>
+        </div>
+      </section>
+
+      <FinalCta />
     </>
   )
 }

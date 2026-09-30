@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 
-import { Container } from '@/components/Container'
 import { CtaRibbon } from '@/components/CtaRibbon'
 import { InterestSection } from '@/components/InterestSection'
 import { LeadExpert } from '@/components/LeadExpert'
@@ -12,12 +11,11 @@ import { ServicesSection } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
+import { WHATSAPP_URL } from '@/lib/clinic'
 import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/aesthetics-1.jpg'
 import doctorImage from '@/images/bozana.jpeg'
-
-const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
 interface PageProps {
   params: { locale: string }
@@ -59,7 +57,8 @@ export default async function AestheticsServices() {
         imageAlt={t('hero.imageAlt')}
         title={t('hero.title')}
         description={t('hero.description')}
-        ctaLabel={t('hero.ctaLabel')}      />
+        ctaLabel={t('hero.ctaLabel')}
+      />
 
       <InterestSection
         eyebrow={t('interest.eyebrow')}
@@ -73,15 +72,11 @@ export default async function AestheticsServices() {
         title={t('ourServices.title')}
         body={t('ourServices.body')}
         ctaLabel={t('ourServices.ctaLabel')}
-        ctaHref={WHATSAPP_HREF}
+        ctaHref={WHATSAPP_URL}
         ctaExternal
       />
 
-      <section className="pb-24 sm:pb-28">
-        <Container>
-          <PricingGroups groups={groups} withContainer={false} />
-        </Container>
-      </section>
+      <PricingGroups groups={groups} />
 
       <LeadExpert
         image={doctorImage}
@@ -89,12 +84,14 @@ export default async function AestheticsServices() {
         eyebrow={t('leadExpert.eyebrow')}
         title={t('leadExpert.title')}
         body={t('leadExpert.body')}
+        profileHref="/specialists/dr-bozana-krivosija"
       />
 
       <CtaRibbon
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
-        ctaLabel={t('ribbon.ctaLabel')}      />
+        ctaLabel={t('ribbon.ctaLabel')}
+      />
 
       <TestimonialsGrid />
 

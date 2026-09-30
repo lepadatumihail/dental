@@ -4,20 +4,29 @@ import type { NextRequest } from 'next/server'
 import { getAlternateUrls, getCanonicalUrl } from '@/lib/canonical'
 import { DEFAULT_LOCALE, isLocale } from '@/lib/locales'
 import { loadArticles } from '@/lib/mdx'
+import { SPECIALIST_PROFILES } from '@/lib/specialists'
 
 // Define the site routes relative to the locale root. Every `[locale]` page
 // must be listed here; blog posts are added from `loadArticles()`.
 const ROUTES = [
   '',
   '/about',
+  '/clinics',
   '/contact',
+  '/dental-tourism',
+  '/doctor-online',
+  '/memberships',
   '/pricing',
+  '/prisma-care',
+  '/results',
   '/services',
   '/services/aesthetics',
   '/services/dental',
   '/services/emergency',
   '/services/general-medicine',
   '/services/massage-therapy',
+  '/specialists',
+  ...SPECIALIST_PROFILES.map(({ slug }) => `/specialists/${slug}`),
 ]
 
 // English-only routes: listed in the `/en` sitemap only, since the other
@@ -36,7 +45,15 @@ function priorityFor(route: string): { priority: number; changefreq: string } {
   if (route === '/about' || route === '/services' || route === '/services/emergency') {
     return { priority: 0.8, changefreq: 'monthly' }
   }
-  if (route === '/pricing' || route.startsWith('/services/')) {
+  if (route === '/specialists' || route === '/clinics') {
+    return { priority: 0.8, changefreq: 'monthly' }
+  }
+  if (
+    route === '/pricing' ||
+    route.startsWith('/services/') ||
+    route.startsWith('/specialists/') ||
+    ['/memberships', '/doctor-online', '/dental-tourism'].includes(route)
+  ) {
     return { priority: 0.7, changefreq: 'monthly' }
   }
   if (route === '/blog') return { priority: 0.6, changefreq: 'weekly' }

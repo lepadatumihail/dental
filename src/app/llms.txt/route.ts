@@ -43,12 +43,14 @@ function buildLlmsTxt(): string {
     '## Services',
     '',
     ...SERVICES.map((service) => {
-      const lead = SPECIALISTS.find((person) => person.path === service.path)
+      const lead = SPECIALISTS.find((person) => person.leads === service.path)
       return `- [${service.name}](${url(service.path)}): ${service.summary}${lead ? ` Led by ${lead.name}.` : ''}`
     }),
     `- [${EMERGENCY_SERVICE.name}](${url(EMERGENCY_SERVICE.path)}): ${EMERGENCY_SERVICE.summary}`,
     '',
     '## Specialists',
+    '',
+    `All specialists: ${url('specialists')}`,
     '',
     ...SPECIALISTS.map(
       (person) =>
@@ -75,6 +77,12 @@ function buildLlmsTxt(): string {
     '## Optional',
     '',
     `- [About the clinic](${url('about')}): team, values and locations.`,
+    `- [Our clinics](${url('clinics')}): the Puerto Banús and Marbella Old Town clinics, with directions.`,
+    `- [Doctor Online](${url('doctor-online')}): ${messages.doctorOnline.meta.description}`,
+    `- [Dental memberships](${url('memberships')}): ${messages.memberships.meta.description}`,
+    `- [Dental tourism](${url('dental-tourism')}): ${messages.dentalTourism.meta.description}`,
+    `- [Patient reviews](${url('results')}): ${messages.results.meta.description}`,
+    `- [Prisma Care](${url('prisma-care')}): ${messages.prismaCare.meta.description}`,
     `- [All treatments](${url('services')})`,
     `- [Sitio en español](${getCanonicalUrl('', 'es')})`,
     `- [Svensk webbplats](${getCanonicalUrl('', 'se')})`,

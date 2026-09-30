@@ -10,7 +10,7 @@ import { RootLayout } from '@/components/RootLayout'
 import { CookieBanner } from '@/components/CookieBanner'
 import { BookingModalProvider } from '@/components/booking/BookingProvider'
 import { JsonLd } from '@/components/JsonLd'
-import { raleway } from '@/lib/fonts'
+import { playfair, raleway } from '@/lib/fonts'
 import { languageTag } from '@/lib/locales'
 import { siteGraph } from '@/lib/structured-data'
 
@@ -43,7 +43,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={languageTag(locale)}
-      className={`${raleway.variable} h-full bg-surface-200 text-base antialiased`}
+      className={`${raleway.variable} ${playfair.variable} h-full bg-white text-base text-ink antialiased`}
     >
       <head>
         {/* Resource hints for performance */}
@@ -102,7 +102,7 @@ export default async function LocaleLayout({
           `}
         </Script>
       </head>
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full flex-col overflow-x-hidden font-light">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

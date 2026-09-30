@@ -102,6 +102,8 @@ interface PageMetadataOptions {
   type?: 'website' | 'article'
   publishedTime?: string
   authors?: Array<string>
+  /** Open Graph / Twitter image; defaults to the site image. */
+  image?: { url: string; alt: string }
 }
 
 /**
@@ -118,6 +120,7 @@ export function createPageMetadata({
   type = 'website',
   publishedTime,
   authors,
+  image = DEFAULT_OG_IMAGE,
 }: PageMetadataOptions): Metadata {
   const canonicalLocale: Locale = englishOnly
     ? DEFAULT_LOCALE
@@ -150,7 +153,7 @@ export function createPageMetadata({
       alternateLocale: locales
         .filter((l) => l !== canonicalLocale)
         .map((l) => OG_LOCALES[l]),
-      images: [DEFAULT_OG_IMAGE],
+      images: [image],
       ...(publishedTime && { publishedTime }),
       ...(authors && { authors }),
     },
@@ -158,7 +161,7 @@ export function createPageMetadata({
       card: 'summary_large_image',
       title: fullTitle,
       description,
-      images: [DEFAULT_OG_IMAGE.url],
+      images: [image.url],
     },
   }
 }

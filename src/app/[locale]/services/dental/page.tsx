@@ -13,12 +13,11 @@ import {
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
+import { WHATSAPP_URL } from '@/lib/clinic'
 import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/implant.jpg'
 import doctorImage from '@/images/clinic/robin-colour.jpg'
-
-const WHATSAPP_HREF = 'https://wa.me/+34673290786'
 
 interface PageProps {
   params: { locale: string }
@@ -54,7 +53,8 @@ export default async function DentalServices() {
         imageAlt={t('hero.imageAlt')}
         title={t('hero.title')}
         description={t('hero.description')}
-        ctaLabel={t('hero.ctaLabel')}      />
+        ctaLabel={t('hero.ctaLabel')}
+      />
 
       <InterestSection
         eyebrow={t('interest.eyebrow')}
@@ -68,7 +68,7 @@ export default async function DentalServices() {
         title={t('ourServices.title')}
         body={t('ourServices.body')}
         ctaLabel={t('ourServices.ctaLabel')}
-        ctaHref={WHATSAPP_HREF}
+        ctaHref={WHATSAPP_URL}
         ctaExternal
         items={t.raw('ourServices.items') as ServiceItem[]}
       />
@@ -79,12 +79,14 @@ export default async function DentalServices() {
         eyebrow={t('leadExpert.eyebrow')}
         title={t('leadExpert.title')}
         body={t('leadExpert.body')}
+        profileHref="/specialists/dr-robbin"
       />
 
       <CtaRibbon
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
-        ctaLabel={t('ribbon.ctaLabel')}      />
+        ctaLabel={t('ribbon.ctaLabel')}
+      />
 
       <TestimonialsGrid />
 

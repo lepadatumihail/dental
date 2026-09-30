@@ -3,9 +3,11 @@
 import { getLocale, getTranslations } from 'next-intl/server'
 
 import type { PriceGroup } from '@/components/PricingGroups'
-import { EMERGENCY_SERVICE, SERVICES } from '@/lib/clinic'
+import { EMERGENCY_SERVICE, SERVICES, SPECIALISTS } from '@/lib/clinic'
+import type { Specialist } from '@/lib/specialists'
 import {
   pricingPageGraph,
+  profilePageGraph,
   servicePageGraph,
   simplePageGraph,
   type BreadcrumbItem,
@@ -142,6 +144,66 @@ export async function simplePageJsonLd(
       page === 'about'
         ? { name: tLayout('navigation.items.theClinic'), path: 'about' }
         : treatments,
+    ],
+  })
+}
+
+// Pages whose copy lives in their own namespace, with `meta.title` and
+// `meta.description`; the value is the path and the breadcrumb label key.
+const NEW_PAGES = {
+  specialists: { path: 'specialists', nav: 'specialists', type: 'CollectionPage' },
+  memberships: { path: 'memberships', nav: 'memberships', type: 'WebPage' },
+  doctorOnline: { path: 'doctor-online', nav: 'doctorOnline', type: 'WebPage' },
+  dentalTourism: { path: 'dental-tourism', nav: 'dentalTourism', type: 'WebPage' },
+  prismaCare: { path: 'prisma-care', nav: 'prismaCare', type: 'AboutPage' },
+  clinics: { path: 'clinics', nav: 'clinics', type: 'WebPage' },
+  results: { path: 'results', nav: null, type: 'WebPage' },
+} as const
+
+export async function newPageJsonLd(page: keyof typeof NEW_PAGES) {
+  const locale = await getLocale()
+  const config = NEW_PAGES[page]
+  const t = await getTranslations({ locale, namespace: `${page}.meta` })
+  const tSite = await getTranslations({ locale, namespace: 'site' })
+  const { home } = await navCrumbs(locale)
+
+  return simplePageGraph({
+    locale,
+    path: config.path,
+    name: t('title'),
+    description: t('description'),
+    type: config.type,
+    breadcrumbs: [
+      home,
+      {
+        name: config.nav ? tSite(`nav.${config.nav}`) : t('title'),
+        path: config.path,
+      },
+    ],
+  })
+}
+
+export async function specialistPageJsonLd(specialist: Specialist) {
+  const locale = await getLocale()
+  const person = SPECIALISTS.find(
+    (p) => p.path === `specialists/${specialist.slug}`,
+  )!
+  const t = await getTranslations({
+    locale,
+    namespace: `specialists.people.${specialist.slug}`,
+  })
+  const tSite = await getTranslations({ locale, namespace: 'site' })
+  const { home } = await navCrumbs(locale)
+
+  return profilePageGraph({
+    locale,
+    person,
+    name: `${specialist.name} — ${t('role')}`,
+    description: t('experience'),
+    breadcrumbs: [
+      home,
+      { name: tSite('nav.specialists'), path: 'specialists' },
+      { name: specialist.name, path: person.path },
     ],
   })
 }

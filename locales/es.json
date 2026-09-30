@@ -32,36 +32,6 @@
     "description": "Salud dental, estética y medicina general premium en Marbella — máxima eficiencia, confort y cuidado.",
     "tagline": "Prisma Clinic Marbella",
     "viewServices": "Ver nuestros servicios",
-    "discoverMore": "Descubre más",
-    "clients": {
-      "title": "Trabajamos con marcas dentales líderes a nivel mundial"
-    },
-    "journey": {
-      "title": "Tu camino hacia una mejor salud",
-      "description": "Desde tu primera visita hasta el cuidado continuo, te guiamos en cada paso del camino con precisión, compasión y tecnología avanzada.",
-      "steps": {
-        "consultation": {
-          "label": "01",
-          "title": "Consulta",
-          "description": "Programa tu primera visita para una evaluación completa de tus necesidades de salud y estética."
-        },
-        "diagnosis": {
-          "label": "02",
-          "title": "Diagnóstico",
-          "description": "Diagnósticos avanzados con tecnología de imagen de vanguardia para resultados precisos y fiables."
-        },
-        "treatment": {
-          "label": "03",
-          "title": "Tratamiento",
-          "description": "Planes de tratamiento personalizados elaborados por nuestros especialistas, adaptados a tu situación única."
-        },
-        "care": {
-          "label": "04",
-          "title": "Cuidado Continuo",
-          "description": "Seguimiento continuo y cuidado preventivo para garantizar resultados duraderos y tranquilidad."
-        }
-      }
-    },
     "services": {
       "title": "Nuestros Servicios",
       "description": "Utilizamos tecnologías dentales y estéticas de vanguardia para ofrecer una atención premium. Nuestro equipo avanzado garantiza precisión y comodidad, mejorando tanto su sonrisa como su apariencia facial con resultados excepcionales.",
@@ -108,53 +78,6 @@
     },
     "testimonial": {
       "text": "El equipo de Prisma Clinic Marbella hizo que mi visita dental fuera muy cómoda y sin estrés. Su enfoque suave y atención al detalle cambió completamente mi perspectiva sobre la atención dental."
-    },
-    "hero": {
-      "slides": {
-        "aesthetic": {
-          "h1": "Tratamientos Estéticos y Antiedad",
-          "h2": "Conoce soluciones estéticas de alto nivel con un equipo de clase mundial en medicina antiedad — todo en un mismo lugar.",
-          "cta": "Ver tratamientos"
-        },
-        "dental": {
-          "h1": "Salud y Cuidado Dental",
-          "h2": "El cuidado dental más avanzado de España",
-          "cta": "Ver tratamientos"
-        },
-        "medical": {
-          "h1": "Medicina General y Optimización de la Salud",
-          "h2": "Acceso inmediato a tratamientos y cuidados de salud",
-          "cta": "Llámanos ahora"
-        }
-      }
-    },
-    "treatments": {
-      "title": "Todo en un solo lugar",
-      "description": "Accede a la única instalación en Marbella con un grupo de expertos centrados en longevidad, belleza y calidad de vida — todo en un mismo sitio",
-      "cards": {
-        "dental": {
-          "title": "Cuidado Dental y Estética",
-          "description": "Desde los casos más complejos hasta los más sencillos, cuidamos cada detalle con excelencia."
-        },
-        "antiAging": {
-          "title": "Tratamientos Antiedad",
-          "description": "Las últimas tecnologías en tratamientos estéticos en Marbella"
-        },
-        "general": {
-          "title": "Medicina General",
-          "description": "Para tus necesidades diarias y tu calidad de vida."
-        }
-      }
-    },
-    "whatsapp": {
-      "title": "Estamos aquí 24/7 — para cualquier emergencia",
-      "description": "Abiertos las 24 horas para emergencias, preguntas o una consulta rápida. Nuestro equipo multilingüe domina español, inglés, sueco, alemán y farsi — escríbenos cuando quieras.",
-      "cta": "¡Envíanos un mensaje!"
-    },
-    "about": {
-      "eyebrow": "Sobre la Clínica",
-      "title": "Prisma Clinic",
-      "body": "Prisma Clinic Marbella es una clínica moderna de odontología y estética situada en el corazón de Marbella, dedicada a ofrecer cuidados de alta calidad en un entorno sereno y lujoso. Nos especializamos en servicios dentales integrales: desde revisiones rutinarias y odontología cosmética hasta tratamientos avanzados. Nuestra división de estética ofrece tratamientos no quirúrgicos personalizados como rellenos dérmicos y neuromoduladores para realzar la belleza natural con resultados sutiles y efectivos. Para tu tranquilidad, también contamos con atención dental de emergencia 24/7, garantizando soporte experto siempre que lo necesites. En Prisma, tu comodidad, confianza y bienestar son lo primero."
     },
     "testimonialsGrid": {
       "title": "Lo que dicen sobre nosotros",
@@ -1337,6 +1260,679 @@
       "unavailable": "La reserva en línea no está disponible temporalmente. Llámenos o escríbanos y estaremos encantados de ayudarle.",
       "fallbackCall": "Llámenos",
       "fallbackWhatsapp": "Escríbanos por WhatsApp"
+    }
+  },
+  "site": {
+    "bookConsultation": "Reserva una consulta",
+    "bookYourConsultation": "Reserva tu consulta",
+    "nav": {
+      "label": "Navegación principal",
+      "home": "Inicio de Prisma Clinic",
+      "menu": "Abrir menú",
+      "close": "Cerrar menú",
+      "bookNow": "Reservar",
+      "treatments": "Tratamientos",
+      "specialists": "Especialistas",
+      "prices": "Precios",
+      "memberships": "Membresías",
+      "doctorOnline": "Doctor Online",
+      "dentalTourism": "Turismo dental",
+      "prismaCare": "Prisma Care",
+      "clinics": "Clínicas",
+      "emergency": "Urgencias 24/7"
+    },
+    "footer": {
+      "tagline": "Cuidado avanzado. Trato personal.",
+      "explore": "Explorar",
+      "visit": "Visítanos",
+      "connect": "Conecta",
+      "results": "Experiencias de pacientes",
+      "ourClinics": "Nuestras clínicas",
+      "about": "Sobre la clínica",
+      "contact": "Contacto",
+      "blog": "Blog",
+      "email": "Correo electrónico",
+      "disclaimer": "La información médica es de carácter general y no sustituye a una consulta individual.",
+      "websiteBy": "Web creada por"
+    },
+    "finalCta": {
+      "eyebrow": "Empieza con una conversación",
+      "title": "Tu próximo capítulo<br></br><em>empieza aquí.</em>"
+    },
+    "whatsapp": {
+      "label": "Contactar con Prisma Clinic",
+      "eyebrow": "¿En qué podemos ayudarte?",
+      "title": "Contacta con Prisma",
+      "topicLabel": "¿Sobre qué es tu consulta?",
+      "messageLabel": "Tu mensaje",
+      "messagePlaceholder": "Añade un breve mensaje (opcional)",
+      "write": "Escribir por WhatsApp",
+      "call": "Llamar: {topic}",
+      "emergencyNote": "Si hay riesgo para la vida, llama al 112.",
+      "trigger": "WhatsApp y llamada",
+      "close": "Cerrar",
+      "closeLabel": "Cerrar la ventana de contacto",
+      "template": "Hola, Prisma Clinic. Me gustaría que me ayudarais con: {topic}.",
+      "topics": {
+        "dental": "Tratamiento dental",
+        "dentalTourism": "Turismo dental",
+        "emergency": "Urgencia dental 24/7",
+        "aesthetic": "Tratamiento estético",
+        "medical": "Medicina general",
+        "surgery": "Cirugía y salud masculina",
+        "massage": "Masaje y terapia Yumeiho",
+        "doctorOnline": "Doctor Online",
+        "memberships": "Membresías",
+        "prismaCare": "Prisma Care",
+        "other": "Cómo llegar u otra consulta"
+      }
+    }
+  },
+  "areas": {
+    "dental": {
+      "title": "Odontología",
+      "lead": "Salud y cuidado dental avanzados",
+      "services": [
+        "Implantes dentales",
+        "Endodoncia y tratamiento de conductos",
+        "Carillas y diseño de sonrisa",
+        "Coronas y puentes",
+        "Blanqueamiento profesional",
+        "Revisiones preventivas",
+        "Extracciones y elevación de seno",
+        "Urgencias dentales 24/7"
+      ]
+    },
+    "aesthetics": {
+      "title": "Medicina estética",
+      "lead": "Resultados refinados, nunca excesivos",
+      "services": [
+        "Rellenos dérmicos",
+        "Aumento de labios",
+        "Armonización facial",
+        "Neuromoduladores",
+        "Bruxismo e hiperhidrosis",
+        "PRP facial y capilar",
+        "Polinucleótidos",
+        "Bioestimuladores de PLLA"
+      ]
+    },
+    "medical": {
+      "title": "Medicina general",
+      "lead": "Atención privada, sin listas de espera",
+      "services": [
+        "Atención urgente 24/7",
+        "Control médico del peso",
+        "Cirugía menor",
+        "Salud masculina y urología",
+        "Sueros IV y bienestar",
+        "Análisis de sangre y chequeos",
+        "Medicina del viajero",
+        "Telemedicina"
+      ]
+    },
+    "massage": {
+      "title": "Masaje terapéutico",
+      "lead": "El exclusivo método japonés Yumeiho",
+      "services": [
+        "Masaje terapéutico Yumeiho",
+        "Terapia de presión en tejido profundo",
+        "Desequilibrios posturales",
+        "Tensión de espalda y cuello",
+        "Movilidad articular",
+        "Tensión ciática y nerviosa",
+        "Drenaje linfático",
+        "Reflexología y estiramientos"
+      ]
+    }
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Odontología  /  Medicina estética  /  Medicina general",
+      "title": "El arte del<br></br>buen cuidado.",
+      "lead": "Experiencia de primer nivel. Tratamientos personalizados. Resultados excepcionales en Marbella y Puerto Banús.",
+      "explore": "Descubre los tratamientos",
+      "imageAlt": "El equipo de especialistas de Prisma Clinic en la clínica"
+    },
+    "proof": {
+      "locations": "Dos ubicaciones emblemáticas",
+      "specialists": "Seis especialistas dedicados",
+      "care": "Atención personalizada"
+    },
+    "intro": {
+      "label": "El estándar Prisma",
+      "eyebrow": "Una clínica multidisciplinar moderna",
+      "title": "Todo lo que necesitas.<br></br><em>Una experiencia cuidada al detalle.</em>",
+      "p1": "Prisma reúne odontología de alto nivel, medicina estética y atención médica diaria bajo un mismo techo, en un entorno sereno y cuidado.",
+      "p2": "Cada detalle se aborda con precisión, discreción y un trato personal, desde la primera consulta hasta el seguimiento."
+    },
+    "access": {
+      "online": {
+        "eyebrow": "Prisma Doctor Online",
+        "title": "Consulta a un médico<br></br>estés donde estés.",
+        "cta": "Videoconsulta — 25€"
+      },
+      "memberships": {
+        "eyebrow": "Cuidado anual",
+        "title": "Descubre las<br></br>membresías Prisma.",
+        "cta": "Ver membresías"
+      }
+    },
+    "treatments": {
+      "eyebrow": "Excelencia bajo un mismo techo",
+      "title": "Tratamientos pensados<br></br>para <em>ti.</em>",
+      "viewAll": "Ver todos los tratamientos",
+      "discover": "Descubre esta especialidad"
+    },
+    "specialists": {
+      "eyebrow": "Las personas detrás de tu cuidado",
+      "title": "Conoce a tus<br></br><em>especialistas.</em>",
+      "body": "Un equipo multidisciplinar unido por la precisión clínica, el consejo honesto y una vocación natural por el trato personal.",
+      "cta": "Conoce a todo el equipo"
+    },
+    "reviews": {
+      "eyebrow": "Experiencias de pacientes",
+      "title": "Un cuidado<br></br><em>que se recuerda.</em>",
+      "source": "reseña verificada de Google",
+      "cta": "Lee todas las opiniones"
+    },
+    "find": {
+      "eyebrow": "Encuéntranos",
+      "title": "Dos clínicas.<br></br><em>Un mismo estándar.</em>",
+      "cta": "Conoce nuestras dos clínicas"
+    },
+    "emergency": {
+      "eyebrow": "Cuando no se puede esperar",
+      "title": "Siempre a tu lado.<br></br><em>Las 24 horas del día.</em>",
+      "body": "Atención dental inmediata ante dolor intenso, dientes rotos, infecciones, traumatismos, restauraciones perdidas y otras urgencias, también fines de semana y festivos.",
+      "call": "Llama al {phone}",
+      "info": "Información de urgencias"
+    }
+  },
+  "specialists": {
+    "meta": {
+      "title": "Nuestros especialistas",
+      "description": "Conoce al equipo de Prisma Clinic Marbella: odontología estética e implantes, medicina estética y regenerativa, injerto capilar, cirugía general y terapia Yumeiho."
+    },
+    "hero": {
+      "eyebrow": "Nuestros especialistas",
+      "title": "Experiencia clínica,<br></br>trato humano.",
+      "intro": "Un equipo multidisciplinar unido por la precisión clínica, el consejo honesto y una vocación natural por el trato personal."
+    },
+    "card": {
+      "explore": "Ver perfil",
+      "teaser": "Conoce a {name} y descubre su experiencia y sus tratamientos destacados."
+    },
+    "profile": {
+      "back": "← Todos los especialistas",
+      "bookWith": "Reservar con {name}",
+      "approach": "Su enfoque",
+      "languages": "Idiomas",
+      "expertise": "Áreas de especialización",
+      "howCanHelp": "Cómo puede ayudarte {name}.",
+      "galleryLabel": "{name} en Prisma Clinic",
+      "galleryAlt": {
+        "intro": "{name} — presentación",
+        "expertise": "{name} — especialización",
+        "treatments": "{name} — tratamientos destacados"
+      },
+      "ctaEyebrow": "Consulta personalizada",
+      "ctaTitle": "Empieza con<br></br><em>una conversación.</em>"
+    },
+    "people": {
+      "behrouz-rajabi": {
+        "role": "Especialista en terapia Yumeiho",
+        "detail": "Terapia Yumeiho personalizada, centrada en el equilibrio postural, la movilidad, la tensión muscular y la recuperación de la soltura de movimiento.",
+        "experience": "Representante oficial de la terapia Yumeiho, con más de 20 años de experiencia devolviendo el equilibrio, aliviando el dolor y mejorando el movimiento.",
+        "philosophy": "Acompañar la alineación natural del cuerpo para favorecer la movilidad, el equilibrio y un bienestar duradero.",
+        "languages": [
+          "Persa",
+          "Alemán",
+          "Inglés",
+          "Español"
+        ],
+        "treatments": [
+          "Dolor y tensión de espalda",
+          "Dolor de cuello y hombros",
+          "Desequilibrio pélvico",
+          "Molestias de cadera y articulaciones",
+          "Desequilibrios posturales",
+          "Alineación de la columna",
+          "Tensión muscular",
+          "Movilidad y equilibrio corporal"
+        ]
+      },
+      "dr-afshin-moheb": {
+        "role": "Cirugía plástica facial y restauración capilar",
+        "detail": "Cirugía facial y restauración capilar a cargo de un especialista, con una planificación minuciosa, proporciones naturales y un seguimiento discreto.",
+        "experience": "Especialista de reconocimiento internacional, con décadas de experiencia quirúrgica y más de 7.000 trasplantes capilares realizados.",
+        "philosophy": "Devolver la confianza con una restauración capilar natural y personalizada.",
+        "languages": [
+          "Inglés",
+          "Alemán",
+          "Persa"
+        ],
+        "treatments": [
+          "Trasplante capilar FUE",
+          "Restauración de la línea frontal",
+          "Recuperación de la densidad capilar",
+          "Trasplante de barba",
+          "Trasplante de cejas",
+          "PRP y terapia capilar regenerativa"
+        ]
+      },
+      "dr-angelo-termini": {
+        "role": "Cirugía general y salud masculina",
+        "detail": "Atención médica y quirúrgica privada, con especial atención a la salud masculina, diagnósticos claros y una orientación confidencial.",
+        "experience": "Consultor médico sénior con casi 40 años de experiencia, que combina la pericia quirúrgica con una atención cercana y centrada en el paciente.",
+        "philosophy": "La buena medicina empieza por escuchar. Cada paciente debe sentirse visto, respetado e implicado en su propio cuidado.",
+        "languages": [
+          "Sueco",
+          "Inglés",
+          "Noruego",
+          "Italiano",
+          "Español"
+        ],
+        "treatments": [
+          "Medicina general y diagnóstico",
+          "Urgencias 24/7 y telemedicina",
+          "Cirugía general",
+          "Urología",
+          "Control médico del peso",
+          "Salud masculina y proctología",
+          "Medicina preventiva",
+          "Inyecciones terapéuticas y estética"
+        ]
+      },
+      "dr-bozana-krivosija": {
+        "role": "Medicina estética y regenerativa",
+        "detail": "Tratamientos estéticos y regenerativos refinados, diseñados en torno al equilibrio facial, la calidad de la piel y unos resultados que se sienten auténticamente tuyos.",
+        "experience": "Comprometida con resultados naturales y equilibrados que refuerzan la confianza, gracias a una valoración personalizada y un enfoque regenerativo.",
+        "philosophy": "Ayudarte a verte con frescura, con confianza y en tu mejor versión.",
+        "languages": [
+          "Inglés",
+          "Serbio",
+          "Español"
+        ],
+        "treatments": [
+          "Inyecciones antiarrugas",
+          "Rellenos dérmicos",
+          "Skin boosters",
+          "Polinucleótidos",
+          "Estimuladores de colágeno",
+          "PRP (plasma rico en plaquetas)",
+          "Microneedling",
+          "Sueros vitamínicos IV"
+        ]
+      },
+      "dr-darina-sansasvili": {
+        "role": "Especialista en estética dentofacial",
+        "detail": "Medicina estética facial personalizada, con un enfoque preciso y meditado de la armonía, el rejuvenecimiento y los resultados naturales.",
+        "experience": "Doctora en medicina dental, conferenciante y formadora internacional con más de 17 años de experiencia clínica en odontología y estética facial.",
+        "philosophy": "No cambies tu rostro: reálzalo.",
+        "languages": [
+          "Inglés",
+          "Checo",
+          "Italiano",
+          "Ruso",
+          "Español",
+          "Georgiano"
+        ],
+        "treatments": [
+          "Botox avanzado",
+          "Botox terapéutico",
+          "Armonización facial",
+          "Realce de labios y pómulos",
+          "Contorno de mentón y mandíbula",
+          "Rinomodelación sin cirugía",
+          "Polinucleótidos",
+          "Skin boosters"
+        ]
+      },
+      "dr-robbin": {
+        "role": "Odontología estética, cosmética e implantología",
+        "detail": "Odontología estética e implantología, restauraciones complejas y urgencias dentales 24/7, con una atención serena y meticulosa.",
+        "experience": "Dentista de cuarta generación especializado en odontología estética e implantología, dedicado a crear sonrisas naturales y seguras que perduran.",
+        "philosophy": "Cada sonrisa es única. Mi trabajo es sacar lo mejor de la tuya.",
+        "languages": [
+          "Sueco",
+          "Inglés",
+          "Persa",
+          "Alemán",
+          "Lituano",
+          "Noruego"
+        ],
+        "treatments": [
+          "Implantes dentales",
+          "Carillas",
+          "Blanqueamiento dental",
+          "Coronas y puentes",
+          "Revisiones preventivas",
+          "Endodoncia (tratamiento de conductos)",
+          "Odontología de urgencia 24/7"
+        ]
+      }
+    }
+  },
+  "memberships": {
+    "meta": {
+      "title": "Membresías dentales",
+      "description": "Membresías dentales anuales en Prisma Clinic Marbella: limpiezas, blanqueamiento, urgencias y 10% de descuento en tratamientos. Individual, pareja o familia."
+    },
+    "hero": {
+      "eyebrow": "Membresías Prisma",
+      "title": "Un cuidado que<br></br>te acompaña.",
+      "intro": "Elige una membresía dental anual con cuidado preventivo, precios preferentes y atención dental de urgencia incluida.",
+      "cta": "Ver membresías"
+    },
+    "intro": {
+      "eyebrow": "Membresías anuales",
+      "title": "Elige el cuidado<br></br><em>que encaja con tu vida.</em>",
+      "body": "Cada membresía es personal, fácil de usar y válida durante doce meses desde su activación."
+    },
+    "group": {
+      "eyebrow": "Membresías dentales",
+      "title": "Una sonrisa más sana, todo el año."
+    },
+    "perYear": "/ año",
+    "join": "Hazte miembro",
+    "joinMessage": "Hola, Prisma Clinic. Me gustaría hacerme miembro: {plan} ({price} / año).",
+    "plans": {
+      "individual": {
+        "name": "Individual",
+        "note": "Para un miembro",
+        "benefits": [
+          "2 limpiezas dentales al año",
+          "1 blanqueamiento al año",
+          "Atención dental de urgencia incluida",
+          "10% de descuento en todos los tratamientos"
+        ]
+      },
+      "couple": {
+        "name": "Pareja",
+        "note": "Para dos miembros",
+        "benefits": [
+          "4 limpiezas dentales al año",
+          "2 blanqueamientos al año",
+          "Atención dental de urgencia incluida para ambos miembros",
+          "10% de descuento en todos los tratamientos"
+        ]
+      },
+      "family": {
+        "name": "Familia",
+        "note": "Para toda la familia",
+        "benefits": [
+          "8 limpiezas dentales al año",
+          "4 blanqueamientos al año",
+          "Atención dental de urgencia incluida para toda la familia",
+          "10% de descuento en todos los tratamientos"
+        ]
+      }
+    },
+    "influencer": {
+      "eyebrow": "Prisma Influencer",
+      "title": "¿Te interesa una<br></br><em>colaboración creativa?</em>",
+      "body": "Las membresías para influencers se estudian de forma individual y no pueden contratarse online. Contacta con Prisma Clinic para valorar el nivel de colaboración adecuado.",
+      "cta": "Contactar con Prisma",
+      "message": "Hola, Prisma Clinic. Me gustaría hablar sobre una membresía de influencer."
+    }
+  },
+  "doctorOnline": {
+    "meta": {
+      "title": "Doctor Online — Videoconsulta médica",
+      "description": "Videoconsulta privada con un médico de Prisma Clinic Marbella por 25€: dental, capilar, piel y estética o medicina general. Se descuenta del tratamiento en clínica."
+    },
+    "hero": {
+      "eyebrow": "Prisma Doctor Online",
+      "title": "Tu médico.<br></br>Estés donde estés.",
+      "intro": "Habla en privado por videollamada con un profesional de Prisma por 25€. Recibe una orientación clara, el especialista adecuado y un camino sencillo hacia la atención en clínica cuando la necesites.",
+      "cta": "Reserva tu consulta online — 25€"
+    },
+    "steps": [
+      {
+        "title": "Elige tu motivo de consulta",
+        "body": "Cuéntanos en qué necesitas ayuda y elige la cita que mejor te convenga."
+      },
+      {
+        "title": "Consulta por vídeo",
+        "body": "Habla con el profesional de Prisma adecuado en una consulta online privada."
+      },
+      {
+        "title": "Continúa tu tratamiento",
+        "body": "Si continúas con un tratamiento en la clínica Prisma, los 25€ de la consulta se descuentan íntegramente del coste de tu tratamiento."
+      }
+    ],
+    "routing": {
+      "eyebrow": "Orientación de especialistas",
+      "title": "Empieza por<br></br><em>la conversación adecuada.</em>",
+      "body": "Disponible en inglés, español, sueco y persa. Las solicitudes de receta solo se valoran cuando es médica y legalmente apropiado.",
+      "bookLabel": "Reservar consulta: {area}",
+      "areas": {
+        "dental": {
+          "label": "Atención dental",
+          "who": "Dr. Robbin",
+          "body": "Dolor, problemas dentales y orientación sobre tratamientos"
+        },
+        "hair": {
+          "label": "Restauración capilar",
+          "who": "Dr. Afshin",
+          "body": "Caída del cabello y opciones de restauración"
+        },
+        "skin": {
+          "label": "Piel y estética",
+          "who": "Dra. Darina / Dra. Bozana",
+          "body": "Piel, estética facial y medicina regenerativa"
+        },
+        "medical": {
+          "label": "Medicina general",
+          "who": "Dr. Angelo / Dra. Bozana",
+          "body": "Salud general, orientación médica privada y próximos pasos"
+        }
+      }
+    },
+    "message": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (25€). Especialidad: {area}.",
+    "messageGeneral": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (25€).",
+    "note": {
+      "label": "Este servicio no está pensado para emergencias con riesgo vital.",
+      "body": "Ante síntomas urgentes o graves, llama al 112. Para urgencias dentales, llama a Prisma 24/7 al <phone></phone>."
+    },
+    "cta": {
+      "eyebrow": "Atención online",
+      "title": "Empieza desde<br></br><em>donde estés.</em>",
+      "button": "Reservar por 25€"
+    }
+  },
+  "dentalTourism": {
+    "meta": {
+      "title": "Turismo dental en Marbella",
+      "description": "Planifica tu tratamiento dental en Marbella con Prisma Clinic: valoración online, plan de tratamiento transparente, citas coordinadas y atención multilingüe."
+    },
+    "hero": {
+      "eyebrow": "Turismo dental Prisma · Marbella",
+      "title": "Odontología de excelencia.<br></br><em>Al estilo Marbella.</em>",
+      "intro": "Planifica tu tratamiento dental en Marbella con un único equipo clínico dedicado: desde la valoración online y un plan de tratamiento transparente hasta las citas, la recuperación y el apoyo local.",
+      "cta": "Planificar mi viaje dental",
+      "imageAlt": "Tratamiento dental en Prisma Clinic Marbella"
+    },
+    "proof": [
+      "Valoración online antes de viajar",
+      "Un calendario de tratamiento coordinado",
+      "Dos clínicas céntricas en Marbella",
+      "Atención personal multilingüe"
+    ],
+    "process": {
+      "eyebrow": "Un recorrido coordinado",
+      "title": "Tu tratamiento,<br></br><em>planificado en torno a ti.</em>",
+      "steps": [
+        {
+          "title": "Comparte tu caso",
+          "body": "Cuéntanos qué te gustaría mejorar y comparte las radiografías o escáneres que tengas."
+        },
+        {
+          "title": "Consulta online",
+          "body": "Empieza con una valoración por vídeo para que el dentista adecuado estudie tu caso antes del viaje."
+        },
+        {
+          "title": "Recibe tu plan",
+          "body": "Obtén un plan clínico personalizado, la duración estimada de la estancia y un presupuesto transparente."
+        },
+        {
+          "title": "Viaja a Marbella",
+          "body": "Coordinamos tu agenda en la clínica y el apoyo local que hayas elegido para tu viaje."
+        },
+        {
+          "title": "Tratamiento y seguimiento",
+          "body": "Recibe tu tratamiento con el equipo dental de Prisma y un seguimiento claro cuando vuelvas a casa."
+        }
+      ]
+    },
+    "planner": {
+      "eyebrow": "Crea tu primer plan",
+      "title": "Háblanos de<br></br><em>tu viaje dental.</em>",
+      "body": "Este primer paso da al equipo de Prisma la información necesaria para preparar la conversación adecuada. Tu plan final y el presupuesto se confirman tras la valoración clínica.",
+      "treatmentLabel": "Tratamiento de interés",
+      "monthLabel": "Mes preferido para viajar",
+      "stayLabel": "Estancia prevista",
+      "supportLabel": "Apoyo para el viaje",
+      "summaryEyebrow": "Tu solicitud",
+      "flexible": "Fechas flexibles",
+      "notDecided": "sin decidir",
+      "send": "Enviar mi plan a Prisma",
+      "orBook": "O reserva una consulta dental",
+      "message": "Hola, Prisma Clinic. Me gustaría un plan de turismo dental. Tratamiento: {treatment}. Mes preferido: {month}. Estancia prevista: {stay}. Apoyo para el viaje: {support}.",
+      "treatments": [
+        "Implantes dentales",
+        "Carillas y diseño de sonrisa",
+        "Coronas y puentes",
+        "Rehabilitación oral completa",
+        "Blanqueamiento dental",
+        "Tratamiento dental complejo",
+        "Aún no lo sé"
+      ],
+      "stays": [
+        "2–3 días",
+        "3–5 días",
+        "5–7 días",
+        "Más de una semana",
+        "Aún no lo sé"
+      ],
+      "supports": [
+        "Solo la planificación del tratamiento",
+        "Agenda en clínica y traslado desde el aeropuerto",
+        "Agenda en clínica, traslado y recomendaciones de hotel",
+        "Prefiero que Prisma me asesore"
+      ]
+    },
+    "included": {
+      "eyebrow": "Tratamiento en Marbella",
+      "title": "Precisión clínica.<br></br><em>Coordinación personal.</em>",
+      "items": [
+        {
+          "title": "Antes de llegar",
+          "body": "Consulta online, estudio del caso, propuesta preliminar de tratamiento y una lista clara de lo que debes traer."
+        },
+        {
+          "title": "Durante tu estancia",
+          "body": "Citas coordinadas, contacto multilingüe y tratamiento en Puerto Banús o en el casco antiguo de Marbella."
+        },
+        {
+          "title": "Cuando vuelvas a casa",
+          "body": "Seguimiento digital, pautas de cuidado posterior y contacto directo con el equipo de Prisma cuando surjan dudas."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Empieza desde casa",
+      "title": "Tu sonrisa en Marbella<br></br><em>empieza con un plan.</em>",
+      "button": "Planifica tu viaje"
+    }
+  },
+  "prismaCare": {
+    "meta": {
+      "title": "Prisma Care — Maiti Nepal",
+      "description": "Prisma Care: Prisma Clinic Marbella apoya a Maiti Nepal con aportaciones económicas y misiones dentales que llevan atención a niños en situación vulnerable."
+    },
+    "hero": {
+      "eyebrow": "Prisma Care · Maiti Nepal",
+      "title": "Cuidar más allá<br></br><em>de nuestras clínicas.</em>",
+      "intro": "Prisma Clinic apoya a Maiti Nepal con aportaciones económicas y misiones dentales sobre el terreno, ayudando a que niños vulnerables accedan a sonrisas más sanas y a una atención compasiva.",
+      "cta": "Descubre la misión",
+      "imageAlt": "El equipo de Prisma Clinic"
+    },
+    "statement": {
+      "eyebrow": "Nuestro compromiso",
+      "title": "La experiencia clínica puede<br></br><em>cambiar más que una sonrisa.</em>",
+      "body": "Nuestra responsabilidad no termina en la puerta de la clínica. A través de Prisma Care apoyamos la labor de Maiti Nepal en la protección y el empoderamiento de niños y mujeres, y preparamos equipos dentales para ofrecer atención práctica allí donde más se necesita."
+    },
+    "pillars": [
+      {
+        "title": "Apoyo directo",
+        "body": "Las aportaciones económicas ayudan a Maiti Nepal a mantener su labor de protección, educación, rehabilitación y trabajo comunitario."
+      },
+      {
+        "title": "Misiones dentales",
+        "body": "Los profesionales dentales de Prisma viajan a Nepal para examinar y tratar a los niños, y ayudarles a entender la salud bucodental del día a día."
+      },
+      {
+        "title": "Cuidado a largo plazo",
+        "body": "El objetivo es un impacto sostenible a través de la prevención, la educación, el seguimiento y una colaboración continuada."
+      }
+    ],
+    "feature": {
+      "eyebrow": "De Marbella a Nepal",
+      "title": "Conocimiento, tiempo y<br></br><em>cuidado en acción.</em>",
+      "body": "Cada misión se diseña a partir de necesidades reales: revisiones dentales, tratamientos urgentes, prevención y educación práctica. Prisma Care une a pacientes, colaboradores y al equipo clínico en torno a un propósito compartido.",
+      "cta": "Apoya o colabora con Prisma Care",
+      "message": "Hola, Prisma Clinic. Me gustaría apoyar a Prisma Care y a Maiti Nepal.",
+      "imageAlt": "La sala de espera de Prisma Clinic"
+    },
+    "cta": {
+      "eyebrow": "Forma parte del cambio",
+      "title": "Ayúdanos a llevar<br></br><em>el cuidado más lejos.</em>",
+      "button": "Contactar con Prisma Care",
+      "message": "Hola, Prisma Clinic. Me gustaría recibir más información sobre Prisma Care."
+    }
+  },
+  "clinics": {
+    "meta": {
+      "title": "Nuestras clínicas en Marbella y Puerto Banús",
+      "description": "Visita Prisma Clinic en Puerto Banús (Plaza Marina Banús) o en el casco antiguo de Marbella (Av. Nabeul). Direcciones, cómo llegar y urgencias 24/7."
+    },
+    "hero": {
+      "eyebrow": "Marbella · Puerto Banús",
+      "title": "Dos clínicas.<br></br>Un mismo estándar.",
+      "intro": "Tanto si vives en Marbella como si estás de visita en Puerto Banús o viajas a la Costa del Sol, una atención excepcional siempre está cerca."
+    },
+    "banusLabel": "Puerto Banús",
+    "oldTownLabel": "Marbella Centro",
+    "body": "Consultas programadas, seguimiento y atención urgente en un entorno discreto y céntrico.",
+    "directions": "Cómo llegar",
+    "banusImageAlt": "Recepción de Prisma Clinic Banús",
+    "oldTownImageAlt": "Prisma Clinic Casco Antiguo, en Marbella"
+  },
+  "results": {
+    "meta": {
+      "title": "Opiniones de pacientes",
+      "description": "Reseñas verificadas en Google de pacientes de Prisma Clinic Marbella: odontología, medicina estética y urgencias dentales 24/7."
+    },
+    "hero": {
+      "eyebrow": "Experiencias verificadas de pacientes",
+      "title": "Resultados que van<br></br>más allá del espejo.",
+      "intro": "El mejor resultado es sentirte en buenas manos. Estas son las palabras de los pacientes que confiaron en Prisma."
+    },
+    "score": "Reseñas de Google",
+    "verified": "Reseña verificada de Google"
+  },
+  "treatmentsPage": {
+    "hero": {
+      "eyebrow": "Nuestra experiencia",
+      "title": "Tratamientos,<br></br>con criterio.",
+      "intro": "Cuatro disciplinas, un mismo estándar de cuidado coordinado. Explora cada área de tratamiento y empieza con el especialista más adecuado para ti."
+    },
+    "explore": "Descubrir {area}",
+    "hotline": {
+      "eyebrow": "Urgencias dentales 24/7",
+      "note": "Llámanos primero para que el equipo valore tu situación y prepare tu llegada."
     }
   }
 }

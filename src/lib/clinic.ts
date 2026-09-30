@@ -3,14 +3,21 @@
 
 export const CLINIC_PHONE = '+34 673 290 786'
 export const CLINIC_PHONE_E164 = '+34673290786'
-export const WHATSAPP_URL = `https://wa.me/${CLINIC_PHONE_E164}`
+// wa.me expects the number without the leading +.
+export const WHATSAPP_URL = `https://wa.me/${CLINIC_PHONE_E164.slice(1)}`
+export const CLINIC_EMAIL = 'info@prismaclinicmarbella.es'
+
+/** WhatsApp chat link with a pre-filled message. */
+export function whatsappLink(text: string) {
+  return `${WHATSAPP_URL}?text=${encodeURIComponent(text)}`
+}
 
 export const SOCIAL_PROFILES = [
   'https://www.facebook.com/p/Prisma-Clinic-Marbella-61577789463482/',
   'https://www.instagram.com/prismaclinicmarbella/',
 ]
 
-// Spoken by the team (see `home.whatsapp.description`).
+// Spoken by the team.
 export const LANGUAGES_SPOKEN = ['Spanish', 'English', 'Swedish', 'German', 'Farsi']
 
 export interface ClinicLocation {
@@ -58,41 +65,66 @@ export interface ClinicSpecialist {
   jobTitle: string
   /** schema.org MedicalSpecialty values; left empty when none fits. */
   specialties: Array<string>
-  /** Page (without locale) where the specialist is presented. */
+  /** Profile page (without locale). */
   path: string
+  /** Service page (without locale) this specialist leads, if any. */
+  leads?: string
   languages?: Array<string>
 }
 
+// Profiles and copy live in `src/lib/specialists.ts` and `specialists.people`.
 export const SPECIALISTS: ReadonlyArray<ClinicSpecialist> = [
+  {
+    id: 'robbin',
+    name: 'Dr. Robbin',
+    jobTitle: 'Aesthetic, Cosmetic & Implant Dentistry',
+    specialties: ['Dentistry'],
+    path: 'specialists/dr-robbin',
+    leads: 'services/dental',
+    languages: ['Swedish', 'English', 'Persian', 'German', 'Lithuanian', 'Norwegian'],
+  },
+  {
+    id: 'darina-sansasvili',
+    name: 'Dr. Darina Sansasvili',
+    jobTitle: 'Dentofacial Aesthetic Specialist',
+    specialties: ['Dentistry'],
+    path: 'specialists/dr-darina-sansasvili',
+    languages: ['English', 'Czech', 'Italian', 'Russian', 'Spanish', 'Georgian'],
+  },
+  {
+    id: 'bozana-krivosija',
+    name: 'Dr. Bozana Krivošija',
+    jobTitle: 'Aesthetic & Regenerative Medicine',
+    specialties: [],
+    path: 'specialists/dr-bozana-krivosija',
+    leads: 'services/aesthetics',
+    languages: ['English', 'Serbian', 'Spanish'],
+  },
+  {
+    id: 'afshin-moheb',
+    name: 'Dr. Afshin Moheb',
+    jobTitle: 'Facial Plastic Surgery & Hair Restoration',
+    specialties: ['PlasticSurgery'],
+    path: 'specialists/dr-afshin-moheb',
+    languages: ['English', 'German', 'Persian'],
+  },
   {
     id: 'angelo-termini',
     name: 'Dr. Angelo Termini',
     jobTitle: 'General Medicine, General Surgery & Urology (MD, PhD)',
     specialties: ['PrimaryCare', 'Surgical', 'Urologic'],
-    path: 'services/general-medicine',
-  },
-  {
-    id: 'bozana-krivosija',
-    name: 'Dr. Bozana Krivošija',
-    jobTitle: 'Aesthetic & Anti-Aging Medicine',
-    specialties: [],
-    path: 'services/aesthetics',
-    languages: ['Serbian', 'Spanish', 'English'],
-  },
-  {
-    id: 'robbin',
-    name: 'Dr. Robbin',
-    jobTitle: 'Dental Surgeon & Cosmetic Dentistry',
-    specialties: ['Dentistry'],
-    path: 'services/dental',
-    languages: ['English', 'Spanish'],
+    path: 'specialists/dr-angelo-termini',
+    leads: 'services/general-medicine',
+    languages: ['Swedish', 'English', 'Norwegian', 'Italian', 'Spanish'],
   },
   {
     id: 'behrouz-rajabi',
     name: 'Behrouz Rajabi',
     jobTitle: 'Yumeiho Therapeutic Massage Specialist',
     specialties: [],
-    path: 'services/massage-therapy',
+    path: 'specialists/behrouz-rajabi',
+    leads: 'services/massage-therapy',
+    languages: ['Persian', 'German', 'English', 'Spanish'],
   },
 ]
 

@@ -1,159 +1,25 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
-import type { IconProps } from '@phosphor-icons/react'
 
-import { Blockquote } from '@/components/Blockquote'
-import { Border } from '@/components/Border'
-import { Button } from '@/components/Button'
-
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { PageIntro } from '@/components/PageIntro'
-import { Testimonial } from '@/components/Testimonial'
+import { BookTrigger } from '@/components/booking/BookButton'
+import { FinalCta } from '@/components/FinalCta'
+import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
+import { Link } from '@/i18n/navigation'
+import { TREATMENT_AREAS } from '@/lib/areas'
 import { createPageMetadata } from '@/lib/canonical'
+import { CLINIC_PHONE, CLINIC_PHONE_E164 } from '@/lib/clinic'
 import { simplePageJsonLd } from '@/lib/page-graphs'
-import logoMailSmirk from '@/images/clients/phobia/logo-dark.svg'
-import { EmergencyServiceBanner } from '@/components/EmergencyServiceBanner'
+import { Arrow, richTags } from '@/lib/rich'
 
-import { FirstAidKit, Syringe, Tooth } from '@phosphor-icons/react/dist/ssr'
-
-interface Service {
-  id: number
-  icon: React.ComponentType<IconProps>
-  client: string
-  service: string
-  title: string
-  summary: string[]
-  href: string
-  testimonial: {
-    author: {
-      name: string
-      role: string
-    }
-    content: string
-  }
-}
-
-async function Services() {
-  const t = await getTranslations('layout.services')
-  const services: Service[] = [
-    {
-      id: 1,
-      icon: Tooth,
-      client: t('dental.client'),
-      service: t('dental.service'),
-      title: t('dental.title'),
-      summary: t.raw('dental.summary') as string[],
-      href: '/services/dental',
-      testimonial: {
-        author: {
-          name: t('dental.testimonial.author'),
-          role: t('dental.testimonial.role'),
-        },
-        content: t('dental.testimonial.content'),
-      },
-    },
-    {
-      id: 2,
-      icon: Syringe,
-      client: t('aesthetics.client'),
-      service: t('aesthetics.service'),
-      title: t('aesthetics.title'),
-      summary: t.raw('aesthetics.summary') as string[],
-      href: '/services/aesthetics',
-      testimonial: {
-        author: {
-          name: t('aesthetics.testimonial.author'),
-          role: t('aesthetics.testimonial.role'),
-        },
-        content: t('aesthetics.testimonial.content'),
-      },
-    },
-    {
-      id: 3,
-      icon: FirstAidKit,
-      client: t('generalMedicine.client'),
-      service: t('generalMedicine.service'),
-      title: t('generalMedicine.title'),
-      summary: t.raw('generalMedicine.summary') as string[],
-      href: '/services/general-medicine',
-      testimonial: {
-        author: {
-          name: t('generalMedicine.testimonial.author'),
-          role: t('generalMedicine.testimonial.role'),
-        },
-        content: t('generalMedicine.testimonial.content'),
-      },
-    },
-  ]
-
-  return (
-    <Container className="mt-24">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          {t('page.title')}
-        </h2>
-      </FadeIn>
-      <div className="mt-10 space-y-20 sm:space-y-24">
-        {services.map((service) => (
-          <FadeIn key={service.id}>
-            <article>
-              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-10">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <service.icon size={42} />
-                    <h3 className="mt-6 font-display text-2xl font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {service.client}
-                    </h3>
-                  </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {service.service}
-                    </p>
-                  </div>
-                </div>
-                <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={service.href}>{service.title}</Link>
-                  </p>
-                  <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {Array.isArray(service.summary) &&
-                      service.summary.map(
-                        (paragraph: string, index: number) => (
-                          <p key={`${service.id}-paragraph-${index}`}>
-                            {paragraph}
-                          </p>
-                        ),
-                      )}
-                  </div>
-                  <div className="mt-8 flex">
-                    <Button
-                      href={service.href}
-                      aria-label={`${t('page.learnMore')} ${service.client}`}
-                    >
-                      {t('page.learnMore')}
-                    </Button>
-                  </div>
-                  {service.testimonial && (
-                    <Blockquote
-                      author={service.testimonial.author}
-                      className="mt-12"
-                    >
-                      {service.testimonial.content}
-                    </Blockquote>
-                  )}
-                </div>
-              </Border>
-            </article>
-          </FadeIn>
-        ))}
-      </div>
-    </Container>
-  )
-}
+// Each area's introduction reuses the summary written for its service page.
+const SUMMARY_KEYS = {
+  dental: 'layout.services.dental.summary',
+  aesthetics: 'layout.services.aesthetics.summary',
+  medical: 'layout.services.generalMedicine.summary',
+  massage: 'massageTherapy.v2.hero.description',
+} as const
 
 interface PageProps {
   params: { locale: string }
@@ -173,35 +39,76 @@ export async function generateMetadata({
   })
 }
 
-// Generate static params for all locales
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'es' }, { locale: 'se' }]
 }
 
 export default async function ServicesPage() {
-  const t = await getTranslations('layout.services')
+  const t = await getTranslations('treatmentsPage')
+  const tAreas = await getTranslations('areas')
+  const tSite = await getTranslations('site')
+  const tAll = await getTranslations()
 
   return (
     <>
       <JsonLd data={await simplePageJsonLd('services')} />
-      <PageIntro eyebrow={t('page.title')} title={t('page.subtitle')}>
-        <p>{t('page.description')}</p>
-      </PageIntro>
+      <InnerHero
+        eyebrow={t('hero.eyebrow')}
+        title={t.rich('hero.title', richTags)}
+        intro={t('hero.intro')}
+      />
 
-      <EmergencyServiceBanner />
+      <section className="detail-section treatment-directory">
+        {TREATMENT_AREAS.map((area) => {
+          const title = tAreas(`${area.key}.title`)
+          const summary = tAll.raw(SUMMARY_KEYS[area.key]) as string | string[]
+          const services = tAreas.raw(`${area.key}.services`) as Array<string>
+          return (
+            <article key={area.key} id={area.key}>
+              <div className="detail-image">
+                <Image
+                  src={area.image}
+                  alt={title}
+                  fill
+                  sizes="(min-width: 700px) 50vw, 100vw"
+                />
+              </div>
+              <div>
+                <p className="eyebrow">
+                  {area.number} / {tAreas(`${area.key}.lead`)}
+                </p>
+                <h2>
+                  <Link href={area.href}>{title}</Link>
+                </h2>
+                <p>{Array.isArray(summary) ? summary[0] : summary}</p>
+                <div className="detail-tags">
+                  {services.map((service) => (
+                    <span key={service}>{service}</span>
+                  ))}
+                </div>
+                <div className="hero-actions">
+                  <Link className="button dark" href={area.href}>
+                    {t('explore', { area: title })} <Arrow />
+                  </Link>
+                  <BookTrigger service={area.bookingKey} className="text-link">
+                    {tSite('bookConsultation')} <Arrow />
+                  </BookTrigger>
+                </div>
+              </div>
+            </article>
+          )
+        })}
+      </section>
 
-      <Services />
+      <section className="emergency-hotline">
+        <p className="eyebrow gold">{t('hotline.eyebrow')}</p>
+        <a href={`tel:${CLINIC_PHONE_E164}`}>
+          {CLINIC_PHONE} <Arrow />
+        </a>
+        <span>{t('hotline.note')}</span>
+      </section>
 
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: t('page.testimonial.client'), logo: logoMailSmirk }}
-      >
-        {t('page.testimonial.content')}
-      </Testimonial>
-
-      {/* <Clients />  */}
-
-      {/* <ContactSection /> */}
+      <FinalCta />
     </>
   )
 }

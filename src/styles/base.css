@@ -1,12 +1,7 @@
-@font-face {
-  font-family: 'Mona Sans';
-  font-weight: 200 900;
-  font-display: block;
-  font-style: normal;
-  font-stretch: 75% 125%;
-  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-raleway), Raleway, ui-sans-serif, system-ui, sans-serif;
+@layer base {
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sans);
+  }
 }

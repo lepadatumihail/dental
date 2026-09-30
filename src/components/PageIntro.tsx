@@ -1,45 +1,27 @@
-import clsx from 'clsx'
+import Image from 'next/image'
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import monogram from '@/images/prisma/brand/prisma-monogram.png'
 
+/** Text-only page opener (contact, blog, services index): the inner hero. */
 export function PageIntro({
   eyebrow,
   title,
   children,
-  centered = false,
 }: {
   eyebrow: string
   title: string
   children: React.ReactNode
+  /** Kept for existing call sites; the inner hero is always left-aligned. */
   centered?: boolean
 }) {
   return (
-    <Container className={clsx('mt-24 sm:mt-32', centered && 'text-center')}>
-      <FadeIn>
-        <h1>
-          <span className="block font-display text-base font-semibold text-neutral-950">
-            {eyebrow}
-          </span>
-          <span className="sr-only"> - </span>
-          <span
-            className={clsx(
-              'mt-6 block max-w-5xl font-display text-5xl font-medium tracking-tight [text-wrap:balance] text-neutral-950 sm:text-6xl',
-              centered && 'mx-auto',
-            )}
-          >
-            {title}
-          </span>
-        </h1>
-        <div
-          className={clsx(
-            'mt-6 max-w-3xl text-xl text-neutral-600',
-            centered && 'mx-auto',
-          )}
-        >
-          {children}
-        </div>
-      </FadeIn>
-    </Container>
+    <section className="inner-hero">
+      <Image src={monogram} alt="" priority sizes="600px" />
+      <div>
+        <p className="eyebrow gold">{eyebrow}</p>
+        <h1>{title}</h1>
+        <div className="inner-hero-intro">{children}</div>
+      </div>
+    </section>
   )
 }

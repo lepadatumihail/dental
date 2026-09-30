@@ -1,9 +1,7 @@
-import { Phone } from '@phosphor-icons/react/dist/ssr'
 import Image, { type StaticImageData } from 'next/image'
 
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { BookButton } from '@/components/booking/BookButton'
+import { BookTrigger } from '@/components/booking/BookButton'
+import { Arrow } from '@/lib/rich'
 
 type PageHeroProps = {
   image: StaticImageData
@@ -16,6 +14,7 @@ type PageHeroProps = {
   emergencyCtaHref?: string
 }
 
+/** Service-page opener: headline and CTAs beside a monochrome photo. */
 export function PageHero({
   image,
   imageAlt = '',
@@ -27,54 +26,31 @@ export function PageHero({
   emergencyCtaHref,
 }: PageHeroProps) {
   return (
-    <section className="relative h-[88vh] min-h-[560px] w-full overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="tourism-hero service-hero">
+      <div>
+        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <div className="hero-actions">
+          <BookTrigger className="button dark">
+            {ctaLabel} <Arrow />
+          </BookTrigger>
+          {emergencyCtaLabel && emergencyCtaHref ? (
+            <a className="button urgent" href={emergencyCtaHref}>
+              {emergencyCtaLabel} <Arrow />
+            </a>
+          ) : null}
+        </div>
+      </div>
+      <div className="tourism-hero-image">
         <Image
           src={image}
           alt={imageAlt}
           fill
           priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-b from-warm-dark/55 via-warm-dark/35 to-warm-dark/70"
+          sizes="(min-width: 700px) 45vw, 100vw"
         />
       </div>
-
-      <Container className="relative z-10 flex h-full items-center">
-        <FadeIn className="w-full">
-          <div className="max-w-3xl text-white">
-            {eyebrow ? (
-              <p className="mb-6 text-xs font-semibold tracking-[0.18em] text-white/85 uppercase">
-                {eyebrow}
-              </p>
-            ) : null}
-            <h1
-              className="text-4xl font-semibold sm:text-6xl lg:text-7xl"
-              style={{ letterSpacing: '-1px', lineHeight: 1.08 }}
-            >
-              {title}
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-xl">
-              {description}
-            </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <BookButton label={ctaLabel} variant="hero" />
-              {emergencyCtaLabel && emergencyCtaHref ? (
-                <a
-                  href={emergencyCtaHref}
-                  className="inline-flex items-center gap-2 rounded-lg bg-red-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-150 hover:bg-red-600"
-                >
-                  <Phone weight="fill" className="h-4 w-4" />
-                  {emergencyCtaLabel}
-                </a>
-              ) : null}
-            </div>
-          </div>
-        </FadeIn>
-      </Container>
     </section>
   )
 }
