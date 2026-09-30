@@ -18,7 +18,8 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 | `--ink` / `--gold` | `ink` | `#111111` | Text and "accent" (the accent *is* ink) |
 | `--white` / `--ivory` | `white` | `#ffffff` | Page background, light buttons |
 | `--line` | `line` | `#d8d8d8` | Hairline rules and grid borders on white |
-| `--muted` | `muted` | `#505050` | Secondary copy, numbers, captions |
+| `--muted` | `muted` | `#454545` | Secondary copy, numbers, captions |
+| `--soft` | — | `#f3f3f1` | Soft panel behind CTA bands |
 | — | — | `#333` / `#383838` / `#555` | Rules and borders on black sections |
 | — | — | `#aaa` / `#777` | Secondary copy on black sections |
 
@@ -26,7 +27,7 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 **Legacy tokens:** `mocha`, `taupe`, `sand`, `forest`, `warm-dark`, `surface-*` still exist but are remapped to the monochrome values above so older markup (booking wizard, cookie banner, blog) follows the design. Don't use them in new code — use `ink`, `muted`, `line`, `black`, `white`.
 
-**Photography:** treatment-area and atmosphere images are shown in grayscale (`filter: grayscale()`); portraits of specialists and clinic interiors stay in colour.
+**Photography:** always in full colour — against the monochrome interface the photos provide the warmth and contrast. Never apply grayscale filters.
 
 ## 3. Typography
 
@@ -39,8 +40,8 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 | Role | Size | Details |
 |------|------|---------|
-| h1 | `clamp(4.7rem, 7.2vw, 7.6rem)`, line-height 0.88 | **Uppercase**. Smaller on service heroes (`.service-hero h1`) and profiles |
-| h2 | `clamp(3.6rem, 6.1vw, 7rem)`, line-height 0.96 | Sentence case; second line often `<em>` italic |
+| h1 | `clamp(4.2rem, 6.6vw, 7rem)`, line-height 0.9 | **Uppercase** for short titles. Service heroes (`.service-hero h1`) carry full-sentence titles, so they are sentence case at `clamp(2.8rem, 4vw, 4.6rem)` |
+| h2 | `clamp(2.8rem, 4.8vw, 5.4rem)`, line-height 0.96 | Sentence case; second line often `<em>` italic |
 | Section h2 (content pages) | `clamp(2.6rem, 4.6vw, 5.4rem)` | `.split-heading`, `.statement`, `.expert-feature` |
 | h3 | ~1.7–2.2rem | Playfair, used in grids and cards |
 | Eyebrow (`.eyebrow`) | 0.68rem, weight 500 | Uppercase, letter-spacing 0.21em |
@@ -51,7 +52,7 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 - **Serif for statements, sans for structure.** Playfair for headlines, quotes and big numbers; Raleway for everything functional.
 - **Two-line headlines.** Most section titles are two short lines, the second in italic: `"Your next chapter<br></br><em>starts here.</em>"` (rendered with `t.rich(key, richTags)` from `src/lib/rich.tsx`).
-- **Uppercase only for h1, eyebrows, buttons and nav micro-labels.**
+- **Uppercase only for short h1s, eyebrows, buttons and nav micro-labels.** Anything longer than ~5 words stays in sentence case.
 
 ## 4. Components
 
@@ -81,7 +82,7 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - `.statement` — headline left, lead (`.statement-lead`) + body right.
 - Numbered hairline grids: `.service-grid`, `.condition-grid`, `.price-grid`, `.review-grid`, `.steps` — cells separated by 1px `--line` borders, a small muted `01` number, Playfair h3, muted copy.
 - Lists with rules: `.home-specialist-list`, `.profile-treatment-list`, `.routing-list`, `.tourism-process`.
-- Black bands: `.dark-section`, `.cta-band`, `.care-cta`, `.profile-cta`, `.emergency-hotline`, `.emergency-strip`.
+- CTA bands (`.compact-emergency`, `.cta-band`, `.care-cta`, `.profile-cta`, `.influencer-membership`, `.emergency-hotline`, `.emergency-strip`) sit on the soft `--soft` panel with dark buttons. Black is reserved for the footer and a few feature blocks (trip planner, emergency steps, featured membership card, active tab) — never stack black bands.
 - Tags: `.detail-tags span`, `.service-chips span` — 1px bordered chips, no radius.
 - Price list: `.price-grid` — one row per group, name (sticky) on the left, prices on the right.
 - People lists: `.home-specialist-list` rows with a 64px `.specialist-thumb` (grayscale, colour on hover) from `Specialist.thumb`.

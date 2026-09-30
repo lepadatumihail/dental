@@ -51,14 +51,14 @@
   /* Monochrome palette (see DESIGN.md). */
   --color-ink: #111111;
   --color-line: #d8d8d8;
-  --color-muted: #505050;
+  --color-muted: #454545;
 
   /* Legacy token names, remapped onto the monochrome palette so pages that
      still use them follow the new design. */
   --color-mocha: #111111;
   --color-mocha-light: #333333;
   --color-mocha-dark: #000000;
-  --color-taupe: #505050;
+  --color-taupe: #454545;
   --color-sand: #d8d8d8;
   --color-sand-light: #eeeeee;
   --color-forest: #111111;

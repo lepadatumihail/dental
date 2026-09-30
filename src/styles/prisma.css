@@ -11,7 +11,7 @@
   --ivory: #fff;
   --line: #d8d8d8;
   --gold: #111;
-  --muted: #505050;
+  --muted: #454545;
 
   /* One gutter for header, heroes and sections so every edge lines up. */
   --gutter: clamp(1.2rem, 5vw, 6rem);
@@ -19,6 +19,8 @@
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   --focus: var(--ink);
+  /* Soft panel for CTA bands: separation without a black slab. */
+  --soft: #f3f3f1;
 }
 
 @layer base {
@@ -48,7 +50,7 @@
     line-height: 0.9;
   }
   h2 {
-    font-size: clamp(3.6rem, 6.1vw, 7rem);
+    font-size: clamp(2.8rem, 4.8vw, 5.4rem);
     line-height: 0.96;
   }
   h2 em {
@@ -427,7 +429,7 @@
   .intro-columns p,
   .clinic-heading > p:last-child {
     color: var(--muted);
-    font-size: 0.97rem;
+    font-size: 1.05rem;
     line-height: 1.8;
   }
   .access-grid {
@@ -455,7 +457,7 @@
   }
   .access-grid h3 {
     margin: 2rem 0;
-    font-size: clamp(2.6rem, 4vw, 5rem);
+    font-size: clamp(2.2rem, 3.2vw, 3.8rem);
     line-height: 1;
   }
   .access-grid span {
@@ -539,7 +541,6 @@
     overflow: hidden;
   }
   .treatment-image {
-    filter: grayscale();
     min-height: 420px;
   }
   .service-list {
@@ -850,7 +851,6 @@
     position: relative;
   }
   .clinic-image {
-    filter: grayscale();
     position: absolute;
     inset: 0 0 14%;
   }
@@ -965,8 +965,7 @@
     display: grid;
   }
   .home-proof > div {
-    border-top: 1px solid var(--line);
-    padding-top: 2rem;
+    padding-top: 0;
   }
   .home-proof h2 {
     margin: 1.5rem 0 2.5rem;
@@ -1066,7 +1065,6 @@
     padding-bottom: 0;
   }
   .detail-image {
-    filter: grayscale();
     min-height: 560px;
   }
   .treatment-directory h2,
@@ -1919,7 +1917,6 @@
     display: grid;
   }
   .care-hero-image {
-    filter: grayscale();
     height: 600px;
   }
   .care-hero h1,
@@ -1986,7 +1983,6 @@
     display: grid;
   }
   .care-feature-image {
-    filter: grayscale();
     min-height: 650px;
   }
   .care-feature h2 {
@@ -2016,7 +2012,6 @@
     display: grid;
   }
   .tourism-hero-image {
-    filter: grayscale();
     height: 650px;
   }
   .tourism-proof {
@@ -3390,7 +3385,6 @@
   }
   .area-cards .specialist-photo img {
     object-position: center;
-    filter: grayscale();
   }
   .cta-band .hero-actions {
     flex-wrap: wrap;
@@ -3914,18 +3908,8 @@
   }
   .specialist-thumb img {
     object-fit: cover;
-    filter: grayscale();
     width: 100%;
     height: 100%;
-    transition: filter 300ms ease;
-  }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  @layer components {
-    .home-specialist-list a:hover .specialist-thumb img {
-      filter: none;
-    }
   }
 }
 
@@ -4391,6 +4375,127 @@
     }
     .page-offset {
       padding-top: 95px;
+    }
+  }
+}
+
+@layer components {
+  /* Service titles are full sentences: sentence case reads far better. */
+  .service-hero h1 {
+    text-transform: none;
+    letter-spacing: -0.025em;
+    font-size: clamp(2.8rem, 4vw, 4.6rem);
+    line-height: 1.02;
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    h2 {
+      font-size: 2.6rem;
+    }
+    .service-hero h1 {
+      font-size: clamp(2.2rem, 9vw, 2.7rem);
+      line-height: 1.05;
+    }
+  }
+}
+
+@layer components {
+  /* CTA bands sit on a soft grey panel; the footer stays the one black anchor. */
+  .compact-emergency,
+  .cta-band,
+  .care-cta,
+  .profile-cta,
+  .influencer-membership,
+  .emergency-strip,
+  .emergency-hotline {
+    --focus: var(--ink);
+    color: var(--ink);
+    background: var(--soft);
+  }
+  :is(
+      .compact-emergency,
+      .cta-band,
+      .care-cta,
+      .profile-cta,
+      .influencer-membership,
+      .emergency-strip,
+      .emergency-hotline
+    )
+    .gold,
+  .influencer-membership .eyebrow {
+    color: var(--ink);
+  }
+  .emergency-copy p,
+  .cta-band p,
+  .influencer-membership p:not(.eyebrow),
+  .emergency-strip p:not(.eyebrow),
+  .emergency-hotline > span {
+    color: var(--muted);
+  }
+  :is(
+      .compact-emergency,
+      .cta-band,
+      .care-cta,
+      .profile-cta,
+      .influencer-membership,
+      .emergency-strip,
+      .emergency-hotline
+    )
+    .button.light {
+    color: #fff;
+    background: var(--black);
+  }
+  :is(
+      .compact-emergency,
+      .cta-band,
+      .care-cta,
+      .profile-cta,
+      .influencer-membership,
+      .emergency-strip,
+      .emergency-hotline
+    )
+    .button.light:hover {
+    background: #2a2a2a;
+  }
+  :is(
+      .compact-emergency,
+      .cta-band,
+      .care-cta,
+      .profile-cta,
+      .influencer-membership,
+      .emergency-strip,
+      .emergency-hotline
+    )
+    .light-link {
+    color: var(--ink);
+  }
+  /* Inset panel inside a white section: a hairline keeps its edge. */
+  .emergency-strip {
+    border: 1px solid var(--line);
+  }
+}
+
+@layer components {
+  .home-specialist-list small {
+    font-size: 0.82rem;
+  }
+}
+
+@media (width>700px) {
+  @layer components {
+    .compact-emergency {
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem 5rem;
+    }
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .profile-gallery {
+      grid-template-columns: 1fr;
     }
   }
 }
