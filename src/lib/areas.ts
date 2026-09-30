@@ -3,7 +3,7 @@ import type { StaticImageData } from 'next/image'
 import dentistry from '@/images/prisma/areas/dentistry.jpg'
 import aesthetics from '@/images/prisma/areas/aesthetics.jpg'
 import medicine from '@/images/prisma/areas/medicine.jpg'
-import clinic from '@/images/prisma/areas/clinic.jpg'
+import massage from '@/images/prisma/areas/massage.jpg'
 
 /** Treatment areas; copy lives under `areas.<key>` in locales/*.json. */
 export interface TreatmentArea {
@@ -41,6 +41,6 @@ export const TREATMENT_AREAS: ReadonlyArray<TreatmentArea> = [
     key: 'massage',
     number: '04',
     href: '/services/massage-therapy',
-    image: clinic,
+    image: massage,
   },
 ]
