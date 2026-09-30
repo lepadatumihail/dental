@@ -4499,3 +4499,9 @@
     }
   }
 }
+
+@layer components {
+  .results-score .text-link {
+    margin-top: 2rem;
+  }
+}

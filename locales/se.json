@@ -1407,8 +1407,7 @@
     "reviews": {
       "eyebrow": "Patientupplevelser",
       "title": "Vård som<br></br><em>man minns.</em>",
-      "source": "verifierad Google-recension",
-      "cta": "Läs alla patientberättelser"
+      "source": "verifierad Google-recension"
     },
     "find": {
       "eyebrow": "Hitta hit",

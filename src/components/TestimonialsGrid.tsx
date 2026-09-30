@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
 
-import { Link } from '@/i18n/navigation'
+import { GOOGLE_REVIEWS_URL } from '@/lib/clinic'
 import { Arrow } from '@/lib/rich'
 
 type TestimonialItem = {
@@ -8,13 +8,9 @@ type TestimonialItem = {
   text: string
 }
 
-const GOOGLE_REVIEWS_HREF =
-  'https://www.google.com/search?sa=X&sca_esv=d4004dff2930eec9&hl=es-ES&q=Prisma+Clinic+Marbella+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjY0NDU2MrcwNjE3tzA1MDGw3MDI-IpRPqAoszg3UcE5JzMvM1nBN7EoKTUnJ1EhKLU49fDGxOJFrIRUAADaG9GUXgAAAA&rldimm=2311532783477850409&tbm=lcl#lkt=LocalPoiReviews'
-
 export function TestimonialsGrid() {
   const t = useTranslations('home.testimonialsGrid')
-  const tReviews = useTranslations('landing.reviews')
-  // Six keep the grid even; the full set lives on /results.
+  // Six keep the grid even; the full set lives on Google.
   const items = (t.raw('items') as TestimonialItem[]).slice(0, 6)
 
   return (
@@ -28,7 +24,7 @@ export function TestimonialsGrid() {
           <p>{t('description')}</p>
           <a
             className="text-link"
-            href={GOOGLE_REVIEWS_HREF}
+            href={GOOGLE_REVIEWS_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,11 +42,6 @@ export function TestimonialsGrid() {
             </figcaption>
           </figure>
         ))}
-      </div>
-      <div className="section-actions">
-        <Link className="text-link" href="/results">
-          {tReviews('cta')} <Arrow />
-        </Link>
       </div>
     </section>
   )

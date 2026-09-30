@@ -5,8 +5,9 @@ import { FinalCta } from '@/components/FinalCta'
 import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
+import { GOOGLE_REVIEWS_URL } from '@/lib/clinic'
 import { newPageJsonLd } from '@/lib/page-graphs'
-import { richTags } from '@/lib/rich'
+import { Arrow, richTags } from '@/lib/rich'
 
 interface PageProps {
   params: { locale: string }
@@ -33,9 +34,8 @@ export async function generateMetadata({
 export default async function ResultsPage() {
   const t = await getTranslations('results')
   // Same verified Google reviews as the homepage grid, already translated.
-  const reviews = (await getTranslations('home.testimonialsGrid')).raw(
-    'items',
-  ) as Array<{ name: string; text: string }>
+  const tReviews = await getTranslations('home.testimonialsGrid')
+  const reviews = tReviews.raw('items') as Array<{ name: string; text: string }>
 
   return (
     <>
@@ -50,6 +50,14 @@ export default async function ResultsPage() {
           <strong>5.0</strong>
           <span aria-hidden="true">★★★★★</span>
           <small>{t('score')}</small>
+          <a
+            className="text-link"
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {tReviews('viewAll')} <Arrow />
+          </a>
         </div>
         {reviews.map((review, index) => (
           <blockquote key={review.name}>

@@ -7,7 +7,11 @@ import { FinalCta } from '@/components/FinalCta'
 import { TreatmentTabs } from '@/components/TreatmentTabs'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
-import { CLINIC_PHONE, CLINIC_PHONE_E164 } from '@/lib/clinic'
+import {
+  CLINIC_PHONE,
+  CLINIC_PHONE_E164,
+  GOOGLE_REVIEWS_URL,
+} from '@/lib/clinic'
 import { Arrow, richTags } from '@/lib/rich'
 import { SPECIALIST_PROFILES } from '@/lib/specialists'
 
@@ -40,9 +44,8 @@ export default async function Home() {
   const tSite = await getTranslations('site')
   const tPeople = await getTranslations('specialists.people')
   const tLocations = await getTranslations('home.locations')
-  const reviews = (await getTranslations('home.testimonialsGrid')).raw(
-    'items',
-  ) as Array<{ name: string; text: string }>
+  const tReviews = await getTranslations('home.testimonialsGrid')
+  const reviews = tReviews.raw('items') as Array<{ name: string; text: string }>
   const review = reviews[0]
 
   return (
@@ -172,9 +175,14 @@ export default async function Home() {
           <p>
             — {review.name}, {t('reviews.source')}
           </p>
-          <Link className="text-link" href="/results">
-            {t('reviews.cta')} <Arrow />
-          </Link>
+          <a
+            className="text-link"
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {tReviews('viewAll')} <Arrow />
+          </a>
         </div>
         <div>
           <p className="eyebrow">{t('find.eyebrow')}</p>

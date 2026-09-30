@@ -12,6 +12,10 @@ export function whatsappLink(text: string) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(text)}`
 }
 
+/** The clinic's Google reviews, where every patient story lives. */
+export const GOOGLE_REVIEWS_URL =
+  'https://www.google.com/search?sa=X&sca_esv=d4004dff2930eec9&hl=es-ES&q=Prisma+Clinic+Marbella+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjY0NDU2MrcwNjE3tzA1MDGw3MDI-IpRPqAoszg3UcE5JzMvM1nBN7EoKTUnJ1EhKLU49fDGxOJFrIRUAADaG9GUXgAAAA&rldimm=2311532783477850409&tbm=lcl#lkt=LocalPoiReviews'
+
 export const SOCIAL_PROFILES = [
   'https://www.facebook.com/p/Prisma-Clinic-Marbella-61577789463482/',
   'https://www.instagram.com/prismaclinicmarbella/',
