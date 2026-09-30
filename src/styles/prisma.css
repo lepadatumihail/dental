@@ -4338,3 +4338,59 @@
     }
   }
 }
+
+@media (width<=700px) {
+  @layer components {
+    /* Compact mobile header: 34px utility bar + 60px bar with the logo. */
+    .utility-bar {
+      height: 34px;
+      font-size: 0.6rem;
+    }
+    .main-nav {
+      min-height: 60px;
+    }
+    .brand img {
+      width: 112px;
+    }
+    .menu-button {
+      gap: 6px;
+      width: 40px;
+      height: 40px;
+      margin-right: -8px;
+    }
+    .menu-button span {
+      width: 22px;
+    }
+    .menu-button[aria-expanded='true'] span:first-child {
+      transform: translateY(3.5px) rotate(45deg);
+    }
+    .menu-button[aria-expanded='true'] span:last-child {
+      transform: translateY(-3.5px) rotate(-45deg);
+    }
+    .menu-button:focus-visible {
+      outline-offset: -2px;
+    }
+    .site-header[data-state='compact'] {
+      transform: translateY(-34px);
+    }
+    .nav {
+      padding-top: 5.5rem;
+    }
+
+    /* Openers follow the shorter header. */
+    .inner-hero {
+      padding-top: 160px;
+    }
+    .care-hero,
+    .tourism-hero,
+    .profile-hero {
+      padding-top: 135px;
+    }
+    .team-hero {
+      padding-top: 130px;
+    }
+    .page-offset {
+      padding-top: 95px;
+    }
+  }
+}
