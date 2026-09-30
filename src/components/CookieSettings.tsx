@@ -57,7 +57,7 @@ export function CookieSettings({ className }: CookieSettingsProps) {
     <div className={className}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-sm text-neutral-600 underline hover:text-neutral-950"
+        className="underline underline-offset-3 transition-colors duration-150 hover:text-white"
       >
         {t('cookiePolicy')}
       </button>

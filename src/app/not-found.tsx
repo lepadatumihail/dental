@@ -28,7 +28,7 @@ export default function NotFound() {
               href="/"
               className="button dark mt-8"
             >
-              Go to the home page <span aria-hidden="true">↗</span>
+              Go to the home page
             </Link>
           </FadeIn>
         </Container>

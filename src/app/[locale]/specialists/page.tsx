@@ -8,7 +8,7 @@ import { JsonLd } from '@/components/JsonLd'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
 import { newPageJsonLd } from '@/lib/page-graphs'
-import { richTags } from '@/lib/rich'
+import { Arrow, richTags } from '@/lib/rich'
 import { SPECIALIST_PROFILES } from '@/lib/specialists'
 
 interface PageProps {
@@ -64,10 +64,9 @@ export default async function SpecialistsPage() {
               <h2>{person.name}</h2>
               <p>{t(`people.${person.slug}.detail`)}</p>
               <div className="profile-note">
-                <strong>{t('card.explore')}</strong>
-                <span>
-                  {t('card.teaser', { name: person.shortName })} <b>↗</b>
-                </span>
+                <strong>
+                  {t('card.explore')} <Arrow />
+                </strong>
               </div>
             </div>
           </Link>

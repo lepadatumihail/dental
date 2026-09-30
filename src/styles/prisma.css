@@ -12,15 +12,30 @@
   --line: #d8d8d8;
   --gold: #111;
   --muted: #505050;
+
+  /* One gutter for header, heroes and sections so every edge lines up. */
+  --gutter: clamp(1.2rem, 5vw, 6rem);
+  --section-y: clamp(5.5rem, 9vw, 8.5rem);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --focus: var(--ink);
 }
 
 @layer base {
   h1,
   h2,
   h3 {
-    letter-spacing: -0.035em;
+    letter-spacing: -0.03em;
     font-family: var(--font-display);
     font-weight: 400;
+    text-wrap: balance;
+  }
+  /* Unitless, so small labels don't inherit the root's fixed 28px leading. */
+  body {
+    line-height: 1.6;
+  }
+  p {
+    text-wrap: pretty;
   }
   h1,
   h2 {
@@ -28,8 +43,9 @@
   }
   h1 {
     text-transform: uppercase;
-    font-size: clamp(4.7rem, 7.2vw, 7.6rem);
-    line-height: 0.88;
+    letter-spacing: -0.015em;
+    font-size: clamp(4.2rem, 6.6vw, 7rem);
+    line-height: 0.9;
   }
   h2 {
     font-size: clamp(3.6rem, 6.1vw, 7rem);
@@ -37,6 +53,10 @@
   }
   h2 em {
     font-weight: 400;
+  }
+  :where(a, button, select, input, textarea, summary):focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
   }
   blockquote {
     max-width: 1100px;
@@ -52,11 +72,11 @@
     z-index: 20;
     width: 100%;
     color: var(--ink);
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid #1111111f;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-    background: #fffffff7;
-    padding: 0 2.7vw;
+    background: #fffffff2;
+    padding: 0 var(--gutter);
     position: absolute;
     top: 0;
     left: 0;
@@ -64,12 +84,26 @@
   .utility-bar {
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    border-bottom: 1px solid #1111112e;
+    border-bottom: 1px solid #1111111a;
     justify-content: space-between;
     align-items: center;
-    height: 52px;
-    font-size: 0.62rem;
+    gap: 2rem;
+    height: 40px;
+    font-size: 0.66rem;
     display: flex;
+  }
+  .utility-links {
+    align-items: center;
+    gap: 2rem;
+    display: flex;
+  }
+  .utility-links > a {
+    opacity: 0.7;
+    transition: opacity 150ms ease;
+  }
+  .utility-links > a:hover,
+  .utility-links > a[aria-current='page'] {
+    opacity: 1;
   }
   .utility-bar i,
   .languages i {
@@ -83,7 +117,7 @@
   .main-nav {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    min-height: 100px;
+    min-height: 84px;
     display: grid;
   }
   .brand {
@@ -91,20 +125,20 @@
     display: inline-flex;
   }
   .brand img {
-    width: clamp(150px, 15vw, 220px);
+    width: clamp(140px, 12vw, 190px);
     height: auto;
     display: block;
   }
   .nav {
     justify-content: center;
     align-items: center;
-    gap: clamp(0.9rem, 1.35vw, 1.65rem);
+    gap: clamp(1.2rem, 2vw, 2.4rem);
     display: flex;
   }
   .nav a {
-    letter-spacing: 0.015em;
+    letter-spacing: 0.01em;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: 500;
     position: relative;
   }
@@ -112,17 +146,20 @@
     color: var(--gold);
   }
   .nav a:after {
-    content: "";
+    content: '';
     background: var(--gold);
     height: 1px;
-    transition: right 0.25s;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms var(--ease-out);
     position: absolute;
     bottom: -8px;
     left: 0;
-    right: 100%;
-  }
-  .nav a:hover:after {
     right: 0;
+  }
+  .nav a:hover:after,
+  .nav a[aria-current='page']:after {
+    transform: scaleX(1);
   }
   .header-actions {
     justify-content: flex-end;
@@ -133,7 +170,7 @@
   .languages {
     letter-spacing: 0.18em;
     white-space: nowrap;
-    font-size: 0.65rem;
+    font-size: 0.66rem;
   }
   .nav-book {
     border: 1px solid var(--gold);
@@ -142,9 +179,14 @@
     letter-spacing: 0.15em;
     cursor: pointer;
     background: 0 0;
-    padding: 1rem 1.35rem;
-    font-size: 0.65rem;
-    transition: all 0.25s;
+    padding: 0.95rem 1.35rem;
+    font-size: 0.68rem;
+    transition-property: background-color, color, border-color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease-out);
+  }
+  .nav-book:active {
+    transform: scale(0.96);
   }
   .nav-book:hover {
     background: var(--black);
@@ -205,13 +247,13 @@
     width: min(660px, 45vw);
     position: absolute;
     top: 52%;
-    left: 2.7vw;
+    left: var(--gutter);
     transform: translateY(-43%);
   }
   .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.21em;
-    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    font-size: 0.7rem;
     font-weight: 500;
   }
   .gold {
@@ -237,9 +279,7 @@
     position: relative;
   }
   .team-hero .hero-actions .button {
-    border: 1px solid var(--black);
     min-width: 260px;
-    box-shadow: 0 10px 28px #00000029;
   }
   .button {
     text-transform: uppercase;
@@ -249,28 +289,31 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    min-height: 64px;
-    padding: 0 1.9rem;
-    font-size: 0.69rem;
+    min-height: 60px;
+    padding: 0 1.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
-    transition: all 0.25s;
+    transition-property: background-color, color, border-color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease-out);
     display: inline-flex;
+  }
+  .button:active {
+    transform: scale(0.96);
   }
   .button.light {
     background: var(--ivory);
     color: var(--black);
   }
   .button.light:hover {
-    background: #fff;
-    transform: translateY(-2px);
+    background: #f2f2f2;
   }
   .button.dark {
     background: var(--black);
     color: #fff;
   }
   .button.dark:hover {
-    background: #292929;
-    transform: translateY(-2px);
+    background: #2a2a2a;
   }
   .button.wide {
     width: 100%;
@@ -279,8 +322,8 @@
     text-transform: uppercase;
     letter-spacing: 0.14em;
     align-items: center;
-    gap: 1rem;
-    font-size: 0.68rem;
+    gap: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 500;
     display: inline-flex;
   }
@@ -315,16 +358,20 @@
     border: 0;
   }
   .hero-proof strong {
-    color: var(--gold);
     font-family: var(--font-display);
-    font-size: 2.1rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    font-size: 2.4rem;
     font-weight: 400;
+    line-height: 1;
   }
   .hero-proof span {
     text-transform: uppercase;
     letter-spacing: 0.16em;
-    font-size: 0.66rem;
-    line-height: 1.6;
+    color: var(--muted);
+    max-width: 11rem;
+    font-size: 0.68rem;
+    line-height: 1.5;
   }
   .light-section {
     background: #fff;
@@ -333,7 +380,7 @@
     background: var(--white);
     grid-template-columns: 1fr 3fr;
     gap: 4rem;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
     position: relative;
     overflow: hidden;
@@ -384,17 +431,19 @@
     line-height: 1.8;
   }
   .access-grid {
-    border-block: 1px solid var(--black);
+    border-block: 1px solid var(--line);
     grid-template-columns: repeat(2, 1fr);
     display: grid;
   }
   .access-grid a {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--line);
     flex-direction: column;
     justify-content: space-between;
     min-height: 380px;
-    padding: 4rem 7vw;
-    transition: all 0.25s;
+    padding: 4rem var(--gutter);
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: var(--ease-out);
     display: flex;
   }
   .access-grid a:last-child {
@@ -417,7 +466,7 @@
     display: flex;
   }
   .treatments {
-    padding: 2rem 7vw 10rem;
+    padding: 2rem var(--gutter) 10rem;
   }
   .home-treatments {
     background: var(--white);
@@ -452,7 +501,9 @@
     align-items: center;
     gap: 1rem;
     padding: 2rem;
-    transition: all 0.25s;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
     display: grid;
   }
   .treatment-tab > span {
@@ -490,7 +541,6 @@
   .treatment-image {
     filter: grayscale();
     min-height: 420px;
-    transition: background-image 0.25s;
   }
   .service-list {
     background: var(--ivory);
@@ -510,7 +560,7 @@
   }
   .specialists {
     border-top: 1px solid var(--line);
-    padding: 10rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .specialists-heading {
     grid-template-columns: 1.45fr 1fr;
@@ -578,7 +628,7 @@
   .emergency {
     grid-template-columns: 1.5fr 1fr;
     gap: 8rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .emergency h2,
@@ -594,9 +644,6 @@
     max-width: 520px;
     margin: 0 0 2rem;
     line-height: 1.8;
-  }
-  .emergency-copy .text-link {
-    margin-left: 2rem;
   }
   .emergency-tags {
     border-top: 1px solid #333;
@@ -614,7 +661,7 @@
     font-size: 0.7rem;
   }
   .prices {
-    padding: 10rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .prices-heading {
     grid-template-columns: 1.45fr 1fr;
@@ -671,7 +718,7 @@
     font-weight: 500;
   }
   .process {
-    padding: 10rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .process-title {
     max-width: 850px;
@@ -706,7 +753,7 @@
     line-height: 1.7;
   }
   .reviews {
-    padding: 10rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .review-heading {
     justify-content: space-between;
@@ -783,7 +830,7 @@
     font-size: 0.7rem;
   }
   .clinics {
-    padding: 10rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .clinic-heading {
     grid-template-columns: 1.3fr 1fr;
@@ -864,7 +911,7 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 4rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: flex;
   }
   .final-cta .gold {
@@ -880,7 +927,7 @@
     background: #fff;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 8rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .home-split > div:first-child > p:not(.eyebrow) {
@@ -914,7 +961,7 @@
   .home-proof {
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .home-proof > div {
@@ -971,7 +1018,7 @@
     min-height: 680px;
     color: var(--ink);
     border-bottom: 1px solid var(--line);
-    padding: 230px 7vw 100px;
+    padding: 205px var(--gutter) 100px;
     position: relative;
     overflow: hidden;
   }
@@ -999,7 +1046,7 @@
   }
   .detail-section {
     background: #fff;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .treatment-directory article {
     border-bottom: 1px solid var(--line);
@@ -1058,7 +1105,7 @@
     border-bottom: 1px solid var(--line);
     flex-direction: column;
     min-width: 0;
-    transition: background 0.25s;
+    transition: background-color 250ms ease;
     display: flex;
   }
   .specialist-directory .specialist-card:nth-child(3n) {
@@ -1119,7 +1166,7 @@
     align-items: center;
     gap: 8vw;
     min-height: 820px;
-    padding: 170px 7vw 6rem;
+    padding: 175px var(--gutter) 6rem;
     display: grid;
   }
   .profile-hero-image {
@@ -1136,7 +1183,7 @@
   .profile-back {
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--ink);
     margin-bottom: 4rem;
     padding-bottom: 0.35rem;
     font-size: 0.7rem;
@@ -1158,7 +1205,7 @@
     border-bottom: 1px solid var(--line);
     grid-template-columns: 1.2fr 0.8fr;
     gap: 10vw;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .profile-overview blockquote {
@@ -1172,7 +1219,7 @@
     line-height: 1.9;
   }
   .profile-languages {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
     margin-top: 4rem;
     padding-top: 1.5rem;
   }
@@ -1187,7 +1234,7 @@
   .profile-treatments {
     grid-template-columns: 0.8fr 1.2fr;
     gap: 8vw;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .profile-treatments h2 {
@@ -1195,10 +1242,10 @@
     font-size: clamp(3rem, 5vw, 6rem);
   }
   .profile-treatment-list {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
   }
   .profile-treatment-list div {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     grid-template-columns: 52px 1fr;
     align-items: center;
     gap: 1rem;
@@ -1239,7 +1286,7 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 4rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: flex;
   }
   .profile-cta h2 {
@@ -1333,7 +1380,7 @@
     grid-template-columns: 1fr auto;
     align-items: center;
     gap: 1rem 4rem;
-    padding: 3.5rem 7vw;
+    padding: 3.5rem var(--gutter);
     display: grid;
   }
   .emergency-hotline .gold {
@@ -1395,7 +1442,7 @@
   .emergency-process {
     grid-template-columns: 0.8fr 1.2fr;
     gap: 6rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .emergency-steps {
@@ -1432,7 +1479,7 @@
     border-top: 1px solid #333;
     grid-template-columns: 2fr repeat(3, 1fr);
     gap: 4rem;
-    padding: 5rem 7vw 2rem;
+    padding: 5rem var(--gutter) 2rem;
     display: grid;
   }
   .footer-brand p {
@@ -1549,7 +1596,7 @@
     right: 1.5rem;
   }
   .whatsapp-trigger {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     background: var(--black);
     color: #fff;
     cursor: pointer;
@@ -1573,7 +1620,7 @@
   .whatsapp-panel {
     width: min(390px, 100vw - 2rem);
     color: var(--black);
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     background: #fff;
     padding: 2rem;
     position: relative;
@@ -1601,7 +1648,7 @@
   }
   .whatsapp-panel select,
   .whatsapp-panel textarea {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     width: 100%;
     color: var(--black);
     font: inherit;
@@ -1615,7 +1662,7 @@
     min-height: 88px;
   }
   .whatsapp-action {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     justify-content: space-between;
@@ -1643,7 +1690,7 @@
     grid-template-columns: 1.2fr 1fr;
     align-items: end;
     gap: 2rem 8rem;
-    padding: 9rem 7vw 5rem;
+    padding: 9rem var(--gutter) 5rem;
     display: grid;
   }
   .membership-intro .eyebrow {
@@ -1656,7 +1703,7 @@
   }
   .membership-group {
     background: #fff;
-    padding: 7rem 7vw 9rem;
+    padding: 7rem var(--gutter) 9rem;
   }
   .membership-group + .membership-group {
     border-top: 1px solid var(--line);
@@ -1670,12 +1717,12 @@
     font-size: clamp(3rem, 5vw, 6rem);
   }
   .membership-cards {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     grid-template-columns: repeat(3, 1fr);
     display: grid;
   }
   .membership-cards article {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--line);
     min-height: 620px;
     color: var(--black);
     background: #fff;
@@ -1726,7 +1773,7 @@
     position: relative;
   }
   .membership-cards li:before {
-    content: "—";
+    content: '—';
     position: absolute;
     left: 0;
   }
@@ -1736,7 +1783,7 @@
     grid-template-columns: 1.2fr 1fr;
     align-items: end;
     gap: 8rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .influencer-membership .eyebrow {
@@ -1755,7 +1802,7 @@
     font-size: clamp(2.6rem, 4vw, 4.6rem);
   }
   .checkout-summary {
-    border-block: 1px solid var(--black);
+    border-block: 1px solid var(--line);
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 2rem;
@@ -1768,14 +1815,14 @@
     font-weight: 400;
   }
   .online-value {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     grid-template-columns: repeat(3, 1fr);
     display: grid;
   }
   .online-value > div {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--line);
     min-height: 290px;
-    padding: 4rem 7vw;
+    padding: 4rem var(--gutter);
   }
   .online-value > div:last-child {
     border-right: 0;
@@ -1795,7 +1842,7 @@
   .doctor-routing {
     grid-template-columns: 0.85fr 1.15fr;
     gap: 8rem;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .doctor-routing-heading h2 {
@@ -1808,10 +1855,10 @@
     line-height: 1.8;
   }
   .routing-list {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
   }
   .routing-list article {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -1828,7 +1875,7 @@
     line-height: 1.6;
   }
   .routing-list button {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     cursor: pointer;
     background: #fff;
     border-radius: 50%;
@@ -1836,17 +1883,18 @@
     width: 52px;
     height: 52px;
     font-size: 1.2rem;
-    transition: all 0.2s;
+    transition-property: background-color, color;
+    transition-duration: 200ms;
   }
   .routing-list button:hover {
     background: var(--black);
     color: #fff;
   }
   .online-note {
-    border-block: 1px solid var(--black);
+    border-block: 1px solid var(--line);
     grid-template-columns: 0.7fr 1.3fr;
     gap: 4rem;
-    padding: 3rem 7vw;
+    padding: 3rem var(--gutter);
     display: grid;
   }
   .online-note p {
@@ -1867,7 +1915,7 @@
     align-items: center;
     gap: 8vw;
     min-height: 800px;
-    padding: 170px 7vw 6rem;
+    padding: 175px var(--gutter) 6rem;
     display: grid;
   }
   .care-hero-image {
@@ -1891,7 +1939,7 @@
     grid-template-columns: 0.6fr 1.2fr 0.8fr;
     align-items: start;
     gap: 5vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .care-statement h2 {
@@ -1902,14 +1950,14 @@
     line-height: 1.9;
   }
   .care-pillars {
-    border-block: 1px solid var(--black);
+    border-block: 1px solid var(--line);
     grid-template-columns: repeat(3, 1fr);
     display: grid;
   }
   .care-pillars article {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--line);
     min-height: 360px;
-    padding: 4rem 7vw;
+    padding: 4rem var(--gutter);
   }
   .care-pillars article:last-child {
     border-right: 0;
@@ -1934,7 +1982,7 @@
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
     gap: 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .care-feature-image {
@@ -1953,7 +2001,7 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 4rem;
-    padding: 8rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: flex;
   }
   .care-cta h2 {
@@ -1964,7 +2012,7 @@
     align-items: center;
     gap: 7vw;
     min-height: 850px;
-    padding: 170px 7vw 6rem;
+    padding: 175px var(--gutter) 6rem;
     display: grid;
   }
   .tourism-hero-image {
@@ -1972,12 +2020,12 @@
     height: 650px;
   }
   .tourism-proof {
-    border-block: 1px solid var(--black);
+    border-block: 1px solid var(--line);
     grid-template-columns: repeat(4, 1fr);
     display: grid;
   }
   .tourism-proof div {
-    border-right: 1px solid var(--black);
+    border-right: 1px solid var(--line);
     flex-direction: column;
     justify-content: space-between;
     min-height: 160px;
@@ -2000,17 +2048,17 @@
   .tourism-process {
     grid-template-columns: 0.8fr 1.2fr;
     gap: 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .tourism-process h2 {
     margin-top: 1.4rem;
   }
   .tourism-process > div:last-child {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
   }
   .tourism-process article {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     grid-template-columns: 55px 1fr;
     align-items: center;
     gap: 1.5rem;
@@ -2029,7 +2077,7 @@
     color: #fff;
     grid-template-columns: 0.85fr 1.15fr;
     gap: 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .planner-heading h2 {
@@ -2097,17 +2145,17 @@
   .tourism-included {
     grid-template-columns: 0.75fr 1.25fr;
     gap: 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .tourism-included h2 {
     margin-top: 1.4rem;
   }
   .included-grid {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
   }
   .included-grid article {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     grid-template-columns: 0.75fr 1.25fr;
     gap: 2rem;
     padding: 2.5rem 0;
@@ -2137,88 +2185,47 @@
       animation: none !important;
     }
   }
-  @media (width<=1450px) {
-    .main-nav {
-      grid-template-columns: 1fr auto;
-      min-height: 82px;
-    }
-    .nav {
-      z-index: 2;
-      background: var(--black);
-      flex-direction: column;
-      justify-content: center;
-      gap: 1.2rem;
-      padding: 5rem 1.5rem;
-      transition: all 0.35s;
-      position: fixed;
-      inset: 0;
-      overflow: auto;
-      transform: translate(100%);
-    }
-    .nav.open {
-      transform: translate(0);
-    }
-    .nav a {
-      color: #fff;
-      font-family: var(--font-display);
-      font-size: clamp(1.6rem, 4vh, 2.4rem);
-    }
-    .nav .nav-book {
-      color: #fff;
-    }
-    .site-header:has(.nav.open) .menu-button span {
-      background: #fff;
-    }
-    .desktop-only {
-      display: none;
-    }
-    .mobile-only {
-      display: block;
-    }
-    .menu-button {
-      z-index: 3;
-      cursor: pointer;
-      background: 0 0;
-      border: 0;
-      place-content: center;
-      gap: 7px;
-      width: 44px;
-      height: 44px;
-      display: grid;
-    }
-    .menu-button span {
-      background: var(--ink);
-      width: 24px;
-      height: 1px;
-    }
-  }
   @media (width<=1180px) {
     .utility-bar {
-      height: 42px;
+      height: 40px;
+    }
+    .utility-links > a {
+      display: none;
     }
     .main-nav {
       grid-template-columns: 1fr auto;
       min-height: 72px;
     }
     .nav {
+      z-index: 2;
       background: var(--black);
       flex-direction: column;
       justify-content: center;
-      transition: all 0.35s;
+      gap: 1.1rem;
+      padding: 5rem 1.5rem;
+      transition: transform 450ms var(--ease-drawer);
       position: fixed;
       inset: 0;
+      overflow: auto;
       transform: translate(100%);
+      --focus: #fff;
     }
     .nav.open {
       transform: translate(0);
     }
     .nav a {
       color: #fff;
+      letter-spacing: -0.01em;
       font-family: var(--font-display);
-      font-size: 2.4rem;
+      font-size: clamp(1.7rem, 4.2vh, 2.4rem);
+      font-weight: 400;
+    }
+    .nav a:after {
+      bottom: -4px;
     }
     .nav .nav-book {
       color: #fff;
+      margin-top: 1rem;
     }
     .site-header:has(.nav.open) .menu-button span {
       background: #fff;
@@ -2244,6 +2251,13 @@
       background: var(--ink);
       width: 24px;
       height: 1px;
+      transition: transform 300ms var(--ease-out);
+    }
+    .menu-button[aria-expanded='true'] span:first-child {
+      transform: translateY(4px) rotate(45deg);
+    }
+    .menu-button[aria-expanded='true'] span:last-child {
+      transform: translateY(-4px) rotate(-45deg);
     }
     .hero-copy {
       width: 52vw;
@@ -2383,12 +2397,12 @@
       min-height: 88px;
     }
     .hero-proof strong {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
     }
     .hero-proof span {
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       padding: 0 0.25rem;
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       line-height: 1.35;
     }
     .hero-proof div {
@@ -2422,7 +2436,7 @@
     }
     .access-grid a {
       border-right: 0;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 1px solid var(--line);
       min-height: 300px;
       padding: 3rem 1.2rem;
     }
@@ -2459,9 +2473,6 @@
     }
     .emergency {
       padding: 6.5rem 1.2rem;
-    }
-    .emergency-copy .text-link {
-      margin: 1.5rem 0 0;
     }
     .specialists-heading,
     .prices-heading {
@@ -2692,7 +2703,7 @@
     }
     .membership-cards article {
       border-right: 0;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 1px solid var(--line);
       min-height: auto;
     }
     .membership-cards article:last-child {
@@ -2707,7 +2718,7 @@
     }
     .online-value > div {
       border-right: 0;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 1px solid var(--line);
       min-height: 220px;
       padding: 3rem 1.2rem;
     }
@@ -2724,7 +2735,7 @@
       grid-template-columns: 1fr;
       gap: 3rem;
       min-height: auto;
-      padding: 150px 1.2rem 5rem;
+      padding: 160px 1.2rem 5rem;
     }
     .profile-hero-image {
       height: min(120vw, 560px);
@@ -2761,7 +2772,7 @@
       grid-template-columns: 1fr;
       gap: 3rem;
       min-height: auto;
-      padding: 150px 1.2rem 5rem;
+      padding: 160px 1.2rem 5rem;
     }
     .care-hero-image,
     .tourism-hero-image {
@@ -2780,7 +2791,7 @@
     .care-pillars article,
     .tourism-proof div {
       border-right: 0;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 1px solid var(--line);
       min-height: 220px;
       padding: 3rem 1.2rem;
     }
@@ -2828,9 +2839,6 @@
     .team-hero h1 {
       font-size: 3rem;
     }
-    .hero-proof strong {
-      display: none;
-    }
     .hero-proof div {
       padding: 0.6rem 0.2rem;
     }
@@ -2869,12 +2877,21 @@
   .hero-image {
     position: absolute;
   }
+  /* The team photo owns the right-hand column and fades into the white
+     page on its left edge, so the headline never sits on the photo. */
   .team-hero .hero-image {
-    inset: 0 0 108px;
+    aspect-ratio: 2048 / 1558;
+    width: min(57vw, 1000px);
+    inset: auto 0 108px auto;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 16%);
   }
   .team-hero .hero-image img {
-    object-fit: contain;
-    object-position: right bottom;
+    object-fit: cover;
+    object-position: center bottom;
+  }
+  .team-hero .hero-shade {
+    display: none;
   }
   .specialist-photo img,
   .profile-hero-image img {
@@ -2925,11 +2942,11 @@
 
   /* Hero offsets for pages whose first section is not an inner hero. */
   .page-offset {
-    padding-top: 152px;
+    padding-top: 125px;
   }
 }
 
-@media (width<=1450px) {
+@media (width<=1180px) {
   @layer components {
     .nav-languages {
       letter-spacing: 0.18em;
@@ -2951,7 +2968,7 @@
       display: inline-block;
     }
     .page-offset {
-      padding-top: 134px;
+      padding-top: 113px;
     }
   }
 }
@@ -2959,7 +2976,7 @@
 @media (width<=1180px) {
   @layer components {
     .page-offset {
-      padding-top: 114px;
+      padding-top: 113px;
     }
   }
 }
@@ -2967,10 +2984,18 @@
 @media (width<=700px) {
   @layer components {
     .team-hero .hero-image {
+      aspect-ratio: auto;
+      width: auto;
       inset: 0 0 88px;
+      -webkit-mask-image: none;
+      mask-image: none;
     }
     .team-hero .hero-image img {
+      object-fit: contain;
       object-position: center bottom;
+    }
+    .team-hero .hero-shade {
+      display: block;
     }
     .copyright-meta {
       flex-wrap: wrap;
@@ -2982,14 +3007,15 @@
 @layer components {
   /* Doctor Online routing rows link out to WhatsApp. */
   .routing-list article > a {
-    border: 1px solid var(--black);
+    border: 1px solid var(--line);
     border-radius: 50%;
     flex: 0 0 52px;
     place-items: center;
     width: 52px;
     height: 52px;
-    font-size: 1.2rem;
-    transition: all 0.2s;
+    transition-property: background-color, color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: var(--ease-out);
     display: grid;
   }
   .routing-list article > a:hover {
@@ -3035,7 +3061,7 @@
 
   .section-block {
     border-bottom: 1px solid var(--line);
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
   }
   .split-heading {
     grid-template-columns: 1.2fr 1fr;
@@ -3069,7 +3095,7 @@
     border-bottom: 1px solid var(--line);
     grid-template-columns: 1fr 1.3fr;
     gap: 3rem 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .statement h2 {
@@ -3128,7 +3154,7 @@
     grid-template-columns: 0.85fr 1.15fr;
     align-items: center;
     gap: 8vw;
-    padding: 9rem 7vw;
+    padding: var(--section-y) var(--gutter);
     display: grid;
   }
   .expert-photo {
@@ -3160,7 +3186,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    padding: 5rem 7vw;
+    padding: 5rem var(--gutter);
     display: flex;
   }
   .cta-band h2 {
@@ -3207,16 +3233,16 @@
   }
 
   .location-cards {
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--line);
     grid-template-columns: repeat(2, 1fr);
     display: grid;
   }
   .location-cards article {
-    border-bottom: 1px solid var(--black);
+    border-bottom: 1px solid var(--line);
     padding: 3rem 3rem 3rem 0;
   }
   .location-cards article + article {
-    border-left: 1px solid var(--black);
+    border-left: 1px solid var(--line);
     padding-left: 3rem;
   }
   .location-cards article > span {
@@ -3395,7 +3421,7 @@
   }
 }
 
-@media (width<=1450px) {
+@media (width<=1180px) {
   @layer components {
     /* Keep the accent links readable on the black mobile menu. */
     .nav .emergency-nav {
@@ -3410,6 +3436,905 @@
     }
     body:has(.nav.open) .whatsapp-widget {
       display: none;
+    }
+  }
+}
+
+/*
+ * Polish: header behaviour, icons, surfaces and motion.
+ * Durations stay under 300ms for interactions; ease-out everywhere.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Fixed header that tucks away on scroll (state set by SiteHeader). */
+  .site-header {
+    position: fixed;
+    transition: transform 400ms var(--ease-out);
+  }
+  .site-header[data-state='compact'] {
+    transform: translateY(-40px);
+  }
+  .site-header[data-state='hidden'] {
+    transform: translateY(-100%);
+  }
+  .site-header:has(.nav.open) {
+    transform: none;
+  }
+
+  /* Arrow icon: sized to the label, nudges toward its direction on hover. */
+  .arrow {
+    vertical-align: -0.05em;
+    flex: none;
+    width: 11px;
+    height: 11px;
+    margin-left: 0.35em;
+    display: inline-block;
+    transition: transform 250ms var(--ease-out);
+  }
+  .home-specialist-list .arrow,
+  .routing-list .arrow,
+  .treatment-tab .arrow {
+    width: 15px;
+    height: 15px;
+  }
+  .treatment-tab .arrow {
+    justify-self: end;
+  }
+
+  /* Hairline on photos so light images keep an edge on white. */
+  .specialist-photo,
+  .profile-hero-image,
+  .expert-photo,
+  .detail-image,
+  .clinic-location-image,
+  .tourism-hero-image,
+  .care-hero-image,
+  .care-feature-image,
+  .treatment-image {
+    position: relative;
+  }
+  .specialist-photo:after,
+  .profile-hero-image:after,
+  .expert-photo:after,
+  .detail-image:after,
+  .clinic-location-image:after,
+  .tourism-hero-image:after,
+  .care-hero-image:after,
+  .care-feature-image:after,
+  .treatment-image:after {
+    content: '';
+    pointer-events: none;
+    box-shadow: inset 0 0 0 1px oklch(0 0 0 / 0.1);
+    position: absolute;
+    inset: 0;
+  }
+  .specialist-photo img {
+    transition: scale 700ms var(--ease-out);
+  }
+
+  /* Press feedback on everything that behaves like a button. */
+  .whatsapp-trigger,
+  .whatsapp-action {
+    transition-property: background-color, color, transform;
+    transition-duration: 160ms;
+    transition-timing-function: var(--ease-out);
+  }
+  .whatsapp-trigger:active,
+  .whatsapp-action:active,
+  .routing-list article > a:active {
+    transform: scale(0.96);
+  }
+
+  /* White focus ring on black surfaces. */
+  .dark-section,
+  .footer,
+  .cta-band,
+  .care-cta,
+  .profile-cta,
+  .emergency-hotline,
+  .emergency-strip,
+  .trip-planner,
+  .influencer-membership,
+  .membership-cards .featured,
+  .treatment-tab.active {
+    --focus: #fff;
+  }
+
+  /* Figures line up in columns. */
+  .price-row strong,
+  .membership-price strong,
+  .tourism-proof span,
+  .results-score strong {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* WhatsApp widget: panel grows from the trigger; icon cross-fades. */
+  .whatsapp-panel {
+    transform-origin: bottom right;
+    transition:
+      opacity 200ms var(--ease-out),
+      transform 200ms var(--ease-out);
+  }
+  .icon-swap {
+    width: 20px;
+    height: 20px;
+    display: inline-grid;
+    position: relative;
+  }
+  .icon-swap svg {
+    width: 20px;
+    height: 20px;
+    transition:
+      opacity 200ms cubic-bezier(0.2, 0, 0, 1),
+      scale 200ms cubic-bezier(0.2, 0, 0, 1),
+      filter 200ms cubic-bezier(0.2, 0, 0, 1);
+    position: absolute;
+    inset: 0;
+  }
+  .icon-swap .icon-open,
+  .whatsapp-trigger[aria-expanded='true'] .icon-closed {
+    opacity: 0;
+    filter: blur(4px);
+    scale: 0.25;
+  }
+  .whatsapp-trigger[aria-expanded='true'] .icon-open {
+    opacity: 1;
+    filter: blur(0);
+    scale: 1;
+  }
+
+  /* Staggered entrance for the opening copy of each page (runs once). */
+  .hero-copy > *,
+  .inner-hero > div > *,
+  .tourism-hero > div:first-child > *,
+  .care-hero > div:last-child > *,
+  .profile-hero-copy > * {
+    animation: rise 700ms var(--ease-out) both;
+  }
+  .hero-copy > :nth-child(2),
+  .inner-hero > div > :nth-child(2),
+  .tourism-hero > div:first-child > :nth-child(2),
+  .care-hero > div:last-child > :nth-child(2),
+  .profile-hero-copy > :nth-child(2) {
+    animation-delay: 100ms;
+  }
+  .hero-copy > :nth-child(3),
+  .inner-hero > div > :nth-child(3),
+  .tourism-hero > div:first-child > :nth-child(3),
+  .care-hero > div:last-child > :nth-child(3),
+  .profile-hero-copy > :nth-child(3) {
+    animation-delay: 200ms;
+  }
+  .hero-copy > :nth-child(n + 4),
+  .inner-hero > div > :nth-child(n + 4),
+  .tourism-hero > div:first-child > :nth-child(n + 4),
+  .care-hero > div:last-child > :nth-child(n + 4),
+  .profile-hero-copy > :nth-child(n + 4) {
+    animation-delay: 300ms;
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+}
+
+@starting-style {
+  .whatsapp-panel {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  @layer components {
+    :is(a, button):hover > .arrow,
+    :is(a, button):hover > * > .arrow,
+    .specialist-card:hover .arrow {
+      transform: translate(2px, -2px);
+    }
+    .specialist-card:hover .specialist-photo img {
+      scale: 1.03;
+    }
+    .treatment-tab:not(.active):hover {
+      background: #f6f6f6;
+    }
+  }
+}
+
+@media (width<=1180px) {
+  @layer components {
+    .team-hero .hero-image {
+      width: 50vw;
+    }
+    .treatment-tab .arrow {
+      display: none;
+    }
+    /* Menu items settle in one after another when the menu opens. */
+    .nav.open > * {
+      animation: rise 500ms var(--ease-out) both;
+    }
+    .nav.open > :nth-child(2) {
+      animation-delay: 30ms;
+    }
+    .nav.open > :nth-child(3) {
+      animation-delay: 60ms;
+    }
+    .nav.open > :nth-child(4) {
+      animation-delay: 90ms;
+    }
+    .nav.open > :nth-child(5) {
+      animation-delay: 120ms;
+    }
+    .nav.open > :nth-child(6) {
+      animation-delay: 150ms;
+    }
+    .nav.open > :nth-child(7) {
+      animation-delay: 180ms;
+    }
+    .nav.open > :nth-child(8) {
+      animation-delay: 210ms;
+    }
+    .nav.open > :nth-child(n + 9) {
+      animation-delay: 240ms;
+    }
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .inner-hero > img {
+      opacity: 0.035;
+    }
+    .team-hero .hero-image {
+      width: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Round icon-only trigger: stays out of the way of page content. */
+  .whatsapp-trigger {
+    box-shadow:
+      0 0 0 1px #ffffff38,
+      0 10px 32px #00000033;
+    justify-content: center;
+    width: 56px;
+    min-height: 56px;
+    height: 56px;
+    padding: 0;
+  }
+  .whatsapp-trigger .icon-swap,
+  .whatsapp-trigger .icon-swap svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@layer components {
+  .button.outline {
+    color: var(--ink);
+    background: #fff;
+    box-shadow: inset 0 0 0 1px var(--ink);
+  }
+  .button.outline:hover {
+    background: #f2f2f2;
+  }
+
+  /* Cookie consent: compact card bottom-left, clear of the contact button. */
+  .cookie-card {
+    z-index: 85;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--ink);
+    gap: 1rem;
+    width: min(420px, 100vw - 2rem);
+    max-height: calc(100svh - 2rem);
+    padding: 1.75rem;
+    display: grid;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    overflow: auto;
+    box-shadow: 0 24px 70px #0000002e;
+    transition:
+      opacity 300ms var(--ease-out),
+      transform 300ms var(--ease-out);
+  }
+  .cookie-copy {
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.7;
+  }
+  .cookie-copy button {
+    color: var(--ink);
+    text-underline-offset: 3px;
+    text-decoration: underline;
+  }
+  .cookie-actions {
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+    display: grid;
+  }
+  .cookie-actions .button {
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 1rem;
+    font-size: 0.66rem;
+  }
+  .cookie-card > .text-link {
+    justify-self: start;
+  }
+  .cookie-head {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  .cookie-close {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  .cookie-list {
+    border-top: 1px solid var(--line);
+  }
+  .cookie-list li {
+    border-bottom: 1px solid var(--line);
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    display: flex;
+  }
+  .cookie-list strong {
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .cookie-list p {
+    color: var(--muted);
+    margin-top: 0.3rem;
+    font-size: 0.76rem;
+    line-height: 1.6;
+  }
+  .cookie-switch {
+    background: #ccc;
+    border-radius: 999px;
+    flex: none;
+    width: 40px;
+    height: 22px;
+    transition: background-color 200ms ease;
+    position: relative;
+  }
+  .cookie-switch span {
+    background: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transition: transform 200ms var(--ease-out);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+  }
+  .cookie-switch.is-on {
+    background: var(--ink);
+  }
+  .cookie-switch.is-on span {
+    transform: translateX(18px);
+  }
+  .cookie-switch:disabled {
+    opacity: 0.45;
+  }
+}
+
+@starting-style {
+  .cookie-card {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    body:has(.cookie-card) .whatsapp-widget {
+      display: none;
+    }
+    .cookie-card {
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      width: auto;
+      padding: 1.4rem;
+    }
+  }
+}
+
+@layer components {
+  /* Treatment explorer: chips wrap on the left, one CTA on the right. */
+  .treatment-tab {
+    grid-template-columns: 48px 1fr;
+  }
+  .service-list {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.75rem 0 1.75rem 2rem;
+    display: grid;
+  }
+  .service-chips {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    display: flex;
+  }
+  .service-chips > span {
+    border: 1px solid var(--line);
+    padding: 0.6rem 0.85rem;
+    font-size: 0.74rem;
+  }
+  .service-list .button {
+    margin-left: 0;
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .service-list {
+      grid-template-columns: 1fr;
+      padding: 1.5rem 0 0;
+    }
+    .service-list .button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@layer components {
+  .home-specialist-list a {
+    grid-template-columns: 64px 1fr auto;
+    gap: 1.5rem;
+  }
+  .specialist-thumb {
+    background: #eee;
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .specialist-thumb:after {
+    content: '';
+    box-shadow: inset 0 0 0 1px oklch(0 0 0 / 0.1);
+    position: absolute;
+    inset: 0;
+  }
+  .specialist-thumb img {
+    object-fit: cover;
+    filter: grayscale();
+    width: 100%;
+    height: 100%;
+    transition: filter 300ms ease;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  @layer components {
+    .home-specialist-list a:hover .specialist-thumb img {
+      filter: none;
+    }
+  }
+}
+
+@layer components {
+  .emergency-copy .hero-actions {
+    flex-wrap: wrap;
+    gap: 1.25rem 2rem;
+  }
+}
+
+@layer components {
+  /* Leave room under the last footer row for the floating contact button. */
+  .footer {
+    padding-bottom: 6rem;
+  }
+}
+
+@layer components {
+  /* Quieter monogram watermark, clear of the header. */
+  .inner-hero > img {
+    opacity: 0.04;
+    width: min(34vw, 480px);
+    top: auto;
+    bottom: -6%;
+    right: var(--gutter);
+  }
+}
+
+@layer components {
+  :is(
+      .button,
+      .text-link,
+      .nav-book,
+      .whatsapp-action,
+      .access-grid span,
+      .home-specialist-list a,
+      .routing-list a
+    )
+    > .arrow {
+    margin-left: 0;
+  }
+  .specialist-directory h2 {
+    font-size: clamp(2rem, 2.4vw, 3rem);
+  }
+  .profile-note strong {
+    align-items: center;
+    gap: 0.6rem;
+    display: inline-flex;
+  }
+  .profile-note strong .arrow {
+    margin-left: 0;
+  }
+}
+
+@layer components {
+  .specialist-card-copy > p:not(.eyebrow) {
+    margin-bottom: 2.5rem;
+  }
+  .specialist-card-copy .profile-note {
+    margin-top: auto;
+  }
+}
+
+@layer components {
+  .profile-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@layer components {
+  /* Split heroes share half the width with a photo: smaller headlines. */
+  .care-hero h1,
+  .tourism-hero h1 {
+    font-size: clamp(3.2rem, 4.8vw, 5.6rem);
+    line-height: 0.95;
+  }
+  .profile-hero h1 {
+    font-size: clamp(3.4rem, 5.2vw, 6.2rem);
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .care-hero h1,
+    .tourism-hero h1,
+    .profile-hero h1 {
+      font-size: clamp(2.6rem, 11vw, 3.4rem);
+    }
+  }
+}
+
+@layer components {
+  /* One scale for section headlines inside content pages. */
+  .care-statement h2,
+  .care-feature h2,
+  .tourism-process h2,
+  .tourism-included h2,
+  .planner-heading h2,
+  .doctor-routing-heading h2,
+  .influencer-membership h2,
+  .profile-treatments h2,
+  .membership-group .split-heading h2,
+  .emergency-intro h2 {
+    font-size: clamp(2.8rem, 4.4vw, 5.2rem);
+    line-height: 1;
+  }
+  .care-hero-image img {
+    object-position: 35% center;
+  }
+}
+
+@layer components {
+  .review-grid blockquote {
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Price list: one row per group, name on the left, prices on the right. */
+  .price-grid {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin-bottom: 2.5rem;
+    display: block;
+  }
+  .price-grid article {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 2rem 6vw;
+    min-height: 0;
+    padding: 3rem 0;
+    display: grid;
+  }
+  .price-grid article header {
+    align-items: baseline;
+    gap: 1.2rem;
+    margin: 0;
+    display: flex;
+  }
+  .price-grid h3 {
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+    line-height: 1.1;
+  }
+  .price-grid .price-group-note {
+    margin: 0.8rem 0 0;
+  }
+  .price-rows .price-row:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .price-row {
+    font-size: 0.86rem;
+  }
+  .price-row span {
+    color: var(--ink);
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .price-grid article {
+      grid-template-columns: 1fr;
+      padding: 2.5rem 0;
+    }
+    .price-grid article,
+    .price-grid {
+      border-left: 0;
+    }
+  }
+}
+
+@media (width>700px) {
+  @layer components {
+    .price-grid article header {
+      align-self: start;
+      position: sticky;
+      top: 6.5rem;
+    }
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    /* Mobile hero: copy, then photo, then proof bar — in normal flow. */
+    .team-hero {
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
+      padding-top: 150px;
+      display: flex;
+    }
+    .team-hero .hero-copy {
+      order: 1;
+      width: auto;
+      padding: 0 1.2rem;
+      position: static;
+      transform: none;
+    }
+    .team-hero .hero-image {
+      aspect-ratio: 2048 / 1558;
+      order: 2;
+      width: 100%;
+      margin-top: 2.5rem;
+      position: relative;
+      inset: auto;
+    }
+    .team-hero .hero-image img {
+      object-fit: cover;
+    }
+    .team-hero .hero-shade {
+      display: none;
+    }
+    .hero-proof {
+      order: 3;
+      position: static;
+    }
+    .team-hero .hero-actions {
+      width: 100%;
+    }
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .treatment-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .home-specialist-list a {
+      grid-template-columns: 52px 1fr auto;
+      gap: 1rem;
+      min-height: 92px;
+    }
+    .specialist-thumb {
+      width: 52px;
+      height: 52px;
+    }
+    .home-specialist-list strong {
+      font-size: 1.35rem;
+    }
+  }
+}
+
+@media (width<=1180px) {
+  @layer components {
+    /* Mobile menu: left-aligned, primary links large, secondary small caps. */
+    .nav {
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.4rem;
+      padding: 7rem var(--gutter) 3rem;
+    }
+    .nav a {
+      font-size: clamp(1.8rem, 4.4vh, 2.4rem);
+      line-height: 1.2;
+    }
+    .nav a.mobile-only {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #aaa;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      line-height: 2.4;
+    }
+    .nav .emergency-nav + .mobile-only {
+      margin-top: 1.75rem;
+    }
+    .nav .nav-book {
+      color: var(--black);
+      background: #fff;
+      margin-top: 1.75rem;
+      padding: 1.1rem 1.6rem;
+    }
+    .nav-languages {
+      margin-top: 2rem;
+    }
+  }
+}
+
+@layer components {
+  /* Contact: booking on the left, clinic details on the right. */
+  .contact-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: start;
+    gap: 4rem 7vw;
+    display: grid;
+  }
+  .contact-lead {
+    color: var(--muted);
+    margin: 1.2rem 0 2.5rem;
+    line-height: 1.8;
+  }
+  .contact-details article {
+    border-top: 1px solid var(--line);
+    padding: 1.75rem 0;
+  }
+  .contact-details h3 {
+    font-size: 1.7rem;
+  }
+  .contact-details address {
+    color: var(--muted);
+    margin: 0.6rem 0 1.2rem;
+    font-size: 0.9rem;
+    font-style: normal;
+    line-height: 1.7;
+  }
+  .contact-details dl {
+    border-top: 1px solid var(--line);
+    gap: 1.1rem;
+    padding-top: 1.75rem;
+    display: grid;
+  }
+  .contact-details dt {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-size: 0.64rem;
+  }
+  .contact-details dd {
+    margin: 0.3rem 0 0;
+  }
+  .contact-details dd a {
+    text-underline-offset: 3px;
+    text-decoration: underline;
+    text-decoration-color: var(--line);
+    transition: text-decoration-color 150ms ease;
+  }
+  .contact-details dd a:hover {
+    text-decoration-color: currentColor;
+  }
+  .contact-social {
+    gap: 1.5rem;
+    display: flex;
+  }
+}
+
+@media (width<=1000px) {
+  @layer components {
+    .contact-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@layer components {
+  /* Blog index: one row per article. */
+  .article-list {
+    border-top: 1px solid var(--line);
+  }
+  .article-list a {
+    border-bottom: 1px solid var(--line);
+    grid-template-columns: 180px 1fr auto;
+    align-items: start;
+    gap: 1rem 4vw;
+    padding: 3rem 0;
+    transition: background-color 250ms ease;
+    display: grid;
+  }
+  .article-list time {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    padding-top: 0.6rem;
+    font-size: 0.68rem;
+  }
+  .article-list h2 {
+    font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+    line-height: 1.1;
+  }
+  .article-list p {
+    color: var(--muted);
+    max-width: 680px;
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
+  .article-list small {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.64rem;
+  }
+  .article-list .arrow {
+    width: 16px;
+    height: 16px;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (width<=700px) {
+  @layer components {
+    .article-list a {
+      grid-template-columns: 1fr auto;
+    }
+    .article-list time {
+      grid-column: 1/-1;
+      padding: 0;
+    }
+  }
+}
+
+@media (width>1000px) {
+  @layer components {
+    .contact-booking {
+      position: sticky;
+      top: 6.5rem;
     }
   }
 }

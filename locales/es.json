@@ -243,21 +243,6 @@
       "title": "Servicio Premium 24/7 de Marbella"
     }
   },
-  "contact": {
-    "title": "Atención Dental de Emergencia 24/7",
-    "description": "Las emergencias dentales no esperan al horario comercial. Nuestro equipo de especialistas está disponible las 24 horas para brindar atención inmediata cuando más la necesite.",
-    "conditions": {
-      "toothache": "Dolor dental severo",
-      "broken": "Dientes rotos o astillados",
-      "lost": "Coronas o empastes perdidos",
-      "trauma": "Trauma dental por accidentes"
-    },
-    "learnMore": "Más Información",
-    "emergencyHotline": "Línea de Emergencia",
-    "location": {
-      "title": "Nuestra Ubicación"
-    }
-  },
   "layout": {
     "header": {
       "home": "Inicio",
@@ -516,17 +501,6 @@
         }
       }
     }
-  },
-  "office": {
-    "name": "Prisma Clinic Marbella",
-    "address": "Av. de Nabeul, 14, 29601 Marbella, Málaga",
-    "country": "España",
-    "phone": "Teléfono",
-    "phoneNumber": "+34 673 290 786",
-    "openingHours": "Horario de Atención",
-    "weekdays": "Lunes - Domingo: 24/7",
-    "saturday": "Sábado: 10:00 AM - 2:00 PM",
-    "sunday": "Domingo: Cerrado"
   },
   "emergencyPage": {
     "hero": {
@@ -1395,9 +1369,9 @@
       "imageAlt": "El equipo de especialistas de Prisma Clinic en la clínica"
     },
     "proof": {
-      "locations": "Dos ubicaciones emblemáticas",
-      "specialists": "Seis especialistas dedicados",
-      "care": "Atención personalizada"
+      "locations": "Clínicas en Marbella y Banús",
+      "specialists": "Especialistas dedicados",
+      "care": "Urgencias dentales"
     },
     "intro": {
       "label": "El estándar Prisma",
@@ -1460,8 +1434,7 @@
       "intro": "Un equipo multidisciplinar unido por la precisión clínica, el consejo honesto y una vocación natural por el trato personal."
     },
     "card": {
-      "explore": "Ver perfil",
-      "teaser": "Conoce a {name} y descubre su experiencia y sus tratamientos destacados."
+      "explore": "Ver perfil"
     },
     "profile": {
       "back": "← Todos los especialistas",
@@ -1473,8 +1446,7 @@
       "galleryLabel": "{name} en Prisma Clinic",
       "galleryAlt": {
         "intro": "{name} — presentación",
-        "expertise": "{name} — especialización",
-        "treatments": "{name} — tratamientos destacados"
+        "expertise": "{name} — especialización"
       },
       "ctaEyebrow": "Consulta personalizada",
       "ctaTitle": "Empieza con<br></br><em>una conversación.</em>"

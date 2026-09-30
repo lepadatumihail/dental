@@ -243,21 +243,6 @@
       "title": "Marbella's Premier 24/7 Service"
     }
   },
-  "contact": {
-    "title": "24/7 Emergency Dental Care",
-    "description": "Dental emergencies don't wait for business hours. Our team of specialists is available around the clock to provide immediate care when you need it most.",
-    "conditions": {
-      "toothache": "Severe toothache",
-      "broken": "Broken or chipped teeth",
-      "lost": "Lost crowns or fillings",
-      "trauma": "Dental trauma from accidents"
-    },
-    "learnMore": "Learn more",
-    "emergencyHotline": "Emergency Hotline",
-    "location": {
-      "title": "Our Location"
-    }
-  },
   "layout": {
     "header": {
       "home": "Home",
@@ -513,17 +498,6 @@
         }
       }
     }
-  },
-  "office": {
-    "name": "Prisma Clinic Marbella",
-    "address": "Av. de Nabeul, 14, 29601 Marbella, Málaga",
-    "country": "Spain",
-    "phone": "Phone",
-    "phoneNumber": "+34 673 290 786",
-    "openingHours": "Opening Hours",
-    "weekdays": "Monday - Sunday: 24/7",
-    "saturday": "Saturday: 10:00 AM - 2:00 PM",
-    "sunday": "Sunday: Closed"
   },
   "emergencyPage": {
     "hero": {
@@ -1392,9 +1366,9 @@
       "imageAlt": "The Prisma Clinic specialist team inside the clinic"
     },
     "proof": {
-      "locations": "Two iconic locations",
-      "specialists": "Six dedicated specialists",
-      "care": "Personalised care"
+      "locations": "Clinics in Marbella & Banús",
+      "specialists": "Dedicated specialists",
+      "care": "Emergency dental care"
     },
     "intro": {
       "label": "Prisma standard",
@@ -1457,8 +1431,7 @@
       "intro": "A multidisciplinary team united by clinical precision, honest guidance and an instinct for personal care."
     },
     "card": {
-      "explore": "Explore profile",
-      "teaser": "Meet {name} and discover their expertise and signature treatments."
+      "explore": "Explore profile"
     },
     "profile": {
       "back": "← All specialists",
@@ -1470,8 +1443,7 @@
       "galleryLabel": "{name} at Prisma Clinic",
       "galleryAlt": {
         "intro": "{name} — introduction",
-        "expertise": "{name} — expertise",
-        "treatments": "{name} — signature treatments"
+        "expertise": "{name} — expertise"
       },
       "ctaEyebrow": "Personalised consultation",
       "ctaTitle": "Begin with<br></br><em>a conversation.</em>"

@@ -6,10 +6,7 @@ import { InterestSection } from '@/components/InterestSection'
 import { LeadExpert } from '@/components/LeadExpert'
 import { LocationsSection } from '@/components/LocationsSection'
 import { PageHero } from '@/components/PageHero'
-import {
-  ServicesSection,
-  type ServiceItem,
-} from '@/components/ServicesSection'
+import { ServicesSection, type ServiceItem } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
@@ -17,7 +14,7 @@ import { WHATSAPP_URL } from '@/lib/clinic'
 import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/implant.jpg'
-import doctorImage from '@/images/clinic/robin-colour.jpg'
+import doctorImage from '@/images/prisma/specialists/dr-robbin.jpg'
 
 interface PageProps {
   params: { locale: string }

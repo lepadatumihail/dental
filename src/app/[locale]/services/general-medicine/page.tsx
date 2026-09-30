@@ -6,17 +6,14 @@ import { InterestSection } from '@/components/InterestSection'
 import { LeadExpert } from '@/components/LeadExpert'
 import { LocationsSection } from '@/components/LocationsSection'
 import { PageHero } from '@/components/PageHero'
-import {
-  ServicesSection,
-  type ServiceItem,
-} from '@/components/ServicesSection'
+import { ServicesSection, type ServiceItem } from '@/components/ServicesSection'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
 import { WHATSAPP_URL } from '@/lib/clinic'
 import { servicePageJsonLd } from '@/lib/page-graphs'
 
-import doctorImage from '@/images/clinic/angelo-termini.jpg'
+import doctorImage from '@/images/prisma/specialists/dr-angelo-termini.jpg'
 import heroImage from '@/images/clinic/general-medicine.jpg'
 
 interface PageProps {

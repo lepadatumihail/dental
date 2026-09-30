@@ -62,13 +62,16 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - `.button.light` — white fill, black text; used on black sections (on `.final-cta` it renders dark).
 - `.button.urgent` — red-500 fill for emergency calls only.
 - `.button.wide` — full width (forms, membership cards).
+- `.button.outline` — white with an ink hairline; the secondary choice beside a dark button.
 - `.text-link` — uppercase micro-label link with trailing arrow; `.light-link` on black.
+- **Arrow:** always the `<Arrow />` SVG from `src/lib/rich.tsx` (never the ↗ glyph). It nudges up-right on hover. Tabs and toggles get no arrow — arrows mean "goes somewhere".
 - Booking buttons use `BookTrigger` (`src/components/booking/BookButton.tsx`) with these classes; pass `service="dental" | "aesthetics" | "medical"` to pre-select a service.
 
 ### Shared page parts
-- **Header** (`SiteHeader`): absolute over the first section, utility bar (locations + EN · ES · SE), wordmark, nav, "Book a consultation". Collapses to a full-screen black menu below 1450px.
+- **Header** (`SiteHeader`): fixed; utility bar (locations, secondary links Doctor Online / Dental Tourism / Prisma Care, EN · ES · SE) above the wordmark, six primary links and "Book a consultation". The current page is underlined. It tucks away while scrolling down and returns without the utility bar when scrolling up. Below 1180px it collapses to a left-aligned full-screen black menu.
 - **Footer** (`Footer`): black, wordmark (inverted), four columns, copyright + cookie settings + credit.
-- **WhatsApp widget** (`WhatsAppWidget`): black pill bottom-right that opens a topic picker and hands off to WhatsApp or a call.
+- **WhatsApp widget** (`WhatsAppWidget`): round 56px black button bottom-right (icon cross-fades to ×) that opens a topic picker and hands off to WhatsApp or a call.
+- **Cookie consent** (`CookieBanner`): compact card bottom-left, equal-weight "Accept all" / "Necessary only".
 - **Inner hero** (`InnerHero` / `PageIntro`): white, monogram watermark, eyebrow, uppercase h1, intro, CTA. Accounts for the absolute header (padding-top 230px desktop).
 - **Final CTA** (`FinalCta`): "Your next chapter starts here." band before the footer.
 - **Split heroes**: `.tourism-hero` (+ `.service-hero`), `.care-hero`, `.profile-hero` — copy beside an image.
@@ -79,15 +82,18 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - Numbered hairline grids: `.service-grid`, `.condition-grid`, `.price-grid`, `.review-grid`, `.steps` — cells separated by 1px `--line` borders, a small muted `01` number, Playfair h3, muted copy.
 - Lists with rules: `.home-specialist-list`, `.profile-treatment-list`, `.routing-list`, `.tourism-process`.
 - Black bands: `.dark-section`, `.cta-band`, `.care-cta`, `.profile-cta`, `.emergency-hotline`, `.emergency-strip`.
-- Tags: `.detail-tags span`, `.service-list span` — 1px bordered chips, no radius.
+- Tags: `.detail-tags span`, `.service-chips span` — 1px bordered chips, no radius.
+- Price list: `.price-grid` — one row per group, name (sticky) on the left, prices on the right.
+- People lists: `.home-specialist-list` rows with a 64px `.specialist-thumb` (grayscale, colour on hover) from `Specialist.thumb`.
 
 ### Forms
 - Underline inputs in modals (`.booking-modal`), bordered inputs on black (`.planner-form`), square corners everywhere.
 
 ## 5. Layout
 
-- Horizontal page padding: `7vw` desktop, `1.2rem` mobile (≤700px).
-- Section padding: `8–10rem` vertical desktop, `6–6.5rem` mobile.
+- One gutter everywhere: `--gutter` (`clamp(1.2rem, 5vw, 6rem)`) for the header, heroes and sections, so all edges line up.
+- Section padding: `--section-y` (`clamp(5.5rem, 9vw, 8.5rem)`) desktop, `6–6.5rem` mobile.
+- Dividers on white are always the light hairline (`--line`); solid black is reserved for surfaces (bands, buttons, the featured card).
 - Grids use fractional columns (`1.2fr 1fr`, `0.85fr 1.15fr`) rather than a 12-column system.
 - **No border radius** (Tailwind radius tokens are 0; pills via `rounded-full` only for the WhatsApp trigger and round icon buttons).
 - **No shadows** except floating UI (WhatsApp widget, modals).
@@ -95,17 +101,24 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 
 ## 6. Motion
 
-- Hover: buttons lift `translateY(-2px)`; nav links grow an underline; grid cards shift to `#f5f5f5`; access tiles invert to black.
-- Hero image fades/scales in (`heroScale`, 1.1s).
+Tokens: `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)`, `--ease-drawer: cubic-bezier(0.32, 0.72, 0, 1)`.
+
+- Interactions stay under 300ms and name their properties (never `transition: all`).
+- Press: buttons, the WhatsApp trigger and round icon buttons scale to `0.96` on `:active`.
+- Hover (gated behind `(hover: hover) and (pointer: fine)`): arrows nudge `translate(2px, -2px)`; nav links grow an underline from the left; specialist photos scale to `1.03`; thumbnails regain colour; inactive tabs tint `#f6f6f6`.
+- Entrance: the opening copy of each page rises in once, staggered 100ms (`rise`, 700ms); the hero image fades/scales in (`heroScale`). The mobile menu items stagger 30ms as it slides in (450ms, drawer curve).
+- Popovers (WhatsApp panel, cookie card) enter with `@starting-style` from `opacity: 0; translateY(8–16px)`.
 - `prefers-reduced-motion` disables all transitions and animations.
+
+### Focus
+- `:focus-visible` shows a 2px ring in `--focus` (ink on white; black surfaces set `--focus: #fff`).
 
 ## 7. Responsive
 
 | Breakpoint | Changes |
 |------------|---------|
-| ≤1450px | Nav collapses to the full-screen black menu (with language links) |
-| ≤1180px | Smaller header, 2-column grids, treatment tabs stack |
-| ≤700px | Single column, 1.2rem gutters, h1 ~3.5rem, hero CTAs stack full width, footer 2 columns |
+| ≤1180px | Nav collapses to the full-screen menu (secondary links and languages move into it); 2-column grids; treatment tabs stack |
+| ≤700px | Single column; the homepage hero becomes a normal flow (copy → photo → proof bar); hero CTAs stack full width; footer 2 columns |
 
 Mobile: hero actions stack; keep tap targets ≥44px.
 
@@ -119,6 +132,7 @@ Mobile: hero actions stack; keep tap targets ≥44px.
 1. Black, white and greys only; red-500 exclusively for emergency call buttons.
 2. Playfair Display for headlines (uppercase h1, sentence-case h2 with an italic second line); Raleway 300 for body.
 3. Reuse the semantic classes in `src/styles/prisma.css` before writing new CSS; add new ones there, in the same vocabulary.
-4. Hairline rules, square corners, no shadows, no decorative icons — use numbers (`01`, `02`) and the `↗` arrow instead.
+4. Hairline rules, square corners, no shadows, no decorative icons or Unicode symbols — use numbers (`01`, `02`) and the `<Arrow />` SVG instead.
+7. Never set text on top of a photo; give photos their own column (the homepage team photo fades into white on its left edge).
 5. Every page starts with a hero that clears the absolute header (`InnerHero`, a split hero, or `.page-offset`).
 6. Copy goes in `locales/{en,es,se}.json`; headings with line breaks use `<br></br>` and `<em>` with `t.rich(key, richTags)`.

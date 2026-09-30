@@ -127,7 +127,7 @@ export default async function About() {
                 <p>{t(`specialties.items.${key}.description`)}</p>
                 <div className="profile-note">
                   <strong>
-                    {t('specialties.discoverMore')} <b>↗</b>
+                    {t('specialties.discoverMore')} <Arrow />
                   </strong>
                 </div>
               </div>
@@ -148,6 +148,9 @@ export default async function About() {
         <div className="home-specialist-list">
           {SPECIALIST_PROFILES.map((person) => (
             <Link key={person.slug} href={`/specialists/${person.slug}`}>
+              <span className="specialist-thumb">
+                <Image src={person.thumb} alt="" sizes="64px" />
+              </span>
               <div>
                 <strong>{person.name}</strong>
                 <small>{tPeople(`${person.slug}.role`)}</small>

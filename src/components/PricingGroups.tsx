@@ -15,15 +15,19 @@ function PricingGrid({ groups }: { groups: PriceGroup[] }) {
         <article key={group.title}>
           <header>
             <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{group.title}</h3>
-          </header>
-          <p className="price-group-note">{group.subtitle}</p>
-          {group.items.map((item) => (
-            <div className="price-row" key={item.service}>
-              <span>{item.service}</span>
-              <strong>{item.price}</strong>
+            <div>
+              <h3>{group.title}</h3>
+              <p className="price-group-note">{group.subtitle}</p>
             </div>
-          ))}
+          </header>
+          <div className="price-rows">
+            {group.items.map((item) => (
+              <div className="price-row" key={item.service}>
+                <span>{item.service}</span>
+                <strong>{item.price}</strong>
+              </div>
+            ))}
+          </div>
         </article>
       ))}
     </div>

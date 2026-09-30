@@ -1,6 +1,6 @@
-import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
+import { FinalCta } from '@/components/FinalCta'
 import { JsonLd } from '@/components/JsonLd'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageLinks } from '@/components/PageLinks'
@@ -64,7 +64,7 @@ export default async function BlogArticleWrapper({
         />
       )}
 
-      <ContactSection />
+      <FinalCta />
     </>
   )
 }

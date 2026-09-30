@@ -55,22 +55,21 @@ export default async function MembershipsPage() {
         }
       />
 
-      <section className="membership-intro" id="memberships">
-        <p className="eyebrow">{t('intro.eyebrow')}</p>
-        <h2>{t.rich('intro.title', richTags)}</h2>
-        <p>{t('intro.body')}</p>
-      </section>
-
-      <section className="membership-group">
-        <div className="membership-group-heading">
-          <p className="eyebrow">{t('group.eyebrow')}</p>
-          <h2>{t('group.title')}</h2>
+      <section className="membership-group" id="memberships">
+        <div className="split-heading">
+          <div>
+            <p className="eyebrow">{t('group.eyebrow')}</p>
+            <h2>{t('group.title')}</h2>
+          </div>
+          <p>{t('intro.body')}</p>
         </div>
         <div className="membership-cards">
           {PLANS.map((plan, index) => {
             const featured = index === 1
             const name = t(`plans.${plan.key}.name`)
-            const benefits = t.raw(`plans.${plan.key}.benefits`) as Array<string>
+            const benefits = t.raw(
+              `plans.${plan.key}.benefits`,
+            ) as Array<string>
             return (
               <article key={plan.key} className={featured ? 'featured' : ''}>
                 <p className="eyebrow">{t(`plans.${plan.key}.note`)}</p>
@@ -85,7 +84,9 @@ export default async function MembershipsPage() {
                   ))}
                 </ul>
                 <a
-                  className={featured ? 'button light wide' : 'button dark wide'}
+                  className={
+                    featured ? 'button light wide' : 'button dark wide'
+                  }
                   href={whatsappLink(
                     t('joinMessage', {
                       plan: `${t('group.eyebrow')} — ${name}`,

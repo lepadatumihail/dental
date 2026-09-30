@@ -41,7 +41,7 @@ export async function generateMetadata({
   })
 }
 
-const GALLERY_KEYS = ['intro', 'expertise', 'treatments'] as const
+const GALLERY_KEYS = ['intro', 'expertise'] as const
 
 export default async function SpecialistProfilePage({ params }: PageProps) {
   const person = findSpecialist(params.slug)
@@ -119,7 +119,7 @@ export default async function SpecialistProfilePage({ params }: PageProps) {
               alt={t(`profile.galleryAlt.${GALLERY_KEYS[index]}`, {
                 name: person.shortName,
               })}
-              sizes="(min-width: 700px) 33vw, 100vw"
+              sizes="(min-width: 700px) 50vw, 100vw"
               placeholder="blur"
             />
           </figure>

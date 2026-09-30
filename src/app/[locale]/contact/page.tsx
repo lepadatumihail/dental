@@ -1,16 +1,25 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 
-import { Border } from '@/components/Border'
-import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
 import { ContactBooking } from '@/components/booking/ContactBooking'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
+import {
+  CLINIC_EMAIL,
+  CLINIC_PHONE,
+  CLINIC_PHONE_E164,
+  LOCATIONS,
+  SOCIAL_PROFILES,
+  WHATSAPP_URL,
+} from '@/lib/clinic'
 import { simplePageJsonLd } from '@/lib/page-graphs'
+import { Arrow } from '@/lib/rich'
+
+const OFFICES = [
+  { key: 'banus', location: 'banus' },
+  { key: 'oldTown', location: 'old-town' },
+] as const
 
 interface PageProps {
   params: { locale: string }
@@ -36,6 +45,7 @@ export async function generateMetadata({
 
 export default async function Contact() {
   const t = await getTranslations('booking')
+  const tLocations = await getTranslations('home.locations')
 
   return (
     <>
@@ -44,31 +54,80 @@ export default async function Contact() {
         <p>{t('inline.intro')}</p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
-          <FadeIn className="lg:order-last">
-            <ContactBooking />
-          </FadeIn>
-
-          <FadeIn>
-            <h2 className="font-display text-base font-semibold text-warm-dark">
-              {t('contact.locationTitle')}
-            </h2>
-            <p className="mt-6 text-base text-taupe">
-              {t('contact.locationBody')}
-            </p>
-
-            <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
-
-            <Border className="mt-16 pt-16">
-              <h2 className="font-display text-base font-semibold text-warm-dark">
-                {t('contact.followTitle')}
-              </h2>
-              <SocialMedia className="mt-6" />
-            </Border>
-          </FadeIn>
+      <section className="section-block contact-layout">
+        <div className="contact-booking">
+          <ContactBooking />
         </div>
-      </Container>
+
+        <div className="contact-details">
+          <p className="eyebrow">{t('contact.locationTitle')}</p>
+          <p className="contact-lead">{t('contact.locationBody')}</p>
+
+          {OFFICES.map((office) => {
+            const location = LOCATIONS.find((l) => l.id === office.location)!
+            return (
+              <article key={office.key}>
+                <h3>{tLocations(`${office.key}.name`)}</h3>
+                <address>{tLocations(`${office.key}.address`)}</address>
+                <a
+                  className="text-link"
+                  href={location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tLocations('directions')} <Arrow />
+                </a>
+              </article>
+            )
+          })}
+
+          <dl>
+            <div>
+              <dt>{tLocations('phoneLabel')}</dt>
+              <dd>
+                <a href={`tel:${CLINIC_PHONE_E164}`}>{CLINIC_PHONE}</a>
+              </dd>
+            </div>
+            <div>
+              <dt>{tLocations('whatsappLabel')}</dt>
+              <dd>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {CLINIC_PHONE}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd>
+                <a href={`mailto:${CLINIC_EMAIL}`}>{CLINIC_EMAIL}</a>
+              </dd>
+            </div>
+            <div>
+              <dt>{tLocations('openingHoursLabel')}</dt>
+              <dd>{tLocations('openingHoursValue')}</dd>
+            </div>
+            <div>
+              <dt>{t('contact.followTitle')}</dt>
+              <dd className="contact-social">
+                {SOCIAL_PROFILES.map((href) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {href.includes('instagram') ? 'Instagram' : 'Facebook'}
+                  </a>
+                ))}
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </>
   )
 }

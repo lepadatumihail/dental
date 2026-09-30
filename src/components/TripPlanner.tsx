@@ -30,7 +30,10 @@ export function TripPlanner() {
     <form className="planner-form" onSubmit={(e) => e.preventDefault()}>
       <label>
         {t('treatmentLabel')}
-        <select value={treatment} onChange={(e) => setTreatment(e.target.value)}>
+        <select
+          value={treatment}
+          onChange={(e) => setTreatment(e.target.value)}
+        >
           {treatments.map((option) => (
             <option key={option}>{option}</option>
           ))}

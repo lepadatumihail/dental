@@ -56,7 +56,11 @@ export function LocationsSection({
                 <div>
                   <dt>{t('whatsappLabel')}</dt>
                   <dd>
-                    <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={WHATSAPP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {CLINIC_PHONE}
                     </a>
                   </dd>

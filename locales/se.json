@@ -243,21 +243,6 @@
       "title": "Marbellas ledande 24/7-service"
     }
   },
-  "contact": {
-    "title": "Kontakta oss",
-    "description": "Vi är här för att hjälpa dig med alla dina tand- och estetiska behandlingsbehov. Kontakta Prisma Clinic Marbella för att boka din tid eller ställa frågor.",
-    "conditions": {
-      "toothache": "Svår tandvärk",
-      "broken": "Spruckna eller flisade tänder",
-      "lost": "Förlorade kronor eller fyllningar",
-      "trauma": "Tandtrauma vid olyckor"
-    },
-    "learnMore": "Läs mer",
-    "emergencyHotline": "Akutlinje",
-    "location": {
-      "title": "Vår plats"
-    }
-  },
   "layout": {
     "header": {
       "home": "Hem",
@@ -516,17 +501,6 @@
         }
       }
     }
-  },
-  "office": {
-    "name": "Prisma Clinic Marbella",
-    "address": "Av. de Nabeul 14, 29601 Marbella, Málaga",
-    "country": "Spanien",
-    "phone": "Telefon",
-    "phoneNumber": "+34 673 290 786",
-    "openingHours": "Öppettider",
-    "weekdays": "Måndag - Söndag: 24/7",
-    "saturday": "Lördag: 10:00–14:00",
-    "sunday": "Söndag: Stängt"
   },
   "emergencyPage": {
     "hero": {
@@ -1395,9 +1369,9 @@
       "imageAlt": "Specialistteamet på Prisma Clinic inne på kliniken"
     },
     "proof": {
-      "locations": "Två ikoniska adresser",
-      "specialists": "Sex engagerade specialister",
-      "care": "Personlig vård"
+      "locations": "Kliniker i Marbella och Banús",
+      "specialists": "Engagerade specialister",
+      "care": "Akut tandvård"
     },
     "intro": {
       "label": "Prisma-standarden",
@@ -1460,8 +1434,7 @@
       "intro": "Ett tvärprofessionellt team förenat av klinisk precision, ärlig vägledning och en naturlig känsla för personlig omsorg."
     },
     "card": {
-      "explore": "Se profil",
-      "teaser": "Möt {name} och upptäck expertis och signaturbehandlingar."
+      "explore": "Se profil"
     },
     "profile": {
       "back": "← Alla specialister",
@@ -1473,8 +1446,7 @@
       "galleryLabel": "{name} på Prisma Clinic",
       "galleryAlt": {
         "intro": "{name} — introduktion",
-        "expertise": "{name} — expertis",
-        "treatments": "{name} — signaturbehandlingar"
+        "expertise": "{name} — expertis"
       },
       "ctaEyebrow": "Personlig konsultation",
       "ctaTitle": "Börja med<br></br><em>ett samtal.</em>"

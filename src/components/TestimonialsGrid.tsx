@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 
+import { Link } from '@/i18n/navigation'
 import { Arrow } from '@/lib/rich'
 
 type TestimonialItem = {
@@ -12,7 +13,9 @@ const GOOGLE_REVIEWS_HREF =
 
 export function TestimonialsGrid() {
   const t = useTranslations('home.testimonialsGrid')
-  const items = t.raw('items') as TestimonialItem[]
+  const tReviews = useTranslations('landing.reviews')
+  // Six keep the grid even; the full set lives on /results.
+  const items = (t.raw('items') as TestimonialItem[]).slice(0, 6)
 
   return (
     <section className="section-block">
@@ -43,6 +46,11 @@ export function TestimonialsGrid() {
             </figcaption>
           </figure>
         ))}
+      </div>
+      <div className="section-actions">
+        <Link className="text-link" href="/results">
+          {tReviews('cta')} <Arrow />
+        </Link>
       </div>
     </section>
   )

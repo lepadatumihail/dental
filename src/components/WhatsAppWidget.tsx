@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { WhatsappLogo, X } from '@phosphor-icons/react'
 import { useTranslations } from 'next-intl'
 
 import { CLINIC_PHONE_E164, whatsappLink } from '@/lib/clinic'
@@ -91,9 +92,13 @@ export function WhatsAppWidget() {
         className="whatsapp-trigger"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
+        aria-label={open ? t('close') : t('trigger')}
+        title={open ? undefined : t('trigger')}
       >
-        <span aria-hidden="true">◉</span>
-        <b>{open ? t('close') : t('trigger')}</b>
+        <span className="icon-swap" aria-hidden="true">
+          <WhatsappLogo className="icon-closed" weight="regular" />
+          <X className="icon-open" weight="regular" />
+        </span>
       </button>
     </aside>
   )

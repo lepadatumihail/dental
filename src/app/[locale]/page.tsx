@@ -68,21 +68,21 @@ export default async function Home() {
               {tSite('bookConsultation')} <Arrow />
             </BookTrigger>
             <Link className="text-link" href="/services">
-              {t('hero.explore')} <span>→</span>
+              {t('hero.explore')} <Arrow />
             </Link>
           </div>
         </div>
         <div className="hero-proof">
           <div>
-            <strong aria-hidden="true">⌖</strong>
+            <strong>2</strong>
             <span>{t('proof.locations')}</span>
           </div>
           <div>
-            <strong aria-hidden="true">◎</strong>
+            <strong>{SPECIALIST_PROFILES.length}</strong>
             <span>{t('proof.specialists')}</span>
           </div>
           <div>
-            <strong aria-hidden="true">✦</strong>
+            <strong>24/7</strong>
             <span>{t('proof.care')}</span>
           </div>
         </div>
@@ -150,6 +150,9 @@ export default async function Home() {
         <div className="home-specialist-list">
           {SPECIALIST_PROFILES.map((person) => (
             <Link key={person.slug} href={`/specialists/${person.slug}`}>
+              <span className="specialist-thumb">
+                <Image src={person.thumb} alt="" sizes="64px" />
+              </span>
               <div>
                 <strong>{person.name}</strong>
                 <small>{tPeople(`${person.slug}.role`)}</small>
@@ -196,12 +199,14 @@ export default async function Home() {
         </div>
         <div className="emergency-copy">
           <p>{t('emergency.body')}</p>
-          <a className="button light" href={`tel:${CLINIC_PHONE_E164}`}>
-            {t('emergency.call', { phone: CLINIC_PHONE })} <Arrow />
-          </a>
-          <Link className="text-link light-link" href="/services/emergency">
-            {t('emergency.info')} <Arrow />
-          </Link>
+          <div className="hero-actions">
+            <a className="button light" href={`tel:${CLINIC_PHONE_E164}`}>
+              {t('emergency.call', { phone: CLINIC_PHONE })} <Arrow />
+            </a>
+            <Link className="text-link light-link" href="/services/emergency">
+              {t('emergency.info')} <Arrow />
+            </Link>
+          </div>
         </div>
       </section>
 

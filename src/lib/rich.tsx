@@ -9,7 +9,25 @@ export const richTags = {
   em: (chunks: ReactNode) => <em>{chunks}</em>,
 }
 
-/** The ↗ glyph that trails CTAs in the Prisma design. */
+/**
+ * The up-right arrow that trails CTAs. An SVG rather than the ↗ glyph so it
+ * renders identically on every platform; it nudges on hover (see prisma.css).
+ */
 export function Arrow() {
-  return <span aria-hidden="true">↗</span>
+  return (
+    <svg
+      className="arrow"
+      viewBox="0 0 12 12"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M3 9 9 3M4.5 3H9v4.5"
+        stroke="currentColor"
+        strokeWidth="1.25"
+        strokeLinecap="square"
+      />
+    </svg>
+  )
 }

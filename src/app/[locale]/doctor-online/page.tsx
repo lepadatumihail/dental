@@ -90,7 +90,7 @@ export default async function DoctorOnlinePage() {
                   rel="noopener noreferrer"
                   aria-label={t('routing.bookLabel', { area: label })}
                 >
-                  ↗
+                  <Arrow />
                 </a>
               </article>
             )
@@ -102,7 +102,9 @@ export default async function DoctorOnlinePage() {
         <p>{t('note.label')}</p>
         <strong>
           {t.rich('note.body', {
-            phone: () => <a href={`tel:${CLINIC_PHONE_E164}`}>{CLINIC_PHONE}</a>,
+            phone: () => (
+              <a href={`tel:${CLINIC_PHONE_E164}`}>{CLINIC_PHONE}</a>
+            ),
           })}
         </strong>
       </section>

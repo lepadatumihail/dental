@@ -15,7 +15,7 @@ import { WHATSAPP_URL } from '@/lib/clinic'
 import { servicePageJsonLd } from '@/lib/page-graphs'
 
 import heroImage from '@/images/clinic/aesthetics-1.jpg'
-import doctorImage from '@/images/bozana.jpeg'
+import doctorImage from '@/images/prisma/specialists/dr-bozana-krivosija.jpg'
 
 interface PageProps {
   params: { locale: string }

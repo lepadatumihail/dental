@@ -25,7 +25,9 @@ export function TreatmentTabs() {
             type="button"
             role="tab"
             aria-selected={index === active}
-            className={index === active ? 'treatment-tab active' : 'treatment-tab'}
+            className={
+              index === active ? 'treatment-tab active' : 'treatment-tab'
+            }
             onClick={() => setActive(index)}
           >
             <span>{item.number}</span>
@@ -33,7 +35,6 @@ export function TreatmentTabs() {
               <strong>{t(`${item.key}.title`)}</strong>
               <small>{t(`${item.key}.lead`)}</small>
             </div>
-            <b aria-hidden="true">↗</b>
           </button>
         ))}
       </div>
@@ -55,9 +56,11 @@ export function TreatmentTabs() {
           ))}
         </div>
         <div className="service-list">
-          {services.slice(0, 4).map((service) => (
-            <span key={service}>{service}</span>
-          ))}
+          <div className="service-chips">
+            {services.slice(0, 4).map((service) => (
+              <span key={service}>{service}</span>
+            ))}
+          </div>
           <Link className="button dark" href={area.href}>
             {tLanding('discover')} <Arrow />
           </Link>
