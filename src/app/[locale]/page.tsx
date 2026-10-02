@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink } from '@/components/BookLink'
 import { FinalCta } from '@/components/FinalCta'
+import { Photo } from '@/components/Photo'
 import { TreatmentTabs } from '@/components/TreatmentTabs'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
@@ -53,7 +54,7 @@ export default async function Home() {
       {/* ───── Hero ───── */}
       <section className="hero team-hero" id="top">
         <div className="hero-image">
-          <Image
+          <Photo
             src={teamInside}
             alt={t('hero.imageAlt')}
             fill
@@ -67,9 +68,9 @@ export default async function Home() {
           <h1>{t.rich('hero.title', richTags)}</h1>
           <p className="hero-lead">{t('hero.lead')}</p>
           <div className="hero-actions">
-            <BookTrigger className="button dark">
+            <BookLink className="button dark">
               {tSite('bookConsultation')} <Arrow />
-            </BookTrigger>
+            </BookLink>
             <Link className="text-link" href="/services">
               {t('hero.explore')} <Arrow />
             </Link>
@@ -154,7 +155,7 @@ export default async function Home() {
           {SPECIALIST_PROFILES.map((person) => (
             <Link key={person.slug} href={`/specialists/${person.slug}`}>
               <span className="specialist-thumb">
-                <Image src={person.thumb} alt="" sizes="64px" />
+                <Photo src={person.thumb} alt="" sizes="64px" />
               </span>
               <div>
                 <strong>{person.name}</strong>

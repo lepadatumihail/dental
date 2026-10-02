@@ -34,7 +34,7 @@ function buildLlmsTxt(): string {
     `- Phone and WhatsApp (24/7): ${CLINIC_PHONE} (${WHATSAPP_URL})`,
     `- Opening hours: ${messages.home.locations.openingHoursValue}`,
     `- Languages spoken: ${LANGUAGES_SPOKEN.join(', ')}`,
-    `- [Book an appointment online](${url('contact')}): choose a service and a time; the clinic confirms the visit.`,
+    `- [Book an appointment](${url('contact')}): by WhatsApp message or phone call; the team replies to confirm a time. There is no online booking form.`,
     ...LOCATIONS.map(
       (location) =>
         `- ${location.name}: ${location.streetAddress}, ${location.postalCode} ${location.locality}, ${location.region}, Spain ([map](${location.mapsUrl}))`,

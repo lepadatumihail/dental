@@ -121,7 +121,7 @@ export async function simplePageJsonLd(
   const { t: tLayout, home, treatments } = await navCrumbs(locale)
 
   if (page === 'contact') {
-    const t = await getTranslations({ locale, namespace: 'booking.meta' })
+    const t = await getTranslations({ locale, namespace: 'contact.meta' })
     return simplePageGraph({
       locale,
       path: 'contact',

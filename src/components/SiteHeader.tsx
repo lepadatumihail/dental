@@ -5,7 +5,7 @@ import Image from 'next/image'
 import clsx from 'clsx'
 import { useLocale, useTranslations } from 'next-intl'
 
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink } from '@/components/BookLink'
 import { Link, usePathname } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 
@@ -183,15 +183,15 @@ export function SiteHeader() {
               {t(`nav.${item.key}`)}
             </Link>
           ))}
-          <BookTrigger className="nav-book mobile-only" onClick={close}>
+          <BookLink className="nav-book mobile-only" onClick={close}>
             {t('nav.bookNow')}
-          </BookTrigger>
+          </BookLink>
           <LanguageLinks className="nav-languages" />
         </nav>
         <div className="header-actions">
-          <BookTrigger className="nav-book desktop-only">
+          <BookLink className="nav-book desktop-only">
             {t('bookConsultation')}
-          </BookTrigger>
+          </BookLink>
           <button
             type="button"
             className="menu-button"

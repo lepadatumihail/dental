@@ -1,23 +1,30 @@
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink, type BookingTopic } from '@/components/BookLink'
 import { Arrow } from '@/lib/rich'
 
 type CtaRibbonProps = {
   title: string
   subtitle?: string
   ctaLabel: string
+  /** Treatment area named in the pre-filled WhatsApp message. */
+  service?: BookingTopic
 }
 
-/** Black booking band between sections. */
-export function CtaRibbon({ title, subtitle, ctaLabel }: CtaRibbonProps) {
+/** Booking band between sections. */
+export function CtaRibbon({
+  title,
+  subtitle,
+  ctaLabel,
+  service,
+}: CtaRibbonProps) {
   return (
     <section className="cta-band">
       <div>
         <h2>{title}</h2>
         {subtitle ? <p>{subtitle}</p> : null}
       </div>
-      <BookTrigger className="button light">
+      <BookLink service={service} className="button light">
         {ctaLabel} <Arrow />
-      </BookTrigger>
+      </BookLink>
     </section>
   )
 }

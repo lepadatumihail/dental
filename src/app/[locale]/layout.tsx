@@ -8,7 +8,6 @@ import { getMessages, getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
 import { RootLayout } from '@/components/RootLayout'
 import { CookieBanner } from '@/components/CookieBanner'
-import { BookingModalProvider } from '@/components/booking/BookingProvider'
 import { JsonLd } from '@/components/JsonLd'
 import { playfair, raleway } from '@/lib/fonts'
 import { languageTag } from '@/lib/locales'
@@ -117,12 +116,10 @@ export default async function LocaleLayout({
         <JsonLd data={siteGraph(locale, tMeta('description'))} />
 
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <BookingModalProvider>
-            <RootLayout>
-              {children}
-              <CookieBanner />
-            </RootLayout>
-          </BookingModalProvider>
+          <RootLayout>
+            {children}
+            <CookieBanner />
+          </RootLayout>
         </NextIntlClientProvider>
         <Analytics />
       </body>

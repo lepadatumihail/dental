@@ -25,9 +25,9 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 
 **Emergency / urgent:** the only colour in the interface. Tailwind `red-500` (`#ef4444`, hover `#dc2626`) for `.button.urgent` "call now" buttons on emergency and general-medicine pages; `red-600` (`#dc2626`) for the "Emergency 24/7" nav link (legible as small text on white) and `red-400` (`#f87171`) for it in the black mobile menu.
 
-**Legacy tokens:** `mocha`, `taupe`, `sand`, `forest`, `warm-dark`, `surface-*` still exist but are remapped to the monochrome values above so older markup (booking wizard, cookie banner, blog) follows the design. Don't use them in new code — use `ink`, `muted`, `line`, `black`, `white`.
+**Legacy tokens:** `mocha`, `taupe`, `sand`, `forest`, `warm-dark`, `surface-*` still exist but are remapped to the monochrome values above so older markup (cookie banner, blog) follows the design. Don't use them in new code — use `ink`, `muted`, `line`, `black`, `white`.
 
-**Photography:** always in full colour — against the monochrome interface the photos provide the warmth and contrast. Never apply grayscale filters.
+**Photography:** always in full colour — against the monochrome interface the photos provide the warmth and contrast. Never apply grayscale filters. See §4 "Photos" for framing.
 
 ## 3. Typography
 
@@ -49,9 +49,22 @@ The palette is strictly monochrome. CSS variables live in `src/styles/prisma.css
 | Body | ~0.85–1.1rem, line-height 1.7–1.85 | Muted colour for supporting copy |
 | Button label | 0.69rem, weight 500 | Uppercase, letter-spacing 0.15em |
 
+### Mobile scale (≤700px)
+
+Display type steps down on phones; supporting copy and micro-labels step up.
+
+| Role | Size | Details |
+|------|------|---------|
+| h1 (inner hero) | `clamp(1.95rem, 8.6vw, 2.25rem)`, line-height 1 | Home hero `clamp(2.05rem, 9.2vw, 2.4rem)`; split heroes `clamp(1.85rem, 8vw, 2.15rem)`; service hero `clamp(1.7rem, 7.2vw, 1.95rem)` |
+| h2 (all sections) | 1.75rem, line-height 1.08 | |
+| Card / list titles | 1.3–1.65rem, line-height 1.1–1.2 | Names on cards 1.55rem |
+| Quotes | 1.05–1.3rem | |
+| Body | 1rem, line-height 1.7 | Supporting copy never below 0.875rem |
+| Micro-labels | ≥0.66rem | Nothing below ~11px |
+
 ### Principles
 
-- **The scale lives in one place:** the "Type scale" block at the end of `prisma.css`. Change sizes there, not in individual components.
+- **The scale lives in one place:** the "Type scale" block near the end of `prisma.css`, with its phone counterpart, "Mobile type scale", as the last block of the file. Change sizes there, not in individual components.
 - **Serif for statements, sans for structure.** Playfair for headlines, quotes and big numbers; Raleway for everything functional.
 - **Two-line headlines.** Most section titles are two short lines, the second in italic: `"Your next chapter<br></br><em>starts here.</em>"` (rendered with `t.rich(key, richTags)` from `src/lib/rich.tsx`).
 - **Uppercase only for short h1s, eyebrows, buttons and nav micro-labels.** Anything longer than ~5 words stays in sentence case.
@@ -68,7 +81,7 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - `.button.outline` — white with an ink hairline; the secondary choice beside a dark button.
 - `.text-link` — uppercase micro-label link with trailing arrow; `.light-link` on black.
 - **Arrow:** always the `<Arrow />` SVG from `src/lib/rich.tsx` (never the ↗ glyph). It nudges up-right on hover. Tabs and toggles get no arrow — arrows mean "goes somewhere".
-- Booking buttons use `BookTrigger` (`src/components/booking/BookButton.tsx`) with these classes; pass `service="dental" | "aesthetics" | "medical"` to pre-select a service.
+- Booking buttons use `BookLink` (`src/components/BookLink.tsx`) with these classes. There is no booking form: it opens WhatsApp with a pre-filled message; pass `service="dental" | "aesthetics" | "medical" | "massage"` or `specialist="Dr. …"` to make the message specific.
 
 ### Shared page parts
 - **Header** (`SiteHeader`): fixed; utility bar (locations, secondary links Doctor Online / Dental Tourism / Prisma Care, EN · ES · SE) above the wordmark, six primary links and "Book a consultation". The current page is underlined. It tucks away while scrolling down and returns without the utility bar when scrolling up. Below 1180px it collapses to a left-aligned full-screen black menu.
@@ -83,14 +96,20 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - `.split-heading` — eyebrow + h2 left, supporting copy right.
 - `.statement` — headline left, lead (`.statement-lead`) + body right.
 - Numbered hairline grids: `.service-grid`, `.condition-grid`, `.price-grid`, `.review-grid`, `.steps` — cells separated by 1px `--line` borders, a small muted `01` number, Playfair h3, muted copy.
-- Lists with rules: `.home-specialist-list`, `.profile-treatment-list`, `.routing-list`, `.tourism-process`.
+- Lists with rules: `.home-specialist-list`, `.profile-treatment-list`, `.routing-list`, `.tourism-process`, `.booking-options` (contact page: one row per booking topic, each a WhatsApp link).
 - CTA bands (`.compact-emergency`, `.cta-band`, `.care-cta`, `.profile-cta`, `.influencer-membership`, `.emergency-hotline`, `.emergency-strip`) sit on the soft `--soft` panel with dark buttons. Black is reserved for the footer and a few feature blocks (trip planner, emergency steps, featured membership card, active tab) — never stack black bands.
 - Tags: `.detail-tags span`, `.service-chips span` — 1px bordered chips, no radius.
 - Price list: `.price-grid` — one row per group, name (sticky) on the left, prices on the right.
 - People lists: `.home-specialist-list` rows with a 64px `.specialist-thumb` (grayscale, colour on hover) from `Specialist.thumb`.
 
+### Photos
+- Render photographs with `Photo` (`src/components/Photo.tsx`), not `next/image` directly: it serves them at quality 90 and takes a `focus` (CSS `object-position`) for frames that crop.
+- **Never cut a face.** Frames are sized by `aspect-ratio`, not fixed heights, so a crop is the same on every screen: portraits (`.specialist-photo`, `.profile-hero-image`, `.expert-photo`) are 4:5 like the portrait files; treatment photos (`.detail-image`, about cards, the mobile treatment panel) are 3:2 like their files; the team photo (`.hero-image`, `.care-hero-image`) keeps its own ratio because it cannot lose either edge.
+- Split-hero photos (`.tourism-hero-image`) sit in a 4:5 frame capped at 600px; set `focus` / `imageFocus` so the people in a landscape photo stay inside it.
+- New specialist portraits must be 4:5 (currently ~1000×1250). Don't display a photo wider than its file allows on a 2× screen — the profile graphics (1080px) are capped at 600px.
+
 ### Forms
-- Underline inputs in modals (`.booking-modal`), bordered inputs on black (`.planner-form`), square corners everywhere.
+- Bordered inputs on black (`.planner-form`), square corners everywhere.
 
 ## 5. Layout
 
@@ -121,7 +140,8 @@ Tokens: `--ease-out: cubic-bezier(0.23, 1, 0.32, 1)`, `--ease-drawer: cubic-bezi
 | Breakpoint | Changes |
 |------------|---------|
 | ≤1180px | Nav collapses to the full-screen menu (secondary links and languages move into it); 2-column grids; treatment tabs stack |
-| ≤700px | Single column; the homepage hero becomes a normal flow (copy → photo → proof bar); hero CTAs stack full width; footer 2 columns |
+| ≤860px | The homepage hero becomes a normal flow (copy → whole team photo → proof bar); above that the photo's width leaves room for the copy, so text never sits on it |
+| ≤700px | Single column; hero CTAs stack full width; footer 2 columns; mobile type scale; numbered cards lose their min-heights and proof rows sit two to a row |
 
 Mobile: hero actions stack; keep tap targets ≥44px.
 

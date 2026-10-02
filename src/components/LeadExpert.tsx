@@ -1,6 +1,7 @@
-import Image, { type StaticImageData } from 'next/image'
+import type { StaticImageData } from 'next/image'
 import { useTranslations } from 'next-intl'
 
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { Arrow } from '@/lib/rich'
 
@@ -28,7 +29,7 @@ export function LeadExpert({
   return (
     <section className="expert-feature">
       <div className="expert-photo">
-        <Image
+        <Photo
           src={image}
           alt={imageAlt}
           fill

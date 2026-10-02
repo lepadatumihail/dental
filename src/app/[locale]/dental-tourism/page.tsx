@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { TripPlanner } from '@/components/TripPlanner'
 import { createPageMetadata } from '@/lib/canonical'
 import { newPageJsonLd } from '@/lib/page-graphs'
@@ -54,9 +54,10 @@ export default async function DentalTourismPage() {
           </a>
         </div>
         <div className="tourism-hero-image">
-          <Image
+          <Photo
             src={dentistry}
             alt={t('hero.imageAlt')}
+            focus="18% center"
             fill
             priority
             sizes="(min-width: 700px) 45vw, 100vw"

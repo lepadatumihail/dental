@@ -65,6 +65,7 @@ export default async function PricingPage() {
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
         ctaLabel={t('ribbon.cta')}
+        service="aesthetics"
       />
 
       <LocationsSection />

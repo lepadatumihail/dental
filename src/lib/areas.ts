@@ -11,8 +11,6 @@ export interface TreatmentArea {
   number: string
   href: string
   image: StaticImageData
-  /** `booking.services.*` key, when the area is bookable online. */
-  bookingKey?: 'dental' | 'aesthetics' | 'medical'
 }
 
 export const TREATMENT_AREAS: ReadonlyArray<TreatmentArea> = [
@@ -21,21 +19,18 @@ export const TREATMENT_AREAS: ReadonlyArray<TreatmentArea> = [
     number: '01',
     href: '/services/dental',
     image: dentistry,
-    bookingKey: 'dental',
   },
   {
     key: 'aesthetics',
     number: '02',
     href: '/services/aesthetics',
     image: aesthetics,
-    bookingKey: 'aesthetics',
   },
   {
     key: 'medical',
     number: '03',
     href: '/services/general-medicine',
     image: medicine,
-    bookingKey: 'medical',
   },
   {
     key: 'massage',

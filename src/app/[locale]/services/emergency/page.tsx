@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
+import { Photo } from '@/components/Photo'
 import { TestimonialsGrid } from '@/components/TestimonialsGrid'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
@@ -78,9 +78,10 @@ export default async function EmergencyDentalServices() {
           </div>
         </div>
         <div className="tourism-hero-image">
-          <Image
+          <Photo
             src={imageHero}
             alt=""
+            focus="center top"
             fill
             priority
             sizes="(min-width: 700px) 45vw, 100vw"
@@ -111,9 +112,7 @@ export default async function EmergencyDentalServices() {
           (key) => (
             <div key={key}>
               <strong>{t(`services.stats.${key}.label`)}</strong>
-              <span className="text-4xl">
-                {t(`services.stats.${key}.value`)}
-              </span>
+              <span className="stat">{t(`services.stats.${key}.value`)}</span>
             </div>
           ),
         )}

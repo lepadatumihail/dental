@@ -51,6 +51,7 @@ export default async function MassageTherapyServices() {
         title={t('hero.title')}
         description={t('hero.description')}
         ctaLabel={t('hero.ctaLabel')}
+        service="massage"
       />
 
       <InterestSection
@@ -97,6 +98,7 @@ export default async function MassageTherapyServices() {
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
         ctaLabel={t('ribbon.ctaLabel')}
+        service="massage"
       />
 
       <TestimonialsGrid />

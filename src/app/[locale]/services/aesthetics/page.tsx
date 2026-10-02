@@ -58,6 +58,7 @@ export default async function AestheticsServices() {
         title={t('hero.title')}
         description={t('hero.description')}
         ctaLabel={t('hero.ctaLabel')}
+        service="aesthetics"
       />
 
       <InterestSection
@@ -91,6 +92,7 @@ export default async function AestheticsServices() {
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
         ctaLabel={t('ribbon.ctaLabel')}
+        service="aesthetics"
       />
 
       <TestimonialsGrid />

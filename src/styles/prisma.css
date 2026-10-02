@@ -540,7 +540,9 @@
     display: grid;
     overflow: hidden;
   }
+  /* Never wider than 16:9, so wide screens don't crop into the 3:2 photos. */
   .treatment-image {
+    aspect-ratio: 16 / 9;
     min-height: 420px;
   }
   .service-list {
@@ -634,7 +636,9 @@
   }
   .emergency h2,
   .reviews h2,
-  .final-cta h2 {
+  .final-cta h2,
+  .home-split h2,
+  .emergency-process h2 {
     margin-top: 1.5rem;
   }
   .emergency-copy {
@@ -1065,7 +1069,7 @@
     padding-bottom: 0;
   }
   .detail-image {
-    min-height: 560px;
+    aspect-ratio: 3 / 2;
   }
   .treatment-directory h2,
   .clinic-directory h2 {
@@ -1113,8 +1117,8 @@
     background: #f5f5f5;
   }
   .specialist-photo {
+    aspect-ratio: 4 / 5;
     background: #eee;
-    height: 500px;
     position: relative;
     overflow: hidden;
   }
@@ -1160,7 +1164,7 @@
   .profile-hero {
     border-bottom: 1px solid var(--line);
     background: #fff;
-    grid-template-columns: minmax(360px, 0.85fr) 1.15fr;
+    grid-template-columns: minmax(360px, min(42%, 560px)) 1fr;
     align-items: center;
     gap: 8vw;
     min-height: 820px;
@@ -1168,8 +1172,8 @@
     display: grid;
   }
   .profile-hero-image {
+    aspect-ratio: 4 / 5;
     background: #eee;
-    height: 620px;
     overflow: hidden;
   }
   .profile-hero-image img {
@@ -1508,81 +1512,6 @@
     padding-top: 1.5rem;
     font-size: 0.68rem;
   }
-  .modal-backdrop {
-    z-index: 100;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    background: #000000b8;
-    place-items: center;
-    padding: 1rem;
-    display: grid;
-    position: fixed;
-    inset: 0;
-  }
-  .booking-modal {
-    background: #fff;
-    width: min(720px, 100%);
-    max-height: 94vh;
-    padding: 3.5rem;
-    position: relative;
-    overflow: auto;
-    box-shadow: 0 30px 100px #00000059;
-  }
-  .modal-close {
-    cursor: pointer;
-    background: 0 0;
-    border: 0;
-    font-size: 2rem;
-    font-weight: 200;
-    position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
-  }
-  .booking-modal h2 {
-    margin: 1rem 0 2.5rem;
-    font-size: clamp(3rem, 5vw, 5rem);
-  }
-  .booking-modal form {
-    gap: 1.3rem;
-    display: grid;
-  }
-  .booking-modal label {
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    gap: 0.55rem;
-    font-size: 0.62rem;
-    font-weight: 500;
-    display: grid;
-  }
-  .booking-modal select,
-  .booking-modal input {
-    width: 100%;
-    color: var(--ink);
-    text-transform: none;
-    letter-spacing: 0;
-    background: #fff;
-    border: 0;
-    border-bottom: 1px solid #aaa;
-    border-radius: 0;
-    outline: none;
-    padding: 1rem 0;
-    font-size: 0.92rem;
-  }
-  .field-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    display: grid;
-  }
-  .modal-note {
-    color: var(--muted);
-    text-align: center;
-    margin: 1.5rem 0 0;
-    font-size: 0.75rem;
-  }
-  .modal-note a {
-    color: var(--ink);
-    border-bottom: 1px solid;
-  }
   .whatsapp-widget {
     z-index: 80;
     flex-direction: column;
@@ -1917,7 +1846,7 @@
     display: grid;
   }
   .care-hero-image {
-    height: 600px;
+    aspect-ratio: 2000 / 1521;
   }
   .care-hero h1,
   .tourism-hero h1 {
@@ -2012,7 +1941,10 @@
     display: grid;
   }
   .tourism-hero-image {
-    height: 650px;
+    aspect-ratio: 4 / 5;
+    justify-self: end;
+    width: 100%;
+    max-width: 600px;
   }
   .tourism-proof {
     border-block: 1px solid var(--line);
@@ -2255,7 +2187,11 @@
       transform: translateY(-4px) rotate(-45deg);
     }
     .hero-copy {
-      width: 52vw;
+      width: 45vw;
+    }
+    .team-hero .hero-actions {
+      flex-wrap: wrap;
+      row-gap: 1.2rem;
     }
     .treatment-layout {
       grid-template-columns: 1fr;
@@ -2311,9 +2247,6 @@
     }
     .specialist-directory article:nth-child(2n) {
       border-right: 0;
-    }
-    .specialist-photo {
-      height: 450px;
     }
   }
   @media (width<=700px) {
@@ -2457,10 +2390,11 @@
       font-size: 1.55rem;
     }
     .treatment-panel {
-      grid-template-rows: 310px auto;
+      grid-template-rows: auto auto;
     }
     .treatment-image {
-      min-height: 310px;
+      aspect-ratio: 3 / 2;
+      min-height: 0;
     }
     .service-list .button {
       width: 100%;
@@ -2587,9 +2521,6 @@
     .treatment-directory article:nth-child(2n) .detail-image {
       order: 0;
     }
-    .detail-image {
-      min-height: 360px;
-    }
     .specialist-directory {
       grid-template-columns: 1fr;
       padding-top: 0;
@@ -2597,9 +2528,6 @@
     .specialist-directory .specialist-card,
     .specialist-directory .specialist-card:nth-child(3n) {
       border-right: 0;
-    }
-    .specialist-photo {
-      height: 430px;
     }
     .specialist-card-copy {
       padding: 3rem 1.2rem;
@@ -2661,12 +2589,6 @@
     }
     .footer > div:last-of-type {
       grid-column: auto;
-    }
-    .booking-modal {
-      padding: 3rem 1.4rem 2rem;
-    }
-    .field-row {
-      grid-template-columns: 1fr;
     }
     .whatsapp-widget {
       bottom: 1rem;
@@ -2732,9 +2654,6 @@
       min-height: auto;
       padding: 160px 1.2rem 5rem;
     }
-    .profile-hero-image {
-      height: min(120vw, 560px);
-    }
     .profile-back {
       margin-bottom: 2.5rem;
     }
@@ -2772,7 +2691,9 @@
     .care-hero-image,
     .tourism-hero-image {
       grid-row: 2;
-      height: min(120vw, 580px);
+    }
+    .tourism-hero-image {
+      max-width: none;
     }
     .care-statement {
       grid-template-columns: 1fr;
@@ -2837,9 +2758,6 @@
     .hero-proof div {
       padding: 0.6rem 0.2rem;
     }
-    .booking-modal {
-      max-height: 92svh;
-    }
   }
 }
 
@@ -2873,13 +2791,14 @@
     position: absolute;
   }
   /* The team photo owns the right-hand column and fades into the white
-     page on its left edge, so the headline never sits on the photo. */
+     page on its left edge. Its width leaves room for the 550px lead, so the
+     copy never sits on the photo (nor on the first face in it). */
   .team-hero .hero-image {
     aspect-ratio: 2048 / 1558;
-    width: min(57vw, 1000px);
+    width: min(57vw, 1000px, max(100vw - var(--gutter) - 550px, 50vw));
     inset: auto 0 108px auto;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 16%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 7%);
   }
   .team-hero .hero-image img {
     object-fit: cover;
@@ -3155,6 +3074,7 @@
   .expert-photo {
     aspect-ratio: 4/5;
     background: #eee;
+    max-width: 560px;
     position: relative;
     overflow: hidden;
   }
@@ -3381,7 +3301,7 @@
     padding: 0;
   }
   .area-cards .specialist-photo {
-    height: 340px;
+    aspect-ratio: 3 / 2;
   }
   .area-cards .specialist-photo img {
     object-position: center;
@@ -3974,8 +3894,10 @@
 }
 
 @layer components {
+  /* The profile graphics are 1080px wide; capping them keeps their type sharp. */
   .profile-gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 600px));
+    justify-content: center;
   }
 }
 
@@ -4015,9 +3937,6 @@
   .emergency-intro h2 {
     font-size: clamp(2.8rem, 4.4vw, 5.2rem);
     line-height: 1;
-  }
-  .care-hero-image img {
-    object-position: 35% center;
   }
 }
 
@@ -4136,6 +4055,40 @@
   }
 }
 
+@media (700px < width <= 860px) {
+  @layer components {
+    /* Portrait tablets: too narrow for the copy beside the photo, so the hero
+       flows like on mobile — copy, the whole team photo, then the proof bar. */
+    .team-hero {
+      flex-direction: column;
+      height: auto;
+      min-height: 0;
+      padding-top: 190px;
+      display: flex;
+    }
+    .team-hero .hero-copy {
+      order: 1;
+      width: auto;
+      padding: 0 var(--gutter);
+      position: static;
+      transform: none;
+    }
+    .team-hero .hero-image {
+      order: 2;
+      width: 100%;
+      margin-top: 3.5rem;
+      position: relative;
+      inset: auto;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .hero-proof {
+      order: 3;
+      position: static;
+    }
+  }
+}
+
 @media (width<=700px) {
   @layer components {
     .treatment-heading {
@@ -4188,6 +4141,18 @@
       margin-top: 1.75rem;
       padding: 1.1rem 1.6rem;
     }
+    /* The booking link is a button, not one of the menu links above. */
+    .nav a.nav-book {
+      color: var(--black);
+      letter-spacing: 0.15em;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+    .nav a.nav-book:after {
+      content: none;
+    }
     .nav-languages {
       margin-top: 2rem;
     }
@@ -4201,6 +4166,48 @@
     align-items: start;
     gap: 4rem 7vw;
     display: grid;
+  }
+  .contact-booking h2 {
+    margin-top: 1.5rem;
+    font-size: clamp(2rem, 2.8vw, 3rem);
+    line-height: 1.05;
+  }
+  /* Booking topics: each row opens WhatsApp with its message pre-filled. */
+  .booking-options {
+    border-top: 1px solid var(--line);
+    margin-bottom: 2.5rem;
+  }
+  .booking-options a {
+    border-bottom: 1px solid var(--line);
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    min-height: 104px;
+    padding: 1.25rem 0;
+    display: grid;
+  }
+  .booking-options a > span {
+    color: var(--muted);
+    font-size: 0.7rem;
+  }
+  .booking-options strong {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.2;
+    display: block;
+  }
+  .booking-options small {
+    color: var(--muted);
+    margin-top: 0.35rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    display: block;
+  }
+  .booking-options .arrow {
+    width: 15px;
+    height: 15px;
+    margin-left: 0;
   }
   .contact-lead {
     color: var(--muted);
@@ -4575,6 +4582,10 @@
   .results-score strong {
     font-size: 4.5rem;
   }
+  .tourism-proof .stat {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
 
   /* Clinics: breathing room between the copy and the directions button. */
   .clinic-location-copy address {
@@ -4582,50 +4593,6 @@
   }
   .clinic-location-copy .button {
     margin-top: 2rem;
-  }
-}
-
-@media (width<=700px) {
-  @layer components {
-    h1,
-    .inner-hero h1 {
-      font-size: 2.6rem;
-    }
-    .team-hero h1 {
-      font-size: clamp(2.5rem, 10.5vw, 2.9rem);
-    }
-    .profile-hero h1,
-    .care-hero h1,
-    .tourism-hero h1 {
-      font-size: clamp(2.3rem, 9.5vw, 2.8rem);
-    }
-    .service-hero h1 {
-      font-size: clamp(2rem, 8vw, 2.4rem);
-    }
-    h2 {
-      font-size: 2.2rem;
-    }
-    .split-heading h2,
-    .statement h2,
-    .expert-feature h2,
-    .home-proof h2,
-    .treatment-directory h2,
-    .care-statement h2,
-    .care-feature h2,
-    .tourism-process h2,
-    .tourism-included h2,
-    .planner-heading h2,
-    .doctor-routing-heading h2,
-    .influencer-membership h2,
-    .profile-treatments h2,
-    .emergency-intro h2,
-    .emergency-process h2 {
-      font-size: 2.1rem;
-    }
-    blockquote,
-    .profile-overview blockquote {
-      font-size: 1.6rem;
-    }
   }
 }
 
@@ -4703,5 +4670,259 @@
         )
     ) {
     border-bottom: 0;
+  }
+}
+
+/*
+ * Mobile rhythm: numbered cards drop their desktop min-heights and the tall
+ * gap above each title, and proof rows sit two to a row, so a grid reads as a
+ * list instead of a long scroll.
+ */
+@media (width<=700px) {
+  @layer components {
+    .condition-grid article,
+    .emergency-steps article,
+    .online-value > div,
+    .care-pillars article {
+      min-height: 0;
+    }
+    .condition-grid article,
+    .emergency-steps article,
+    .service-grid article {
+      padding: 1.75rem 1.5rem;
+    }
+    .online-value > div,
+    .care-pillars article {
+      padding: 2.25rem 1.2rem;
+    }
+    .condition-grid h3,
+    .emergency-steps h3,
+    .service-grid h3,
+    .online-value h3,
+    .care-pillars h3 {
+      margin-top: 1.5rem;
+    }
+    .tourism-proof {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .tourism-proof div {
+      border-right: 1px solid var(--line);
+      gap: 1.5rem;
+      min-height: 0;
+      padding: 1.75rem 1.2rem;
+    }
+    .tourism-proof div:nth-child(2n) {
+      border-right: 0;
+    }
+    .tourism-proof div:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+    .booking-options a {
+      grid-template-columns: 2rem 1fr auto;
+      gap: 0.75rem;
+    }
+  }
+}
+
+/*
+ * Mobile type scale (phones, up to 700px) — the counterpart of the scale
+ * above. Display type steps down so headlines stop crowding a 375px column;
+ * supporting copy and the smallest labels step up so they stay readable.
+ * It comes last so it wins over every size set earlier in this file.
+ */
+@media (width<=700px) {
+  @layer components {
+    /* Headlines */
+    h1,
+    h2,
+    h3 {
+      overflow-wrap: break-word;
+    }
+    h1,
+    .inner-hero h1 {
+      font-size: clamp(1.95rem, 8.6vw, 2.25rem);
+      line-height: 1;
+    }
+    .team-hero h1 {
+      font-size: clamp(2.05rem, 9.2vw, 2.4rem);
+      line-height: 0.96;
+    }
+    .profile-hero h1,
+    .care-hero h1,
+    .tourism-hero h1 {
+      font-size: clamp(1.85rem, 8vw, 2.15rem);
+      line-height: 1;
+    }
+    .service-hero h1 {
+      font-size: clamp(1.7rem, 7.2vw, 1.95rem);
+      line-height: 1.08;
+    }
+    h2,
+    .split-heading h2,
+    .statement h2,
+    .expert-feature h2,
+    .home-proof h2,
+    .treatment-directory h2,
+    .care-statement h2,
+    .care-feature h2,
+    .tourism-process h2,
+    .tourism-included h2,
+    .planner-heading h2,
+    .doctor-routing-heading h2,
+    .influencer-membership h2,
+    .profile-treatments h2,
+    .membership-group .split-heading h2,
+    .emergency-intro h2,
+    .emergency-process h2,
+    .cta-band h2,
+    .contact-booking h2 {
+      font-size: 1.75rem;
+      line-height: 1.08;
+    }
+
+    /* Card and list titles */
+    .access-grid h3 {
+      font-size: 1.65rem;
+      line-height: 1.1;
+    }
+    .care-pillars h3,
+    .membership-cards h3,
+    .specialist-directory h2,
+    .clinic-directory h2 {
+      font-size: 1.55rem;
+      line-height: 1.15;
+    }
+    .condition-grid h3,
+    .emergency-steps h3,
+    .online-value h3,
+    .tourism-process h3,
+    .routing-list h3,
+    .location-cards h3,
+    .price-grid h3,
+    .emergency-strip h3,
+    .article-list h2 {
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+    .service-grid h3,
+    .included-grid h3,
+    .contact-details h3 {
+      font-size: 1.3rem;
+      line-height: 1.2;
+    }
+    .treatment-tab strong {
+      font-size: 1.3rem;
+    }
+    .home-proof article strong {
+      font-size: 1.25rem;
+    }
+    .home-specialist-list strong,
+    .booking-options strong {
+      font-size: 1.2rem;
+    }
+    .profile-treatment-list strong,
+    .tourism-proof span,
+    .statement-lead {
+      font-size: 1.15rem;
+    }
+    .whatsapp-panel h3 {
+      font-size: 1.6rem;
+    }
+
+    /* Figures */
+    .results-score strong {
+      font-size: 3.25rem;
+    }
+    .membership-price strong {
+      font-size: 2.4rem;
+    }
+    .tourism-proof .stat,
+    .emergency-hotline a {
+      font-size: 1.6rem;
+    }
+    .planner-summary strong {
+      font-size: 1.5rem;
+    }
+
+    /* Quotes */
+    blockquote,
+    .profile-overview blockquote {
+      font-size: 1.3rem;
+      line-height: 1.35;
+    }
+    .result-directory blockquote p {
+      font-size: 1.2rem;
+      line-height: 1.45;
+    }
+    .home-proof blockquote {
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+    .review-grid blockquote {
+      font-size: 1.05rem;
+    }
+
+    /* Menu */
+    .nav a {
+      font-size: clamp(1.5rem, 3.7vh, 1.9rem);
+    }
+
+    /* Body copy: one size for every intro and lead. */
+    .inner-hero > div > p:not(.eyebrow),
+    .inner-hero-intro,
+    .profile-lead,
+    .intro-columns p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .typography {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+    }
+
+    /* Supporting copy steps up from 13px. */
+    .service-grid p,
+    .condition-grid p,
+    .emergency-steps p,
+    .online-value p,
+    .membership-cards li,
+    .routing-list span,
+    .booking-options small,
+    .location-cards dl {
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+    .home-specialist-list small,
+    .review-grid figcaption,
+    .home-proof article span,
+    .planner-summary span,
+    .emergency-hotline > span,
+    .price-disclaimer,
+    .footer > div:not(.footer-brand, .copyright) {
+      font-size: 0.875rem;
+    }
+
+    /* Micro-labels: nothing below 11px. */
+    .utility-bar,
+    .hero-proof span {
+      font-size: 0.66rem;
+    }
+    .section-label,
+    .footer > div > span,
+    .location-cards dt,
+    .contact-details dt,
+    .price-group-note,
+    .profile-note strong,
+    .article-list small,
+    .review-grid figcaption small,
+    .membership-price span,
+    .price-grid article header > span {
+      font-size: 0.69rem;
+    }
+
+    /* Standalone links get a thumb-sized hit area. */
+    .text-link {
+      min-height: 44px;
+    }
   }
 }

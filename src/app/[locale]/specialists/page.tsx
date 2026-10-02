@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { FinalCta } from '@/components/FinalCta'
 import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
 import { newPageJsonLd } from '@/lib/page-graphs'
@@ -52,9 +52,10 @@ export default async function SpecialistsPage() {
             href={`/specialists/${person.slug}`}
           >
             <div className="specialist-photo">
-              <Image
+              <Photo
                 src={person.image}
                 alt={person.name}
+                fill
                 sizes="(min-width: 1180px) 33vw, (min-width: 700px) 50vw, 100vw"
                 placeholder="blur"
               />

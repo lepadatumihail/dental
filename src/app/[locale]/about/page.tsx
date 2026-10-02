@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
 import { WHATSAPP_URL } from '@/lib/clinic'
@@ -79,7 +79,7 @@ export default async function About() {
         {statKeys.map((key) => (
           <div key={key}>
             <strong>{t(`stats.${key}.label`)}</strong>
-            <span className="text-4xl">{t(`stats.${key}.value`)}</span>
+            <span className="stat">{t(`stats.${key}.value`)}</span>
           </div>
         ))}
       </section>
@@ -115,7 +115,7 @@ export default async function About() {
           {specialtyCards.map(({ key, href, image }) => (
             <Link key={key} className="specialist-card" href={href}>
               <div className="specialist-photo">
-                <Image
+                <Photo
                   src={image}
                   alt={t(`specialties.items.${key}.title`)}
                   fill
@@ -149,7 +149,7 @@ export default async function About() {
           {SPECIALIST_PROFILES.map((person) => (
             <Link key={person.slug} href={`/specialists/${person.slug}`}>
               <span className="specialist-thumb">
-                <Image src={person.thumb} alt="" sizes="64px" />
+                <Photo src={person.thumb} alt="" sizes="64px" />
               </span>
               <div>
                 <strong>{person.name}</strong>

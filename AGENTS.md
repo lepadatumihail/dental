@@ -5,6 +5,10 @@
 - On mobile, keep hero primary and secondary CTAs on one row with smaller padding and type so both buttons fit comfortably.
 - When rebuilding or restyling the home page, they have pointed at Novera-style layout polish and Sensor23-style structural pillars as references alongside `DESIGN.md`.
 - They iterate with screenshots; they have asked to drop hero layouts with a large image directly under the headline and to remove decorative icons when sections feel busy.
+- The clinic's feedback often arrives second-hand and without examples (October 2026: "faces cropped", "image quality bad", "font too big on mobile"); check every page at phone, tablet and desktop widths rather than asking for specifics.
+- Never crop a face: photos of people sit in `aspect-ratio` frames that match the file (4:5 portraits, uncropped team photo), with a `focus` where a frame must crop.
+- On phones keep display type modest (h1 ≈ 32–36px, h2 28px) and supporting copy at 14px or more; see the mobile scale in `DESIGN.md`.
+- No online booking: in October 2026 the clinic asked for the booking system to be removed and every "book" action to open WhatsApp with a pre-filled message.
 
 ## Learned Workspace Facts
 
@@ -15,6 +19,7 @@
 - Internal links must use `Link` from `@/i18n/navigation`, not `next/link`, so they keep the current locale prefix.
 - `<html>`/`<body>` live in `src/app/[locale]/layout.tsx` (for `lang`); `src/app/not-found.tsx` renders its own. Don't gate layout rendering on client mount: crawlers need server-rendered content.
 - Page styling lives in semantic classes in `src/styles/prisma.css` (`button dark`, `inner-hero`, `split-heading`, `service-grid`…); old Tailwind tokens (`mocha`, `surface-*`, `taupe`) are remapped to monochrome values in `src/styles/tailwind.css`, and radius tokens are 0.
-- Specialists: portraits, gallery and booking service live in `src/lib/specialists.ts`, copy under `specialists.people.<slug>`, and JSON-LD/llms.txt facts in `SPECIALISTS` in `src/lib/clinic.ts`. Profile pages are `/specialists/<slug>`.
-- Booking buttons use `BookTrigger` (`src/components/booking/BookButton.tsx`) with a `service` key (`dental`, `aesthetics`, `medical`) to pre-select the agenda event type. Doctor Online, memberships and dental-tourism requests hand off to WhatsApp (`whatsappLink()` in `src/lib/clinic.ts`) until online payment exists.
+- Specialists: portraits (4:5) and gallery live in `src/lib/specialists.ts`, copy under `specialists.people.<slug>`, and JSON-LD/llms.txt facts in `SPECIALISTS` in `src/lib/clinic.ts`. Profile pages are `/specialists/<slug>`.
+- Booking buttons use `BookLink` (`src/components/BookLink.tsx`): a WhatsApp link (`whatsappLink()` in `src/lib/clinic.ts`) whose pre-filled message comes from `site.bookMessage.*`, chosen by a `service` key (`dental`, `aesthetics`, `medical`, `massage`) or a `specialist` name. Doctor Online, memberships and dental-tourism requests hand off to WhatsApp the same way. There is no booking API or modal.
+- Photographs render through `Photo` (`src/components/Photo.tsx`): quality 90 plus an optional `focus` (`object-position`). The WhatsApp campaign webhook (`src/app/api/whatsapp/webhook`, `src/lib/whatsapp/`) is separate from site booking; its replies link to `/es/contact`.
 - Open Graph and Twitter image URLs resolve from `metadataBase` in `src/app/layout.tsx` (fed from the same canonical base); if dev still warns about localhost, verify the running tree, clear `.next`, and restart.

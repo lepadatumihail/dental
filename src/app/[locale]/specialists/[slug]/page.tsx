@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink } from '@/components/BookLink'
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { createPageMetadata } from '@/lib/canonical'
 import { specialistPageJsonLd } from '@/lib/page-graphs'
@@ -58,9 +58,10 @@ export default async function SpecialistProfilePage({ params }: PageProps) {
       <JsonLd data={await specialistPageJsonLd(person)} />
       <section className="profile-hero">
         <div className="profile-hero-image">
-          <Image
+          <Photo
             src={person.image}
             alt={person.name}
+            fill
             priority
             placeholder="blur"
             sizes="(min-width: 700px) 45vw, 100vw"
@@ -73,9 +74,9 @@ export default async function SpecialistProfilePage({ params }: PageProps) {
           <p className="eyebrow">{tp('role')}</p>
           <h1>{person.name}</h1>
           <p className="profile-lead">{tp('experience')}</p>
-          <BookTrigger service={person.bookingKey} className="button dark">
+          <BookLink specialist={person.shortName} className="button dark">
             {t('profile.bookWith', { name: person.shortName })} <Arrow />
-          </BookTrigger>
+          </BookLink>
         </div>
       </section>
 
@@ -114,12 +115,12 @@ export default async function SpecialistProfilePage({ params }: PageProps) {
       >
         {person.gallery.map((image, index) => (
           <figure key={image.src}>
-            <Image
+            <Photo
               src={image}
               alt={t(`profile.galleryAlt.${GALLERY_KEYS[index]}`, {
                 name: person.shortName,
               })}
-              sizes="(min-width: 700px) 50vw, 100vw"
+              sizes="(min-width: 1200px) 600px, (min-width: 700px) 50vw, 100vw"
               placeholder="blur"
             />
           </figure>
@@ -131,9 +132,9 @@ export default async function SpecialistProfilePage({ params }: PageProps) {
           <p className="eyebrow">{t('profile.ctaEyebrow')}</p>
           <h2>{t.rich('profile.ctaTitle', richTags)}</h2>
         </div>
-        <BookTrigger service={person.bookingKey} className="button light">
+        <BookLink specialist={person.shortName} className="button light">
           {tSite('bookYourConsultation')} <Arrow />
-        </BookTrigger>
+        </BookLink>
       </section>
     </>
   )

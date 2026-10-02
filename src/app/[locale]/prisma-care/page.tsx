@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { createPageMetadata } from '@/lib/canonical'
 import { whatsappLink } from '@/lib/clinic'
 import { newPageJsonLd } from '@/lib/page-graphs'
@@ -42,7 +42,7 @@ export default async function PrismaCarePage() {
       <JsonLd data={await newPageJsonLd('prismaCare')} />
       <section className="care-hero">
         <div className="care-hero-image">
-          <Image
+          <Photo
             src={teamInside}
             alt={t('hero.imageAlt')}
             fill
@@ -78,7 +78,7 @@ export default async function PrismaCarePage() {
 
       <section className="care-feature">
         <div className="care-feature-image">
-          <Image
+          <Photo
             src={lounge}
             alt={t('feature.imageAlt')}
             fill

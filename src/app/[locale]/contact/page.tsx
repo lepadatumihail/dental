@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 
+import { BookLink } from '@/components/BookLink'
 import { PageIntro } from '@/components/PageIntro'
-import { ContactBooking } from '@/components/booking/ContactBooking'
 import { JsonLd } from '@/components/JsonLd'
 import { createPageMetadata } from '@/lib/canonical'
 import {
@@ -15,6 +15,16 @@ import {
 } from '@/lib/clinic'
 import { simplePageJsonLd } from '@/lib/page-graphs'
 import { Arrow } from '@/lib/rich'
+
+// Each option opens WhatsApp with its own pre-filled message; `general` is
+// the catch-all without a treatment area.
+const BOOKING_OPTIONS = [
+  'dental',
+  'aesthetics',
+  'medical',
+  'massage',
+  'general',
+] as const
 
 const OFFICES = [
   { key: 'banus', location: 'banus' },
@@ -33,7 +43,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { locale } = params
-  const t = await getTranslations({ locale, namespace: 'booking' })
+  const t = await getTranslations({ locale, namespace: 'contact' })
 
   return createPageMetadata({
     path: 'contact',
@@ -44,24 +54,44 @@ export async function generateMetadata({
 }
 
 export default async function Contact() {
-  const t = await getTranslations('booking')
+  const t = await getTranslations('contact')
   const tLocations = await getTranslations('home.locations')
 
   return (
     <>
       <JsonLd data={await simplePageJsonLd('contact')} />
-      <PageIntro eyebrow={t('inline.eyebrow')} title={t('inline.title')}>
-        <p>{t('inline.intro')}</p>
+      <PageIntro eyebrow={t('hero.eyebrow')} title={t('hero.title')}>
+        <p>{t('hero.intro')}</p>
       </PageIntro>
 
       <section className="section-block contact-layout">
         <div className="contact-booking">
-          <ContactBooking />
+          <p className="eyebrow">{t('booking.eyebrow')}</p>
+          <h2>{t('booking.title')}</h2>
+          <p className="contact-lead">{t('booking.body')}</p>
+          <div className="booking-options">
+            {BOOKING_OPTIONS.map((option, index) => (
+              <BookLink
+                key={option}
+                service={option === 'general' ? undefined : option}
+              >
+                <span>{String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <strong>{t(`booking.options.${option}.name`)}</strong>
+                  <small>{t(`booking.options.${option}.description`)}</small>
+                </div>
+                <Arrow />
+              </BookLink>
+            ))}
+          </div>
+          <a className="text-link" href={`tel:${CLINIC_PHONE_E164}`}>
+            {t('booking.call', { phone: CLINIC_PHONE })} <Arrow />
+          </a>
         </div>
 
         <div className="contact-details">
-          <p className="eyebrow">{t('contact.locationTitle')}</p>
-          <p className="contact-lead">{t('contact.locationBody')}</p>
+          <p className="eyebrow">{t('details.locationTitle')}</p>
+          <p className="contact-lead">{t('details.locationBody')}</p>
 
           {OFFICES.map((office) => {
             const location = LOCATIONS.find((l) => l.id === office.location)!
@@ -111,7 +141,7 @@ export default async function Contact() {
               <dd>{tLocations('openingHoursValue')}</dd>
             </div>
             <div>
-              <dt>{t('contact.followTitle')}</dt>
+              <dt>{t('details.followTitle')}</dt>
               <dd className="contact-social">
                 {SOCIAL_PROFILES.map((href) => (
                   <a

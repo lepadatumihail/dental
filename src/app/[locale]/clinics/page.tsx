@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { FinalCta } from '@/components/FinalCta'
 import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { createPageMetadata } from '@/lib/canonical'
 import { LOCATIONS } from '@/lib/clinic'
 import { newPageJsonLd } from '@/lib/page-graphs'
@@ -58,7 +58,7 @@ export default async function ClinicsPage() {
           return (
             <article key={clinic.key}>
               <div className="clinic-location-image">
-                <Image
+                <Photo
                   src={clinic.image}
                   alt={t(`${clinic.key}ImageAlt`)}
                   fill

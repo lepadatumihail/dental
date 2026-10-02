@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink } from '@/components/BookLink'
 import { whatsappLink } from '@/lib/clinic'
 import { Arrow } from '@/lib/rich'
 
@@ -79,9 +79,9 @@ export function TripPlanner() {
       >
         {t('send')} <Arrow />
       </a>
-      <BookTrigger service="dental" className="planner-call">
+      <BookLink service="dental" className="planner-call">
         {t('orBook')}
-      </BookTrigger>
+      </BookLink>
     </form>
   )
 }

@@ -48,9 +48,11 @@ export default async function DentalServices() {
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}
+        imageFocus="60% center"
         title={t('hero.title')}
         description={t('hero.description')}
         ctaLabel={t('hero.ctaLabel')}
+        service="dental"
       />
 
       <InterestSection
@@ -83,6 +85,7 @@ export default async function DentalServices() {
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
         ctaLabel={t('ribbon.ctaLabel')}
+        service="dental"
       />
 
       <TestimonialsGrid />

@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { TREATMENT_AREAS } from '@/lib/areas'
 import { Arrow } from '@/lib/rich'
@@ -41,7 +41,7 @@ export function TreatmentTabs() {
       <div className="treatment-panel" role="tabpanel">
         <div className="treatment-image">
           {TREATMENT_AREAS.map((item, index) => (
-            <Image
+            <Photo
               key={item.key}
               src={item.image}
               alt={t(`${item.key}.title`)}

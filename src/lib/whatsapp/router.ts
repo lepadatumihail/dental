@@ -3,12 +3,11 @@
 // Patients receive an opt-in template that asks them to reply:
 //   1 → dental, 2 → aesthetics, 3 → both, BAJA → unsubscribe.
 // This module turns an inbound message body into an intent + the Spanish
-// reply we send back (with a deep link into the existing booking wizard).
+// reply we send back (with a link to the contact page, where every booking
+// option opens the clinic's WhatsApp).
 //
 // Kept dependency-free and side-effect-free so it can be unit-tested and
 // reused by the webhook route.
-
-import { findEventTypeByKey } from '@/lib/agenda/event-types'
 
 export type Intent = 'dental' | 'aesthetics' | 'both' | 'baja' | 'unknown'
 
@@ -43,14 +42,10 @@ export interface RoutedReply {
   interest: 'dental' | 'aesthetics' | 'both' | null
 }
 
-/** Build a deep link that opens the booking wizard with a service preselected. */
-export function bookingLink(
-  serviceKey: 'dental' | 'aesthetics' | 'all',
-  ctx: ReplyContext,
-): string {
-  const params = new URLSearchParams({ book: serviceKey })
-  if (ctx.ref) params.set('ref', ctx.ref)
-  return `${ctx.baseUrl}/?${params.toString()}`
+/** Link to the Spanish contact page, where patients pick what to book. */
+export function bookingLink(ctx: ReplyContext): string {
+  const query = ctx.ref ? `?${new URLSearchParams({ ref: ctx.ref })}` : ''
+  return `${ctx.baseUrl}/es/contact${query}`
 }
 
 const HELLO = (name?: string) => (name ? `${name}, ` : '')
@@ -67,7 +62,7 @@ export function routeReply(body: string, ctx: ReplyContext): RoutedReply {
         optOut: false,
         text:
           `¡Genial! 🦷 ${HELLO(ctx.name)}reserva tu revisión dental gratuita ` +
-          `aquí:\n${bookingLink('dental', ctx)}`,
+          `aquí:\n${bookingLink(ctx)}`,
       }
     case 'aesthetics':
       return {
@@ -76,7 +71,7 @@ export function routeReply(body: string, ctx: ReplyContext): RoutedReply {
         optOut: false,
         text:
           `¡Perfecto! ✨ ${HELLO(ctx.name)}reserva tu consulta de medicina ` +
-          `estética aquí:\n${bookingLink('aesthetics', ctx)}`,
+          `estética aquí:\n${bookingLink(ctx)}`,
       }
     case 'both':
       return {
@@ -85,7 +80,7 @@ export function routeReply(body: string, ctx: ReplyContext): RoutedReply {
         optOut: false,
         text:
           `¡Estupendo! ${HELLO(ctx.name)}reserva aquí y elige el servicio ` +
-          `que prefieras:\n${bookingLink('all', ctx)}`,
+          `que prefieras:\n${bookingLink(ctx)}`,
       }
     case 'baja':
       return {
@@ -108,6 +103,3 @@ export function routeReply(body: string, ctx: ReplyContext): RoutedReply {
       }
   }
 }
-
-// Re-exported for callers that need the service→event-type mapping.
-export { findEventTypeByKey }

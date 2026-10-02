@@ -39,8 +39,6 @@ export interface Specialist {
   thumb: StaticImageData
   /** Profile graphics: introduction and expertise/method. */
   gallery: [StaticImageData, StaticImageData]
-  /** `booking.services.*` key to pre-select in the booking modal, if any. */
-  bookingKey?: 'dental' | 'aesthetics' | 'medical'
 }
 
 export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
@@ -59,7 +57,6 @@ export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
     image: afshin,
     thumb: afshinThumb,
     gallery: [afshinIntro, afshinExpertise],
-    bookingKey: 'aesthetics',
   },
   {
     slug: 'dr-angelo-termini',
@@ -68,7 +65,6 @@ export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
     image: angelo,
     thumb: angeloThumb,
     gallery: [angeloIntro, angeloExpertise],
-    bookingKey: 'medical',
   },
   {
     slug: 'dr-bozana-krivosija',
@@ -77,7 +73,6 @@ export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
     image: bozana,
     thumb: bozanaThumb,
     gallery: [bozanaIntro, bozanaPhilosophy],
-    bookingKey: 'aesthetics',
   },
   {
     slug: 'dr-darina-sansasvili',
@@ -86,7 +81,6 @@ export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
     image: darina,
     thumb: darinaThumb,
     gallery: [darinaIntro, darinaExpertise],
-    bookingKey: 'aesthetics',
   },
   {
     slug: 'dr-robbin',
@@ -95,7 +89,6 @@ export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
     image: robbin,
     thumb: robbinThumb,
     gallery: [robbinIntro, robbinExpertise],
-    bookingKey: 'dental',
   },
 ]
 

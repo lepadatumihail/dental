@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
-import { BookTrigger } from '@/components/booking/BookButton'
+import { BookLink } from '@/components/BookLink'
 import { FinalCta } from '@/components/FinalCta'
 import { InnerHero } from '@/components/InnerHero'
 import { JsonLd } from '@/components/JsonLd'
+import { Photo } from '@/components/Photo'
 import { Link } from '@/i18n/navigation'
 import { TREATMENT_AREAS } from '@/lib/areas'
 import { createPageMetadata } from '@/lib/canonical'
@@ -66,7 +66,7 @@ export default async function ServicesPage() {
           return (
             <article key={area.key} id={area.key}>
               <div className="detail-image">
-                <Image
+                <Photo
                   src={area.image}
                   alt={title}
                   fill
@@ -90,9 +90,9 @@ export default async function ServicesPage() {
                   <Link className="button dark" href={area.href}>
                     {t('explore', { area: title })} <Arrow />
                   </Link>
-                  <BookTrigger service={area.bookingKey} className="text-link">
+                  <BookLink service={area.key} className="text-link">
                     {tSite('bookConsultation')} <Arrow />
-                  </BookTrigger>
+                  </BookLink>
                 </div>
               </div>
             </article>

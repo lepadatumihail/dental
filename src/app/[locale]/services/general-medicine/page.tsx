@@ -47,9 +47,11 @@ export default async function GeneralMedicineServices() {
       <PageHero
         image={heroImage}
         imageAlt={t('hero.imageAlt')}
+        imageFocus="68% center"
         title={t('hero.title')}
         description={t('hero.description')}
         ctaLabel={t('hero.ctaLabel')}
+        service="medical"
         emergencyCtaLabel={t('hero.emergencyCtaLabel')}
         emergencyCtaHref="tel:+34673290786"
       />
@@ -84,6 +86,7 @@ export default async function GeneralMedicineServices() {
         title={t('ribbon.title')}
         subtitle={t('ribbon.subtitle')}
         ctaLabel={t('ribbon.ctaLabel')}
+        service="medical"
       />
 
       <TestimonialsGrid />
