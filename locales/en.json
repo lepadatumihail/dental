@@ -1333,7 +1333,7 @@
       "online": {
         "eyebrow": "Prisma Doctor Online",
         "title": "Meet a doctor<br></br>from wherever you are.",
-        "cta": "Video consultation — 25€"
+        "cta": "Video consultation — 50€"
       },
       "memberships": {
         "eyebrow": "Annual care",
@@ -1600,13 +1600,13 @@
   "doctorOnline": {
     "meta": {
       "title": "Doctor Online — Video Consultation",
-      "description": "Speak privately with a Prisma Clinic Marbella doctor by video for €25: dental, hair restoration, skin and aesthetics, and general medicine. Fee deducted from in-clinic treatment."
+      "description": "Speak privately with a Prisma Clinic Marbella doctor by video for €50: dental, hair restoration, skin and aesthetics, and general medicine. Fee deducted from in-clinic treatment."
     },
     "hero": {
       "eyebrow": "Prisma Doctor Online",
       "title": "Your doctor.<br></br>Wherever you are.",
-      "intro": "Speak privately with a Prisma clinician by video for €25. Receive clear guidance, the right specialist and an easy path to in-clinic care when needed.",
-      "cta": "Book online consultation — 25€"
+      "intro": "Speak privately with a Prisma clinician by video for €50. Receive clear guidance, the right specialist and an easy path to in-clinic care when needed.",
+      "cta": "Book online consultation — 50€"
     },
     "steps": [
       {
@@ -1619,7 +1619,7 @@
       },
       {
         "title": "Continue your care",
-        "body": "When you continue with an in-clinic treatment at Prisma, the full €25 consultation fee is deducted from your treatment cost."
+        "body": "When you continue with an in-clinic treatment at Prisma, the full €50 consultation fee is deducted from your treatment cost."
       }
     ],
     "routing": {
@@ -1650,8 +1650,8 @@
         }
       }
     },
-    "message": "Hello Prisma Clinic, I would like to book a Doctor Online video consultation (25€). Area: {area}.",
-    "messageGeneral": "Hello Prisma Clinic, I would like to book a Doctor Online video consultation (25€).",
+    "message": "Hello Prisma Clinic, I would like to book a Doctor Online video consultation (50€). Area: {area}.",
+    "messageGeneral": "Hello Prisma Clinic, I would like to book a Doctor Online video consultation (50€).",
     "note": {
       "label": "This service is not for life-threatening emergencies.",
       "body": "For urgent or severe symptoms, call 112. For urgent dental care, call Prisma 24/7 on <phone></phone>."
@@ -1659,7 +1659,7 @@
     "cta": {
       "eyebrow": "Online care",
       "title": "Begin from<br></br><em>where you are.</em>",
-      "button": "Book for 25€"
+      "button": "Book for 50€"
     }
   },
   "dentalTourism": {

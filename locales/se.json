@@ -1336,7 +1336,7 @@
       "online": {
         "eyebrow": "Prisma Doctor Online",
         "title": "Träffa en läkare<br></br>var du än befinner dig.",
-        "cta": "Videokonsultation — 25€"
+        "cta": "Videokonsultation — 50€"
       },
       "memberships": {
         "eyebrow": "Vård året runt",
@@ -1603,13 +1603,13 @@
   "doctorOnline": {
     "meta": {
       "title": "Doctor Online — videokonsultation",
-      "description": "Träffa en läkare på Prisma Clinic Marbella via video för €25 – tandvård, hår, hud, estetik och allmänmedicin. Avgiften dras av vid behandling på kliniken."
+      "description": "Träffa en läkare på Prisma Clinic Marbella via video för €50 – tandvård, hår, hud, estetik och allmänmedicin. Avgiften dras av vid behandling på kliniken."
     },
     "hero": {
       "eyebrow": "Prisma Doctor Online",
       "title": "Din läkare.<br></br>Var du än är.",
-      "intro": "Prata privat med en behandlare från Prisma via video för €25. Få tydlig vägledning, rätt specialist och en enkel väg vidare till vård på kliniken när det behövs.",
-      "cta": "Boka onlinekonsultation — 25€"
+      "intro": "Prata privat med en behandlare från Prisma via video för €50. Få tydlig vägledning, rätt specialist och en enkel väg vidare till vård på kliniken när det behövs.",
+      "cta": "Boka onlinekonsultation — 50€"
     },
     "steps": [
       {
@@ -1622,7 +1622,7 @@
       },
       {
         "title": "Fortsätt din vård",
-        "body": "Om du går vidare med en behandling på Prisma dras hela konsultationsavgiften på €25 av från behandlingskostnaden."
+        "body": "Om du går vidare med en behandling på Prisma dras hela konsultationsavgiften på €50 av från behandlingskostnaden."
       }
     ],
     "routing": {
@@ -1653,8 +1653,8 @@
         }
       }
     },
-    "message": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (25€). Område: {area}.",
-    "messageGeneral": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (25€).",
+    "message": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (50€). Område: {area}.",
+    "messageGeneral": "Hej Prisma Clinic! Jag vill boka en videokonsultation via Doctor Online (50€).",
     "note": {
       "label": "Tjänsten är inte avsedd för livshotande nödsituationer.",
       "body": "Vid akuta eller allvarliga symtom, ring 112. För akut tandvård, ring Prisma 24/7 på <phone></phone>."
@@ -1662,7 +1662,7 @@
     "cta": {
       "eyebrow": "Vård online",
       "title": "Börja där<br></br><em>du är.</em>",
-      "button": "Boka för 25€"
+      "button": "Boka för 50€"
     }
   },
   "dentalTourism": {

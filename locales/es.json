@@ -1336,7 +1336,7 @@
       "online": {
         "eyebrow": "Prisma Doctor Online",
         "title": "Consulta a un médico<br></br>estés donde estés.",
-        "cta": "Videoconsulta — 25€"
+        "cta": "Videoconsulta — 50€"
       },
       "memberships": {
         "eyebrow": "Cuidado anual",
@@ -1603,13 +1603,13 @@
   "doctorOnline": {
     "meta": {
       "title": "Doctor Online — Videoconsulta médica",
-      "description": "Videoconsulta privada con un médico de Prisma Clinic Marbella por 25€: dental, capilar, piel y estética o medicina general. Se descuenta del tratamiento en clínica."
+      "description": "Videoconsulta privada con un médico de Prisma Clinic Marbella por 50€: dental, capilar, piel y estética o medicina general. Se descuenta del tratamiento en clínica."
     },
     "hero": {
       "eyebrow": "Prisma Doctor Online",
       "title": "Tu médico.<br></br>Estés donde estés.",
-      "intro": "Habla en privado por videollamada con un profesional de Prisma por 25€. Recibe una orientación clara, el especialista adecuado y un camino sencillo hacia la atención en clínica cuando la necesites.",
-      "cta": "Reserva tu consulta online — 25€"
+      "intro": "Habla en privado por videollamada con un profesional de Prisma por 50€. Recibe una orientación clara, el especialista adecuado y un camino sencillo hacia la atención en clínica cuando la necesites.",
+      "cta": "Reserva tu consulta online — 50€"
     },
     "steps": [
       {
@@ -1622,7 +1622,7 @@
       },
       {
         "title": "Continúa tu tratamiento",
-        "body": "Si continúas con un tratamiento en la clínica Prisma, los 25€ de la consulta se descuentan íntegramente del coste de tu tratamiento."
+        "body": "Si continúas con un tratamiento en la clínica Prisma, los 50€ de la consulta se descuentan íntegramente del coste de tu tratamiento."
       }
     ],
     "routing": {
@@ -1653,8 +1653,8 @@
         }
       }
     },
-    "message": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (25€). Especialidad: {area}.",
-    "messageGeneral": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (25€).",
+    "message": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (50€). Especialidad: {area}.",
+    "messageGeneral": "Hola, Prisma Clinic. Me gustaría reservar una videoconsulta de Doctor Online (50€).",
     "note": {
       "label": "Este servicio no está pensado para emergencias con riesgo vital.",
       "body": "Ante síntomas urgentes o graves, llama al 112. Para urgencias dentales, llama a Prisma 24/7 al <phone></phone>."
@@ -1662,7 +1662,7 @@
     "cta": {
       "eyebrow": "Atención online",
       "title": "Empieza desde<br></br><em>donde estés.</em>",
-      "button": "Reservar por 25€"
+      "button": "Reservar por 50€"
     }
   },
   "dentalTourism": {
