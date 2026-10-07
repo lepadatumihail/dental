@@ -4,14 +4,12 @@ import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import clsx from 'clsx'
 
-interface CookiePreferences {
-  necessary: boolean
-  analytics: boolean
-  marketing: boolean
-}
-
-const COOKIE_CONSENT_KEY = 'cookie-consent'
-const COOKIE_PREFERENCES_KEY = 'cookie-preferences'
+import { Link } from '@/i18n/navigation'
+import {
+  getCookieConsent,
+  saveCookiePreferences,
+  type CookiePreferences,
+} from '@/hooks/useCookieConsent'
 
 function Toggle({
   checked,
@@ -49,37 +47,15 @@ export function CookieBanner() {
   })
 
   const t = useTranslations('cookieBanner')
+  const legal = useTranslations('legal')
 
   useEffect(() => {
-    // Check if user has already given consent
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
-    if (!consent) {
-      setIsVisible(true)
-    } else {
-      // Load existing preferences
-      const savedPreferences = localStorage.getItem(COOKIE_PREFERENCES_KEY)
-      if (savedPreferences) {
-        setPreferences(JSON.parse(savedPreferences))
-      }
-    }
+    const saved = getCookieConsent()
+    if (saved) setPreferences(saved)
+    else setIsVisible(true)
   }, [])
 
-  const savePreferences = (prefs: CookiePreferences) => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'true')
-    localStorage.setItem(COOKIE_PREFERENCES_KEY, JSON.stringify(prefs))
-
-    // Update Google Analytics consent based on preferences
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: prefs.analytics ? 'granted' : 'denied',
-        ad_storage: prefs.marketing ? 'granted' : 'denied',
-        ad_user_data: prefs.marketing ? 'granted' : 'denied',
-        ad_personalization: prefs.marketing ? 'granted' : 'denied',
-      })
-    }
-
-    setIsVisible(false)
-  }
+  const savePreferences = saveCookiePreferences
 
   const handleAcceptAll = () => {
     const allAccepted = {
@@ -136,9 +112,7 @@ export function CookieBanner() {
           <p className="eyebrow">{t('title')}</p>
           <p className="cookie-copy">
             {t('description')}{' '}
-            <button type="button" onClick={() => setShowCustomization(true)}>
-              {t('learnMore')}
-            </button>
+            <Link href="/cookie-policy">{legal('cookies.title')}</Link>
           </p>
           <div className="cookie-actions">
             <button
@@ -172,7 +146,7 @@ export function CookieBanner() {
               type="button"
               className="cookie-close"
               onClick={() => setShowCustomization(false)}
-              aria-label="Close customization panel"
+              aria-label={t('close')}
             >
               ×
             </button>
@@ -213,36 +187,4 @@ export function CookieBanner() {
       )}
     </section>
   )
-}
-
-// Utility function to check cookie consent status
-export function getCookieConsent(): CookiePreferences | null {
-  if (typeof window === 'undefined') return null
-
-  const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
-  if (!consent) return null
-
-  const preferences = localStorage.getItem(COOKIE_PREFERENCES_KEY)
-  if (!preferences) return null
-
-  return JSON.parse(preferences)
-}
-
-// Utility function to check if a specific cookie type is allowed
-export function isCookieAllowed(type: keyof CookiePreferences): boolean {
-  const consent = getCookieConsent()
-  if (!consent) return false
-
-  return consent[type]
-}
-
-// TypeScript declaration for gtag
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      action: string,
-      parameters: Record<string, string>,
-    ) => void
-  }
 }

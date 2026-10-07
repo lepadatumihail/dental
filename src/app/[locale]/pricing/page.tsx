@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PaymentInformation } from '@/components/PaymentInformation'
 import { getTranslations } from 'next-intl/server'
 
 import { CtaRibbon } from '@/components/CtaRibbon'
@@ -55,6 +56,8 @@ export default async function PricingPage() {
           </a>
         }
       />
+
+      <PaymentInformation showPrice />
 
       <section className="section-block">
         <PricingGroups groups={groups} withContainer={false} />

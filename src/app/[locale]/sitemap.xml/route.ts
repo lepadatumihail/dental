@@ -5,6 +5,7 @@ import { getAlternateUrls, getCanonicalUrl } from '@/lib/canonical'
 import { DEFAULT_LOCALE, isLocale } from '@/lib/locales'
 import { loadArticles } from '@/lib/mdx'
 import { SPECIALIST_PROFILES } from '@/lib/specialists'
+import { LEGAL_PAGES } from '@/lib/legal'
 
 // Define the site routes relative to the locale root. Every `[locale]` page
 // must be listed here; blog posts are added from `loadArticles()`.
@@ -26,6 +27,7 @@ const ROUTES = [
   '/services/general-medicine',
   '/services/massage-therapy',
   '/specialists',
+  ...Object.values(LEGAL_PAGES),
   ...SPECIALIST_PROFILES.map(({ slug }) => `/specialists/${slug}`),
 ]
 

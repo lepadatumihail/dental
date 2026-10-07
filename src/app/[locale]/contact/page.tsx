@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PaymentInformation } from '@/components/PaymentInformation'
 import { getTranslations } from 'next-intl/server'
 
 import { BookLink } from '@/components/BookLink'
@@ -63,6 +64,8 @@ export default async function Contact() {
       <PageIntro eyebrow={t('hero.eyebrow')} title={t('hero.title')}>
         <p>{t('hero.intro')}</p>
       </PageIntro>
+
+      <PaymentInformation />
 
       <section className="section-block contact-layout">
         <div className="contact-booking">

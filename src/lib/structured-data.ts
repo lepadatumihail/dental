@@ -8,6 +8,7 @@ import {
   getCanonicalUrl,
 } from '@/lib/canonical'
 import {
+  CLINIC_COMPANY,
   CLINIC_PHONE_E164,
   LANGUAGES_SPOKEN,
   LOCATIONS,
@@ -70,6 +71,8 @@ export function siteGraph(locale: string, description: string): Thing {
     '@type': 'MedicalOrganization',
     '@id': ORGANIZATION_ID,
     name: SITE_NAME,
+    legalName: CLINIC_COMPANY.name,
+    taxID: CLINIC_COMPANY.taxId,
     url: getCanonicalUrl('', locale),
     logo: `${BASE_URL}/logo-small.png`,
     image: `${BASE_URL}${DEFAULT_OG_IMAGE.url}`,

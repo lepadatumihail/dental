@@ -838,12 +838,15 @@
     }
   },
   "cookieBanner": {
+    "settings": "Cookieinställningar",
+    "close": "Stäng cookieinställningar",
+    "revoke": "Endast nödvändiga",
     "title": "Cookie-samtycke",
-    "description": "Vi använder cookies för att förbättra din surfupplevelse, visa personliga annonser eller innehåll och analysera vår trafik. Genom att klicka \"Acceptera alla\" samtycker du till vår användning av cookies.",
+    "description": "Vi använder nödvändig lagring för att komma ihåg dina val. Valfria analys- och marknadsföringsverktyg laddas endast med ditt samtycke. Du kan ändra dina val när som helst.",
     "necessaryTitle": "Nödvändiga Cookies",
-    "necessaryDescription": "Dessa cookies är nödvändiga för att webbplatsen ska fungera korrekt. De möjliggör grundläggande funktioner som sidnavigering och åtkomst till säkra områden.",
+    "necessaryDescription": "Nödvändig lagring kommer ihåg dina cookie- och språkval så att webbplatsen kan följa dem.",
     "analyticsTitle": "Analytiska Cookies",
-    "analyticsDescription": "Dessa cookies hjälper oss att förstå hur besökare interagerar med vår webbplats genom att samla in och rapportera information anonymt.",
+    "analyticsDescription": "Dessa valfria verktyg hjälper oss att förstå besök och hur webbplatsen används.",
     "marketingTitle": "Marknadsföringscookies",
     "marketingDescription": "Dessa cookies används för att spåra besökare över webbplatser för att visa relevanta och engagerande annonser.",
     "acceptAll": "Acceptera alla",
@@ -1856,6 +1859,146 @@
     "hotline": {
       "eyebrow": "Akut tandvård dygnet runt",
       "note": "Ring först så att teamet kan bedöma din situation och förbereda ditt besök."
+    }
+  },
+  "legal": {
+    "eyebrow": "Patientinformation",
+    "updated": "Uppdaterad 8 oktober 2026",
+    "navigation": "Juridisk information och patientinformation",
+    "company": "Företaget som driver kliniken och tar emot betalningar",
+    "taxId": "CIF / NIF",
+    "address": "Företagsadress",
+    "email": "E-post",
+    "phone": "Telefon",
+    "contact": "Kontakta kliniken via uppgifterna ovan för bokningar, betalningsfrågor, fakturor eller återbetalningar.",
+    "beforePayment": "Läs våra tjänste- och betalningsvillkor innan du betalar. Tid och betalningsuppgifter avtalas direkt med kliniken.",
+    "privacyLink": "Så använder vi dina personuppgifter",
+    "priceTitle": "Onlinekonsultation — 50 €",
+    "priceBody": "Avgiften på 50 € är slutpriset för en videokonsultation, inklusive eventuella tillämpliga skatter. Tandbehandlingar som kräver individuell bedömning prissätts genom en personlig offert. Kliniken bekräftar totalbeloppet och eventuell skattespecifikation före betalningen.",
+    "summary": "Patientens avbokning och uteblivna besök återbetalas inte. Omboka minst 24 timmar i förväg för att behålla betalningen. Om kliniken ställer in eller ett tekniskt problem förhindrar videokonsultationen kan du välja en ny tid eller återbetalning.",
+    "notice": {
+      "title": "Juridisk information",
+      "description": "Företags- och kontaktuppgifter för Serenity clinica SL, som driver Prisma Clinic Marbella.",
+      "intro": "Prisma Clinic Marbella drivs av {company}, CIF {taxId}, som tar emot betalningar för klinikens tjänster.",
+      "sections": [
+        {
+          "title": "Tjänster och kontakt",
+          "body": "Kliniken erbjuder tandvård, medicinska och estetiska tjänster, inklusive videokonsultationer. Tider och behandlingsplaner avtalas direkt med kliniken. Företagets kontaktadress är {address}."
+        },
+        {
+          "title": "Information om vård",
+          "body": "Informationen på webbplatsen är allmän och ersätter inte en individuell klinisk bedömning, diagnos eller behandlingsplan. Lämpliga tjänster avtalas med den behandlande yrkesutövaren. Ring 112 vid livshotande tillstånd."
+        },
+        {
+          "title": "Betalningar och patientinformation",
+          "body": "Tjänste- och betalningsvillkoren beskriver betalningslänkar och reglerna för onlinekonsultationer. Integritets- och cookiepolicyerna beskriver webbplatsens behandling av personuppgifter och dina cookieval."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Tjänste- och betalningsvillkor",
+      "description": "Betalningslänkar, behandlingsofferter samt regler för avbokning, ombokning och återbetalning av videokonsultationen för 50 €.",
+      "intro": "Dessa villkor beskriver betalningar för vård på kliniken och onlinekonsultationer hos Prisma Clinic Marbella, som drivs av {company}, CIF {taxId}.",
+      "sections": [
+        {
+          "title": "Tider och behandlingsofferter",
+          "body": "Kontakta kliniken via WhatsApp, telefon eller e-post för att avtala om tjänst och tid. Tandbehandlingar som kräver individuell bedömning prissätts med en personlig offert efter bedömningen. Läs igenom föreslagen behandling, pris och betalningsplan innan du godkänner dem."
+        },
+        {
+          "title": "Säkra betalningslänkar",
+          "body": "Kliniken skickar en betalningslänk till bankens betalningssida för den avtalade tjänsten. Kontrollera tjänstebeskrivning, belopp och mottagare innan du betalar med kort på bankens sida. Den här webbplatsen samlar inte in kortuppgifter. Läs villkoren innan du använder länken och kontakta kliniken om något är oklart."
+        },
+        {
+          "title": "Vad betalningen avser",
+          "body": "Avgiften på 50 € är slutpriset för en videokonsultation, inklusive eventuella tillämpliga skatter. För behandling på kliniken ska den individuella offerten eller betalningsbegäran ange om beloppet är en förskottsbetalning, delbetalning eller full betalning samt eventuellt återstående belopp. Totalbeloppet och eventuell skattespecifikation bekräftas före betalningen."
+        },
+        {
+          "title": "Bekräftelse av bokning",
+          "body": "Tider avtalas personligen med kliniken. Spara bankens betalningsresultat och kontakta kliniken efter betalningen för att bekräfta mottagandet och den avtalade tiden. Bekräfta tid och anslutningsuppgifter för videokonsultation med teamet. En betalning väljer inte i sig någon besökstid."
+        },
+        {
+          "title": "Onlinekonsultation: patientens avbokning",
+          "body": "Betalningen på 50 € återbetalas inte om patienten avbokar, med förbehåll för tvingande rättigheter enligt tillämplig lag. Använd möjligheten till ombokning nedan för att behålla betalningen för en annan tid."
+        },
+        {
+          "title": "Onlinekonsultation: ombokning",
+          "body": "Du kan flytta konsultationen och behålla betalningen om du meddelar kliniken minst 24 timmar före den avtalade tiden. Kontakta kliniken via WhatsApp, telefon eller e-post för att avtala om en ny tid. Kontakta kliniken vid önskemål med mindre än 24 timmars framförhållning; möjligheten att flytta betalningen som beskrivs här kräver minst 24 timmars varsel."
+        },
+        {
+          "title": "Onlinekonsultation: uteblivet besök",
+          "body": "Om du inte deltar i den avtalade konsultationen förloras betalningen på 50 € och återbetalas inte, med förbehåll för tvingande rättigheter enligt tillämplig lag."
+        },
+        {
+          "title": "Inställd tid från kliniken eller tekniska problem",
+          "body": "Om kliniken ställer in videokonsultationen eller ett tekniskt problem gör att den inte kan genomföras, kan du välja en ny tid med bibehållen betalning eller återbetalning. Kontakta kliniken för att meddela och ordna ditt val."
+        },
+        {
+          "title": "Betalning för behandling på kliniken",
+          "body": "Reglerna för avbokning och uteblivet besök vid onlinekonsultationen för 50 € gäller den konsultationen. För behandling på kliniken ska du be om villkoren för avbokning, ombokning och återbetalning tillsammans med din individuella offert innan du betalar."
+        },
+        {
+          "title": "Betalningsbekräftelse, fakturor och frågor",
+          "body": "Spara betalningsbekräftelsen som banken visar efter transaktionen. Kontakta kliniken med betalningsdatum, belopp och bokningsreferens för att bekräfta mottagandet, få din faktura eller ställa betalningsfrågor. Skicka inte fullständiga kortnummer eller säkerhetskoder via e-post eller WhatsApp."
+        },
+        {
+          "title": "Dina rättigheter",
+          "body": "Dessa villkor begränsar inte rättigheter som inte kan avtalas bort enligt tillämplig lag. Kontakta kliniken via uppgifterna nedan för att diskutera ett betalningsproblem eller lämna ett klagomål."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Integritetspolicy",
+      "description": "Så hanterar Prisma Clinic Marbella kontakt-, boknings- och betalningsuppgifter och dina dataskyddsrättigheter.",
+      "intro": "{company}, CIF {taxId}, är personuppgiftsansvarig för de uppgifter som Prisma Clinic Marbella behandlar för ändamålen som beskrivs här.",
+      "sections": [
+        {
+          "title": "Kontakt och bokningsuppgifter",
+          "body": "När du kontaktar kliniken får den informationen du lämnar, som namn, kontaktuppgifter, önskad tid och meddelandets innehåll. Webbplatsens bokningsknappar öppnar WhatsApp. Planeraren för tandvårdsresor förbereder ett meddelande utifrån dina val; den skapar ingen bokning och skickar ingen bokningsförfrågan till kliniken på den här webbplatsen. Du väljer om du skickar meddelandet i WhatsApp."
+        },
+        {
+          "title": "Ändamål och rättslig grund",
+          "body": "Kontakt- och bokningsuppgifter används för att besvara din förfrågan och förbereda den tjänst du begär. Betalnings- och faktureringsuppgifter används för att administrera tjänsten och uppfylla bokförings- och skattekrav. Valfria analys- och marknadsföringsverktyg aktiveras genom dina cookieval. Hälsouppgifter som lämnas för vård behandlas för vårdändamål enligt tillämpliga dataskyddsregler och tystnadsplikt."
+        },
+        {
+          "title": "Betalningar och mottagare",
+          "body": "Betalningar sker på bankens betalningssida. Banken eller betalningsleverantören behandlar kort- och transaktionsuppgifter enligt sin egen integritetsinformation. Kliniken använder uppgifter som behövs för att identifiera betalningen, administrera bokningen och utfärda faktura. Leverantörer av webbhotell och teknisk support kan behandla trafikuppgifter. WhatsApp/Meta behandlar meddelanden genom sin tjänst; när kliniken använder meddelandeautomatisering stödjer Twilio och Google Sheets leverans och administration. Myndigheter kan få uppgifter när lagen kräver det."
+        },
+        {
+          "title": "Externa tjänster och internationell behandling",
+          "body": "WhatsApp, meddelandeleverantörer, betalningsleverantörer och valfria analystjänster har egen integritetsinformation. Deras infrastruktur kan innebära behandling utanför Europeiska ekonomiska samarbetsområdet. Läs leverantörens information om behandlingsplatser och överföringsskydd innan du använder tjänsten, eller kontakta kliniken om ett annat sätt att kommunicera."
+        },
+        {
+          "title": "Lagringstid",
+          "body": "Kontaktuppgifter sparas så länge som behövs för att hantera förfrågan och eventuell tjänst. Faktureringsuppgifter och patientjournaler sparas under de tider som krävs enligt tillämpliga skatte-, bokförings- och vårdregler och vid behov för rättsliga anspråk. Valfri webbläsarlagring kan hanteras via cookieinställningarna eller webbläsaren."
+        },
+        {
+          "title": "Dina val och rättigheter",
+          "body": "Du kan begära tillgång, rättelse, radering, begränsning eller dataportabilitet och invända mot behandling när det är tillämpligt genom att kontakta kliniken. Samtycke kan återkallas utan att tidigare laglig behandling påverkas. Du kan också klaga hos Spaniens dataskyddsmyndighet (AEPD). Uppgifter som behövs för att ordna vård eller fakturering är nödvändiga för dessa tjänster; samtycke till valfri analys och marknadsföring krävs inte för att besöka webbplatsen."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookiepolicy",
+      "description": "Cookieval och valfri analys på Prisma Clinic Marbellas webbplats.",
+      "intro": "Du kan acceptera valfria cookies, använda endast nödvändig lagring eller ändra ditt val när som helst via cookieinställningarna.",
+      "sections": [
+        {
+          "title": "Nödvändig webbläsarlagring",
+          "body": "Webbplatsen sparar ditt cookieval i webbläsarens lokala lagring med cookie-consent och cookie-preferences. De behåller dina val tills du ändrar eller raderar dem. Webbplatsen kan också använda NEXT_LOCALE för att komma ihåg språkvalet."
+        },
+        {
+          "title": "Valfri analys och marknadsföring",
+          "body": "Med analyssamtycke laddar webbplatsen Google Analytics, Ahrefs Analytics och Vercel Analytics för att förstå hur webbplatsen används. Google Analytics kan skapa cookies med namnen _ga och _ga_*. Google Tag Manager laddas endast när både analys och marknadsföring är aktiverade; vilka cookies det skapar beror på konfigurerade taggar. Dessa valfria verktyg laddas inte om du väljer endast nödvändig lagring."
+        },
+        {
+          "title": "Ändra ditt val",
+          "body": "Använd cookieinställningarna för att acceptera eller avvisa valfria kategorier. Sidan laddas om när ett nytt val sparas så att det träder i kraft. Om du avvisar eller återkallar samtycke laddas valfria verktyg inte vid efterföljande sidladdningar. Du kan radera redan lagrade tredjepartscookies i webbläsarens inställningar. Du kan fortfarande besöka webbplatsen och kontakta kliniken utan valfria cookies."
+        },
+        {
+          "title": "Externa webbplatser",
+          "body": "WhatsApp, kartor, sociala nätverk och bankens betalningssidor har egna cookie- och integritetspolicyer. De tjänsterna tillämpar sina egna inställningar när du följer en extern länk."
+        }
+      ]
     }
   }
 }

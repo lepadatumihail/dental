@@ -838,12 +838,15 @@
     }
   },
   "cookieBanner": {
+    "settings": "Configurar cookies",
+    "close": "Cerrar configuración de cookies",
+    "revoke": "Solo necesarias",
     "title": "Consentimiento de Cookies",
-    "description": "Utilizamos cookies para mejorar su experiencia de navegación, servir anuncios o contenido personalizado y analizar nuestro tráfico. Al hacer clic en \"Aceptar Todo\", usted consiente nuestro uso de cookies.",
+    "description": "Utilizamos almacenamiento necesario para recordar tus preferencias. Las herramientas opcionales de analítica y marketing solo se cargan con tu consentimiento. Puedes cambiar tu elección en cualquier momento.",
     "necessaryTitle": "Cookies Necesarias",
-    "necessaryDescription": "Estas cookies son esenciales para que el sitio web funcione correctamente. Habilitan funciones básicas como la navegación de páginas y el acceso a áreas seguras.",
+    "necessaryDescription": "El almacenamiento necesario recuerda tus preferencias de cookies e idioma para que el sitio respete tus elecciones.",
     "analyticsTitle": "Cookies de Análisis",
-    "analyticsDescription": "Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando e informando información de forma anónima.",
+    "analyticsDescription": "Estas herramientas opcionales nos ayudan a comprender las visitas y el uso del sitio web.",
     "marketingTitle": "Cookies de Marketing",
     "marketingDescription": "Estas cookies se utilizan para rastrear visitantes en sitios web para mostrar anuncios relevantes y atractivos.",
     "acceptAll": "Aceptar Todo",
@@ -1856,6 +1859,146 @@
     "hotline": {
       "eyebrow": "Urgencias dentales 24/7",
       "note": "Llámanos primero para que el equipo valore tu situación y prepare tu llegada."
+    }
+  },
+  "legal": {
+    "eyebrow": "Información para pacientes",
+    "updated": "Actualizado el 8 de octubre de 2026",
+    "navigation": "Información legal y para pacientes",
+    "company": "Empresa que gestiona la clínica y recibe los pagos",
+    "taxId": "CIF / NIF",
+    "address": "Dirección de la empresa",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "contact": "Para citas, consultas sobre pagos, facturas o solicitudes de reembolso, contacta con la clínica a través de los datos anteriores.",
+    "beforePayment": "Antes de pagar, lee nuestras condiciones de contratación. Los detalles de tu cita y del pago se acuerdan directamente con la clínica.",
+    "privacyLink": "Cómo utilizamos tus datos personales",
+    "priceTitle": "Consulta online — 50 €",
+    "priceBody": "Los 50 € son el precio final de una videoconsulta, incluidos los impuestos que resulten aplicables. Los tratamientos dentales que requieren una valoración individual se presupuestan de forma personalizada. La clínica confirma el importe total y el desglose de los impuestos aplicables antes del pago.",
+    "summary": "Las cancelaciones del paciente y las citas a las que no acuda no son reembolsables. Puedes cambiar la cita conservando el pago con al menos 24 horas de antelación. Si la clínica cancela o un problema técnico impide la videoconsulta, puedes elegir otra cita o un reembolso.",
+    "notice": {
+      "title": "Aviso legal",
+      "description": "Datos de la empresa y contacto de Serenity clinica SL, titular de Prisma Clinic Marbella.",
+      "intro": "Prisma Clinic Marbella está gestionada por {company}, con CIF {taxId}, que recibe los pagos por los servicios de la clínica.",
+      "sections": [
+        {
+          "title": "Servicios y contacto",
+          "body": "La clínica presta servicios dentales, médicos y estéticos, incluidas videoconsultas. Las citas y los planes de tratamiento se acuerdan directamente con la clínica. La dirección de contacto de la empresa es {address}."
+        },
+        {
+          "title": "Información asistencial",
+          "body": "La información del sitio web es general y no sustituye una valoración clínica, un diagnóstico o un plan de tratamiento individual. Los servicios adecuados para cada paciente se acuerdan con el profesional que le atiende. En caso de emergencia vital, llama al 112."
+        },
+        {
+          "title": "Pagos e información para pacientes",
+          "body": "Las condiciones de contratación explican los enlaces de pago y las normas de las consultas online. Las políticas de privacidad y cookies explican el tratamiento de datos personales en el sitio web y tus opciones sobre cookies."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Condiciones de contratación",
+      "description": "Enlaces de pago, presupuestos y condiciones de cancelación, cambio de cita y reembolso de la videoconsulta de 50 €.",
+      "intro": "Estas condiciones explican los pagos de servicios presenciales y consultas online de Prisma Clinic Marbella, gestionada por {company}, con CIF {taxId}.",
+      "sections": [
+        {
+          "title": "Citas y presupuestos de tratamiento",
+          "body": "Contacta con la clínica por WhatsApp, teléfono o correo electrónico para acordar el servicio y la cita. Los tratamientos dentales que requieren una valoración individual se presupuestan de forma personalizada tras dicha valoración. Revisa el tratamiento propuesto, su precio y el calendario de pagos antes de aceptarlo."
+        },
+        {
+          "title": "Enlaces de pago seguros",
+          "body": "La clínica envía un enlace de pago alojado por el banco para el servicio acordado. Comprueba la descripción del servicio, el importe y el destinatario antes de pagar con tarjeta en la página del banco. Este sitio web no recoge datos de tarjeta. Lee estas condiciones antes de utilizar un enlace de pago y contacta con la clínica si tienes dudas."
+        },
+        {
+          "title": "Qué cubre el pago",
+          "body": "La tarifa de 50 € de la consulta online es el precio final, incluidos los impuestos que resulten aplicables, y cubre el pago íntegro de una videoconsulta. Para tratamientos presenciales, el presupuesto o la solicitud de pago individual debe indicar si se trata de una señal, un pago parcial o un pago íntegro, así como cualquier saldo pendiente. El importe total y el desglose de los impuestos aplicables se confirman antes del pago."
+        },
+        {
+          "title": "Confirmación de la cita",
+          "body": "Las citas se acuerdan personalmente con la clínica. Tras pagar, conserva el resultado del pago mostrado por el banco y contacta con la clínica para confirmar la recepción y la cita acordada. En las consultas online, confirma la hora y los datos de conexión con el equipo. El pago por sí solo no selecciona una hora de cita."
+        },
+        {
+          "title": "Consulta online: cancelación del paciente",
+          "body": "El pago de 50 € no se reembolsa si el paciente cancela, sin perjuicio de los derechos irrenunciables previstos en la legislación aplicable. Para conservar el pago para otra cita, utiliza la opción de cambio de cita indicada a continuación."
+        },
+        {
+          "title": "Consulta online: cambio de cita",
+          "body": "Puedes cambiar tu consulta conservando el pago si avisas a la clínica con al menos 24 horas de antelación respecto a la cita acordada. Contacta por WhatsApp, teléfono o correo electrónico para concertar el nuevo horario. Si faltan menos de 24 horas, contacta con la clínica; la opción de conservar el pago aquí descrita requiere un aviso mínimo de 24 horas."
+        },
+        {
+          "title": "Consulta online: inasistencia",
+          "body": "Si no acudes a la consulta acordada, pierdes el pago de 50 € y no se reembolsa, sin perjuicio de los derechos irrenunciables previstos en la legislación aplicable."
+        },
+        {
+          "title": "Cancelación de la clínica o problema técnico",
+          "body": "Si la clínica cancela la videoconsulta o un problema técnico impide realizarla, puedes elegir otra cita conservando el pago o un reembolso. Contacta con la clínica para comunicar y gestionar tu elección."
+        },
+        {
+          "title": "Pagos de tratamientos presenciales",
+          "body": "Las normas de cancelación e inasistencia de la consulta online de 50 € se aplican a dicha consulta. Para los tratamientos presenciales, solicita a la clínica las condiciones de cancelación, cambio de cita y reembolso junto con tu presupuesto individual antes de pagar."
+        },
+        {
+          "title": "Confirmación del pago, facturas y consultas",
+          "body": "Conserva la confirmación que muestra el banco tras la operación. Contacta con la clínica indicando la fecha, el importe y la referencia de la cita para confirmar la recepción, obtener tu factura o plantear una consulta sobre el pago. No envíes números completos de tarjeta ni códigos de seguridad por correo electrónico o WhatsApp."
+        },
+        {
+          "title": "Tus derechos",
+          "body": "Estas condiciones no limitan los derechos que no puedan excluirse conforme a la legislación aplicable. Para comunicar una incidencia de pago o presentar una reclamación, utiliza los datos de contacto indicados a continuación."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Política de privacidad",
+      "description": "Tratamiento de datos de contacto, citas y pagos en Prisma Clinic Marbella y ejercicio de tus derechos.",
+      "intro": "{company}, con CIF {taxId}, es responsable de los datos personales tratados por Prisma Clinic Marbella para los fines aquí descritos.",
+      "sections": [
+        {
+          "title": "Datos de contacto y citas",
+          "body": "Al contactar con la clínica, esta recibe la información que facilitas, como tu nombre, datos de contacto, preferencias de cita y contenido del mensaje. Los botones de reserva del sitio web abren WhatsApp. El planificador de turismo dental prepara un mensaje con las opciones seleccionadas; no crea una cita ni envía una reserva a la clínica desde este sitio web. Tú decides si envías el mensaje en WhatsApp."
+        },
+        {
+          "title": "Finalidades y bases jurídicas",
+          "body": "Los datos de contacto y citas se utilizan para responder a tu solicitud y realizar las gestiones previas al servicio que solicitas. Los datos de pago y facturación se utilizan para gestionar el servicio y cumplir obligaciones contables y fiscales. Las herramientas opcionales de analítica y marketing se activan mediante tus preferencias de cookies. Si facilitas datos de salud para recibir asistencia, se tratan con fines sanitarios conforme a la normativa de protección de datos y las obligaciones de secreto profesional."
+        },
+        {
+          "title": "Pagos y destinatarios",
+          "body": "Los pagos se realizan en la página del banco. El banco o proveedor de pagos trata los datos de tarjeta y de la operación conforme a su propia información de privacidad. La clínica utiliza los datos necesarios para identificar el pago, gestionar la cita y emitir una factura. Los proveedores de alojamiento y soporte técnico pueden tratar datos de tráfico del sitio web. WhatsApp/Meta trata los mensajes enviados a través de su servicio; cuando la clínica utiliza su automatización de mensajes, Twilio y Google Sheets dan soporte al envío y la gestión. Las autoridades pueden recibir datos cuando lo exija la ley."
+        },
+        {
+          "title": "Servicios externos y tratamiento internacional",
+          "body": "WhatsApp y los proveedores de mensajería, pagos y analítica opcional tienen su propia información de privacidad. Su infraestructura puede implicar tratamiento fuera del Espacio Económico Europeo. Consulta la información del proveedor sobre los lugares de tratamiento y las garantías de transferencia antes de usar su servicio, o contacta con la clínica para acordar otro medio de comunicación."
+        },
+        {
+          "title": "Conservación",
+          "body": "Los datos de contacto se conservan durante el tiempo necesario para atender la solicitud y el servicio que pueda derivarse de ella. Los datos de facturación y las historias clínicas se conservan durante los plazos exigidos por la normativa fiscal, contable y sanitaria aplicable y cuando sea necesario para atender reclamaciones. Puedes gestionar el almacenamiento opcional del navegador desde las preferencias de cookies o los ajustes de tu navegador."
+        },
+        {
+          "title": "Opciones y derechos",
+          "body": "Puedes solicitar el acceso, rectificación, supresión, limitación o portabilidad de tus datos y oponerte al tratamiento cuando corresponda contactando con la clínica. Cuando el tratamiento se base en el consentimiento, puedes retirarlo sin afectar al tratamiento lícito anterior. También puedes reclamar ante la Agencia Española de Protección de Datos (AEPD). Los datos necesarios para organizar la asistencia o facturar son necesarios para prestar esos servicios; el consentimiento de analítica y marketing opcionales no es necesario para navegar por el sitio web."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Política de cookies",
+      "description": "Preferencias de cookies y analítica opcional del sitio web de Prisma Clinic Marbella.",
+      "intro": "Puedes aceptar las cookies opcionales, utilizar solo el almacenamiento necesario o cambiar tu elección en cualquier momento desde la configuración de cookies.",
+      "sections": [
+        {
+          "title": "Almacenamiento necesario",
+          "body": "El sitio web guarda tu elección en el navegador mediante cookie-consent y cookie-preferences en el almacenamiento local. Estos registros conservan tus preferencias hasta que las cambies o las borres. El sitio también puede utilizar NEXT_LOCALE para recordar el idioma."
+        },
+        {
+          "title": "Analítica y marketing opcionales",
+          "body": "Con tu consentimiento de analítica, el sitio carga Google Analytics, Ahrefs Analytics y Vercel Analytics para comprender el uso del sitio web. Google Analytics puede crear cookies _ga y _ga_*. Google Tag Manager solo se carga si activas tanto analítica como marketing; las cookies que establece dependen de las etiquetas configuradas. Estas herramientas opcionales no se cargan si eliges solo el almacenamiento necesario."
+        },
+        {
+          "title": "Cambiar tu elección",
+          "body": "Utiliza la configuración de cookies para aceptar o rechazar categorías opcionales. Al guardar una nueva elección, la página se recarga para aplicarla. Rechazar o retirar el consentimiento impide que las herramientas opcionales se carguen en las siguientes cargas de página. Puedes eliminar las cookies ya almacenadas por terceros desde los ajustes del navegador. Rechazar las cookies opcionales no impide navegar ni contactar con la clínica."
+        },
+        {
+          "title": "Sitios externos",
+          "body": "WhatsApp, los mapas, las redes sociales y las páginas bancarias de pago tienen sus propias políticas de cookies y privacidad. Esos servicios aplican sus propios controles cuando sigues un enlace externo."
+        }
+      ]
     }
   }
 }

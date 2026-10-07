@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PaymentInformation } from '@/components/PaymentInformation'
 import { getTranslations } from 'next-intl/server'
 
 import { InnerHero } from '@/components/InnerHero'
@@ -35,7 +36,7 @@ export async function generateMetadata({
 export default async function DoctorOnlinePage() {
   const t = await getTranslations('doctorOnline')
   const steps = t.raw('steps') as Array<{ title: string; body: string }>
-  // Video consultations are arranged over WhatsApp until online payment exists.
+  // The clinic arranges appointments and sends payment links personally.
   const bookHref = whatsappLink(t('messageGeneral'))
 
   return (
@@ -57,6 +58,8 @@ export default async function DoctorOnlinePage() {
           </a>
         }
       />
+
+      <PaymentInformation showPrice />
 
       <section className="online-value">
         {steps.map((step, index) => (

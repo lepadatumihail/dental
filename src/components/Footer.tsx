@@ -3,7 +3,9 @@ import { useTranslations } from 'next-intl'
 
 import { CookieSettings } from '@/components/CookieSettings'
 import { Link } from '@/i18n/navigation'
+import { LEGAL_PAGES } from '@/lib/legal'
 import {
+  CLINIC_COMPANY,
   CLINIC_EMAIL,
   CLINIC_PHONE,
   CLINIC_PHONE_E164,
@@ -14,6 +16,7 @@ import wordmark from '@/images/prisma/brand/prisma-wordmark.png'
 
 export function Footer() {
   const t = useTranslations('site')
+  const legal = useTranslations('legal')
 
   return (
     <footer className="footer">
@@ -51,6 +54,16 @@ export function Footer() {
         <Link href="/blog">{t('footer.blog')}</Link>
       </div>
       <div className="copyright">
+        <nav className="footer-legal" aria-label={legal('navigation')}>
+          {Object.entries(LEGAL_PAGES).map(([key, href]) => (
+            <Link key={key} href={href}>
+              {legal(`${key}.title`)}
+            </Link>
+          ))}
+        </nav>
+        <p>
+          {CLINIC_COMPANY.name} · CIF {CLINIC_COMPANY.taxId}
+        </p>
         <p>
           © {new Date().getFullYear()} Prisma Clinic Marbella.{' '}
           {t('footer.disclaimer')}

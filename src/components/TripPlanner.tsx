@@ -4,12 +4,14 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 import { BookLink } from '@/components/BookLink'
+import { Link } from '@/i18n/navigation'
 import { whatsappLink } from '@/lib/clinic'
 import { Arrow } from '@/lib/rich'
 
 /** Dental-tourism request builder that hands the summary over to WhatsApp. */
 export function TripPlanner() {
   const t = useTranslations('dentalTourism.planner')
+  const legal = useTranslations('legal')
   const treatments = t.raw('treatments') as Array<string>
   const stays = t.raw('stays') as Array<string>
   const supports = t.raw('supports') as Array<string>
@@ -79,6 +81,9 @@ export function TripPlanner() {
       >
         {t('send')} <Arrow />
       </a>
+      <Link href="/privacy-policy" className="planner-call">
+        {legal('privacyLink')}
+      </Link>
       <BookLink service="dental" className="planner-call">
         {t('orBook')}
       </BookLink>

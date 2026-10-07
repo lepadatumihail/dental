@@ -7,6 +7,13 @@ export const CLINIC_PHONE_E164 = '+34673290786'
 export const WHATSAPP_URL = `https://wa.me/${CLINIC_PHONE_E164.slice(1)}`
 export const CLINIC_EMAIL = 'info@prismaclinicmarbella.es'
 
+// Company details supplied by the clinic for payment-link disclosures.
+export const CLINIC_COMPANY = {
+  name: 'Serenity clinica SL',
+  taxId: 'B19941236',
+  address: 'Avenida Nabeul 14, Oficina 14/15, 29601 Marbella, Málaga, España',
+} as const
+
 /** WhatsApp chat link with a pre-filled message. */
 export function whatsappLink(text: string) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(text)}`

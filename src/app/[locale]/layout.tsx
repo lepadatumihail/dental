@@ -1,6 +1,5 @@
 // src/app/[locale]/layout.tsx
-import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
+import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { hasLocale } from 'next-intl'
@@ -44,75 +43,7 @@ export default async function LocaleLayout({
       lang={languageTag(locale)}
       className={`${raleway.variable} ${playfair.variable} h-full bg-white text-base text-ink antialiased`}
     >
-      <head>
-        {/* Resource hints for performance */}
-        <link rel="preconnect" href="https://analytics.ahrefs.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://analytics.ahrefs.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Ahrefs Analytics */}
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="50Zg5u7x92m3eDyxjhSJww"
-          strategy="lazyOnload"
-        />
-
-        {/* Google Tag Manager */}
-        <Script id="google-tag-manager">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-NH6BS3G8');
-          `}
-        </Script>
-
-        {/* Google Tag Manager with Consent Mode */}
-        <Script id="google-consent">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-
-            // Default consent state for EU users
-            gtag('consent', 'default', {
-              analytics_storage: 'denied',
-              ad_storage: 'denied',
-              ad_user_data: 'denied',
-              ad_personalization: 'denied',
-              wait_for_update: 500,
-            });
-
-            gtag('js', new Date());
-          `}
-        </Script>
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-JHK75NLNSK"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics">
-          {`
-            gtag('config', 'G-JHK75NLNSK', {
-              anonymize_ip: true,
-              cookie_flags: 'samesite=strict;secure'
-            });
-          `}
-        </Script>
-      </head>
       <body className="flex min-h-full flex-col overflow-x-hidden font-light">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NH6BS3G8"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
-
         <JsonLd data={siteGraph(locale, tMeta('description'))} />
 
         <NextIntlClientProvider locale={locale} messages={messages}>
@@ -121,7 +52,7 @@ export default async function LocaleLayout({
             <CookieBanner />
           </RootLayout>
         </NextIntlClientProvider>
-        <Analytics />
+        <ConsentedAnalytics />
       </body>
     </html>
   )
