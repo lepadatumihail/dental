@@ -1062,8 +1062,8 @@
             { "service": "Skinbooster face & neck (K-Surgery)", "price": "600€" },
             { "service": "Profhilo", "price": "600€" },
             { "service": "Under-eye Hydration PDRN (2 sessions)", "price": "450€" },
-            { "service": "Micro Needling (1 session)", "price": "150€" },
-            { "service": "Micro Needling (3 sessions)", "price": "330€" },
+            { "service": "Micro Needling (1 session)", "price": "250€" },
+            { "service": "Micro Needling (3 sessions)", "price": "600€" },
             { "service": "Chemical Peel", "price": "300€" },
             { "service": "Eyelid Lift (plasma fibroblast)", "price": "from 450€" },
             { "service": "Fat Dissolving (per area)", "price": "350€" },
@@ -1106,7 +1106,7 @@
             { "service": "Neck & décolleté", "price": "600€" },
             { "service": "Hands", "price": "600€" },
             { "service": "Hair biostimulation", "price": "from 300€" },
-            { "service": "Inbiotec Amber", "price": "380€ / session" }
+            { "service": "Inbiotec Amber", "price": "480€ / session" }
           ]
         },
         {
@@ -1123,9 +1123,9 @@
           "title": "IV Drips & Wellness",
           "subtitle": "Vitamin & hydration therapy",
           "items": [
-            { "service": "Single session", "price": "180€" },
-            { "service": "4-sessions package", "price": "600€" },
-            { "service": "8-sessions package", "price": "850€" }
+            { "service": "Single session", "price": "250€" },
+            { "service": "4-sessions package", "price": "800€" },
+            { "service": "8-sessions package", "price": "1200€" }
           ]
         }
       ]
@@ -1468,9 +1468,9 @@
         ]
       },
       "dr-bozana-krivosija": {
-        "role": "Aesthetic & Regenerative Medicine",
-        "detail": "Refined aesthetic and regenerative treatments designed around facial balance, skin quality and results that feel authentically yours.",
-        "experience": "Dedicated to creating natural, balanced results that enhance confidence through personalised assessment and a regenerative approach.",
+        "role": "Aesthetic & Anti-Aging Medicine",
+        "detail": "Refined aesthetic treatments designed around facial balance, skin quality and results that feel authentically yours.",
+        "experience": "Dedicated to creating natural, balanced results that enhance confidence through personalised assessment and a tailored anti-aging approach.",
         "philosophy": "Helping you look refreshed, confident and like the best version of yourself.",
         "languages": [
           "English",
@@ -1483,7 +1483,6 @@
           "Skin boosters",
           "Polynucleotides",
           "Collagen stimulators",
-          "PRP (Platelet-Rich Plasma)",
           "Microneedling",
           "IV vitamin therapy"
         ]
@@ -1502,8 +1501,8 @@
           "Georgian"
         ],
         "treatments": [
-          "Advanced Botox",
-          "Therapeutic Botox",
+          "Advanced anti-wrinkle injections",
+          "Therapeutic neuromodulators",
           "Facial harmonisation",
           "Lip & cheek enhancement",
           "Chin & jawline contouring",

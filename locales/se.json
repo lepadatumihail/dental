@@ -1065,8 +1065,8 @@
             { "service": "Skinbooster ansikte & hals (K-Surgery)", "price": "600€" },
             { "service": "Profhilo", "price": "600€" },
             { "service": "Hydrering under ögonen PDRN (2 sessioner)", "price": "450€" },
-            { "service": "Micro Needling (1 session)", "price": "150€" },
-            { "service": "Micro Needling (3 sessioner)", "price": "330€" },
+            { "service": "Micro Needling (1 session)", "price": "250€" },
+            { "service": "Micro Needling (3 sessioner)", "price": "600€" },
             { "service": "Kemisk peeling", "price": "300€" },
             { "service": "Ögonlockslyft (plasmafibroblast)", "price": "från 450€" },
             { "service": "Fettupplösning (per område)", "price": "350€" },
@@ -1109,7 +1109,7 @@
             { "service": "Hals & dekolletage", "price": "600€" },
             { "service": "Händer", "price": "600€" },
             { "service": "Hårbiostimulering", "price": "från 300€" },
-            { "service": "Inbiotec Amber", "price": "380€ / session" }
+            { "service": "Inbiotec Amber", "price": "480€ / session" }
           ]
         },
         {
@@ -1126,9 +1126,9 @@
           "title": "IV-dropp & wellness",
           "subtitle": "Vitamin- & hydreringsterapi",
           "items": [
-            { "service": "Enstaka session", "price": "180€" },
-            { "service": "Paket om 4 sessioner", "price": "600€" },
-            { "service": "Paket om 8 sessioner", "price": "850€" }
+            { "service": "Enstaka session", "price": "250€" },
+            { "service": "Paket om 4 sessioner", "price": "800€" },
+            { "service": "Paket om 8 sessioner", "price": "1200€" }
           ]
         }
       ]
@@ -1471,9 +1471,9 @@
         ]
       },
       "dr-bozana-krivosija": {
-        "role": "Estetisk & regenerativ medicin",
-        "detail": "Förfinade estetiska och regenerativa behandlingar utformade kring ansiktets balans, hudens kvalitet och resultat som känns äkta och helt dina.",
-        "experience": "Hängiven att skapa naturliga, balanserade resultat som stärker självförtroendet, genom personlig bedömning och ett regenerativt förhållningssätt.",
+        "role": "Estetisk medicin & anti-aging",
+        "detail": "Förfinade estetiska behandlingar utformade kring ansiktets balans, hudens kvalitet och resultat som känns äkta och helt dina.",
+        "experience": "Hängiven att skapa naturliga, balanserade resultat som stärker självförtroendet, genom personlig bedömning och ett skräddarsytt anti-aging-förhållningssätt.",
         "philosophy": "Att hjälpa dig att se utvilad och självsäker ut — som den bästa versionen av dig själv.",
         "languages": [
           "Engelska",
@@ -1486,7 +1486,6 @@
           "Skinboosters",
           "Polynukleotider",
           "Kollagenstimulatorer",
-          "PRP (trombocytrik plasma)",
           "Microneedling",
           "IV-vitaminterapi"
         ]
@@ -1505,8 +1504,8 @@
           "Georgiska"
         ],
         "treatments": [
-          "Avancerad Botox",
-          "Terapeutisk Botox",
+          "Avancerad rynkbehandling med injektioner",
+          "Terapeutiska neuromodulatorer",
           "Ansiktsharmonisering",
           "Läpp- & kindförstärkning",
           "Konturering av haka & käklinje",

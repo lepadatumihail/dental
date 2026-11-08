@@ -105,7 +105,7 @@ export const SPECIALISTS: ReadonlyArray<ClinicSpecialist> = [
   {
     id: 'bozana-krivosija',
     name: 'Dr. Bozana Krivošija',
-    jobTitle: 'Aesthetic & Regenerative Medicine',
+    jobTitle: 'Aesthetic & Anti-Aging Medicine',
     specialties: [],
     path: 'specialists/dr-bozana-krivosija',
     leads: 'services/aesthetics',

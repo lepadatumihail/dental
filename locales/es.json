@@ -1065,8 +1065,8 @@
             { "service": "Skinbooster rostro y cuello (K-Surgery)", "price": "600€" },
             { "service": "Profhilo", "price": "600€" },
             { "service": "Hidratación de ojeras PDRN (2 sesiones)", "price": "450€" },
-            { "service": "Micro Needling (1 sesión)", "price": "150€" },
-            { "service": "Micro Needling (3 sesiones)", "price": "330€" },
+            { "service": "Micro Needling (1 sesión)", "price": "250€" },
+            { "service": "Micro Needling (3 sesiones)", "price": "600€" },
             { "service": "Peeling químico", "price": "300€" },
             { "service": "Lifting de párpados (plasma fibroblast)", "price": "desde 450€" },
             { "service": "Disolución de grasa (por zona)", "price": "350€" },
@@ -1109,7 +1109,7 @@
             { "service": "Cuello y escote", "price": "600€" },
             { "service": "Manos", "price": "600€" },
             { "service": "Bioestimulación capilar", "price": "desde 300€" },
-            { "service": "Inbiotec Amber", "price": "380€ / sesión" }
+            { "service": "Inbiotec Amber", "price": "480€ / sesión" }
           ]
         },
         {
@@ -1126,9 +1126,9 @@
           "title": "Sueros IV y bienestar",
           "subtitle": "Vitaminas e hidratación",
           "items": [
-            { "service": "Sesión única", "price": "180€" },
-            { "service": "Paquete de 4 sesiones", "price": "600€" },
-            { "service": "Paquete de 8 sesiones", "price": "850€" }
+            { "service": "Sesión única", "price": "250€" },
+            { "service": "Paquete de 4 sesiones", "price": "800€" },
+            { "service": "Paquete de 8 sesiones", "price": "1200€" }
           ]
         }
       ]
@@ -1471,9 +1471,9 @@
         ]
       },
       "dr-bozana-krivosija": {
-        "role": "Medicina estética y regenerativa",
-        "detail": "Tratamientos estéticos y regenerativos refinados, diseñados en torno al equilibrio facial, la calidad de la piel y unos resultados que se sienten auténticamente tuyos.",
-        "experience": "Comprometida con resultados naturales y equilibrados que refuerzan la confianza, gracias a una valoración personalizada y un enfoque regenerativo.",
+        "role": "Medicina estética y antiedad",
+        "detail": "Tratamientos estéticos refinados, diseñados en torno al equilibrio facial, la calidad de la piel y unos resultados que se sienten auténticamente tuyos.",
+        "experience": "Comprometida con resultados naturales y equilibrados que refuerzan la confianza, gracias a una valoración personalizada y un enfoque antiedad a medida.",
         "philosophy": "Ayudarte a verte con frescura, con confianza y en tu mejor versión.",
         "languages": [
           "Inglés",
@@ -1486,7 +1486,6 @@
           "Skin boosters",
           "Polinucleótidos",
           "Estimuladores de colágeno",
-          "PRP (plasma rico en plaquetas)",
           "Microneedling",
           "Sueros vitamínicos IV"
         ]
@@ -1505,8 +1504,8 @@
           "Georgiano"
         ],
         "treatments": [
-          "Botox avanzado",
-          "Botox terapéutico",
+          "Inyecciones antiarrugas avanzadas",
+          "Neuromoduladores terapéuticos",
           "Armonización facial",
           "Realce de labios y pómulos",
           "Contorno de mentón y mandíbula",
