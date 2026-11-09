@@ -27,7 +27,7 @@ function buildLlmsTxt(): string {
     '',
     `> ${messages.meta.home.description}`,
     '',
-    'Prisma Clinic Marbella is a private clinic on the Costa del Sol, Spain, offering dentistry, aesthetic and anti-aging medicine, general medicine and therapeutic massage, with 24/7 emergency dental care. The website is available in English (/en), Spanish (/es) and Swedish (/se).',
+    'Prisma Clinic Marbella is a private clinic on the Costa del Sol, Spain, offering dentistry, aesthetic and anti-aging medicine and general medicine, with 24/7 emergency dental care. The website is available in English (/en), Spanish (/es) and Swedish (/se).',
     '',
     '## Contact and booking',
     '',

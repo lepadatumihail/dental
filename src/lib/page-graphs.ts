@@ -45,13 +45,6 @@ const SERVICE_PAGES = {
     descriptionKey: 'meta.description',
     specialistId: 'angelo-termini',
   },
-  massage: {
-    service: 'massage',
-    namespace: 'massageTherapy.v2',
-    nameKey: 'hero.title',
-    descriptionKey: 'meta.description',
-    specialistId: 'behrouz-rajabi',
-  },
 } as const
 
 export async function servicePageJsonLd(page: keyof typeof SERVICE_PAGES) {
@@ -69,7 +62,6 @@ export async function servicePageJsonLd(page: keyof typeof SERVICE_PAGES) {
     description: t(config.descriptionKey),
     serviceType: service.name,
     specialistId: config.specialistId,
-    medical: service.key !== 'massage',
     breadcrumbs: [
       home,
       treatments,

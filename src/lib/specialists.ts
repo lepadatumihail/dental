@@ -1,21 +1,17 @@
 import type { StaticImageData } from 'next/image'
 
-import behrouz from '@/images/prisma/specialists/behrouz-rajabi.jpg'
 import afshin from '@/images/prisma/specialists/dr-afshin-moheb.jpg'
 import angelo from '@/images/prisma/specialists/dr-angelo-termini.jpg'
 import bozana from '@/images/prisma/specialists/dr-bozana-krivosija.jpg'
 import darina from '@/images/prisma/specialists/dr-darina-sansasvili.jpg'
 import robbin from '@/images/prisma/specialists/dr-robbin.jpg'
 
-import behrouzThumb from '@/images/prisma/specialists/thumbs/behrouz-rajabi.jpg'
 import afshinThumb from '@/images/prisma/specialists/thumbs/dr-afshin-moheb.jpg'
 import angeloThumb from '@/images/prisma/specialists/thumbs/dr-angelo-termini.jpg'
 import bozanaThumb from '@/images/prisma/specialists/thumbs/dr-bozana-krivosija.jpg'
 import darinaThumb from '@/images/prisma/specialists/thumbs/dr-darina-sansasvili.jpg'
 import robbinThumb from '@/images/prisma/specialists/thumbs/dr-robbin.jpg'
 
-import behrouzIntro from '@/images/prisma/profiles/behrouz-intro.jpg'
-import behrouzMethod from '@/images/prisma/profiles/behrouz-method.jpg'
 import afshinIntro from '@/images/prisma/profiles/afshin-intro.jpg'
 import afshinExpertise from '@/images/prisma/profiles/afshin-expertise.jpg'
 import angeloIntro from '@/images/prisma/profiles/angelo-intro.jpg'
@@ -42,14 +38,6 @@ export interface Specialist {
 }
 
 export const SPECIALIST_PROFILES: ReadonlyArray<Specialist> = [
-  {
-    slug: 'behrouz-rajabi',
-    name: 'Behrouz Rajabi',
-    shortName: 'Behrouz Rajabi',
-    image: behrouz,
-    thumb: behrouzThumb,
-    gallery: [behrouzIntro, behrouzMethod],
-  },
   {
     slug: 'dr-afshin-moheb',
     name: 'Dr. Afshin Moheb',

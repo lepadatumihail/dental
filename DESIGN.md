@@ -81,7 +81,7 @@ All components are semantic classes in `src/styles/prisma.css` (inside `@layer c
 - `.button.outline` — white with an ink hairline; the secondary choice beside a dark button.
 - `.text-link` — uppercase micro-label link with trailing arrow; `.light-link` on black.
 - **Arrow:** always the `<Arrow />` SVG from `src/lib/rich.tsx` (never the ↗ glyph). It nudges up-right on hover. Tabs and toggles get no arrow — arrows mean "goes somewhere".
-- Booking buttons use `BookLink` (`src/components/BookLink.tsx`) with these classes. There is no booking form: it opens WhatsApp with a pre-filled message; pass `service="dental" | "aesthetics" | "medical" | "massage"` or `specialist="Dr. …"` to make the message specific.
+- Booking buttons use `BookLink` (`src/components/BookLink.tsx`) with these classes. There is no booking form: it opens WhatsApp with a pre-filled message; pass `service="dental" | "aesthetics" | "medical"` or `specialist="Dr. …"` to make the message specific.
 
 ### Shared page parts
 - **Header** (`SiteHeader`): fixed; utility bar (locations, secondary links Doctor Online / Dental Tourism / Prisma Care, EN · ES · SE) above the wordmark, six primary links and "Book a consultation". The current page is underlined. It tucks away while scrolling down and returns without the utility bar when scrolling up. Below 1180px it collapses to a left-aligned full-screen black menu.

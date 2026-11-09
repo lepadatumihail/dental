@@ -23,7 +23,6 @@ const BOOKING_OPTIONS = [
   'dental',
   'aesthetics',
   'medical',
-  'massage',
   'general',
 ] as const
 

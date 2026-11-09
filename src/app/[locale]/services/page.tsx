@@ -18,7 +18,6 @@ const SUMMARY_KEYS = {
   dental: 'layout.services.dental.summary',
   aesthetics: 'layout.services.aesthetics.summary',
   medical: 'layout.services.generalMedicine.summary',
-  massage: 'massageTherapy.v2.hero.description',
 } as const
 
 interface PageProps {

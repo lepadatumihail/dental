@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl'
 import { whatsappLink } from '@/lib/clinic'
 
 /** Treatment areas with their own booking message under `site.bookMessage`. */
-export type BookingTopic = 'dental' | 'aesthetics' | 'medical' | 'massage'
+export type BookingTopic = 'dental' | 'aesthetics' | 'medical'
 
 /**
  * Booking CTA. Appointments are arranged over WhatsApp, so this opens the

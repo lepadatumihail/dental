@@ -31,6 +31,17 @@ const nextConfig = {
         destination: '/:locale/about',
         permanent: true,
       },
+      // Massage therapy and its specialist, removed in November 2026.
+      {
+        source: '/:locale(en|es|se)/services/massage-therapy',
+        destination: '/:locale/services',
+        permanent: true,
+      },
+      {
+        source: '/:locale(en|es|se)/specialists/behrouz-rajabi',
+        destination: '/:locale/specialists',
+        permanent: true,
+      },
     ]
   },
   // Uncomment the line below for full static export (for hosting on CDN/static hosts)

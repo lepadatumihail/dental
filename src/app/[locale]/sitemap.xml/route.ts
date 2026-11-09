@@ -25,7 +25,6 @@ const ROUTES = [
   '/services/dental',
   '/services/emergency',
   '/services/general-medicine',
-  '/services/massage-therapy',
   '/specialists',
   ...Object.values(LEGAL_PAGES),
   ...SPECIALIST_PROFILES.map(({ slug }) => `/specialists/${slug}`),

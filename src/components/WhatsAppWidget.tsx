@@ -14,7 +14,6 @@ const TOPICS = [
   'aesthetic',
   'medical',
   'surgery',
-  'massage',
   'doctorOnline',
   'memberships',
   'prismaCare',

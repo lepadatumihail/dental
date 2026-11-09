@@ -128,15 +128,6 @@ export const SPECIALISTS: ReadonlyArray<ClinicSpecialist> = [
     leads: 'services/general-medicine',
     languages: ['Swedish', 'English', 'Norwegian', 'Italian', 'Spanish'],
   },
-  {
-    id: 'behrouz-rajabi',
-    name: 'Behrouz Rajabi',
-    jobTitle: 'Yumeiho Therapeutic Massage Specialist',
-    specialties: [],
-    path: 'specialists/behrouz-rajabi',
-    leads: 'services/massage-therapy',
-    languages: ['Persian', 'German', 'English', 'Spanish'],
-  },
 ]
 
 /** Service pages, in navigation order. `key` matches `layout.navigation.items.treatments.*`. */
@@ -164,14 +155,6 @@ export const SERVICES = [
     specialty: 'PrimaryCare',
     summary:
       'English-speaking private doctor: check-ups and blood panels, minor surgery, urology, weight management and 24/7 urgent care.',
-  },
-  {
-    key: 'massage',
-    path: 'services/massage-therapy',
-    name: 'Yumeiho Therapeutic Massage',
-    specialty: null,
-    summary:
-      'Japanese Yumeiho technique for back tension, posture, joint mobility and sciatic discomfort.',
   },
 ] as const
 
