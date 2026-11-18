@@ -8,7 +8,7 @@ import { whatsappLink } from '@/lib/clinic'
 import { newPageJsonLd } from '@/lib/page-graphs'
 import { Arrow, richTags } from '@/lib/rich'
 
-import teamInside from '@/images/prisma/team-inside.jpg'
+import team from '@/images/prisma/team.jpg'
 import lounge from '@/images/prisma/clinics/lounge.jpg'
 
 interface PageProps {
@@ -43,7 +43,7 @@ export default async function PrismaCarePage() {
       <section className="care-hero">
         <div className="care-hero-image">
           <Photo
-            src={teamInside}
+            src={team}
             alt={t('hero.imageAlt')}
             fill
             priority

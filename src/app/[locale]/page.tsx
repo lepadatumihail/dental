@@ -16,7 +16,7 @@ import {
 import { Arrow, richTags } from '@/lib/rich'
 import { SPECIALIST_PROFILES } from '@/lib/specialists'
 
-import teamInside from '@/images/prisma/team-inside.jpg'
+import team from '@/images/prisma/team.jpg'
 import monogram from '@/images/prisma/brand/prisma-monogram.png'
 
 interface PageProps {
@@ -55,7 +55,7 @@ export default async function Home() {
       <section className="hero team-hero" id="top">
         <div className="hero-image">
           <Photo
-            src={teamInside}
+            src={team}
             alt={t('hero.imageAlt')}
             fill
             priority

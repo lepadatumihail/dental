@@ -1946,7 +1946,9 @@
     display: grid;
   }
   .care-hero-image {
-    aspect-ratio: 2000 / 1521;
+    aspect-ratio: 1856 / 680;
+    align-self: end;
+    margin-bottom: -6rem;
   }
   .care-hero h1,
   .tourism-hero h1 {
@@ -2792,6 +2794,9 @@
     .tourism-hero-image {
       grid-row: 2;
     }
+    .care-hero-image {
+      margin: 0 -1.2rem -5rem;
+    }
     .tourism-hero-image {
       max-width: none;
     }
@@ -2890,15 +2895,13 @@
   .hero-image {
     position: absolute;
   }
-  /* The team photo owns the right-hand column and fades into the white
-     page on its left edge. Its width leaves room for the 550px lead, so the
-     copy never sits on the photo (nor on the first face in it). */
+  /* The team photo (people on pure white) owns the right-hand column and
+     stands on the proof bar. Its width leaves room for the 550px lead, so
+     the copy never sits on the photo (nor on the first face in it). */
   .team-hero .hero-image {
-    aspect-ratio: 2048 / 1558;
+    aspect-ratio: 1856 / 680;
     width: min(57vw, 1000px, max(100vw - var(--gutter) - 550px, 50vw));
     inset: auto 0 108px auto;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 7%);
   }
   .team-hero .hero-image img {
     object-fit: cover;
@@ -3507,7 +3510,6 @@
   .detail-image,
   .clinic-location-image,
   .tourism-hero-image,
-  .care-hero-image,
   .care-feature-image,
   .treatment-image {
     position: relative;
@@ -3518,7 +3520,6 @@
   .detail-image:after,
   .clinic-location-image:after,
   .tourism-hero-image:after,
-  .care-hero-image:after,
   .care-feature-image:after,
   .treatment-image:after {
     content: '';
@@ -4158,7 +4159,7 @@
       transform: none;
     }
     .team-hero .hero-image {
-      aspect-ratio: 2048 / 1558;
+      aspect-ratio: 1856 / 680;
       order: 2;
       width: 100%;
       margin-top: 2.5rem;
@@ -4211,6 +4212,17 @@
     .hero-proof {
       order: 3;
       position: static;
+    }
+    /* Prisma Care stacks the same way, so the wide team photo isn't squeezed
+       into half the width. */
+    .care-hero {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      min-height: auto;
+    }
+    .care-hero-image {
+      grid-row: 2;
+      margin-inline: calc(-1 * var(--gutter));
     }
   }
 }
